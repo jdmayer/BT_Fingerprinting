@@ -1,0 +1,532 @@
+\chapter{Foundation}
+\label{cha:foundation}
+
+\section{Fingerprinting}
+Web browser fingerprinting, also known as device fingerprinting, is the systematic collection of information to identify and later re-identify users. (\textcite{doty18}, p.3)(\textcite{amiunique})\\
+This data tracking method works by obtaining data from the users web browser and using this data to create an unique fingerprint "hash". This hash is the key for later re-identifying the user. (\textcite{upi15}, p. 1)(\textcite{havens16}, p. 4)\\\\
+With millions of computers and mobile devices in use and even more browsers, this identification method seems really unlikely to work at first sight. Nevertheless, it is an extremely reliable method for correlating data across websites or even web browsers with individual users. (\textcite{havens16}, p. 3)\\\\
+Here is how it works:\\
+There are currently over 7.5 billion people populating our planet. Imagine you have to identify a single person. By stating this specific person is male, you already cut the choice by half. Information about the ethnicity and age of this person as well as the time zone he lives in will narrow down the choice even more.\\
+It's basically the same with web browser fingerprinting. The gender can be seen as an equivalent for the used operating system, the ethnicity as the browser and age as the browsers version. Information about the time zone and used language are easily acquirable by the browser and so are more specific details which help narrowing down the choice to nearly always one person.\\\\
+This combination of properties can be obtained using code (time zone, screen resolution, plug-ins) and also be extracted from HTTP headers (user agent string). (\textcite{miele18}) \\\\
+Web browser fingerprinting was first developed roughly before 2010 and due to its effectiveness quickly gained traction in the tracking industry.(\textcite{havens16}, p. 3) \\
+Many of the fingerprinting methods can not be detected by the user and as it is extremely difficult for users to modify their web browsers in a way that they are less vulnerable to it (\textcite{amiunique})(\textcite{miele18}), makes it a dangerous tool for deanonymization attacks and maliciously-minded tracking programs. (\textcite{havens16}, p.3)\\
+\begin{tcolorbox}
+Example\\
+Upon accessing a website, the fingerprinting script determines the users fingerprint and pushes it to a central data store. This data store is usually a shared data store which is used by multiple websites. So when the user accesses another website which also has access to this shared data store, the user will be recognized and the user profile can be updated. (\textcite{havens16}, p. 8)
+\end{tcolorbox}
+
+%\subsection{Entropy} - (\textcite{khan14})
+\section{Utilisation (Why is it needed?)}
+\label{sec:utilisation}
+In a study conducted in 2013 by Nikiforakis et al. they found that fingerprinting is a part of some of the most popular websites on the internet and that multiple hundred thousands of users are fingerprinted on a daily basis. (\textcite{nikiforakis13}, p.6) \\\\
+The following paragraphs lists different ways in which fingerprinting can be utilized:\\\\
+Constructive use
+\begin{itemize}
+	\item Security authentication\\
+	Using web browser fingerprinting to correctly identify a device which is used to log into an account can be used to re-identify a user and help combat fraud or credential hijacking. (\textcite{upi15}, p.4)(\textcite{nikiforakis13}, p.2)
+	\begin{tcolorbox}
+	Example:\\
+	Services can track the devices used to access an account and inform the user in case an unknown device tries to access it. 
+	\end{tcolorbox}
+\end{itemize}
+Destructive use
+\begin{itemize}
+	\item Hacking\\
+	Habits of users can be tracked without their knowledge and attackers can acquire specific knowledge about the user’s software setup. (\textcite{upi15}, p.4) 
+	\begin{tcolorbox}
+	Example:\\
+	With the help of web browser fingerprinting a hacker can acquire knowledge about the users operating system and adjust his hacking method accordingly.
+	\end{tcolorbox}
+\end{itemize}
+Con- and destructive use
+\begin{itemize}
+	\item Identifying criminals\\
+	As a mean of tracking, fingerprinting can be used to track people or even criminals. But as seen in the previous examples this can used for and against users. 
+	\begin{tcolorbox}
+	Example: positive use\\
+	When a user is harassed or stalked by another user the website can use web browser fingerprinting as a mean of blacklisting said user. 
+	\end{tcolorbox}
+	\begin{tcolorbox}
+	Example: negative use\\
+	Citizens of countries with a strict regime can be blacklisted for expressing criticism against the government.
+	\end{tcolorbox}
+	\item Commercial use\\
+	Commercial Fingerprinting is used to track people’s habits and preferences. The acquired knowledge can be used to either help the user or direct him into a certain direction. 
+	\begin{tcolorbox}
+	Example: positive use\\
+	A website picks up the user’s habit to look for climbing gear and suggests similar products.
+	\end{tcolorbox}
+	\begin{tcolorbox}
+	Example: negative use\\
+	A website registers that the user recently bought more expensive products and starts to only show items in this certain price range rather than more suitable but cheaper products.
+	\end{tcolorbox}
+\end{itemize}
+The following paragraphs will summarize the findings of a study conducted by Nikiforakis et al. in cooperation with three commercial fingerprinting companies in order to test multiple websites for the use of fingerprinting scripts.\\\\
+Nikiforakis et al. used the categorization of TrendMicro and McAfee on a list of 3804 domains. If a domain was neither analysed nor categorized by the both used services they were marked as untested and not used. Therefore only 59.2\% of the 3804 domains were included in the results of this testing. If one service declared a domain as unsafe and the other stated the opposite, it was accepted as safe. Some categories were given aliases and gathered together to a more generalized category.(\textcite{nikiforakis13}, pp.6)\\\\
+\begin{figure}[H]
+\centering
+		\includegraphics[width=350pt, height=160pt]{Top10CategoriesNiki.png}
+		\caption{Top 10 categories utilizing fingerprinting (\textcite{Top10Niki})}
+		\label{Top10Niki}
+\end{figure}
+This figure shows 10 categories, 8 of which operate with user subscriptions. These sites usually are interested in preventing hijacking of user accounts and fraudulent activities.\\
+The top two categories were identified as malicious (163 domains) or as spam (1063 domains). Nikiforakis et al. noticed that many domains belonging to one of these categories were parked websites which do not include any fingerprinting code. Further many "quiz" or "survey" websites were located which in a later step extract a user's personal details. The domains were categorized as malicious if they exploit vulnerable browsers or extract private data from users.\\\\
+It was discovered that all these sites were found to include, as some point, fingerprinting code provided by one of the three commercial fingerprinting companies.\\
+This observation, paired with the fact that all of these three studied providers stated that there must be set an appointment in order to acquire fingerprinting services, point to the possibility that fingerprinting companies work with dubious domains in order to expand their fingerprinting database.(\textcite{nikiforakis13}, p.7)
+
+
+\section{Threat (What kind of threat does it pose?)}
+have a look at (\textcite{eckersley10})
+
+As seen in the previous sub-chapter /ref{sec:utilisation} web browser fingerprinting does have its advantages as well as its disadvantages for the user. This section will have a closer look as the threat fingerprinting poses for the users privacy.
+ 
+Web browser fingerprinting is a tracking method, which can correlate user's browsing activity within as well as across sessions without transparency or control. (\textcite{doty18}, p.3) Most fingerprinting techniques are obscure and users usually don't notice that they are being tracked.
+
+The modern web exposes a number of details about the user’s device, either directly or discoverable through testing. This is largely a result of a greater need to comply with different device types, support for different features, or simply leaking data by including too much information in protocol requests.
+(\textcite{havens16}, p. 4)
+ 
+Privacy and security
+
+\begin{itemize}
+	\item Identify a user: concerns about surveillance, personal physical safety, concerns about discrimination against them based on what they read or write when using the web. (\textcite{doty18}, p.4)
+	\item An online party can correlate multiple visits (on same or different sites) to develop a profile or history of the user. This may occur without the user’s knowledge or consent and tools such as clearing cookies do not prevent further correlation. Also allows tracking across origins – different sites may be able to combine information about a single user even where a cookie policy would block accessing of cookies between origins. (\textcite{doty18}, p.4)
+	\item Tracking without transparency or user control: bf allows for collection of data about user activity without clear indications that such collection is happening. Allows for tracking of activity without clear or effective user controls. (typically cannot be cleared or re-set) /*like cookies*/ (\textcite{doty18}, p.4f)
+\end{itemize}
+
+\textbf{go to original source}
+High risk: 
+In 2010 Peter Eckersley, in association with the Electronic Frontier Foundation(EFF), conducted a study of browser fingerprinting techniques. –
+**	Group of people, expected to have high awareness of privacy concerns. 
+**	Out of 470,161 browsers – 93,6% instantaneously unique finerprint
+**	Group -> privacy-conscious users, informed of the dangers of browser fingerprinting
+**	Simple algorithm for detecting changes in fingerprints.
+o	Check to see if there is any fingerprint which, aside from one non-matching field, is otherwise the same.
+o	Not make guess if there were multiple potential matches
+o	Made 65,56\% guesses – 99,1% right
+(\textcite{havens16}, p.6f)
+
+**	Deanonymization of Tor users
+Tor enables JavaScript by default and if the user fails to turn it off, even Tor users can be tracked due to the information leaked by JavaScript. (\textcite{havens16}, p.9f)
+
+\subsection{Under General Data Protection Regulation}
+This threat posed by web browser fingerprinting as depicted above might be reduced by the \textit{General Data Protection Regulation (GDPR)}, which entered into force on May 25th 2018. This regulation imposed by the European Union (EU) intends to cover exactly this kind of hidden data collection which is used by web browser fingerprinting, by forcing companies to prove they have a legitimate reason for the utilization of any means of tracking.(\textcite{miele18})\\\\
+Even though the GDPR avoids specifying technologies it provides general rules which should keep up with technological development. Due to this regulation browser characteristics are now to be treated like personal data. Personal data has a broad definition as any information that might be linked to an identifiable individual can be passed as such. Examples for such are not only the IP-Address and MAC-Address of users but also less specific features, including the combination of characteristics which web browser fingerprinting relies upon. (\textcite{miele18})\\\\
+In order to be allowed to use fingerprinting legally the concerned entity has to complete the following steps:\\
+\begin{itemize}
+	\item show that the tracking does not violate "the fundamental rights and freedoms of the data subject, including privacy", 
+	\item and is in line with "reasonable expectations of data subjects"
+	\item further give a legitimate argument for its interest in tracking,
+	\item and share details about the scope, purposes, and legal basis of the data processing with the person subjected to the fingerprinting\\
+\end{itemize}
+Due to this regulation, the only step the user has to take to avoid fingerprinting is to say "no".\\\\
+Even though the rules imposed by this regulation seem to help prevent unwanted tracking, it only helps mitigate it. There will certainly be fewer entities making use of fingerprinting though web browser fingerprinting is not expected to disappear, no matter how high the penalties are on its illegal utilisation.\\
+Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Further, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
+
+\section{Mitigation (How to avoid it)}
+As seen in the previous chapters there are many way of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the users privacy. So this brings up the question if there is a way to avoid this tracking method. Each of the researched articles about this topic stated the same. No. Unfortunately, there is no way to avoid being fingerprinted completely. There are only ways to try and reduce it. (\textcite{web17})
+-- not possible as e.g. some characteristics are sent automatically!
+
+
+
+Mitigations, not solutions. Users of the Web cannot confidently rely on sites being completely una-ble to correlate traffic, especially when executing client-side code.
+Best practices: according to XY
+\begin{itemize}
+	\item Avoid unnecessary or severe increases to fingerprinting surface
+	\item Mark features that contribute to fingerprintability
+	\item Specify orderings and non-functional differences
+	\item Design APIs to access only the entropy necessary
+	\item Enable graceful degradation for privacy-conscious users or implementers
+	\item Avoid unnecessary new local state mechanisms
+	\item Highlight any local state mechanisms to enable simultaneous clearing
+	\item Limit permanent or persistent state
+\end{itemize}	
+(\textcite{doty18}, p.5)
+
+\begin{itemize}
+	\item Decreasing fingerprinting surface
+	\item Increasing anonymity set
+	\item detectable fingerprinting
+	\item clearable local state
+\end{itemize}
+(\textcite{doty18}, p.7)
+
+
+The stateless nature of browser fingerprinting makes it hard to detect and even harder to opt-out. However, there are several common methods of preventing browser fingerprinting discussed in the literature. These include:
+**	Having all browser vendors agree on a single set of API calls to expose to the web applica-tions as well as internal implementation specifics;
+**	Having blocking tools which are maintained by doing regular web-crawls to detect tracking and incorporate blocking mechanisms into the tool;
+**	The introduction of a universal font list that a browser is limited to choose from for render-ing;
+**	Reporting unified and uncommunicative attributes
+**	Blocking or disabling js;
+**	Reducing the verbosity of the User-Agent string and the plug-in version;
+**	Having flash provide less system information and report only a standard set of fonts
+
+Canvas fingerprinting
+Is a difficult technique to automatically detect and prevent without false positives. A solution would be to turn to crowd-sourcing (sugg. By Acal et al.). A browser tool can de-fault to blocking all pixel data extraction attempts, but slowly over time, take into account user feedback and improve thetool to identify valid fingerprinting attempts. Other suggest-ed methods – having the browser add random pixel noise whenever pixels are extracted or having the browsers render scenes in a generic software renderer. These suggestions com e with a significant performance penalty and therefore, unacceptable for general use. The easiest method appears to require user approval if a script requests pixel data. Modern browsers already use this approach, for example with the html5 geolocation api. However, this introduces another permission dialogue which requires user interaction.
+Accelerometer fingerprinting
+Bojinov et al – 2 methods for the prevention of AF. The first proposal states that the feasibility of fingerprinting can be practically eliminated at the hardware level if the sensor in similar devices are calibrated to the same specification during the manufacturing pro-cess. This would remove any variance in the sensor reading, and thus, eliminate its use for fingerprinting. The second proposal is a software based solution. A random value can be added to the sensor output at the os level. This value can remain constant during continuous use and then change during periods of inactivity.
+Extensions and plug-ins
+The use of some common extensions and plug-ins were also mentioned in the liter-ature. The notable ones which seemed to aid in reducing fingerprintability were AdBlock Plus, Ghostery and NoScript. Nikiforakis et al. examined several highly rated extensions for firefox and chrome, which allowed changing the user-agent to appear as if sessions were from different computers. They noted in their study that these were inadequate and con-tained discrepancies which led to the browser being more distinguishable. These discrep-ancies allow fingerprinting scripts to increase the accuracy of the fingerprint since they are able to tell the presence of a specific extension. It should be noted that these results seem to be different from what was concluded by Yen et al. in their study. They suggested that changing the User-Agent string to one that corresponds to a populare browser version was a simple method to become less distinguishable. 
+(\textcite{upi15}, p.4)
+
+
+-- simplest solution:
+-- browser extension -> automatically blocks active content e.g. JavaScript, Flash, or Silverlight applications (which don't deliver logically info to server)
+-- these plugins - incl. NoScript (Firefox), ScriptBlock (Chrome) -> protection against canvas fingerprinting
+-- using these plug-ins -> some web services or at least individual content -> stop working
+-- not helpful if not sure if provider is trustworthy or not
+-- these blockers can be directly used for fingerprinting the user
+-- apart form script blocking solution
+-- commonly-used browser and default settings
+-- same with OS
+-- high chance - no unique fingerprint and will be harder to track
+(\textcite{web17})
+
+
+CANVAS FINGERPRINTING
+-- using private browsing modes or tor anonymity service
+-- tor -> slower, less attrackive browsing experience
+-- torbutton disables WebGL - still allows rendering to a <canvas> -> still partly vulnerable to canvas FP
+-- mainstream users -> fingerprinting unavoidable consequence
+(\textcite{mowery12}, p.1)
+
+-- increasing the noise, but degrades the performance of <canvas> significantly for legitimate applications
+-- same noise on multiple runs -> aid fingerprinting
+-- therefore adding noise - not a feasible defence
+-- one way would be: browser vendors - agree on a list of "canvas-safe" fonts
+-- to support WebGL, ignore graphics card and render scenes in a generic software renderer
+-- approach might be acceptable - performance impact not
+-- easiest efficient defense: require user approval whenever a script requests pixel data 
+-- modern browsers already implement this type for e.g. HTML5 geolocation APIs
+(\textcite{mowery12}, p.10)
+
+\section{Critical configurations and plug-ins}
+https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/dangerousConfigs}
+	\caption{}
+	\label{fig:dangerousconfigs}
+\end{figure}
+(\textcite{mayer09}, p.43)
+
+As mentioned in the previous paragraph (chapter 2.1.) the scripts which use fingerprinting can read certain data via configuration settings or other observable characteristics from the web browser which enables them to create a specific fingerprint. (\textcite{doty18}, p.3)
+
+The following paragraphs will introduce some of these certain information sources disclosed to third parties by the web browser and why they are used at all.
+
+
+The information that browser fingerprinting reveals typically includes a mixture of HTTP headers (which are delivered as a normal part of every web request) and properties that can be learned about the browser using JavaScript code: your time zone, system fonts, screen resolution, which plugins you have installed, and what platform your browser is running on. Sites can even use techniques such as canvas or WebGL fingerprinting to gain insight into your hardware configuration.(\textcite{miele18})
+
+\subsection{JavaScript}
+
+Js – the language which never works – for the developer
+
+
+JS gives access to many browser-populated features like the plugins installed on the user’s device (\textcite{amiunique})
+
+Identifying web browsers based on the underlying javascript engine
+(\textcite{mulazzani13})
+
+When JavaScript is disabled, websites won’t be able to detect the list of active plugins and fonts you use, and they also won’t be able to install certain cookies on your browser.
+The disadvantage of disabling JavaScript is that websites won’t always function properly, be-cause it’s also used to make websites run smoothly on your device. This will impact your browsing experience.(\textcite{pixel18})
+
+Browser fingerprinting, while a powerful tool, is often part of a larger suite of tracking techniques. Fingerprinting operates through the js engine as part of an analytics program. Any website that runs the fingerprinting analytics script will be able to track users through a shared data store.
+(\textcite{havens16}, p.8)
+
+SEE NIKIFORAKIS!!!!
+
+
+\subsubsection{WebGL}
+%WebGL provides a JavaScript API for rendering 3D graphics in a <canvas> element. Modeled after OpenGL ES 2.0, WebGL is currently a draft speciﬁcation and implemented and enabled in Chrome, Firefox, and Opera, as well as implemented but disabled in Safari. Each of these browsers provides a hardware-accelerated implementation, using the installed graphics hardware to render each frame. To mitigate serious misbehaviour and crashes, all of these browsers enable WebGL only for a whitelisted set of graphics cards and drivers.
+%Current WebGL implementations expose their functionality through a separate canvas context (which will eventually be named “webgl”). The WebGL API is too complex to describe here in suﬃcient detail, but is stylistically similar to the desktop OpenGL API. It provides for vertex and fragment shaders, written in OpenGL Shading Language (GLSL), that, after compilation, run directly on the graphics card. WebGL also provides for OpenGL-style textures, as well as diﬀerent lighting primitives. More advanced techniques, such as specular highlighting, bump mapping, and transparency, can be achieved through custom GLSL shaders. 2.4 SecurityImplications 
+%(\textcite{mowery12}, p.3)
+
+
+\subsection{Adobe Flash}
+Adobe Flash is a browser plug-in which provides different ways of delivering rich media content which could traditionally not be displayed using HTML. (\textcite{nikiforakis13}, p.3)
+
+
+**	Criticized for poor performance, lack of stability
+**	Newer technologies (HTML5) can potentially deliver what used to be only possible through flash – still available on the vast majority of desktops (\textcite{nikiforakis13}, p.3)
+**	Returns all fonts with one simple call (\textcite{havens16}, p.5)
+**	Its rich programming interface (API) provides access to many system-specific attributes (version of OS, list of fonts, screen resolution, timezone) (\textcite{amiunique})
+**	Can be disabled without a negative impact on UEX – only impacts browsing experience on old websites(\textcite{pixel18}.)
+**	Vulnerability, called “local storage objects” -> enables “zombie cookie” or “supercookie”. Almost impossible to remove. Populate numerous different storage areas with tracking in-formation. Even if cookies deleted from browser -> still come back. Other storage locations repopulate cookie as long as any existis – combined with brower fingerprinting, the cookies can track changes in fingerprints while also relying upon the fingerprint as a finale line of defense against the most privacy-conscious users. “cookie syncing” (\textcite{havens16}, p.8f)
+
+SEE NIKIFORAKIS!!!!
+
+\subsection{HTML 5 /Canvas}
+Through the display of an HTML5 Canvas element, it is possible to collect small differences in the hardware on in the software configurations, thanks to slight differences in the image rendering between devices. The smallest pixel difference can be detected -> canvas fingerprinting 
+(\textcite{amiunique})
+
+%One of the most interesting new elements in HTML5, <canvas> provides an area of the screen which can be drawn upon programmatically. It enjoys widespread support, being available in the most recent versions of Chrome, Firefox, Internet Explorer, Opera, and Safari as well as Mobile Safari and Android Browser. The basic approach to drawing on a canvas is simple: acquire a graphics context, and use the context’s API to eﬀect your changes. In the current HTML5 speciﬁcation, the only deﬁned context is“2d”. The 2d context provides basic drawing primitives such as fillRect, lineTo, and arc, as well as more complicated features such as B´ezier curves, color gradients, and copying in an existing image. 
+%
+%\textbf{refer to canvas fingerprinting}
+%pixel extraction: In order for <canvas> to be a useful ﬁngerprint, there must be some way to examine its behavior. Fortunately, <canvas> makes this extremely easy, providing several ways to inspect its data with pixel accuracy.
+%(\textcite{mowery12}, p.2)
+%
+%First, the 2d context provides the method getImageData(). Given a rectangular region of the canvas, this method returns an ImageData object. Contained in this object are the RGBA values (as integers) for every pixel in the requested region. Second, the canvas object itself provides a toDataURL(type) method. When passed “image/png”, this method returns a data url consisting of the Base64 encoding of a PNG image containing the entire contents of the canvas. As this is a very convenient canvas-level method, we used this approach to extract data in our experiments. During black-box use of these ﬁngerprints, the test suite could simply hash these data URLs, thereby removing the need to upload entire images from each client. It is worthwhile to note that these methods do preserve the same origin policy — if an image from a diﬀerent origin has been drawn on this canvas, they will throw a SecurityError exception instead of returning pixel data. Therefore, our <canvas> ﬁngerprints must only contain image resources that are under our control. 
+%(\textcite{mowery12}, p.3)
+
+\subsection{User agent}
+A user agent is a request header field in the hypertext transfer protocol (http) which is used for the communication between browser and website. (\textcite{xovi18}) It is automatically sent with each page call (\textcite{doty18}, p.6), except if it is specifically configured not to. (\textcite{xovi18})(\textcite{fielding14}, p.5.5.3)\\\\
+The user agent contains the name and version of the used browser. In R. Fieldings work about http, this combination is also called product identifier. The product identifiers are listed in the order or their importance, whereas each of them can be followed by one or multiple comments. (\textcite{xovi18})(\textcite{fielding14}, p.5.5.3) This field value is often called user agent string. (\textcite{hoffman16})\\
+\begin{tcolorbox}
+Example 1: \\
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.102 Safari/537.36 Vivaldi/2.0.1309.37
+\end{tcolorbox}
+This string tells the receiving server, that the latest version (2.0.1309.37) of the Vivalid browser is used. In the comments (contained in the brackets) it gives away that the computer runs Windows 10 (Windows NT 10.0) on a 64-bit version (WOW64).\\
+\begin{tcolorbox}
+Example 2:\\
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134\\
+\end{tcolorbox}
+As well as with the other example, this browser (Edge with the version number 17.17134) also gives away the operating system and its version (same as before).\\\\
+As shown in the examples above, not only the used browser name and its version are passed on but also information about the operating system and sometimes hardware. (\textcite{hoffman16}) (\textcite{xovi18}) The passed-on information is used to display different content in different browsers, on different oper-ating systems, or to gather statics (\textcite{hoffman16}) (\textcite{arntz17}) (\textcite{xovi18})\\\\
+If wanted, changes on the user agent string are easily made. (\textcite{arntz17})
+The problem with this configuration is, that the longer the user-agent field values become, the higher becomes the risk of being identified through for example fingerprinting. This is the case why the user should limit the addition to the user-agent string which can be requested by third parties. (\textcite{fielding14}, p.5.5.3)
+
+
+\subsection{Others}
+Quickly describe which else there are:
+(\textcite{havens16}, p.5):
+Language – Language the browser is in; used for localization
+Screen Resolution – the with and height of the user’s screen
+// here reference to why ratio is better -> zoom
+Timezone – the local timezone of the user’s computer
+DoNotTrack – weather the user has indicated they wish to opt-out of tracking
+Installed Fonts – the fonts supported in the browser, typically retrieved from Adobe Flash but can also be detected by other means
+Canvas Fingerprinting – The program attempts to render an image on the webpage using the HTML5 canvas. Subtle differences in the rendering of the image can lead to identification
+
+(\textcite{havens16}, p.6)
+Browser Plugins – a list of plugins installed in the browser
+Cookies enabled – whether or not the user allows cookies on the page
+Benchmark tests – evaluate how the browser’s js engine performs against a list of published bench marks. This information is often used to supplement that of the user agent string
+
+//probably why it's needed, which can be blocked
+
+
+\newpage
+\section{Web browser fingerprinting methods}
+%\subsection{Cookie-like fingerprinting -- remove?}
+%
+%https://samy.pl/evercookie/
+%-- add cookie-like fingerprinting? As not REAL fingerprinting
+%
+%-- users, user agents and devices may be re-identified by a site that first sets and later retrieves state stored by a user agent or device
+%-- this allows re-identification or inference about a user (in the same way http cookies allow state management for the stateless http protocol)
+%-- can also circumvent attempts to limit or clear cookies stored by the user agent
+%-- demonstrated by "evercookie" implementation
+%-- state is maintained across user agents (as in the case of common plug-ins with local storage)
+%-- across devices (certain browser syncing mechansims)
+%-- across software upgrades
+%-- can allow re-identification where active/passive fingerprinting might not
+%(\textcite{doty18}, p.6)
+
+
+\subsection{Active fingerprinting}
+The active fingerprinting method needs to actively query information about the client that isn't automatically provided by the browser. (\textcite{web17}) To obtain additional characteristics the site needs to run a JavaScript code or use plug-ins like Adobe Flash which extend the browsers functionality. (\textcite{web17})((\textcite{doty18}, p.6)\\\\
+Some of the additional characteristics which can be retrieved with this method are:
+\begin{itemize}
+	\item user's screen (width, height, resolution)
+	\item window size
+	\item enumerating fonts
+	\item time zone
+	\item plug-ins
+	\item evaluating performance characteristics
+	\item rendering graphical patterns\\
+\end{itemize}
+The only potential disadvantage active fingerprinting provides is that it can be detected on the clients side. (\textcite{doty18}, p.6) Active fingerprinting can be discovered in case the user analyses the outgoing data packages, HTML or the JavaScript source code, which in the majority of cases doesn't happen. (\textcite{web17})\\\\
+Active fingerprinting techniques
+\begin{itemize}
+	\item Canvas fingerprinting
+	\item JavaScript Engine fingerprinting
+	\item Cross-Browser fingerprinting
+	\item \textbf{Browser specific fingerprinting?}
+\end{itemize}
+
+\subsection{Passive fingerprinting}
+Different than active fingerprinting, passive fingerprinting does not need to execute any code on the client side. This method works based on observable characteristics which is contained in the header data of the IP packet by default. (\textcite{doty18}, p.6)(\textcite{web17})\\\\
+Some of the provided characteristics are:
+\begin{itemize}
+	\item cookies
+	\item http request headers
+	\item ip address and port
+	\item character sets (e.g. UTF-8)
+	\item languages\\
+\end{itemize}
+??Passive fingerprinting techniques
+\begin{itemize}
+	\item \textbf{Browser specific fingerprinting?}
+\end{itemize}
+
+\newpage
+\section{Web browser fingerprinting techniques}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=350pt, height=160pt]{FingerprintingAttributes.png}
+	\caption{Fingerprinting techniques and the attributes that effect the fingerprint}
+	\label{BrowserSpecification}
+\end{figure}
+\subsection{Browser specific fingerprinting}
+
+also just browser fingerprinting?
+
+
+Large scale browser fingerprinting study was conducted by P. Eckersley in the Panopticlick project
+Study has shown 94,2\% of the user with flash or java could be distringuided (without cookies)
+Browser-dependent features (flash/java) to retrieve information on installed fonts, plug-ins, browser platform, screen resolution
+Study showed: only 15-20 bits of identifying info necessary to uniquely identify a particular browser – most identifying metrics – plug-ins, fonts, user agent, http accept, screen resolution – plug-ins due to version numbers
+
+Weaknesses: (\textcite{upi15}, p.2)
+\begin{itemize}
+	\item unable to distinguish between instances of identically configured devices
+	\item fingerprint can change across browsers
+	\item fingerprint can be easily changed (upgrade, plug-in, etc.)
+\end{itemize}
+--As the fingerprint can easily be changed through upgrades, new installed features or external change of the system there are heuristics which can be used to adapt the fingerprint.  (\textcite{upi15}, p.2)
+
+\subsection{Canvas fingerprinting}
+
+-- by Mowery and Shacham in 2012
+-- Rendering text and WebGL scenes on to an area of the screen using HTML5ycanvas> element pro-grammatically
+--  reading the pixel data back to generate a fingerprint
+--  a 2D graphics context is obtained and text or an image is drawn to the canvas
+-- to-DataUrl(type) method is called on the canvas object and a Base64 encoding of a png image contain-ing the contents of the canvas are obtained
+-- hash of the Base64 encoded pixel data is created (the entire image is not needed to be uploaded to a website)
+--  technique uses WebFonts to guarantee that the correct font will always be used when drawing to the canvas
+-- results also showed that at least the operating system, browser version, graphics card, installed fonts, sub-pixel hinting and anti-aliasing all play a part in the final finger-print
+-- 10-bits entropy are possible over the whole population of the web using this technique
+-- 2014 study by Acar et al. -> canvas fingerprinting the most common form of fingerprinting (ax. 5,5\% of top 100k websites)
+ (\textcite{upi15}, p.2)
+
+Weaknesses: (\textcite{upi15}, p.2)
+\begin{itemize}
+	\item unable to distinguish between instances of identically configured devices
+	\item fingerprint can change across browsers
+\end{itemize}
+
+-- usable by any website running js - no requirement for special access to system resources
+(\textcite{upi15}, p.2)
+
+
+-- websites are written in HTML5 code
+-- inside that code, there is a little piece of code that takes your browser’s fingerprint.
+-- enabled by new coding features in HTML5
+-- HTML5 is the coding language used to build websites -> core fundamentals of every website
+-- has the element "canvas"
+-- originally html <canvas> element was used to draw graphics on a web page
+-- from wikipedia
+	--script draws text with the font and size of its choice and adds background colors
+	--script calls canvas API's ToDataURL method -> get canvas pixel data in dataURL format
+	--dataURL format is basically a Base64 encoded  representation of a binary pixel data
+	--script uses this hash (of text-encoded pixel data) as fingerprint
+-- means:
+-- html5 canvas element generates certain data (font size and active background color settings) in the visitors browser on a website
+(\textcite{pixel18})
+
+%#######################################
+(\textcite{mowery12})
+
+%-- based on browser font and WebGL rendering
+%--  a website renders text and WebGL scenes to a <canvas> element, then examines the pixels produced
+%--  Diﬀerent systems produce diﬀerent output, and therefore diﬀerent ﬁngerprints
+%several properties:
+%--  It is consistent. In our experiments, we obtain pixelidentical results in independent trials from the same user. 
+%-- It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observed 116 unique ﬁngerprint values, for a sample entropy of 5.73 bits. This is so even though the user population in our experiments exhibits little variation in browser and OS. 
+%-- It is orthogonal to other ﬁngerprints. Our ﬁngerprint measures graphics driver and GPU model, which is independent of other possible ﬁngerprints discussed below. 
+%-- It is transparent to the user. Our tests can be performed, oﬀscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being ﬁngerprinted.
+%--It is readily obtainable. Any website that runs JavaScript on the user’s browser can ﬁngerprint its rendering behavior; no access is needed besides what is provided by the usual web attacker model.
+%
+%-- Because the ﬁngerprint is consistent, the pixmap (and therefore its hash) will be identical in multiple runs on one machine, but take on diﬀerent values depending on hardware and software conﬁguration.
+%(\textcite{mowery12}, p.1)
+%
+%-- black-box use of a fingerprint: extracts distinguishing entropy without being concerned with the implementation details
+%--- begin - was sie zeigen wollten
+%One way to view our research is as demonstrating experimentally that Baker and Jacob were correct in expecting substantial additional leakage from GPU-based rendering. In addition, we show that there is substantial information leakage from font rendering to <canvas>.
+%-------
+%\textbf{REFER TO CONFIG CHAPTER for infor for webgl, js, canvas, html5!!!}
+%(\textcite{mowery12}, p.2)
+%
+%Experiments are served as pure JavaScript, and results are collected as data URL-encoded PNGs. Our framework then compares these results as images, allowing it to group identical results and display pixel-level diﬀerences between these groups. 
+%We use two types of image comparison: pixel-level difference and diﬀerence maps. When constructing a pixellevel diﬀerence, the framework ﬁrst creates a new image of the appropriate size. Then, each pixel’s color is set to the channel-wise diﬀerence between the two images at that location. If this color is anything other than transparent pure black (which indicates that there is no diﬀerence between the two images at this pixel), we set the alpha value of the diﬀering pixel to 255, rendering it fully opaque. For diﬀerence maps, each pixel in the map is set to either white or black, depending on whether the original images diﬀer. A purely white diﬀerence map indicates identical images, while perfectly black indicates diﬀerence in every pixel. 
+%Unfortunately, we do not have ready access to several hundred distinct consumer-level computer systems. To collect enough data to demonstrate the applicability of our ﬁngerprints, we turned to Amazon Mechanical Turk. We modiﬁed our framework to deliver multiple tests on a single page, along with extended instructions for the human workers on Mechanical Turk. The next section explains our process and results more thoroughly.
+%(\textcite{mowery12}, pp.4)
+%
+%We collected samples from 300 distinct members of the Mechcanical Turk marketplace, paying each a small sum to report their graphics card and graphics driver version. Meanwhile, our ﬁve ﬁngerprinting tests ran in the background. We also collected various metadata, such as the browser’s user agent string and the WebGL-reported renderer, vendor, and version.
+%During the course of data collection, twenty-three distinct users performed our survey twice. Due to our setup, we collected results for text_arial, text_webfont, text_nonsense, and webgl when they ﬁrst performed the survey. However, for all twenty-three users, each of these tests were identical to their later submissions. This suggests that our ﬁngerprints are consistent — for a given browser/OS/graphics card platform, performing the same test will always give identical results. To further test this hypothesis, we ran all of our tests on 5 identically-provisioned lab computers, running Firefox 11 on Windows XP. As expected, all ﬁve computers produced identical results on each test, providing further evidence that our ﬁngerprints are stable across identical hardware and software stacks. Additionally, we note that our ﬁngerprints are unable to distinguish between users who use the exact same hardware and software. 
+%(\textcite{mowery12}, p.5)
+%
+%arial font rendering
+%n general, we ﬁnd a surprising amount of diﬀerentiation in the ways that fonts are rendered. Even Arial, a font which is 30 years old, renders in new and interesting ways depending on the underlying operating system and browser. In the 300 samples collected for the text_arial test, there are 50 distinct renderings.
+%(\textcite{mowery12}, p.6)
+%
+%webfont rendering
+%(\textcite{mowery12}, p.7)
+%
+%
+%webgl
+% Our experiments show that graphics cards leave a detectable ﬁngerprint while rendering even the simplest scenes. 
+% combined:
+% Overall, our ﬁngerprints do combine beneﬁcially: among the 116 groups, our ﬁve extremely simple tests show a distribution entropy of 5.73 bits. We believe that more specialized and targeted tests could reveal even more, perhaps down to the exact installed graphics card, operating system, and browser family. 
+%
+%(\textcite{mowery12}, p.8)
+
+
+%##################
+did different tests:
+e.g. Arial renders in x different ways -> way to distinguish
+
+\textbf{Code Snippet}
+
+\subsection{JavaScript Engine fingerprinting}
+see BOOKMARKS!!!
+
+Relies on JS conformance tests such as the Sputnik test suite to determine a specific browser and major version number. A method demonstrated by Mulazzani et al. executed a set of conformance test cases from the Sputnik test suite in a user’s browser. They then compare the failed tests to a set of test cases that are known to fail in each version of a browser. This allow a match to be made to identify a specific browser and the major version. This can be considered more robust than rely-ing on the User-Agent string to determine the browser and version number for use in fingerprint-ing. While the user-Agent string can be modified to an arbitrary value by the user, the JavaScript engine fingerprint will be unique for each browser and cannot be ported to a different browser. Other properties of this technique are that it can be used to detect modified User-Agent strings, can be used on mobile devices, and can be used to reliably identify the browser of Tor Browser Bundle users.
+ (\textcite{upi15}, p.2)
+
+\textbf{Code Snippet}
+
+
+\subsection{Cross-Browser fingerprinting}
+
+-- uses browser-independent features for the fingerprint
+-- can rely solely on js and use font detection as a techniue
+-- since a js engine is available and enabled by default on all modern browsers 
+-- differs form techniques which rely on browser dependent plug-ins Adobe Flash or Java for obtaining a font list
+(\textcite{upi15}, pp.2)
+ 
+Weaknesses: (\textcite{upi15}, pp.2)
+\begin{itemize}
+	\item unable to distinguish between instances of identically configured devices
+	\item fingerprint can change????
+\end{itemize} 
+ 
+ --> springer verlag:: !!!  User Tracking on the Web via Cross-Browser Fingerprinting
+
+A technique developed by Yinzhi Cao
+**	New method, created by Yinzhi Cao
+**	E.g. used screen’s ratio of width to height as it remains consistent even when using zoom
+**	Adapted 4 such features from AmIUnique (which used screen resolution – not consistent)
+**	Examination of a user’s audio stack, graphics card, and CPU
+**	Relies on 29 features
+**	Script forces system to perform 36 tasks – results include info, takes less than a minute
+**	Only on Tor it didn’t work
+**	(\textcite{nordrum17})
+
+**	Rely on corresponding OS and hardware functionalities
+**	99,24\%  successfully identify
+**	%http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf
+
+
+!!!!!
+made it!!
+USE: (\textcite{Cao17})
+\textbf{Code Snippet}
+
+%\subsection{Accelerometer fingerprinting}
+%Mobile browsers -> harder to fingerprint than desktop browsers, due to the fact that mobile browsers are more uniform and they do no have the plug-ins that are available on desktop sys-tems. A recent study by Bojinov et al. showed a technique of generating a unique fingerprint by accessing a sensor that is commonly found on mobile devices. This technique allows a fingerprint-ing script to avoid using traditional hardware identifiers such as the IMEI and UDID. The study showed that the accelerometer on mobile devices was exposed without user Notification by iOS and Android browsers through JS. Imprecisions in accelerometer calibration during manufacturing result in device specific measured values. The method employed by him involved repeatedly query-ing the accelerometer and then estimating the calibration errors in each of the 3 dimensions to generate a unique fingerprint. This form of fp can be classified as a subcategory of cross-browser fingerprinting. This is due to the fact that the generated fingerprint does not vary across browsers. Another property of this technique is that it may be exercised without user cooperation. However, a factor in limiting its usefulness is that the device must be left facing up and down to gather read-ings to generate the fingerprint.
+% (\textcite{upi15}, p.3f)
+%
+%get rid of it?
+

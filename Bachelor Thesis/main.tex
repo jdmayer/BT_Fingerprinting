@@ -1,0 +1,90 @@
+% !TeX document-id = {a2fa490e-9ddf-4258-b84c-9e4e410bf9ae}
+
+%%% File encoding: UTF-8
+
+%%% Magic comments for setting the correct parameters in compatible IDEs
+% !TeX encoding = utf8
+% !TeX program = pdflatex 
+% !TeX spellcheck = en_US
+% !BIB program = biber
+
+\documentclass[bachelor,english]{hgbthesis}
+
+\usepackage{hyperref}
+%to get rid of the hyperlink borders
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+%to get a background for the examples
+\usepackage{framed}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!10,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=0mm,
+	boxsep=15pt,
+	arc=0pt,outer arc=0pt,
+}
+\usepackage{float} %to force the position of an image
+% Permissible options in [..]: 
+%%%----------------------------------------------------------
+
+
+\RequirePackage[utf8]{inputenc}
+
+\graphicspath{{images/}} 
+\logofile{FH_Logo}				% logo file = images/logo.pdf (use \logofile{} for no logo)
+\bibliography{references}  
+
+\graphicspath{{images/}}
+\title{Web Browser Fingerprinting}
+\author{Janine Denise Mayer}
+\programname{Bachelor Thesis}
+\placeofstudy{Hagenberg}
+\dateofsubmission{2019}{02}{28}	% {YYYY}{MM}{DD}
+
+\advisor{FH-Prof. DI Dr. Werner C. Kurschl}
+
+\begin{document}
+
+%start roman page numbers
+\frontmatter
+
+\maketitle
+\tableofcontents
+
+%\include{front/declaration}
+\include{front/abstract}
+\include{front/kurzfassung}
+
+%start arabic page numbers
+\mainmatter          		
+\include{chapters/introduction}
+\include{chapters/foundation}
+\include{chapters/applicationScenario}
+\include{chapters/requirements}
+\include{chapters/implementation}
+\include{chapters/evaluation}
+\include{chapters/summary}
+
+\appendix                              
+%\include{back/appendix_a}	% technical supplements
+%\include{back/appendix_b}	% contents of the CD-ROM/DVD
+%\include{back/appendix_c}	% chronological list of changes
+%\include{back/appendix_d}	% source text of this document
+
+% references
+\MakeBibliography                    				
+
+\end{document}

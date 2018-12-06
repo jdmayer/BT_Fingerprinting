@@ -1,0 +1,137 @@
+@thesis{upi15,
+	author={R. Upathilake and J. Li and A. Matrawy},
+	title={A Classification of Web Browser Fingerprinting Techniques},
+	year={2015},
+	institution={IEEE},
+	url={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7266460},
+	hyphenation={english}
+}
+
+@thesis{havens16,
+	author={R. Havens},
+	title={Browser Fingerprinting: Attacks and Applications},
+	year={2016},
+	url={http://www.cs.tufts.edu/comp/116/archive/fall2016/rhavens.pdf},
+	hyphenation={english}
+}
+
+@techreport{doty18,
+	author={N. Doty},
+	title={Mitigating Browser Fingerprinting in Web Specifications},
+	journal={WC3 Editor's Draft},
+	year={2018},
+	month={5},
+	day={21},
+	url={https://w3c.github.io/fingerprinting-guidance/},
+	hyphenation={english}
+}
+
+@online{amiunique,
+	author={AmIUnique},
+	urldate={2018-10-22},
+	url={https://amiunique.org/faq},
+}
+
+@techreport{nordrum17,
+	author={A. Nordrum},
+	title={Browser Fingerprinting Tech Works Across Different Browsers for the First Time},
+	year={2017},
+	url={https://spectrum.ieee.org/tech-talk/telecom/internet/new-online-fingerprinting-technique-works-across-browsers},
+	hyphenation={english}
+}
+
+@thesis{cao17,
+	author={Y. Cao and S. Li and E. Wijmans},
+	title={Cross-)Browser Fingerprinting via OS and Hardware Level Features},
+	year={2017},
+	hyphenation={english}
+}
+
+@techreport{fielding14,
+  author={R. Fielding and J. Reschke},
+  title={Hypertext transfer protocol (HTTP/1.1): Semantics and content},
+  year={2014},
+  url={https://tools.ietf.org/html/rfc7231#section-5.5.3},
+  hyphenation={english}
+}
+
+@online{xovi18,
+	author={Xovi},
+	title={User Agent},
+	urldate={2018-10-15},
+	url={https://www.xovi.de/wiki/User_Agent},
+	hyphenation={english}
+}
+
+@online{arntz17,
+	author={P. Arntz},
+	title={Explained: user agent},
+	year={2017},
+	url={https://blog.malwarebytes.com/security-world/technology/2017/08/explained-user-agent/},
+	hyphenation={english}
+}
+
+@techreport{hoffman16,
+	author={C. Hoffman},
+	title={What is a Browser's User Agent?},
+	year={2016},
+	url={https://www.howtogeek.com/114937/htg-explains-whats-a-browser-user-agent/},
+	hyphenation={english}
+}
+
+@techreport{mulazzani13,
+  title={Fast and reliable browser identification with javascript engine fingerprinting},
+  author={M. Mulazzani and P. Reschl and M. Huber and M. Leithner and S. Schrittwieser and E. Weippl and FC Wien},
+  booktitle={Web 2.0 Workshop on Security and Privacy (W2SP)},
+  year={2013},
+  organization={Citeseer},
+  url={http://www.ieee-security.org/TC/W2SP/2013/papers/s2p1.pdf},
+  hyphenation={english}
+}
+
+@techreport{nikiforakis13,
+  title={Cookieless monster: Exploring the ecosystem of web-based device fingerprinting},
+  author={N. Nikiforakis and A. Kapravelos and W. Joosen and C. Kruegel and F. Piessens and G. Vigna},
+  booktitle={Security and privacy (SP), 2013 IEEE symposium on},
+  year={2013},
+  organization={IEEE},
+  url={https://seclab.cs.ucsb.edu/media/uploads/papers/sp2013_cookieless.pdf},
+  hyphenation={english}
+}
+
+@online{pixel18,
+  author={pixelprivacy},
+	url={https://pixelprivacy.com/resources/browser-fingerprinting/},
+	title={Browser Fingerprinting},
+	urldate={2018-10-15},
+	hyphenation={english}
+}
+
+@article{mayer09,
+  title={Any person... a pamphleteer”: Internet Anonymity in the Age of Web 2.0},
+  author={J. R. Mayer},
+  journal={Undergraduate Senior Thesis, Princeton University},
+  year={2009},
+  hyphenation={english}
+}
+
+@techreport{miele18,
+  title={The GDPR and Browser Fingerprinting: How It Changes the Game for the Sneakiest Web Trackers},
+  author={K. Szymielewicz and B. Budington},
+  year={2018},
+  institution={EFF},
+  url={https://www.eff.org/de/deeplinks/2018/06/gdpr-and-browser-fingerprinting-how-it-changes-game-sneakiest-web-trackers},
+  hyphenation={english}
+}
+
+
+%---------------------------------
+% IMAGES
+%---------------------------------
+
+@Misc{Top10Niki,
+	author={N. Nikiforakis, et al.},
+	title={Cookieless monster: Exploring the ecosystem of web-based device fingerprinting},
+	howpublished={Figure~3 in \textcite{nikiforakis13}},
+	year={2013}
+}
