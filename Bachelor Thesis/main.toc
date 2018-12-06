@@ -29,13 +29,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Fingerprinting}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Utilisation (Why is it needed?)}{4}{section.2.2}
+\contentsline {section}{\numberline {2.2}Utilisation}{4}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Threat (What kind of threat does it pose?)}{6}{section.2.3}
+\contentsline {section}{\numberline {2.3}Threat}{6}{section.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Under General Data Protection Regulation}{7}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Mitigation (How to avoid it)}{8}{section.2.4}
+\contentsline {section}{\numberline {2.4}Mitigation }{8}{section.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Critical configurations and plug-ins}{10}{section.2.5}
 \defcounter {refsection}{0}\relax 
