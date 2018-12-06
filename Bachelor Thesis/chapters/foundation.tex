@@ -130,6 +130,7 @@ The danger of web browser fingerprinting lays in its stateless nature.
 * impossible to opt-out
 (\textcite{upi15}, p.4)
  \\\\
+ \subsection{Best practice}
 According to N. Doty (\textcite{doty18}, p.5), these are the best practices to mitigate the fingerprint we leave online: 
 \begin{itemize}
 	\item Avoid unnecessary or severe increases to fingerprinting surface
@@ -150,6 +151,7 @@ Further Doty mentions that this helps:
 \end{itemize}
 (\textcite{doty18}, p.7)\\
 
+\subsection{Prevention?}
 While N. Doty only listed ways to decrease the chance of being fingerprinted, R. Upathilake suggests the following steps to actually prevent the chance of being tracked via web browser fingerprinting (\textcite{upi15}, p.4):
 \begin{itemize}
 	\item Having all browser vendors agree on a single set of API calls to expose to the web applica-tions as well as internal implementation specifics;
@@ -165,12 +167,29 @@ While N. Doty only listed ways to decrease the chance of being fingerprinted, R.
 Is a difficult technique to automatically detect and prevent without false positives. A solution would be to turn to crowd-sourcing (sugg. By Acal et al.). A browser tool can de-fault to blocking all pixel data extraction attempts, but slowly over time, take into account user feedback and improve thetool to identify valid fingerprinting attempts. Other suggest-ed methods – having the browser add random pixel noise whenever pixels are extracted or having the browsers render scenes in a generic software renderer. These suggestions com e with a significant performance penalty and therefore, unacceptable for general use. The easiest method appears to require user approval if a script requests pixel data. Modern browsers already use this approach, for example with the html5 geolocation api. However, this introduces another permission dialogue which requires user interaction.
 (\textcite{upi15}, p.4)
 
+-- using private browsing modes or tor anonymity service
+-- tor -> slower, less attrackive browsing experience
+-- torbutton disables WebGL - still allows rendering to a <canvas> -> still partly vulnerable to canvas FP
+-- mainstream users -> fingerprinting unavoidable consequence
+(\textcite{mowery12}, p.1)
+
+
+-- increasing the noise, but degrades the performance of <canvas> significantly for legitimate applications
+-- same noise on multiple runs -> aid fingerprinting
+-- therefore adding noise - not a feasible defence
+-- one way would be: browser vendors - agree on a list of "canvas-safe" fonts
+-- to support WebGL, ignore graphics card and render scenes in a generic software renderer
+-- approach might be acceptable - performance impact not
+-- easiest efficient defense: require user approval whenever a script requests pixel data 
+-- modern browsers already implement this type for e.g. HTML5 geolocation APIs
+(\textcite{mowery12}, p.10)
+
 \subsection{Extensions and plug-ins}
 The use of some common extensions and plug-ins were also mentioned in the liter-ature. The notable ones which seemed to aid in reducing fingerprintability were AdBlock Plus, Ghostery and NoScript. Nikiforakis et al. examined several highly rated extensions for firefox and chrome, which allowed changing the user-agent to appear as if sessions were from different computers. They noted in their study that these were inadequate and con-tained discrepancies which led to the browser being more distinguishable. These discrep-ancies allow fingerprinting scripts to increase the accuracy of the fingerprint since they are able to tell the presence of a specific extension. It should be noted that these results seem to be different from what was concluded by Yen et al. in their study. They suggested that changing the User-Agent string to one that corresponds to a populare browser version was a simple method to become less distinguishable. 
 (\textcite{upi15}, p.4)
 
+\subsection{The simplest solution}
 
--- simplest solution:
 -- browser extension -> automatically blocks active content e.g. JavaScript, Flash, or Silverlight applications (which don't deliver logically info to server)
 -- these plugins - incl. NoScript (Firefox), ScriptBlock (Chrome) -> protection against canvas fingerprinting
 -- using these plug-ins -> some web services or at least individual content -> stop working
@@ -183,24 +202,11 @@ The use of some common extensions and plug-ins were also mentioned in the liter-
 (\textcite{web17})
 
 
-CANVAS FINGERPRINTING
--- using private browsing modes or tor anonymity service
--- tor -> slower, less attrackive browsing experience
--- torbutton disables WebGL - still allows rendering to a <canvas> -> still partly vulnerable to canvas FP
--- mainstream users -> fingerprinting unavoidable consequence
-(\textcite{mowery12}, p.1)
 
--- increasing the noise, but degrades the performance of <canvas> significantly for legitimate applications
--- same noise on multiple runs -> aid fingerprinting
--- therefore adding noise - not a feasible defence
--- one way would be: browser vendors - agree on a list of "canvas-safe" fonts
--- to support WebGL, ignore graphics card and render scenes in a generic software renderer
--- approach might be acceptable - performance impact not
--- easiest efficient defense: require user approval whenever a script requests pixel data 
--- modern browsers already implement this type for e.g. HTML5 geolocation APIs
-(\textcite{mowery12}, p.10)
-
+\newpage
 \section{Critical configurations and plug-ins}
+
+
 https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
 
 \begin{figure}
