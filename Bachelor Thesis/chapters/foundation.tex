@@ -161,17 +161,11 @@ While N. Doty only listed ways to decrease the chance of being fingerprinted, R.
 	\item 	Having flash provide less system information and report only a standard set of fonts \\
 \end{itemize}
 
-
-
-Canvas fingerprinting
+\subsection{Canvas fingerprinting}
 Is a difficult technique to automatically detect and prevent without false positives. A solution would be to turn to crowd-sourcing (sugg. By Acal et al.). A browser tool can de-fault to blocking all pixel data extraction attempts, but slowly over time, take into account user feedback and improve thetool to identify valid fingerprinting attempts. Other suggest-ed methods – having the browser add random pixel noise whenever pixels are extracted or having the browsers render scenes in a generic software renderer. These suggestions com e with a significant performance penalty and therefore, unacceptable for general use. The easiest method appears to require user approval if a script requests pixel data. Modern browsers already use this approach, for example with the html5 geolocation api. However, this introduces another permission dialogue which requires user interaction.
 (\textcite{upi15}, p.4)
 
-Accelerometer fingerprinting
-Bojinov et al – 2 methods for the prevention of AF. The first proposal states that the feasibility of fingerprinting can be practically eliminated at the hardware level if the sensor in similar devices are calibrated to the same specification during the manufacturing pro-cess. This would remove any variance in the sensor reading, and thus, eliminate its use for fingerprinting. The second proposal is a software based solution. A random value can be added to the sensor output at the os level. This value can remain constant during continuous use and then change during periods of inactivity.
-(\textcite{upi15}, p.4)
-
-Extensions and plug-ins
+\subsection{Extensions and plug-ins}
 The use of some common extensions and plug-ins were also mentioned in the liter-ature. The notable ones which seemed to aid in reducing fingerprintability were AdBlock Plus, Ghostery and NoScript. Nikiforakis et al. examined several highly rated extensions for firefox and chrome, which allowed changing the user-agent to appear as if sessions were from different computers. They noted in their study that these were inadequate and con-tained discrepancies which led to the browser being more distinguishable. These discrep-ancies allow fingerprinting scripts to increase the accuracy of the fingerprint since they are able to tell the presence of a specific extension. It should be noted that these results seem to be different from what was concluded by Yen et al. in their study. They suggested that changing the User-Agent string to one that corresponds to a populare browser version was a simple method to become less distinguishable. 
 (\textcite{upi15}, p.4)
 
