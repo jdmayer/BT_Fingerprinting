@@ -100,7 +100,7 @@
 }
 
 @online{pixel18,
-  author={pixelprivacy},
+  	author={pixelprivacy},
 	url={https://pixelprivacy.com/resources/browser-fingerprinting/},
 	title={Browser Fingerprinting},
 	urldate={2018-10-15},
@@ -124,6 +124,30 @@
   hyphenation={english}
 }
 
+@techreport{web17,
+	title={Browser fingerprints: the basics and protection options},
+	author={Web analytics},
+	year={2017},
+	url={https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/},
+	hyphenation={english}
+}
+
+@article{mowery12,
+	title={Pixel perfect: Fingerprinting canvas in HTML5},
+	author={K. Mowery and H. Shacham},
+	journal={Proceedings of W2SP},
+	year={2012},
+	url={https://hovav.net/ucsd/dist/canvas.pdf},
+	hyphenation={english}
+}
+
+@inproceedings{eckersley10,
+	title={How unique is your web browser?},
+	author={Eckersley, Peter},
+	booktitle={International Symposium on Privacy Enhancing Technologies Symposium},
+	year={2010},
+	organization={Springer}
+}
 
 %---------------------------------
 % IMAGES
@@ -134,4 +158,18 @@
 	title={Cookieless monster: Exploring the ecosystem of web-based device fingerprinting},
 	howpublished={Figure~3 in \textcite{nikiforakis13}},
 	year={2013}
+}
+
+%---------------------------------
+% VIDEO
+%---------------------------------
+
+@video{khan14,
+	author={Khan Academy Labs},
+	title={Information entropy | Journey into information theory | Computer Science | Khan Academy},
+	howpublished={Youtube},
+	year={2014},
+	url={ttps://www.youtube.com/watch?v=2s3aJfRr9gE},
+	urldate={2018-10-28},
+	hyphenation={english}
 }

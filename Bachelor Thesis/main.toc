@@ -45,7 +45,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.2}Adobe Flash}{11}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.3}HTML 5 /Canvas}{11}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.3}HTML 5 /Canvas}{12}{subsection.2.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.4}User agent}{12}{subsection.2.5.4}
 \defcounter {refsection}{0}\relax 
