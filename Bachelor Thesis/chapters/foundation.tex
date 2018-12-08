@@ -313,22 +313,7 @@ Benchmark tests – evaluate how the browser’s js engine performs against a li
 
 
 \newpage
-\section{Web browser fingerprinting methods}
-%\subsection{Cookie-like fingerprinting -- remove?}
-%
-%https://samy.pl/evercookie/
-%-- add cookie-like fingerprinting? As not REAL fingerprinting
-%
-%-- users, user agents and devices may be re-identified by a site that first sets and later retrieves state stored by a user agent or device
-%-- this allows re-identification or inference about a user (in the same way http cookies allow state management for the stateless http protocol)
-%-- can also circumvent attempts to limit or clear cookies stored by the user agent
-%-- demonstrated by "evercookie" implementation
-%-- state is maintained across user agents (as in the case of common plug-ins with local storage)
-%-- across devices (certain browser syncing mechansims)
-%-- across software upgrades
-%-- can allow re-identification where active/passive fingerprinting might not
-%(\textcite{doty18}, p.6)
-
+\section{Web browser fingerprinting methods}\label{sec:Methods}
 
 \subsection{Active fingerprinting}
 The active fingerprinting method needs to actively query information about the client that isn't automatically provided by the browser. (\textcite{web17}) To obtain additional characteristics the site needs to run a JavaScript code or use plug-ins like Adobe Flash which extend the browsers functionality. (\textcite{web17})((\textcite{doty18}, p.6)\\\\
@@ -368,6 +353,10 @@ Some of the provided characteristics are:
 
 
 \section{Web browser fingerprinting techniques}
+As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
+
+The following graph outlines the methods and techniques outlined in this thesis, including accelerometer fingerprinting which is not covered in this thesis.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=350pt, height=160pt]{FingerprintingAttributes.png}
