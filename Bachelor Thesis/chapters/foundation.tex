@@ -355,7 +355,7 @@ Some of the provided characteristics are:
 \section{Web browser fingerprinting techniques}
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 
-The following graph outlines the methods and techniques outlined in this thesis, including accelerometer fingerprinting which is not covered in this thesis.
+The following graph outlines techniques outlines in this thesis, excluding accelerometer fingerprinting which is not covered in this thesis.
 
 \begin{figure}[H]
 	\centering
@@ -365,13 +365,12 @@ The following graph outlines the methods and techniques outlined in this thesis,
 \end{figure}
 \subsection{Browser specific fingerprinting}
 
-also just browser fingerprinting?
-
-
-Large scale browser fingerprinting study was conducted by P. Eckersley in the Panopticlick project
-Study has shown 94,2\% of the user with flash or java could be distringuided (without cookies)
-Browser-dependent features (flash/java) to retrieve information on installed fonts, plug-ins, browser platform, screen resolution
-Study showed: only 15-20 bits of identifying info necessary to uniquely identify a particular browser – most identifying metrics – plug-ins, fonts, user agent, http accept, screen resolution – plug-ins due to version numbers
+* Large scale browser fingerprinting study conducted by P. Eckersley in the Panopticlick project
+* has shown 94,2\% of the user with flash or java could be distringuided (without cookies)
+* Browser-dependent features (flash/java) to retrieve information on installed fonts, plug-ins, browser platform, screen resolution
+* Study showed: only 15-20 bits of identifying info necessary to uniquely identify a particular browser
+* most identifying metrics – plug-ins, fonts, user agent, http accept, screen resolution – plug-ins due to version numbers
+(\textcite{upi15}, p.2)
 
 Weaknesses: (\textcite{upi15}, p.2)
 \begin{itemize}
@@ -379,7 +378,10 @@ Weaknesses: (\textcite{upi15}, p.2)
 	\item fingerprint can change across browsers
 	\item fingerprint can be easily changed (upgrade, plug-in, etc.)
 \end{itemize}
---As the fingerprint can easily be changed through upgrades, new installed features or external change of the system there are heuristics which can be used to adapt the fingerprint.  (\textcite{upi15}, p.2)
+* fp easily changed through upgrades, new installed features or external change of the system 
+* -> heuristics which can be used to adapt the fingerprint.  (\textcite{upi15}, p.2)
+
+
 
 \subsection{Canvas fingerprinting}
 
