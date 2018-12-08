@@ -76,7 +76,7 @@ It was discovered that all these sites were found to include, as some point, fin
 This observation, paired with the fact that all of these three studied providers stated that there must be set an appointment in order to acquire fingerprinting services, point to the possibility that fingerprinting companies work with dubious domains in order to expand their fingerprinting database.(\textcite{nikiforakis13}, p.7)
 
 
-\section{Threat}
+\section{XX Threat}
 have a look at (\textcite{eckersley10})
 
 As seen in the previous sub-chapter /ref{sec:utilisation} web browser fingerprinting does have its advantages as well as its disadvantages for the user. This section will have a closer look as the threat fingerprinting poses for the users privacy.
@@ -123,7 +123,7 @@ Due to this regulation, the only step the user has to take to avoid fingerprinti
 Even though the rules imposed by this regulation seem to help prevent unwanted tracking, it only helps mitigate it. There will certainly be fewer entities making use of fingerprinting though web browser fingerprinting is not expected to disappear, no matter how high the penalties are on its illegal utilisation.\\
 Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Further, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
 
-\section{Mitigation }
+\section{XX Mitigation}
 As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the users privacy. So this brings up the question if there is a way to avoid this tracking method. Each of the researched articles about this topic stated the same. No. Unfortunately, there is no way to avoid being fingerprinted completely. There are only ways to try and reduce the risk of being tracked. (\textcite{web17})
 The danger of web browser fingerprinting lays in its stateless nature. 
 * hard to detect - if even possible
@@ -204,7 +204,7 @@ The use of some common extensions and plug-ins were also mentioned in the liter-
 
 
 \newpage
-\section{Critical configurations and plug-ins}
+\section{XX Critical configurations and plug-ins}
 
 
 https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
@@ -263,6 +263,11 @@ Adobe Flash is a browser plug-in which provides different ways of delivering ric
 SEE NIKIFORAKIS!!!!
 
 \subsection{HTML 5 /Canvas}
+-- HTML5 is the coding language used to build websites -> core fundamentals of every website
+-- has the element "canvas"
+-- originally html <canvas> element was used to draw graphics on a web page
+(\textcite{pixel18})
+
 Through the display of an HTML5 Canvas element, it is possible to collect small differences in the hardware on in the software configurations, thanks to slight differences in the image rendering between devices. The smallest pixel difference can be detected -> canvas fingerprinting 
 (\textcite{amiunique})
 
@@ -363,7 +368,7 @@ The following graph outlines techniques outlines in this thesis, excluding accel
 	\caption{Fingerprinting techniques and the attributes that effect the fingerprint}
 	\label{BrowserSpecification}
 \end{figure}
-\subsection{Browser specific fingerprinting}
+\subsection{XX Browser specific fingerprinting}
 %
 % more info!
 %
@@ -386,113 +391,71 @@ Weaknesses: (\textcite{upi15}, p.2)
 
 
 \subsection{Canvas fingerprinting}
+\textbf{REFER TO CONFIG CHAPTER for infor for webgl, js, canvas, html5!!!}
 
--- by Mowery and Shacham in 2012
--- Rendering text and WebGL scenes on to an area of the screen using HTML5ycanvas> element pro-grammatically
---  reading the pixel data back to generate a fingerprint
---  a 2D graphics context is obtained and text or an image is drawn to the canvas
--- to-DataUrl(type) method is called on the canvas object and a Base64 encoding of a png image contain-ing the contents of the canvas are obtained
--- hash of the Base64 encoded pixel data is created (the entire image is not needed to be uploaded to a website)
---  technique uses WebFonts to guarantee that the correct font will always be used when drawing to the canvas
--- results also showed that at least the operating system, browser version, graphics card, installed fonts, sub-pixel hinting and anti-aliasing all play a part in the final finger-print
--- 10-bits entropy are possible over the whole population of the web using this technique
--- 2014 study by Acar et al. -> canvas fingerprinting the most common form of fingerprinting (ax. 5,5\% of top 100k websites)
- (\textcite{upi15}, p.2)
+Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012. This web browser fingerprinting technique works by using the new coding features in HTML5.(\textcite{pixel18}) 
+It is usable by any website which runs JavaScript and has no need for special access to system resouces.  (\textcite{upi15}, p.2)
+ 
+Only 2 years after its first use a study conducted by Acar et al. (2014) ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximately occurance of 5.5\% in the top 100,000 websites. (\textcite{upi15}, p.2)
 
+It is transparent to the user. Our tests can be performed, offscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being fingerprinted.
+It is readily obtainable. Any website that runs JavaScript on the user’s browser can fingerprint its rendering behavior; no access is needed besides what is provided by the usual web attacker model.
+Because the fingerprint is consistent, the pixmap (and therefore its hash) will be identical in multiple runs on one machine, but take on different values depending on hardware and software configuration.
+(\textcite{mowery12}, p.1)
+
+When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
+
+
+
+ suggests -> fp are consistent
+ tested further -> result -> this fp is stable across identical hardware and software stacks
+ noted -> this fp are unable to distingquish between users who use the exact same hw and sw
+(\textcite{mowery12}, p.5)
+
+Used text font and webfont and webgl rendering which were even more distinguishable than expected. As an example:
+While running the tests on the 300 samples - Arial rendered, depending on the underlying operating system and browser differently - on 300 samples - 50 disting renderings
+(\textcite{mowery12}, p.6)
+
+Further webgl -> graphics cards leave a detectable fingerprint while rendering even the simplest scenes. 
+(\textcite{mowery12}, p.8)
+
+\subsubsection{How it works}
+-- based on browser font and WebGL rendering
+Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5<canvas> element programmatically and reads the pixel data back to generate a fingerprint. Through this process a 2D graphic context is obtained and a text or image is drawn to the canvas.(\textcite{upi15}, p.2)
+
+-- results - data URL-encoded PNGs -mowery
+
+As soon as the canvas object is obtaines the to-DataUrl(type) method is called on it and a Base64 encoding of a png image which contains the canvas' contents is obtaines. This Base 64 encoded pixel data is used to create a hash.(\textcite{upi15}, p.2)
+
+This technique uses WebFonts to guarantee that the correct font will always be used when drawing to the canvas.
+
+At least the operating system, browser version, graphics card, installed fonts, sub-pixel hinting and anti-aliasing all play a part in the final fingerprint.(\textcite{upi15}, p.2)
+
+In their thesis K. Mowery and H. Shacham used two types of image comparisons: pixel-level difference and difference maps.(\textcite{mowery12}, pp.4)
+
+Pixel-level difference works by setting each pixel's color to a channel-wise difference between tow images at that location. If the color is something else thatn transparent pure black it indicates that there is a difference between the two pixels. They set the alpha value of differing pixel to 255 to render it completly opaque. (\textcite{mowery12}, pp.4)
+
+Difference maps works in a similar way, only that this method sets a pixel either black or white, depending on if they differ. If an image is purely white it indicates that they are the identical image. (\textcite{mowery12}, pp.4)
+
+
+ 
 Weaknesses: (\textcite{upi15}, p.2)
 \begin{itemize}
 	\item unable to distinguish between instances of identically configured devices
 	\item fingerprint can change across browsers
 \end{itemize}
 
--- usable by any website running js - no requirement for special access to system resources
-(\textcite{upi15}, p.2)
-
-
--- websites are written in HTML5 code
--- inside that code, there is a little piece of code that takes your browser’s fingerprint.
--- enabled by new coding features in HTML5
--- HTML5 is the coding language used to build websites -> core fundamentals of every website
--- has the element "canvas"
--- originally html <canvas> element was used to draw graphics on a web page
--- from wikipedia
-	--script draws text with the font and size of its choice and adds background colors
-	--script calls canvas API's ToDataURL method -> get canvas pixel data in dataURL format
-	--dataURL format is basically a Base64 encoded  representation of a binary pixel data
-	--script uses this hash (of text-encoded pixel data) as fingerprint
--- means:
--- html5 canvas element generates certain data (font size and active background color settings) in the visitors browser on a website
-(\textcite{pixel18})
-
-%#######################################
-(\textcite{mowery12})
-
--- based on browser font and WebGL rendering
---  a website renders text and WebGL scenes to a <canvas> element, then examines the pixels produced
---  Diﬀerent systems produce diﬀerent output, and therefore diﬀerent ﬁngerprints
-several properties:
---  It is consistent. In our experiments, we obtain pixelidentical results in independent trials from the same user. 
-* It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observed 116 unique ﬁngerprint values, for a sample entropy of 5.73 bits. This is so even though the user population in our experiments exhibits little variation in browser and OS. 
-* It is orthogonal to other ﬁngerprints. Our ﬁngerprint measures graphics driver and GPU model, which is independent of other possible ﬁngerprints discussed below. 
-* It is transparent to the user. Our tests can be performed, oﬀscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being ﬁngerprinted.
-* It is readily obtainable. Any website that runs JavaScript on the user’s browser can ﬁngerprint its rendering behavior; no access is needed besides what is provided by the usual web attacker model.
-
-* Because the ﬁngerprint is consistent, the pixmap (and therefore its hash) will be identical in multiple runs on one machine, but take on diﬀerent values depending on hardware and software conﬁguration.
-(\textcite{mowery12}, p.1)
-
-* black-box use of a fingerprint: extracts distinguishing entropy without being concerned with the implementation details
---- begin - was sie zeigen wollten
-One way to view our research is as demonstrating experimentally that Baker and Jacob were correct in expecting substantial additional leakage from GPU-based rendering. In addition, we show that there is substantial information leakage from font rendering to <canvas>.
--------
-\textbf{REFER TO CONFIG CHAPTER for infor for webgl, js, canvas, html5!!!}
-(\textcite{mowery12}, p.2)
-
--- in this testing: 
-* experiments - pure JS
-* results - data URL-encoded PNGs
-* framework compares results as images - group identical results + display pixel-level differences between these groups
-* used 2 types of image comparison:
-** pixel-level difference and difference maps
-* pixellevel difference: framework creates a new image of the appropriate size
-* then each pixel's color is set ot the channel-wise difference between 2 images at that location
-* color other thatn transparent pure black (-> no difference) - set alpha value of differing pixel to 255
-* rendering it fully opaque
-* difference maps: each pixel is set to either white or black - depending if differ
-* pure white -> identical image
-
-* not access to hundreds distinct customer-level computer systems -> used Amazon Mechanical Turk
-(\textcite{mowery12}, pp.4)
-
-* collected samples form 300 distinct members of the Mechanical Turk marketplace
-* ran 5 fp tests in the background
-* collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version
-* 23 distinct users - survey 2times -> collected resulstr for text_arial, text_webfont, text_nonsense, and webgl
-* all 23 users - each test identical to later submission
-* suggests -> fp are consistent
-* tested further -> result -> this fp is stable across identical hardware and software stacks
-* noted -> this fp are unable to distingquish between users who use the exact same hw and sw
-(\textcite{mowery12}, p.5)
-
-** arial font rendering
-* amount of idfferentiation in the ways that fonts are rendered
-* e.g. Arial - renders depending on the underlying operating system and browser
-* -> in 300 samples -> text_arial -> 50 distinct renderings
-(\textcite{mowery12}, p.6)
-
-**webfont rendering
-(\textcite{mowery12}, p.7)
-**webgl
-* graphics cards leave a detectable ﬁngerprint while rendering even the simplest scenes. 
-(\textcite{mowery12}, p.8)
-
-%entropy
-%* Overall, our ﬁngerprints do combine beneﬁcially: 
-%* among the 116 groups, our ﬁve extremely simple tests show a distribution entropy of 5.73 bits. We believe that more specialized and targeted tests could reveal even more, perhaps down to the exact installed graphics card, operating system, and browser family. 
-(\textcite{mowery12}, p.8)
 
 \textbf{Code Snippet}
 
-\subsection{JavaScript Engine fingerprinting}
+
+%entropy
+%* Overall, our ﬁngerprints do combine beneﬁcially: 
+%* among the 116 groups, our ﬁve extremely simple tests show a distribution entropy of 5.73 bits. We believe that more specialized and targeted tests could reveal even more, perhaps down to the exact installed graphics card, operating system, and browser family. (\textcite{mowery12}, p.8)
+
+ %* It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observed 116 unique ﬁngerprint values, for a sample entropy of 5.73 bits. This is so even though the user population in our experiments exhibits little variation in browser and OS. (\textcite{mowery12}, p.1)
+ 
+\subsection{XX JavaScript Engine fingerprinting}
 see BOOKMARKS!!!
 
 Relies on JS conformance tests such as the Sputnik test suite to determine a specific browser and major version number. A method demonstrated by Mulazzani et al. executed a set of conformance test cases from the Sputnik test suite in a user’s browser. They then compare the failed tests to a set of test cases that are known to fail in each version of a browser. This allow a match to be made to identify a specific browser and the major version. This can be considered more robust than rely-ing on the User-Agent string to determine the browser and version number for use in fingerprint-ing. While the user-Agent string can be modified to an arbitrary value by the user, the JavaScript engine fingerprint will be unique for each browser and cannot be ported to a different browser. Other properties of this technique are that it can be used to detect modified User-Agent strings, can be used on mobile devices, and can be used to reliably identify the browser of Tor Browser Bundle users.
@@ -504,7 +467,7 @@ READ:
 http://www.ieee-security.org/TC/W2SP/2013/papers/s2p1.pdf
 
 
-\subsection{Cross-Browser fingerprinting}
+\subsection{XX Cross-Browser fingerprinting}
 
 -- uses browser-independent features for the fingerprint
 -- can rely solely on js and use font detection as a techniue

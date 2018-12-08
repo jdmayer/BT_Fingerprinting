@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  8 DEC 2018 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  9 DEC 2018 00:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1895,12 +1895,12 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 28.
  [2
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 80.
-Package tocbasic Info: Using my definition of `\numberline' on input line 96.
-Package tocbasic Info: Using my definition of `\numberline' on input line 104.
-Package tocbasic Info: Using my definition of `\numberline' on input line 120.
-Package tocbasic Info: Using my definition of `\numberline' on input line 126.
+Package tocbasic Info: Using my definition of `\numberline' on input line 82.
+Package tocbasic Info: Using my definition of `\numberline' on input line 98.
+Package tocbasic Info: Using my definition of `\numberline' on input line 106.
+Package tocbasic Info: Using my definition of `\numberline' on input line 122.
 Package tocbasic Info: Using my definition of `\numberline' on input line 128.
+Package tocbasic Info: Using my definition of `\numberline' on input line 130.
 )
 \tf@toc=\write9
 \openout9 = `main.toc'.
@@ -2189,12 +2189,12 @@ File: images/dangerousConfigs.png Graphic file (type png)
 Package pdftex.def Info: images/dangerousConfigs.png  used on input line 214.
 (pdftex.def)             Requested size: 318.66948pt x 138.31818pt.
 [11 <./images/dangerousConfigs.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 279--284
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--284
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
@@ -2210,12 +2210,12 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--289
+Underfull \hbox (badness 10000) in paragraph at lines 290--294
 
  []
 
@@ -2231,596 +2231,52 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--294
+Underfull \hbox (badness 10000) in paragraph at lines 295--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--294
+Underfull \hbox (badness 10000) in paragraph at lines 295--299
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 319--322
+Underfull \hbox (badness 10000) in paragraph at lines 324--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--333
+Underfull \hbox (badness 10000) in paragraph at lines 335--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--343
+Underfull \hbox (badness 10000) in paragraph at lines 345--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
 [14]
-<images/FingerprintingAttributes.png, id=558, 515.42563pt x 393.97188pt>
+<images/FingerprintingAttributes.png, id=559, 515.42563pt x 393.97188pt>
 File: images/FingerprintingAttributes.png Graphic file (type png)
 <use images/FingerprintingAttributes.png>
 Package pdftex.def Info: images/FingerprintingAttributes.png  used on input lin
-e 362.
+e 367.
 (pdftex.def)             Requested size: 350.00504pt x 159.99657pt.
- [15 <./images/FingerprintingAttributes.png>]
-
-! Package inputenc Error: Unicode character Ô¨Ä (U+FB00)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 --  DiÔ¨Ä
-               erent systems produce diÔ¨Äerent output, and therefore diÔ¨Äe...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Ä (U+FB00)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 --  DiÔ¨Äerent systems produce diÔ¨Ä
-                                          erent output, and therefore diÔ¨Äe...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Ä (U+FB00)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...ce diÔ¨Äerent output, and therefore diÔ¨Ä
-                                                  erent Ô¨Ångerprints
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...rent output, and therefore diÔ¨Äerent Ô¨Å
-                                                  ngerprints
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.435 ...chanical Turk, we observed 116 unique Ô¨Å
-                                                  ngerprint values, for a sa...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 * It is orthogonal to other Ô¨Å
-                                     ngerprints. Our Ô¨Ångerprint measures g...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...rthogonal to other Ô¨Ångerprints. Our Ô¨Å
-                                                  ngerprint measures graphic...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...hich is independent of other possible Ô¨Å
-                                                  ngerprints discussed below.
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Ä (U+FB00)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437 ...he user. Our tests can be performed, oÔ¨Ä
-                                                  screen, in a fraction of a...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437 ...se, that the user‚Äôs system is being Ô¨Å
-                                                  ngerprinted.
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.438 ...avaScript on the user‚Äôs browser can Ô¨Å
-                                                  ngerprint its rendering be...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 * Because the Ô¨Å
-                       ngerprint is consistent, the pixmap (and therefore it...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Ä (U+FB00)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 ...le runs on one machine, but take on diÔ¨Ä
-                                                  erent values depending on ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 ...depending on hardware and software conÔ¨Å
-                                                  guration.
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-[16]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.469 ...ey 2times -> collected resulstr for text_
-                                                  arial, text_webfont, text_...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Improper \spacefactor.
-<recently read> \spacefactor 
-                             
-l.474 (\textcite{mowery12},
-                            p.5)
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Improper \spacefactor.
-<recently read> \spacefactor 
-                             
-l.474 (\textcite{mowery12},
-                            p.5)
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-! You can't use `\spacefactor' in math mode.
-\reserved@b ->\spacefactor 
-                           \@m 
-l.474 (\textcite{mowery12},
-                            p.5)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.475 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ë in font cmex10!
-
-Overfull \hbox (89.85689pt too wide) in paragraph at lines 466--475
-\T1/lmr/m/n/12 sul-str for text$[]\OML/lmm/m/it/12 rial; text[]ebfont; text[]on
-sense; andwebgl \OMS/lmsy/m/n/12 ^^C \OML/lmm/m/it/12 all\OT1/lmr/m/n/12 23\OML
-/lmm/m/it/12 users \OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 eachtestidenticaltolat
-ersubmission \OMS/lmsy/m/n/12 ^^C
- []
-
-
-Overfull \hbox (167.02853pt too wide) in paragraph at lines 466--475
-\OML/lmm/m/it/12 suggests\OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 > fpareconsisten
-t \OMS/lmsy/m/n/12 ^^C \OML/lmm/m/it/12 testedfurther\OMS/lmsy/m/n/12 ^^@ \OML/
-lmm/m/it/12 > result\OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 > thisfpisstableacros
-sidenticalhardwareandsoftwarestacks \OMS/lmsy/m/n/12 ^^C
- []
-
-
-Overfull \hbox (145.2956pt too wide) in paragraph at lines 466--475
-\OML/lmm/m/it/12 noted\OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 > thisfpareunableto
-distingquishbetweenuserswhousetheexactsamehwandsw\OT1/lmr/m/n/12 ([][][][][][][
-][][][]\OML/lmm/m/it/12 MoweryAndShacham\OT1/lmr/m/n/12 [[][]8[][]]\OML/lmm/m/i
-t/12 ; p:\OT1/lmr/m/n/12 5)$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.479 * -> in 300 samples -> text_
-                                  arial -> 50 distinct renderings
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Improper \spacefactor.
-<recently read> \spacefactor 
-                             
-l.480 (\textcite{mowery12},
-                            p.6)
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\blx@leavevmode ...\else \leavevmode \spacefactor 
-                                                  \blx@sf@par \fi 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Improper \spacefactor.
-<recently read> \spacefactor 
-                             
-l.480 (\textcite{mowery12},
-                            p.6)
-You can refer to \spacefactor only in horizontal mode;
-you can refer to \prevdepth only in vertical mode; and
-neither of these is meaningful inside \write. So
-I'm forgetting what you said and using zero instead.
-
-! You can't use `\spacefactor' in math mode.
-\reserved@b ->\spacefactor 
-                           \@m 
-l.480 (\textcite{mowery12},
-                            p.6)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.481 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ú in font cmex10!
-Missing character: There is no Ë in font cmex10!
-
-! Package inputenc Error: Unicode character Ô¨Å (U+FB01)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.485 * graphics cards leave a detectable Ô¨Å
-                                             ngerprint while rendering even ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-[17]) [18]
+ [15 <./images/FingerprintingAttributes.png>] [16] [17]) [18]
 \openout2 = `chapters/applicationScenario.aux'.
 
- (./chapters/applicationScenario.tex
+
+(./chapters/applicationScenario.tex
 Chapter 3.
 ) [19
 
@@ -2876,37 +2332,32 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3D48B3CB50BC1C97E64DA30F08A378BD;9147.
+(rerunfilecheck)             Checksum: DE85D4A48324136D364C46C3EEDD3B0B;9247.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48965 strings out of 492639
- 920928 string characters out of 6133087
- 1466462 words of memory out of 5000000
- 51891 multiletter control sequences out of 15000+600000
+ 48963 strings out of 492639
+ 920916 string characters out of 6133087
+ 1466497 words of memory out of 5000000
+ 51889 multiletter control sequences out of 15000+600000
  584995 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  70i,12n,106p,1103b,2547s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2018/tex
-mf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2018/texmf-dist/fonts/enc/dvip
-s/lm/lm-mathsy.enc}{c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-}{c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/texlive/2018/tex
-mf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type
-1/public/lm/lmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc1
-0.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/
-2018/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2018/texmf-dist/fon
-ts/type1/public/lm/lmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/
-lmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texl
-ive/2018/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2018/texmf-dis
-t/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
-ic/lm/lmssbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
->
-Output written on main.pdf (31 pages, 999809 bytes).
+mf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/texlive/2018/texmf-dist/fonts/type1/p
+ublic/lm/lmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pf
+b><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/201
+8/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2018/texmf-dist/fonts/
+type1/public/lm/lmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr
+i12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texliv
+e/2018/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2018/texmf-dist/
+fonts/type1/public/lm/lmssbx10.pfb>
+Output written on main.pdf (31 pages, 982415 bytes).
 PDF statistics:
- 785 PDF objects out of 1000 (max. 8388607)
- 695 compressed objects within 7 object streams
+ 771 PDF objects out of 1000 (max. 8388607)
+ 684 compressed objects within 7 object streams
  114 named destinations out of 1000 (max. 500000)
  685 words of extra memory for PDF output out of 10000 (max. 10000000)
 

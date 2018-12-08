@@ -310,7 +310,7 @@
       \verb https://hovav.net/ucsd/dist/canvas.pdf
       \endverb
     \endentry
-    \entry{mulazzani13}{report}{}
+    \entry{mulazzani13}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=8acfb52c4d98f4d576286d20617c60f3}{%
            family={Mulazzani},
@@ -364,7 +364,6 @@
       \field{booktitle}{Web 2.0 Workshop on Security and Privacy (W2SP)}
       \field{langid}{english}
       \field{title}{Fast and reliable browser identification with javascript engine fingerprinting}
-      \field{type}{techreport}
       \field{year}{2013}
       \verb{urlraw}
       \verb http://www.ieee-security.org/TC/W2SP/2013/papers/s2p1.pdf
