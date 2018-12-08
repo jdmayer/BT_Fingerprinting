@@ -78,8 +78,7 @@
 	url={https://www.howtogeek.com/114937/htg-explains-whats-a-browser-user-agent/},
 	hyphenation={english}
 }
-
-@techreport{mulazzani13,
+@inproceedings{mulazzani13,
   title={Fast and reliable browser identification with javascript engine fingerprinting},
   author={M. Mulazzani and P. Reschl and M. Huber and M. Leithner and S. Schrittwieser and E. Weippl and FC Wien},
   booktitle={Web 2.0 Workshop on Security and Privacy (W2SP)},
@@ -148,6 +147,16 @@
 	booktitle={International Symposium on Privacy Enhancing Technologies Symposium},
 	year={2010},
 	organization={Springer}
+}
+
+
+@inproceedings{yen09,
+  title={Browser fingerprinting from coarse traffic summaries: Techniques and implications},
+  author={Yen, Ting-Fang and Huang, Xin and Monrose, Fabian and Reiter, Michael K},
+  booktitle={International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment},
+  url={https://www.cs.unc.edu/~reiter/papers/2009/DIMVA.pdf},
+  year={2009},
+  organization={Springer}
 }
 
 %---------------------------------

@@ -364,7 +364,9 @@ The following graph outlines techniques outlines in this thesis, excluding accel
 	\label{BrowserSpecification}
 \end{figure}
 \subsection{Browser specific fingerprinting}
-
+%
+% more info!
+%
 * Large scale browser fingerprinting study conducted by P. Eckersley in the Panopticlick project
 * has shown 94,2\% of the user with flash or java could be distringuided (without cookies)
 * Browser-dependent features (flash/java) to retrieve information on installed fonts, plug-ins, browser platform, screen resolution
@@ -425,54 +427,68 @@ Weaknesses: (\textcite{upi15}, p.2)
 %#######################################
 (\textcite{mowery12})
 
-%-- based on browser font and WebGL rendering
-%--  a website renders text and WebGL scenes to a <canvas> element, then examines the pixels produced
-%--  Diﬀerent systems produce diﬀerent output, and therefore diﬀerent ﬁngerprints
-%several properties:
-%--  It is consistent. In our experiments, we obtain pixelidentical results in independent trials from the same user. 
-%-- It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observed 116 unique ﬁngerprint values, for a sample entropy of 5.73 bits. This is so even though the user population in our experiments exhibits little variation in browser and OS. 
-%-- It is orthogonal to other ﬁngerprints. Our ﬁngerprint measures graphics driver and GPU model, which is independent of other possible ﬁngerprints discussed below. 
-%-- It is transparent to the user. Our tests can be performed, oﬀscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being ﬁngerprinted.
-%--It is readily obtainable. Any website that runs JavaScript on the user’s browser can ﬁngerprint its rendering behavior; no access is needed besides what is provided by the usual web attacker model.
-%
-%-- Because the ﬁngerprint is consistent, the pixmap (and therefore its hash) will be identical in multiple runs on one machine, but take on diﬀerent values depending on hardware and software conﬁguration.
-%(\textcite{mowery12}, p.1)
-%
-%-- black-box use of a fingerprint: extracts distinguishing entropy without being concerned with the implementation details
-%--- begin - was sie zeigen wollten
-%One way to view our research is as demonstrating experimentally that Baker and Jacob were correct in expecting substantial additional leakage from GPU-based rendering. In addition, we show that there is substantial information leakage from font rendering to <canvas>.
-%-------
-%\textbf{REFER TO CONFIG CHAPTER for infor for webgl, js, canvas, html5!!!}
-%(\textcite{mowery12}, p.2)
-%
-%Experiments are served as pure JavaScript, and results are collected as data URL-encoded PNGs. Our framework then compares these results as images, allowing it to group identical results and display pixel-level diﬀerences between these groups. 
-%We use two types of image comparison: pixel-level difference and diﬀerence maps. When constructing a pixellevel diﬀerence, the framework ﬁrst creates a new image of the appropriate size. Then, each pixel’s color is set to the channel-wise diﬀerence between the two images at that location. If this color is anything other than transparent pure black (which indicates that there is no diﬀerence between the two images at this pixel), we set the alpha value of the diﬀering pixel to 255, rendering it fully opaque. For diﬀerence maps, each pixel in the map is set to either white or black, depending on whether the original images diﬀer. A purely white diﬀerence map indicates identical images, while perfectly black indicates diﬀerence in every pixel. 
-%Unfortunately, we do not have ready access to several hundred distinct consumer-level computer systems. To collect enough data to demonstrate the applicability of our ﬁngerprints, we turned to Amazon Mechanical Turk. We modiﬁed our framework to deliver multiple tests on a single page, along with extended instructions for the human workers on Mechanical Turk. The next section explains our process and results more thoroughly.
-%(\textcite{mowery12}, pp.4)
-%
-%We collected samples from 300 distinct members of the Mechcanical Turk marketplace, paying each a small sum to report their graphics card and graphics driver version. Meanwhile, our ﬁve ﬁngerprinting tests ran in the background. We also collected various metadata, such as the browser’s user agent string and the WebGL-reported renderer, vendor, and version.
-%During the course of data collection, twenty-three distinct users performed our survey twice. Due to our setup, we collected results for text_arial, text_webfont, text_nonsense, and webgl when they ﬁrst performed the survey. However, for all twenty-three users, each of these tests were identical to their later submissions. This suggests that our ﬁngerprints are consistent — for a given browser/OS/graphics card platform, performing the same test will always give identical results. To further test this hypothesis, we ran all of our tests on 5 identically-provisioned lab computers, running Firefox 11 on Windows XP. As expected, all ﬁve computers produced identical results on each test, providing further evidence that our ﬁngerprints are stable across identical hardware and software stacks. Additionally, we note that our ﬁngerprints are unable to distinguish between users who use the exact same hardware and software. 
-%(\textcite{mowery12}, p.5)
-%
-%arial font rendering
-%n general, we ﬁnd a surprising amount of diﬀerentiation in the ways that fonts are rendered. Even Arial, a font which is 30 years old, renders in new and interesting ways depending on the underlying operating system and browser. In the 300 samples collected for the text_arial test, there are 50 distinct renderings.
-%(\textcite{mowery12}, p.6)
-%
-%webfont rendering
-%(\textcite{mowery12}, p.7)
-%
-%
-%webgl
-% Our experiments show that graphics cards leave a detectable ﬁngerprint while rendering even the simplest scenes. 
-% combined:
-% Overall, our ﬁngerprints do combine beneﬁcially: among the 116 groups, our ﬁve extremely simple tests show a distribution entropy of 5.73 bits. We believe that more specialized and targeted tests could reveal even more, perhaps down to the exact installed graphics card, operating system, and browser family. 
-%
-%(\textcite{mowery12}, p.8)
+-- based on browser font and WebGL rendering
+--  a website renders text and WebGL scenes to a <canvas> element, then examines the pixels produced
+--  Diﬀerent systems produce diﬀerent output, and therefore diﬀerent ﬁngerprints
+several properties:
+--  It is consistent. In our experiments, we obtain pixelidentical results in independent trials from the same user. 
+* It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observed 116 unique ﬁngerprint values, for a sample entropy of 5.73 bits. This is so even though the user population in our experiments exhibits little variation in browser and OS. 
+* It is orthogonal to other ﬁngerprints. Our ﬁngerprint measures graphics driver and GPU model, which is independent of other possible ﬁngerprints discussed below. 
+* It is transparent to the user. Our tests can be performed, oﬀscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being ﬁngerprinted.
+* It is readily obtainable. Any website that runs JavaScript on the user’s browser can ﬁngerprint its rendering behavior; no access is needed besides what is provided by the usual web attacker model.
 
+* Because the ﬁngerprint is consistent, the pixmap (and therefore its hash) will be identical in multiple runs on one machine, but take on diﬀerent values depending on hardware and software conﬁguration.
+(\textcite{mowery12}, p.1)
 
-%##################
-did different tests:
-e.g. Arial renders in x different ways -> way to distinguish
+* black-box use of a fingerprint: extracts distinguishing entropy without being concerned with the implementation details
+--- begin - was sie zeigen wollten
+One way to view our research is as demonstrating experimentally that Baker and Jacob were correct in expecting substantial additional leakage from GPU-based rendering. In addition, we show that there is substantial information leakage from font rendering to <canvas>.
+-------
+\textbf{REFER TO CONFIG CHAPTER for infor for webgl, js, canvas, html5!!!}
+(\textcite{mowery12}, p.2)
+
+-- in this testing: 
+* experiments - pure JS
+* results - data URL-encoded PNGs
+* framework compares results as images - group identical results + display pixel-level differences between these groups
+* used 2 types of image comparison:
+** pixel-level difference and difference maps
+* pixellevel difference: framework creates a new image of the appropriate size
+* then each pixel's color is set ot the channel-wise difference between 2 images at that location
+* color other thatn transparent pure black (-> no difference) - set alpha value of differing pixel to 255
+* rendering it fully opaque
+* difference maps: each pixel is set to either white or black - depending if differ
+* pure white -> identical image
+
+* not access to hundreds distinct customer-level computer systems -> used Amazon Mechanical Turk
+(\textcite{mowery12}, pp.4)
+
+* collected samples form 300 distinct members of the Mechanical Turk marketplace
+* ran 5 fp tests in the background
+* collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version
+* 23 distinct users - survey 2times -> collected resulstr for text_arial, text_webfont, text_nonsense, and webgl
+* all 23 users - each test identical to later submission
+* suggests -> fp are consistent
+* tested further -> result -> this fp is stable across identical hardware and software stacks
+* noted -> this fp are unable to distingquish between users who use the exact same hw and sw
+(\textcite{mowery12}, p.5)
+
+** arial font rendering
+* amount of idfferentiation in the ways that fonts are rendered
+* e.g. Arial - renders depending on the underlying operating system and browser
+* -> in 300 samples -> text_arial -> 50 distinct renderings
+(\textcite{mowery12}, p.6)
+
+**webfont rendering
+(\textcite{mowery12}, p.7)
+**webgl
+* graphics cards leave a detectable ﬁngerprint while rendering even the simplest scenes. 
+(\textcite{mowery12}, p.8)
+
+%entropy
+%* Overall, our ﬁngerprints do combine beneﬁcially: 
+%* among the 116 groups, our ﬁve extremely simple tests show a distribution entropy of 5.73 bits. We believe that more specialized and targeted tests could reveal even more, perhaps down to the exact installed graphics card, operating system, and browser family. 
+(\textcite{mowery12}, p.8)
 
 \textbf{Code Snippet}
 
@@ -483,6 +499,9 @@ Relies on JS conformance tests such as the Sputnik test suite to determine a spe
  (\textcite{upi15}, p.2)
 
 \textbf{Code Snippet}
+
+READ:
+http://www.ieee-security.org/TC/W2SP/2013/papers/s2p1.pdf
 
 
 \subsection{Cross-Browser fingerprinting}
@@ -520,10 +539,3 @@ A technique developed by Yinzhi Cao
 made it!!
 USE: (\textcite{Cao17})
 \textbf{Code Snippet}
-
-%\subsection{Accelerometer fingerprinting}
-%Mobile browsers -> harder to fingerprint than desktop browsers, due to the fact that mobile browsers are more uniform and they do no have the plug-ins that are available on desktop sys-tems. A recent study by Bojinov et al. showed a technique of generating a unique fingerprint by accessing a sensor that is commonly found on mobile devices. This technique allows a fingerprint-ing script to avoid using traditional hardware identifiers such as the IMEI and UDID. The study showed that the accelerometer on mobile devices was exposed without user Notification by iOS and Android browsers through JS. Imprecisions in accelerometer calibration during manufacturing result in device specific measured values. The method employed by him involved repeatedly query-ing the accelerometer and then estimating the calibration errors in each of the 3 dimensions to generate a unique fingerprint. This form of fp can be classified as a subcategory of cross-browser fingerprinting. This is due to the fact that the generated fingerprint does not vary across browsers. Another property of this technique is that it may be exercised without user cooperation. However, a factor in limiting its usefulness is that the device must be left facing up and down to gather read-ings to generate the fingerprint.
-% (\textcite{upi15}, p.3f)
-%
-%get rid of it?
-
