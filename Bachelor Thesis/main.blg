@@ -1,20 +1,20 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[36] biber-MSWIN32:313> INFO - === 
-[72] Biber.pm:371> INFO - Reading 'main.bcf'
-[192] Biber.pm:857> INFO - Found 20 citekeys in bib section 0
-[210] Biber.pm:3976> INFO - Processing section 0
-[230] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
-[239] bibtex.pm:1500> INFO - LaTeX decoding ...
-[275] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
-[277] Utils.pm:193> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Mayer09' and 'mayer09' in file 'references.bib'
-[362] Utils.pm:193> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Cao17' and 'cao17' in file 'references.bib'
-[368] Utils.pm:193> WARN - I didn't find a database entry for 'Mayer09' (section 0)
-[368] Utils.pm:193> WARN - I didn't find a database entry for 'Cao17' (section 0)
-[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[394] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[394] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[421] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[429] bbl.pm:720> INFO - Output to main.bbl
-[434] Biber.pm:110> INFO - WARNINGS: 4
+[50] biber-MSWIN32:313> INFO - === 
+[109] Biber.pm:371> INFO - Reading 'main.bcf'
+[240] Biber.pm:857> INFO - Found 20 citekeys in bib section 0
+[262] Biber.pm:3976> INFO - Processing section 0
+[283] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[298] bibtex.pm:1500> INFO - LaTeX decoding ...
+[335] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[338] Utils.pm:193> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Mayer09' and 'mayer09' in file 'references.bib'
+[440] Utils.pm:193> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Cao17' and 'cao17' in file 'references.bib'
+[449] Utils.pm:193> WARN - I didn't find a database entry for 'Mayer09' (section 0)
+[449] Utils.pm:193> WARN - I didn't find a database entry for 'Cao17' (section 0)
+[478] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[478] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[478] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[479] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[512] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[520] bbl.pm:720> INFO - Output to main.bbl
+[528] Biber.pm:110> INFO - WARNINGS: 4

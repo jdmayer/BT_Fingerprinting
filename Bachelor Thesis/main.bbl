@@ -66,7 +66,11 @@
       \field{langid}{english}
       \field{title}{Browser fingerprints: the basics and protection options}
       \field{type}{techreport}
+      \field{urlday}{8}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
       \field{year}{2017}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
       \endverb
