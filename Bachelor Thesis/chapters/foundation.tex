@@ -404,7 +404,10 @@ Weaknesses: (\textcite{upi15}, p.2)
 * fp easily changed through upgrades, new installed features or external change of the system 
 * -> heuristics which can be used to adapt the fingerprint.  (\textcite{upi15}, p.2)
 
-
+There are 17 features presented in the Table I of the AmIUnique paper,
+and we have all of them for our single-browser fingerprinting.
+(\textcite{Cao17}, p.2)
+--> look AmIUnique
 
 \subsection{Canvas fingerprinting - REFER to config chapter}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
@@ -523,6 +526,10 @@ Implementation Decision Tree
 (\textcite{mulazzani13}, p.4)
 
 \subsection{XX Cross-Browser fingerprinting}
+
+different kinds of cross-browser finger printing - first by boda - using ip - not so good
+in 2017 cao proposes- better option
+
 -- uses browser-independent features for the fingerprint
 -- can rely solely on js and use font detection as a techniue
 -- since a js engine is available and enabled by default on all modern browsers 
@@ -601,8 +608,81 @@ Finally, we have proposed some improvements for our method, and defined certain
 directions for future experiments; an explicitly cross-browser experiment would
 provide a high-precision dataset. 
 (\textcite{boda11}, p.16)
+unavailable behind an anonymous network or a proxy (\textcite{Cao17}, p.1)
 
 
 
-(\textcite{Cao17})
+-- based on many novel OS and hardware level features, e.g.,
+these from graphics card, CPU, audio stack, and installed
+writing scripts. Specifically, because many of such OS and
+hardware level functions are exposed to JavaScript via browser
+APIs, we can extract features when asking the browser to perform
+certain tasks through these APIs. The extracted features
+can be used for both single- and cross-browser fingerprinting.
+(\textcite{Cao17}, p.1)
 
+-- use many novel OS and hardware features, especially computer graphics ones
+-- successfully fingerprint 99.24\% of users
+-- 83.24\% uniqueness with 91.44\% cross-browser stability
+-- Boda excluding IP address only have 68.98\% uniqueness with 84.64\% cross-browser stability.
+--  current measurement of screen resolution, e.g.AmIUnique, Panopticlick, Boda - unstable
+-- resolution changes in Firefox and IE when zooms
+-- zoom level into consideration, normalize the width and height in screen resolution
+-- DataURL and JPEG formats are unstable across different browsers, because these formats are with loss and implemented differently in multiple browsers and the server side as well.
+-- need to adopt lossless formats for server-client communications in cross-browser fingerprinting.
+-- use PNG, a lossless format, for cross-browser fp
+-- Prior Fingerprintable Features
+-- 4 features for cross-browser fp (screen res., color depth, list of fonts, platform)
+-- nr of CPU virtual cores
+-- screen resolution (in js simply "screen") - firefox/ie - change resolution value according to zoom level
+-- use zoom levels, adjust resolution, screen ration also important
+(\textcite{Cao17}, p.2)
+
+-- nr of CPU virtual cores - obtained by browser feature "hardwareConcurrency"
+-- audiocontext - provides bundle of audio signal processing functionalities from signal generation to signal
+--peak values and their corresponding frequencies are relatively stable
+across browsers. 
+-- create a list of bins with small steps on both the frequency and value axes, and map the peak
+frequencies and values to the corresponding bins.
+-- If one bin contains a frequency or value, we mark the bin as one and
+otherwise zero: such list of bins serve as our cross-browser feature.
+-- List of Fonts width and height of a certain string is measured to determine font type
+-- Line, curve, and anti-aliasing. Line and curve are 2D features
+supported by both Canvas (2D part) and WebGL.
+--Vertex shader. A vertex shader, rendered by GPU and the
+driver, converts each vertex in a 3D model to its coordinate in
+a 2D clip-space.
+-- Fragment shader. A fragment shader, rendered by GPU and
+the driver as well, processes a fragment, such as a triangle
+outputted by the rasterization, into a set of colors and a single
+depth value.
+--- MANY MORE - not write down all, als need to cut short - max. 1page per technique!!!!
+(\textcite{Cao17}, p.3)
+
+HOW it works:
+-- task manager at server side - send various randering tasks
+-- e.g. drawing curves, lines to client side
+-- rendering task - also obtaining OS and hw level info
+-- client-side browser renders and produces results (images, sound waves)
+-- results convert into hashes -> to send to server
+-- meantime - browser collect browser-specific info (for fp composition)
+-- fp is generated from list of hashes from client side and a mask
+-- that is a list of 1 or 0 corresponding to the hash list
+-- perform "and" operation between list of hashes and mask -> create another hash as fp
+-- mask: if browser not support anti-aliasing - all bit in mask involve anti-alisaing -> 0
+-- second part of mask -> each browser pair - different mask
+(\textcite{Cao17}, p.4)
+
+-- add rendering task? p-5
+
+FP composition
+-- how to make fp on server side from client-side hashes
+-- computed with -and- operation
+-- generation of mask for every two browsers is training-based approach
+(\textcite{Cao17}, p.7)
+
+-- go through results?
+
+-- tor browser -> many features unavailable
+-- disables canvas by default -> not fingerprintables if disabled?
+(\textcite{Cao17}, p.13)
