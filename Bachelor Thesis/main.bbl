@@ -106,6 +106,52 @@
       \verb https://blog.malwarebytes.com/security-world/technology/2017/08/explained-user-agent/
       \endverb
     \endentry
+    \entry{boda11}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=cdcbba798fea924e0e603f6733572772}{%
+           family={Boda},
+           familyi={B\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d8c3c1628156fb22b5fb23d41b812d70}{%
+           family={F{ö}ldes},
+           familyi={F\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=39e1cacf5ac5c60c38e48984ca495ad6}{%
+           family={Guly{á}s},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4e6fe34db5207fed02c0618c480f9e63}{%
+           family={Imre},
+           familyi={I\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b178acad5896d2ae73860ad592912651}
+      \strng{fullhash}{929dc82268e3f8ec3cc22ea29178c541}
+      \strng{bibnamehash}{b178acad5896d2ae73860ad592912651}
+      \strng{authorbibnamehash}{b178acad5896d2ae73860ad592912651}
+      \strng{authornamehash}{b178acad5896d2ae73860ad592912651}
+      \strng{authorfullhash}{929dc82268e3f8ec3cc22ea29178c541}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Nordic Conference on Secure IT Systems}
+      \field{title}{User tracking on the web via cross-browser fingerprinting}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://pet-portal.eu/files/articles/2011/fingerprinting/cross-browser_fingerprinting.pdf
+      \endverb
+      \verb{url}
+      \verb https://pet-portal.eu/files/articles/2011/fingerprinting/cross-browser_fingerprinting.pdf
+      \endverb
+    \endentry
     \entry{doty18}{report}{}
       \name{author}{1}{}{%
         {{hash=392b87a9f00d946f4a5fc375dfcd9422}{%

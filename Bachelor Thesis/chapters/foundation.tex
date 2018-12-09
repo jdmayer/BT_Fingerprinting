@@ -241,7 +241,7 @@ The disadvantage of disabling JavaScript is that websites won’t always functio
 Browser fingerprinting, while a powerful tool, is often part of a larger suite of tracking techniques. Fingerprinting operates through the js engine as part of an analytics program. Any website that runs the fingerprinting analytics script will be able to track users through a shared data store.
 (\textcite{havens16}, p.8)
 
-#####
+
 Javascript has been standardized as ECMAScript [8],
 and all major browsers implement it in order to allow
 client-side scripting and dynamic websites. Traditionally,
@@ -549,8 +549,60 @@ A technique developed by Yinzhi Cao
 **	Rely on corresponding OS and hardware functionalities
 **	99,24\%  successfully identify (\textcite{Cao17})
 
+-- first by boda
+-- then extended by cao
+
+
+(\textcite{boda11})
+-- a part of the ip address, availability of a specific font set, time zone, screen resolution
+-- uniquely identify most users of the 5 most popular web browsers
+-- user agent strings - effective but fragile identifiers of browser instance
+(\textcite{boda11}, p.1)
+
+-- browser-independent features as a basis of identification
+-- eg. networking information (ip address, hostname, tcp port number)
+-- eg. application layer information (uas in http header, name/version of os, extemsions, etc.)
+-- eg. info gained by querying - over js - list of fonts, plugins(+version), screen resolution, time zone
+(\textcite{boda11}, p.2)
+
+--create a unique identifier from specific browser data using JavaScript and server-side algorithms
+(\textcite{boda11}, p.4)
+
+-- crossdomain tracking is achieved by using only the first two octets of the IP address, which
+remains constant in many cases even if the IP address of the client changes dynamically
+-- may change after switching to a different ISP or another service
+-- use locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version
+(\textcite{boda11}, p.5)
+
+-- font lists provide a solid base for unique identification under the Windows and Mac OSes
+(\textcite{boda11}, p.8)
+
+ The latter is true largely due to the fact that the list
+of fonts is easily accessible through the JavaScript API. Therefore, if resistance of
+identification is to be secured with the web browsers of today, the only option seems
+to be to disable such scripts. That way, one’s anonymity set can be greatly increased.
+Users of computers in a set of identically configured machines are likely to have
+the best odds against our fingerprinting algorithm. If such computers are centrally
+managed, it is unlikely that any of them has a unique feature based on which it could
+be identified. Therefore, passive methods are insufficient in such a context.
+Our research has some important implications regarding the user’s behaviour. We
+have provided recommendations about browser types and versions that are likely
+indistinguishable from other such browsers. Furthermore, it can be seen that
+resistance to identification is easier achieved with popular system settings. It must be
+noted, however, that these measures are not necessarily easy to carry out without
+causing inconvenience to the user.
+We have also given some guidelines for developers to make their browsers resist
+our fingerprinting algorithm. In particular, the verbosity of the UAS and the plugin
+versions should be decreased, and a standard ‘substitute font set’ – preferably
+supported by all browsers – should be introduced. Furthermore, users should be able
+to set fake system properties in the browser in order to hide their real operating
+system, time zone and screen resolution.
+Finally, we have proposed some improvements for our method, and defined certain
+directions for future experiments; an explicitly cross-browser experiment would
+provide a high-precision dataset. 
+(\textcite{boda11}, p.16)
+
 
 
 (\textcite{Cao17})
-(\textcite{boda11})
-\textbf{Code Snippet}
+
