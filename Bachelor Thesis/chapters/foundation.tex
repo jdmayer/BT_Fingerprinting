@@ -228,6 +228,7 @@ The information that browser fingerprinting reveals typically includes a mixture
 
 Js – the language which never works – for the developer
 
+-- what is sputnik and test 262 ()
 
 JS gives access to many browser-populated features like the plugins installed on the user’s device (\textcite{amiunique})
 
@@ -335,7 +336,6 @@ Benchmark tests – evaluate how the browser’s js engine performs against a li
 
 \newpage
 \section{Web browser fingerprinting methods}\label{sec:Methods}
-
 \subsection{Active fingerprinting}
 The active fingerprinting method needs to actively query information about the client that isn't automatically provided by the browser. (\textcite{web17}) To obtain additional characteristics the site needs to run a JavaScript code or use plug-ins like Adobe Flash which extend the browsers functionality. (\textcite{web17})((\textcite{doty18}, p.6)\\\\
 Some of the additional characteristics which can be retrieved with this method are:
@@ -442,8 +442,14 @@ Difference maps works in a similar way, only that this method sets a pixel eithe
 
 %When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
  
-\subsection{XX JavaScript Engine fingerprinting}
-see BOOKMARKS!!!
+\subsection{JavaScript Engine fingerprinting}
+-- used to identify user and not just browser??
+
+used by mulazzani for browser identification
+-- max. 1/2 pages
+
+rest - how it was extrendet
+
 
 -- Relies on JS conformance tests such as the Sputnik test suite to determine a specific browser and major version number.
 -- A method demonstrated by Mulazzani et al. executed a set of conformance test cases from the Sputnik test suite in a user’s browser
@@ -452,7 +458,7 @@ see BOOKMARKS!!!
 -- can be considered more robust than rely-ing on the User-Agent string (to known browser + version nr) -- user agent string - can be modified
 -- js engine fp -  will be unique for each browser and cannot be ported to a different browser. 
 -- used to detect modified User-Agent strings, can be used on mobile devices, and can be used to reliably identify the browser of Tor Browser Bundle users.
- (\textcite{upi15}, p.2)
+(\textcite{upi15}, p.2)
 
 
 -- developed 2013 by Mulazzani et al.
@@ -502,62 +508,21 @@ Implementation Minimal Fingerprint
 -- calculate for each failed test case - nr of browsers that fail
 -- select test case where only 1 browser failed - remove browser from set - uniquely identifies
 -- redone for each browser - until unique FS for every browser or no test case where only 1 browser failed found
--- 
-
-
- In the latter case, we
-change our selection and choose a different test case until
-either a minimal test set is found or no solution can be
-found. An alternative approach would be to use some form of
-machine learning to find minimal fingerprints, but our results
-indicate that this is not (yet) necessary and our simplistic,
-greedy algorithm works well in practice. With the resulting
-set of fingerprints it becomes possible to assess whether a
-browser is what it claims to be: if all the tests of the minimal
-fingerprint for that browser fail, and no minimal fingerprints
-for the other browsers from the test set do, the browser is
-uniquely identifiable with respect to the test set. To make
-the algorithm and, in consequence, browser fingerprinting
-more resilient against errors, multiple tests could be used per
-browser (in case the user’s browser is not part of the test set
-and the UserAgent string is not used to check this beforehand).
-However, a basic assumption here is that the browser is
-included in the test set during fingerprint calculation in the
-first place. If the browser is not in the test set, false positives
-could occur if the engine is similar to one of the fingerprints
-(with respect to the minimal fingerprint). It is also possible
-to dynamically extend the test set: If a new UserAgent string
-is encountered that was not part of the test set, fingerprints
-could be recalculated on the fly to determine whether the
-UserAgent correctly identifies the browser: Instead of using
-the precalculated fingerprints, the browser is added to the test
-set, fingerprints are recalculated, and the identification process
-starts again with new minimal fingerprints for all browsers
-in the test set. This would allow relative fingerprinting over
-time and could be used to verify only the, e.g., five most
-popular browser versions for the previous month or day.
-The minimal set of failed test cases for the four common
-browsers from 2012 shown in Table I to illustrate minimal
-fingerprints. The browsers in the test set are Firefox 12,
-Opera 11.64, Internet Explorer 9 and Chrome 20, with a
-resulting minimal fingerprint consisting of only 4 tests. With
-the algorithm explained above, we calculate the minimal
-fingerprints as follows: For every test case, the uniqueness in
-the test set is calculated. If a test fails for a specific browser,
-it receives a check mark in the table, and if the browser
-does not fail that test, it is crossed out. While this seems
-counter-intuitive, the check mark highlights the potential to
-use this particular test case for fingerprinting, as the number
-of failed test cases is much smaller than the number of
-tests passed. One of the test cases with u = 1 is selected
-at random, in the example this is 13.0-13-s. This test then
-becomes the minimal fingerprint for Internet Explorer 9, and
+-- if no unique fp for browser -> change selection, until minimal test set or no solution found
 (\textcite{mulazzani13}, p.3)
 
-
+Implementation Decision Tree
+-- multiple test rounds
+-- every test - down 1 level
+-- leaf node -> browser
+-- inner nodes -> tests
+-- edges -> success/fail
+-- no need for unique fp -> tests to split browsers taht fail
+-- can reduce total number of executed tests
+-- good for large test sets
+(\textcite{mulazzani13}, p.4)
 
 \subsection{XX Cross-Browser fingerprinting}
-
 -- uses browser-independent features for the fingerprint
 -- can rely solely on js and use font detection as a techniue
 -- since a js engine is available and enabled by default on all modern browsers 
@@ -570,7 +535,6 @@ Weaknesses: (\textcite{upi15}, pp.2)
 	\item fingerprint can change????
 \end{itemize} 
  
- --> springer verlag:: !!!  User Tracking on the Web via Cross-Browser Fingerprinting
 
 A technique developed by Yinzhi Cao
 **	New method, created by Yinzhi Cao
@@ -583,11 +547,10 @@ A technique developed by Yinzhi Cao
 **	(\textcite{nordrum17})
 
 **	Rely on corresponding OS and hardware functionalities
-**	99,24\%  successfully identify
-**	%http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf
+**	99,24\%  successfully identify (\textcite{Cao17})
 
 
-!!!!!
-made it!!
-USE: (\textcite{Cao17})
+
+(\textcite{Cao17})
+(\textcite{boda11})
 \textbf{Code Snippet}

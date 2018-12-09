@@ -42,8 +42,9 @@
 
 @thesis{cao17,
 	author={Y. Cao and S. Li and E. Wijmans},
-	title={Cross-)Browser Fingerprinting via OS and Hardware Level Features},
+	title={(Cross-)Browser Fingerprinting via OS and Hardware Level Features},
 	year={2017},
+	url={http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf},
 	hyphenation={english}
 }
 
@@ -152,10 +153,19 @@
 
 @inproceedings{yen09,
   title={Browser fingerprinting from coarse traffic summaries: Techniques and implications},
-  author={Yen, Ting-Fang and Huang, Xin and Monrose, Fabian and Reiter, Michael K},
+  author={T. Yen and X. Huang and F. Monrose and M. Reiter},
   booktitle={International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment},
   url={https://www.cs.unc.edu/~reiter/papers/2009/DIMVA.pdf},
   year={2009},
+  organization={Springer}
+}
+
+@inproceedings{boda11,
+  title={User tracking on the web via cross-browser fingerprinting},
+  author={K. Boda and A. F{\"o}ldes and G. Guly{\'a}s and S. Imre},
+  booktitle={Nordic Conference on Secure IT Systems},
+  url={https://pet-portal.eu/files/articles/2011/fingerprinting/cross-browser_fingerprinting.pdf},
+  year={2011},
   organization={Springer}
 }
 
