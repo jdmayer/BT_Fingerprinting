@@ -240,6 +240,22 @@ The disadvantage of disabling JavaScript is that websites won’t always functio
 Browser fingerprinting, while a powerful tool, is often part of a larger suite of tracking techniques. Fingerprinting operates through the js engine as part of an analytics program. Any website that runs the fingerprinting analytics script will be able to track users through a shared data store.
 (\textcite{havens16}, p.8)
 
+#####
+Javascript has been standardized as ECMAScript [8],
+and all major browsers implement it in order to allow
+client-side scripting and dynamic websites. Traditionally,
+Web developers use the UserAgent string or the navigator
+object (i.e., navigator.UserAgent) to identify the client’s
+Web browser, and load corresponding features or CSS files.
+The UserAgent string is defined in RFC2616 [11] as a
+sequence of product tokens and identifies the software as
+well as significant subparts. Tokens are listed in order of their
+significance by convention. The navigator object contains the
+same string as the UserAgent string. However, both are by
+no means security features, and can be set arbitrarily by the
+user.
+(\textcite{mulazzani13}, p.2)\\
+
 SEE NIKIFORAKIS!!!!
 
 
@@ -439,8 +455,106 @@ see BOOKMARKS!!!
  (\textcite{upi15}, p.2)
 
 
-
+-- developed 2013 by Mulazzani et al.
+-- js - used by a very high percentage of websites
+-- enabled by default on all major browsers -- still is??
+-- other methods for server-side browser identification
+-- this approach - more robust (user agent string can be changed)
+-- js fp is authentic for each browser, not easily ported to a different browser
 (\textcite{mulazzani13}, p.1)
+
+-- runtime - more than three orders of magnitude faster
+--  having a comparable overhead for creating and collecting fingerprint samples.
+-- implemented in just a few hundred lines of JS
+-- undetectable for the user - CPU not stalled noticeably
+(\textcite{mulazzani13}, p.2)
+
+-- JS conformance tests - Sputnik or test262 -> thousands of independent test cases
+-- not all necessary for browser identification
+-- a single test case may be sufficient
+-- e.g. to distinguish 2 specific browsers 
+-- only one needs to fail a particular test case, which the other doesnt
+-- e.g.  Opera 11.64 only fails in 4 out of more than 10,000
+tests cases from mid-January, while the most recent version
+of Internet Explorer 9 at that time failed in almost 400 test
+cases. -> only 1 testcase needed if only those two browsers are in the test set
+-- only 1 test of these needed -> fraction of second to execute
+
+-- first each browser is testsd with test 262
+-- results - compared and minimal fp calculated for each browser
+-- (in relation to other browsers in the test set)
+-- use case for minimal fp is a web server that wants to assess - UAS from client is forged
+-- with respect to the other browsers in the test set
+-- web server can verify the browser
+-- fp for each browser - as small as possible
+-- another use case: calculate a decision tree
+-- other than above: binary decision tree - iteratively identify browser in multiple rounds
+-- larger test set
+(\textcite{mulazzani13}, p.3)
+
+
+Implementation Minimal Fingerprint
+-- use greedy algorithm to find a possibly minimal fp for given set
+-- start test262 for each browser in test set
+-- calculate browsers which fail each test case
+-- js engine -> a static part of browser - only once per browser
+-- compare results 
+-- calculate for each failed test case - nr of browsers that fail
+-- select test case where only 1 browser failed - remove browser from set - uniquely identifies
+-- redone for each browser - until unique FS for every browser or no test case where only 1 browser failed found
+-- 
+
+
+ In the latter case, we
+change our selection and choose a different test case until
+either a minimal test set is found or no solution can be
+found. An alternative approach would be to use some form of
+machine learning to find minimal fingerprints, but our results
+indicate that this is not (yet) necessary and our simplistic,
+greedy algorithm works well in practice. With the resulting
+set of fingerprints it becomes possible to assess whether a
+browser is what it claims to be: if all the tests of the minimal
+fingerprint for that browser fail, and no minimal fingerprints
+for the other browsers from the test set do, the browser is
+uniquely identifiable with respect to the test set. To make
+the algorithm and, in consequence, browser fingerprinting
+more resilient against errors, multiple tests could be used per
+browser (in case the user’s browser is not part of the test set
+and the UserAgent string is not used to check this beforehand).
+However, a basic assumption here is that the browser is
+included in the test set during fingerprint calculation in the
+first place. If the browser is not in the test set, false positives
+could occur if the engine is similar to one of the fingerprints
+(with respect to the minimal fingerprint). It is also possible
+to dynamically extend the test set: If a new UserAgent string
+is encountered that was not part of the test set, fingerprints
+could be recalculated on the fly to determine whether the
+UserAgent correctly identifies the browser: Instead of using
+the precalculated fingerprints, the browser is added to the test
+set, fingerprints are recalculated, and the identification process
+starts again with new minimal fingerprints for all browsers
+in the test set. This would allow relative fingerprinting over
+time and could be used to verify only the, e.g., five most
+popular browser versions for the previous month or day.
+The minimal set of failed test cases for the four common
+browsers from 2012 shown in Table I to illustrate minimal
+fingerprints. The browsers in the test set are Firefox 12,
+Opera 11.64, Internet Explorer 9 and Chrome 20, with a
+resulting minimal fingerprint consisting of only 4 tests. With
+the algorithm explained above, we calculate the minimal
+fingerprints as follows: For every test case, the uniqueness in
+the test set is calculated. If a test fails for a specific browser,
+it receives a check mark in the table, and if the browser
+does not fail that test, it is crossed out. While this seems
+counter-intuitive, the check mark highlights the potential to
+use this particular test case for fingerprinting, as the number
+of failed test cases is much smaller than the number of
+tests passed. One of the test cases with u = 1 is selected
+at random, in the example this is 13.0-13-s. This test then
+becomes the minimal fingerprint for Internet Explorer 9, and
+(\textcite{mulazzani13}, p.3)
+
+
 
 \subsection{XX Cross-Browser fingerprinting}
 
