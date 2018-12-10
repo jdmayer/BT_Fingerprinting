@@ -76,7 +76,7 @@ It was discovered that all these sites were found to include, as some point, fin
 This observation, paired with the fact that all of these three studied providers stated that there must be set an appointment in order to acquire fingerprinting services, point to the possibility that fingerprinting companies work with dubious domains in order to expand their fingerprinting database.(\textcite{nikiforakis13}, p.7)
 
 
-\section{XX Threat}
+\section{Threat}
 have a look at (\textcite{eckersley10})
 
 As seen in the previous sub-chapter /ref{sec:utilisation} web browser fingerprinting does have its advantages as well as its disadvantages for the user. This section will have a closer look as the threat fingerprinting poses for the users privacy.
@@ -123,7 +123,7 @@ Due to this regulation, the only step the user has to take to avoid fingerprinti
 Even though the rules imposed by this regulation seem to help prevent unwanted tracking, it only helps mitigate it. There will certainly be fewer entities making use of fingerprinting though web browser fingerprinting is not expected to disappear, no matter how high the penalties are on its illegal utilisation.\\
 Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Further, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
 
-\section{XX Mitigation}
+\section{Mitigation}
 As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the users privacy. So this brings up the question if there is a way to avoid this tracking method. Each of the researched articles about this topic stated the same. No. Unfortunately, there is no way to avoid being fingerprinted completely. There are only ways to try and reduce the risk of being tracked. (\textcite{web17})
 The danger of web browser fingerprinting lays in its stateless nature. 
 * hard to detect - if even possible
@@ -204,7 +204,7 @@ The use of some common extensions and plug-ins were also mentioned in the liter-
 
 
 \newpage
-\section{XX Critical configurations and plug-ins}
+\section{Critical configurations and plug-ins}
 
 
 https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
@@ -224,8 +224,10 @@ The following paragraphs will introduce some of these certain information source
 
 The information that browser fingerprinting reveals typically includes a mixture of HTTP headers (which are delivered as a normal part of every web request) and properties that can be learned about the browser using JavaScript code: your time zone, system fonts, screen resolution, which plugins you have installed, and what platform your browser is running on. Sites can even use techniques such as canvas or WebGL fingerprinting to gain insight into your hardware configuration.(\textcite{miele18})
 
-\subsection{JavaScript}
+\subsection{JavaScript}\label{JS}
 
+JavaScript is enabled by default in all major browsers and by November 2018 JavaScript was included by 95\% of all websites online. (\textcite{w3techs18}).
+-- therefore very useful tool - also because can query!
 Js – the language which never works – for the developer
 
 -- what is sputnik and test 262 ()
@@ -260,13 +262,13 @@ user.
 SEE NIKIFORAKIS!!!!
 
 
-\subsubsection{WebGL}
+\subsubsection{WebGL}\label{webgl}
 %WebGL provides a JavaScript API for rendering 3D graphics in a <canvas> element. Modeled after OpenGL ES 2.0, WebGL is currently a draft speciﬁcation and implemented and enabled in Chrome, Firefox, and Opera, as well as implemented but disabled in Safari. Each of these browsers provides a hardware-accelerated implementation, using the installed graphics hardware to render each frame. To mitigate serious misbehaviour and crashes, all of these browsers enable WebGL only for a whitelisted set of graphics cards and drivers.
 %Current WebGL implementations expose their functionality through a separate canvas context (which will eventually be named “webgl”). The WebGL API is too complex to describe here in suﬃcient detail, but is stylistically similar to the desktop OpenGL API. It provides for vertex and fragment shaders, written in OpenGL Shading Language (GLSL), that, after compilation, run directly on the graphics card. WebGL also provides for OpenGL-style textures, as well as diﬀerent lighting primitives. More advanced techniques, such as specular highlighting, bump mapping, and transparency, can be achieved through custom GLSL shaders. 2.4 SecurityImplications 
 %(\textcite{mowery12}, p.3)
 
 
-\subsection{Adobe Flash}
+\subsection{Adobe Flash}\label{adobe}
 Adobe Flash is a browser plug-in which provides different ways of delivering rich media content which could traditionally not be displayed using HTML. (\textcite{nikiforakis13}, p.3)
 
 
@@ -279,7 +281,7 @@ Adobe Flash is a browser plug-in which provides different ways of delivering ric
 
 SEE NIKIFORAKIS!!!!
 
-\subsection{HTML 5 /Canvas}
+\subsection{HTML 5 /Canvas}\label{html5}
 -- HTML5 is the coding language used to build websites -> core fundamentals of every website
 -- has the element "canvas"
 -- originally html <canvas> element was used to draw graphics on a web page
@@ -297,7 +299,7 @@ Through the display of an HTML5 Canvas element, it is possible to collect small 
 %First, the 2d context provides the method getImageData(). Given a rectangular region of the canvas, this method returns an ImageData object. Contained in this object are the RGBA values (as integers) for every pixel in the requested region. Second, the canvas object itself provides a toDataURL(type) method. When passed “image/png”, this method returns a data url consisting of the Base64 encoding of a PNG image containing the entire contents of the canvas. As this is a very convenient canvas-level method, we used this approach to extract data in our experiments. During black-box use of these ﬁngerprints, the test suite could simply hash these data URLs, thereby removing the need to upload entire images from each client. It is worthwhile to note that these methods do preserve the same origin policy — if an image from a diﬀerent origin has been drawn on this canvas, they will throw a SecurityError exception instead of returning pixel data. Therefore, our <canvas> ﬁngerprints must only contain image resources that are under our control. 
 %(\textcite{mowery12}, p.3)
 
-\subsection{User agent}
+\subsection{User agent}\label{UAS}
 A user agent is a request header field in the hypertext transfer protocol (http) which is used for the communication between browser and website. (\textcite{xovi18}) It is automatically sent with each page call (\textcite{doty18}, p.6), except if it is specifically configured not to. (\textcite{xovi18})(\textcite{fielding14}, p.5.5.3)\\\\
 The user agent contains the name and version of the used browser. In R. Fieldings work about http, this combination is also called product identifier. The product identifiers are listed in the order or their importance, whereas each of them can be followed by one or multiple comments. (\textcite{xovi18})(\textcite{fielding14}, p.5.5.3) This field value is often called user agent string. (\textcite{hoffman16})\\
 \begin{tcolorbox}
@@ -373,7 +375,7 @@ Some of the provided characteristics are:
 \end{itemize}
 
 
-\section{Web browser fingerprinting techniques -- add code snippets}
+\section{Web browser fingerprinting techniques}
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 
 The following graph outlines techniques outlines in this thesis, excluding accelerometer fingerprinting which is not covered in this thesis.
@@ -384,7 +386,7 @@ The following graph outlines techniques outlines in this thesis, excluding accel
 	\caption{Fingerprinting techniques and the attributes that effect the fingerprint}
 	\label{BrowserSpecification}
 \end{figure}
-\subsection{XX Browser specific fingerprinting}
+\subsection{Browser specific fingerprinting}
 %
 % more info!
 %
@@ -409,7 +411,7 @@ and we have all of them for our single-browser fingerprinting.
 (\textcite{Cao17}, p.2)
 --> look AmIUnique
 
-\subsection{Canvas fingerprinting - REFER to config chapter}
+\subsection{Canvas fingerprinting}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
 As the title teasers, this web browser fingerprinting technique works by using the new coding features in HTML5.(\textcite{pixel18}) Any website that runs JavaScript on the user's browser can use the HTML5<canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
 For rendering text fonts, webfonts were used as they are more distringuishable than expected. (\textcite{mowery12}, p.6) Further WebGL was used as  graphic cards leave a detectable fingerprint while rendering even the simplest scenes.(\textcite{mowery12}, p.8)\\
@@ -447,63 +449,38 @@ Difference maps works in a similar way, only that this method sets a pixel eithe
  
 \subsection{JavaScript Engine fingerprinting}
 
-Different than the other mentioned fingerprinting techniques, JavaScript Engine fingerprinting is not used to identify users in particular but the used web browsers.
-
-JavaScript Engine fingerprinting uses testsuits like Sputnik to determine the used browser and major version.
-
-This kind of web browser fingerprinting was first used in a paper from 2011 by P. Reischl et al. (\textcite{reschl11})
-In a paper 2013 the same authors in cooperation with some more published another paper.(\textcite{mulazzani13}, p.1)
-
-JavaScript is by default enabled in all major browsers and used on a very high percentage of websites. Compared to other methods which use server-side scripting for browser identification, JavaScript Engine fingerprinting is more robust as it does not rely on the user agent string.(\textcite{mulazzani13}, p.1)
-
-\begin{comment}
--- runtime - more than three orders of magnitude faster
---  having a comparable overhead for creating and collecting fingerprint samples.
--- implemented in just a few hundred lines of JS
--- undetectable for the user - CPU not stalled noticeably
-(\textcite{mulazzani13}, p.2)
-\end{comment}
+In 2011 P. Reischl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and major version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
+JavaScript Engine fingerprinting uses testsuits like Sputnik to determine the used browser and version. Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robost fingerprinting technique.(\textcite{mulazzani13}, p.1)
 
 \subsubsection{How it works}
-JavaScript Engine fingerprinting uses conformance tests like Sputnik and test262 which consist of thousands of independent test cases to identify browsers and their major versions.
-Most of the time a single test case can be sufficient to uniquely identify the browser. It only needs to fail one particular test case which is passed by the other browsers. This mostly will only take a fraction of a second to execute.
-
--- e.g.  January '11 
-Opera 11.64 only fails in 4 out of more than 10,000
-Internet Explorer 9 at that time failed in almost 400 test cases
-
-There are two methods which can be used to identify the webbrowser and the major version.
-
-For a rather small test set the minimal fingerprint method can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed. They select a test case which only one browser failed. This browser can be uniquely identified by this test and is therefore removed from the set. This process is redone for each browser until there is a unique fingerprint for each browser in the set or there is no test case which only one browser failed. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)
-
-The figure below shows how the uniqueness of browsers and tests is obtained.
+JavaScript Engine fingerprinting works by running test cases of conformance tests like Sputnik and test 262 to identify browsers and their major versions. Even though these test suits consist of multiple thousands test cases the browser only needs to fail one particular test which every other browser passed to be identified. Therefore these fingerprinting technique only needs a fraction of a second to be executed. (\textcite{mulazzani13}, p.3) \\\\
+There are two methods which can be used to identify the webbrowser and the major version.\\\\
+For a rather small test set the minimal fingerprint method can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed. They select a test case which only one browser failed. This browser can be uniquely identified by this test and is therefore removed from the set. This process is redone for each browser until there is a unique fingerprint for each browser in the set or there is no test case which only one browser failed. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)\\\\
+The figure below shows how the uniqueness of browsers and tests is obtained. The check marks mean, that the respective browser has passed the test. Each test which has a uniqueness of 1 can be used to uniquely identify a browser.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=350pt, height=130pt]{MinimalFP.png}
+	\includegraphics[width=350pt, height=100pt]{MinimalFP.png}
 	\caption{Example for the structure of a minimal fingerprint}
 	\label{MinimalFP}
 \end{figure}
-
-If the test set is rather large it is more effective to use a binary decision tree. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version like the  minimal fingerprint would which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)
-
+If the test set is rather large it is more effective to use a binary decision tree. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version like the  minimal fingerprint would which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)\\\\
 The figure below \textbf{reference} give a good overview how such a tree can be structured. The leaf nodes pose as browsers, the inner nodes display the used tests and the edges indicate the success. (\textcite{mulazzani13}, p.4)
-
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=350pt, height=160pt]{DecisionTree.png}
+	\includegraphics[width=340pt, height=150pt]{DecisionTree.png}
 	\caption{Example for the structure of a decision tree}
 	\label{DecisionTree}
 \end{figure}
 
-
 \begin{comment}
--- can be considered more robust than relying on the User-Agent string  -- user agent string - can be modified
--- js engine fp -  will be unique for each browser and cannot be ported to a different browser. 
+--  having a comparable overhead for creating and collecting fingerprint samples.
+-- implemented in just a few hundred lines of JS
+-- undetectable for the user - CPU not stalled noticeably
+(\textcite{mulazzani13}, p.2)
 -- used to detect modified User-Agent strings, and can be used to reliably identify the browser of Tor Browser Bundle users.
 (\textcite{upi15}, p.2)
 \end{comment}
-
-\subsection{XX Cross-Browser fingerprinting}
+\subsection{Cross-Browser fingerprinting}
 
 different kinds of cross-browser finger printing - first by boda - using ip - not so good
 in 2017 cao proposes- better option

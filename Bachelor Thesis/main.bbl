@@ -299,47 +299,6 @@
       \verb https://www.howtogeek.com/114937/htg-explains-whats-a-browser-user-agent/
       \endverb
     \endentry
-    \entry{reschl11}{inproceedings}{}
-      \name{author}{4}{}{%
-        {{hash=d58d2b3df7ac60b929ef60cc209eeb8c}{%
-           family={M.},
-           familyi={M\bibinitperiod},
-           given={P.\bibnamedelimi Reschl},
-           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=e9e23144b21bd7f53e67361567a6836f}{%
-           family={Mulazzani},
-           familyi={M\bibinitperiod}}}%
-        {{hash=01724952e8f0a8bb7a369e27498ca3d7}{%
-           family={Huber},
-           familyi={H\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=e5cdc5675cea95cbc485e1d39d371d84}{%
-           family={Weippl},
-           familyi={W\bibinitperiod},
-           given={E.},
-           giveni={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{f01063ff2bdada70554f6eff5190fa58}
-      \strng{fullhash}{e3ceed3f1aff9d523addd27ee648e9be}
-      \strng{bibnamehash}{f01063ff2bdada70554f6eff5190fa58}
-      \strng{authorbibnamehash}{f01063ff2bdada70554f6eff5190fa58}
-      \strng{authornamehash}{f01063ff2bdada70554f6eff5190fa58}
-      \strng{authorfullhash}{e3ceed3f1aff9d523addd27ee648e9be}
-      \field{sortinit}{M}
-      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proc. of Annual Computer Security Applications Conference (ACSAC)}
-      \field{title}{Efficient browser identification with JavaScript engine fingerprinting}
-      \field{year}{2011}
-      \verb{urlraw}
-      \verb www.researchgate.net/profile/Edgar_Weippl/publication/230035801_Poster_ACSAC_2011_Efficient_Browser_Identification_with_JavaScript_Engine_Fingerprinting/links/5862902e08ae8fce49098567/Poster-ACSAC-2011-Efficient-Browser-Identification-with-JavaScript-Engine-Fingerprinting.pdf
-      \endverb
-      \verb{url}
-      \verb www.researchgate.net/profile/Edgar_Weippl/publication/230035801_Poster_ACSAC_2011_Efficient_Browser_Identification_with_JavaScript_Engine_Fingerprinting/links/5862902e08ae8fce49098567/Poster-ACSAC-2011-Efficient-Browser-Identification-with-JavaScript-Engine-Fingerprinting.pdf
-      \endverb
-    \endentry
     \entry{mayer09}{article}{}
       \name{author}{1}{}{%
         {{hash=f6dcb445ae0108268b58fc62482d99c4}{%
@@ -600,6 +559,49 @@
       \verb https://pixelprivacy.com/resources/browser-fingerprinting/
       \endverb
     \endentry
+    \entry{reschl11}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f84d3fa6c574a9b4caf180ea3dbdb7d3}{%
+           family={Reschl},
+           familyi={R\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8acfb52c4d98f4d576286d20617c60f3}{%
+           family={Mulazzani},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=01724952e8f0a8bb7a369e27498ca3d7}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e5cdc5675cea95cbc485e1d39d371d84}{%
+           family={Weippl},
+           familyi={W\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{8faf20e244c94ef9288b207624a8a78b}
+      \strng{fullhash}{631d495868b913e9ddf6c2b6775db777}
+      \strng{bibnamehash}{8faf20e244c94ef9288b207624a8a78b}
+      \strng{authorbibnamehash}{8faf20e244c94ef9288b207624a8a78b}
+      \strng{authornamehash}{8faf20e244c94ef9288b207624a8a78b}
+      \strng{authorfullhash}{631d495868b913e9ddf6c2b6775db777}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. of Annual Computer Security Applications Conference (ACSAC)}
+      \field{title}{Efficient browser identification with JavaScript engine fingerprinting}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb www.researchgate.net/profile/Edgar_Weippl/publication/230035801_Poster_ACSAC_2011_Efficient_Browser_Identification_with_JavaScript_Engine_Fingerprinting/links/5862902e08ae8fce49098567/Poster-ACSAC-2011-Efficient-Browser-Identification-with-JavaScript-Engine-Fingerprinting.pdf
+      \endverb
+      \verb{url}
+      \verb www.researchgate.net/profile/Edgar_Weippl/publication/230035801_Poster_ACSAC_2011_Efficient_Browser_Identification_with_JavaScript_Engine_Fingerprinting/links/5862902e08ae8fce49098567/Poster-ACSAC-2011-Efficient-Browser-Identification-with-JavaScript-Engine-Fingerprinting.pdf
+      \endverb
+    \endentry
     \entry{miele18}{report}{}
       \name{author}{2}{}{%
         {{hash=f56835b538b65d2bda77418f9d4f7322}{%
@@ -676,6 +678,35 @@
       \endverb
       \verb{url}
       \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7266460
+      \endverb
+    \endentry
+    \entry{w3techs18}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c4456c512439f7bd99c0af55118f1472}{%
+           family={w3techs},
+           familyi={w\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4456c512439f7bd99c0af55118f1472}
+      \strng{fullhash}{c4456c512439f7bd99c0af55118f1472}
+      \strng{bibnamehash}{c4456c512439f7bd99c0af55118f1472}
+      \strng{authorbibnamehash}{c4456c512439f7bd99c0af55118f1472}
+      \strng{authornamehash}{c4456c512439f7bd99c0af55118f1472}
+      \strng{authorfullhash}{c4456c512439f7bd99c0af55118f1472}
+      \field{sortinit}{w}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Usage of JavaScript for websites}
+      \field{urlday}{10}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://w3techs.com/technologies/details/cp-javascript/all/all
+      \endverb
+      \verb{url}
+      \verb https://w3techs.com/technologies/details/cp-javascript/all/all
       \endverb
     \endentry
     \entry{xovi18}{online}{}
