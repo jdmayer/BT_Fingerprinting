@@ -401,6 +401,22 @@ and we have all of them for our single-browser fingerprinting.
 (\textcite{Cao17}, p.2)
 --> look AmIUnique
 
+-- browser fp algorithm  by collecting a number of commonly and less-commonly known characteristics that browsers make available to websites
+-- some can be inferred rom the content of simple/static http requests
+-- other collected by ajax2
+-- group measures into 8 seperate strings
+-- fp -> essentially concatenation of these strings
+-- see picture
+-- in some cases - measurement can capture more subtle facts
+-- e.g. browsers with flash blocking add-on -> show flash in plugin list, but fail to obtain list of system fonts via flash -> create distinctive fingerprint - even though not explicitly detect flash blocker
+(\textcite{eckersley10}, p.4)
+
+
+-- browser fingerprinting - powerful technique
+-- privacy and user trackability
+-- browser reveal so much version and configuration infor -> overwhelmingly trackable
+(\textcite{eckersley10}, p.16)
+
 \subsection{Canvas fingerprinting}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
 As the title teasers, this web browser fingerprinting technique works by using the new coding features in HTML5.(\textcite{pixel18}) Any website that runs JavaScript on the user's browser can use the HTML5<canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
