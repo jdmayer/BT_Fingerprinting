@@ -379,13 +379,20 @@ Some of the provided characteristics are:
 \section{Web browser fingerprinting techniques}
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 \subsection{Browser specific fingerprinting}
+In 2010, P. Eckersley conducted a study in the project "Panopticlick" which checks how trackable users are via a from collected data generated fingerprint. (\textcite{upi15}, p.2) This study has shown that 94.2\% of the uses which use flash or java could be distinguished with browser fingerprinting. (\textcite{eckersley10}, p.2)\\
+Possible even if the browser only reveals as much as its version and configuration information which is in most cases enough to create a distinct fingerprint.(\textcite{eckersley10}, p.16)
 
-* Large scale browser fingerprinting study conducted by P. Eckersley in the Panopticlick project
-* has shown 94,2\% of the user with flash or java could be distringuided (without cookies)
-* Browser-dependent features (flash/java) to retrieve information on installed fonts, plug-ins, browser platform, screen resolution
-* Study showed: only 15-20 bits of identifying info necessary to uniquely identify a particular browser
-* most identifying metrics – plug-ins, fonts, user agent, http accept, screen resolution – plug-ins due to version numbers
-(\textcite{upi15}, p.2)
+\subsubsection{How it works}
+Browser specific fingerprinting is a technique which only uses browser-dependent features (like flash and JavaScript or be retrieved from a http request) to collect a number of common or and less-common known browser characteristics.\\
+This retrieved browser information typically includes the installed fonts, plug-ins (including version numbers), user agent, http accept and screen resolution. (\textcite{upi15}, p.2)\\\\
+As this kind of fingerprint pracitcally is just a concatination of this information it is easily affected by changes, like upgrades, newly installed features or extermal change of the system.
+Usually, simple heuristics can be used to adjust the browser specific fingerprint accordingly.(\textcite{eckersley10}, p.4) (\textcite{upi15}, p.2)\\\\
+The interesting fact about browsers is that sometimes, when they try to hide something, this helps even more to make the fingerprint distinct.
+
+\begin{tcolorbox}
+	Example: \\
+	When a browser uses a flash blocking add-on, the browser still displays flash in the plugin list. When due to the blocking add-on the list of system fonts can't be obtained this creates a distinct fingerprint even though the flash was not explicitly detected. (\textcite{eckersley10}, p.4)
+\end{tcolorbox}
 
 Weaknesses: (\textcite{upi15}, p.2)
 \begin{itemize}
@@ -393,29 +400,9 @@ Weaknesses: (\textcite{upi15}, p.2)
 	\item fingerprint can change across browsers
 	\item fingerprint can be easily changed (upgrade, plug-in, etc.)
 \end{itemize}
-* fp easily changed through upgrades, new installed features or external change of the system 
-* -> heuristics which can be used to adapt the fingerprint.  (\textcite{upi15}, p.2)
-
-There are 17 features presented in the Table I of the AmIUnique paper,
-and we have all of them for our single-browser fingerprinting.
-(\textcite{Cao17}, p.2)
---> look AmIUnique
-
--- browser fp algorithm  by collecting a number of commonly and less-commonly known characteristics that browsers make available to websites
--- some can be inferred rom the content of simple/static http requests
--- other collected by ajax2
--- group measures into 8 seperate strings
--- fp -> essentially concatenation of these strings
--- see picture
--- in some cases - measurement can capture more subtle facts
--- e.g. browsers with flash blocking add-on -> show flash in plugin list, but fail to obtain list of system fonts via flash -> create distinctive fingerprint - even though not explicitly detect flash blocker
-(\textcite{eckersley10}, p.4)
 
 
--- browser fingerprinting - powerful technique
--- privacy and user trackability
--- browser reveal so much version and configuration infor -> overwhelmingly trackable
-(\textcite{eckersley10}, p.16)
+%find AmIUnique paper --- about single browser fp
 
 \subsection{Canvas fingerprinting}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
