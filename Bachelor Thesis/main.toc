@@ -35,7 +35,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Under General Data Protection Regulation}{7}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Mitigation}{8}{section.2.4}
+\contentsline {section}{\numberline {2.4}Mitigation - max. 1,5 -2 pages}{8}{section.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.1}Best practice}{8}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
@@ -71,7 +71,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7.1}Browser specific fingerprinting}{16}{subsection.2.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.2}Canvas fingerprinting}{17}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.2}Canvas fingerprinting}{16}{subsection.2.7.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Weaknesses}{17}{subsection.2.7.2}
 \defcounter {refsection}{0}\relax 
@@ -87,52 +87,52 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Introduction}{23}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Browser specific fingerprinting}{23}{section.3.2}
+\contentsline {section}{\numberline {3.2}Browser specific fingerprinting}{24}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Canvas fingerprinting}{23}{section.3.3}
+\contentsline {section}{\numberline {3.3}Canvas fingerprinting}{24}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}JavaScript Engine fingerprinting}{23}{section.3.4}
+\contentsline {section}{\numberline {3.4}JavaScript Engine fingerprinting}{24}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Cross-Browser fingerprinting}{23}{section.3.5}
+\contentsline {section}{\numberline {3.5}Cross-Browser fingerprinting}{24}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Accelerometer fingerprinting}{23}{section.3.6}
+\contentsline {section}{\numberline {3.6}Accelerometer fingerprinting}{24}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Comparison}{23}{section.3.7}
+\contentsline {section}{\numberline {3.7}Comparison}{24}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Requirements}{24}{chapter.4}
+\contentsline {chapter}{\numberline {4}Requirements}{25}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Use cases}{24}{section.4.1}
+\contentsline {section}{\numberline {4.1}Use cases}{25}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Functional requirements}{24}{section.4.2}
+\contentsline {section}{\numberline {4.2}Functional requirements}{25}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Non functional requirements}{24}{section.4.3}
+\contentsline {section}{\numberline {4.3}Non functional requirements}{25}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Design and Implementation}{25}{chapter.5}
+\contentsline {chapter}{\numberline {5}Design and Implementation}{26}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Idea}{25}{section.5.1}
+\contentsline {section}{\numberline {5.1}Idea}{26}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Architecture}{25}{section.5.2}
+\contentsline {section}{\numberline {5.2}Architecture}{26}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Programming}{25}{section.5.3}
+\contentsline {section}{\numberline {5.3}Programming}{26}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Obtained Data}{25}{section.5.4}
+\contentsline {section}{\numberline {5.4}Obtained Data}{26}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Fingerprint}{25}{section.5.5}
+\contentsline {section}{\numberline {5.5}Fingerprint}{26}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5.1}Calculation}{25}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.1}Calculation}{26}{subsection.5.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Visualisation}{25}{section.5.6}
+\contentsline {section}{\numberline {5.6}Visualisation}{26}{section.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Evaluation}{26}{chapter.6}
+\contentsline {chapter}{\numberline {6}Evaluation}{27}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Prototype testcases}{26}{section.6.1}
+\contentsline {section}{\numberline {6.1}Prototype testcases}{27}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Comparison to AmIUnique and Panopticlick?}{26}{section.6.2}
+\contentsline {section}{\numberline {6.2}Comparison to AmIUnique and Panopticlick?}{27}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Summary}{27}{chapter.7}
+\contentsline {chapter}{\numberline {7}Summary}{28}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{28}{appendix*.10}
+\contentsline {chapter}{References}{29}{appendix*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literature}{28}{section*.11}
+\contentsline {section}{Literature}{29}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Online sources}{29}{section*.12}
+\contentsline {section}{Online sources}{30}{section*.12}

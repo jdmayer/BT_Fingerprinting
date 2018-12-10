@@ -1,5 +1,6 @@
 \chapter{Foundation}
 \label{cha:foundation}
+This chapter will cover the basic knowledge about fingerprinting. First explaining the term fingerprint and what it can be used for. Further it will discuss the threat is poses as well as possible ways to reduce a fingerprint before covering the used configurations and plugins. After the base was layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
 
 \section{Fingerprinting}
 Web browser fingerprinting, also known as device fingerprinting, is the systematic collection of information to identify and later re-identify users. (\textcite{doty18}, p.3)(\textcite{amiunique})\\
@@ -123,7 +124,7 @@ Due to this regulation, the only step the user has to take to avoid fingerprinti
 Even though the rules imposed by this regulation seem to help prevent unwanted tracking, it only helps mitigate it. There will certainly be fewer entities making use of fingerprinting though web browser fingerprinting is not expected to disappear, no matter how high the penalties are on its illegal utilisation.\\
 Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Further, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
 
-\section{Mitigation}
+\section{Mitigation - max. 1,5 -2 pages}
 As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the users privacy. So this brings up the question if there is a way to avoid this tracking method. Each of the researched articles about this topic stated the same. No. Unfortunately, there is no way to avoid being fingerprinted completely. There are only ways to try and reduce the risk of being tracked. (\textcite{web17})
 The danger of web browser fingerprinting lays in its stateless nature. 
 * hard to detect - if even possible
@@ -205,7 +206,7 @@ The use of some common extensions and plug-ins were also mentioned in the liter-
 
 \newpage
 \section{Critical configurations and plug-ins}
-
+-- max. 1/2 page per config
 
 https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
 
@@ -377,19 +378,8 @@ Some of the provided characteristics are:
 
 \section{Web browser fingerprinting techniques}
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
-
-The following graph outlines techniques outlines in this thesis, excluding accelerometer fingerprinting which is not covered in this thesis.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=350pt, height=160pt]{FingerprintingAttributes.png}
-	\caption{Fingerprinting techniques and the attributes that effect the fingerprint}
-	\label{BrowserSpecification}
-\end{figure}
 \subsection{Browser specific fingerprinting}
-%
-% more info!
-%
+
 * Large scale browser fingerprinting study conducted by P. Eckersley in the Panopticlick project
 * has shown 94,2\% of the user with flash or java could be distringuided (without cookies)
 * Browser-dependent features (flash/java) to retrieve information on installed fonts, plug-ins, browser platform, screen resolution
@@ -448,7 +438,6 @@ Difference maps works in a similar way, only that this method sets a pixel eithe
 %When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
  
 \subsection{JavaScript Engine fingerprinting}
-
 In 2011 P. Reischl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and major version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
 JavaScript Engine fingerprinting uses testsuits like Sputnik to determine the used browser and version. Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robost fingerprinting technique.(\textcite{mulazzani13}, p.1)
 
@@ -460,7 +449,7 @@ The figure below shows how the uniqueness of browsers and tests is obtained. The
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=350pt, height=100pt]{MinimalFP.png}
-	\caption{Example for the structure of a minimal fingerprint}
+	\caption{Example for the structure of a minimal fingerprint\\}
 	\label{MinimalFP}
 \end{figure}
 If the test set is rather large it is more effective to use a binary decision tree. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version like the  minimal fingerprint would which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)\\\\
