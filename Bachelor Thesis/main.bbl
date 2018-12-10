@@ -299,6 +299,47 @@
       \verb https://www.howtogeek.com/114937/htg-explains-whats-a-browser-user-agent/
       \endverb
     \endentry
+    \entry{reschl11}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=d58d2b3df7ac60b929ef60cc209eeb8c}{%
+           family={M.},
+           familyi={M\bibinitperiod},
+           given={P.\bibnamedelimi Reschl},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=e9e23144b21bd7f53e67361567a6836f}{%
+           family={Mulazzani},
+           familyi={M\bibinitperiod}}}%
+        {{hash=01724952e8f0a8bb7a369e27498ca3d7}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e5cdc5675cea95cbc485e1d39d371d84}{%
+           family={Weippl},
+           familyi={W\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{f01063ff2bdada70554f6eff5190fa58}
+      \strng{fullhash}{e3ceed3f1aff9d523addd27ee648e9be}
+      \strng{bibnamehash}{f01063ff2bdada70554f6eff5190fa58}
+      \strng{authorbibnamehash}{f01063ff2bdada70554f6eff5190fa58}
+      \strng{authornamehash}{f01063ff2bdada70554f6eff5190fa58}
+      \strng{authorfullhash}{e3ceed3f1aff9d523addd27ee648e9be}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. of Annual Computer Security Applications Conference (ACSAC)}
+      \field{title}{Efficient browser identification with JavaScript engine fingerprinting}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb www.researchgate.net/profile/Edgar_Weippl/publication/230035801_Poster_ACSAC_2011_Efficient_Browser_Identification_with_JavaScript_Engine_Fingerprinting/links/5862902e08ae8fce49098567/Poster-ACSAC-2011-Efficient-Browser-Identification-with-JavaScript-Engine-Fingerprinting.pdf
+      \endverb
+      \verb{url}
+      \verb www.researchgate.net/profile/Edgar_Weippl/publication/230035801_Poster_ACSAC_2011_Efficient_Browser_Identification_with_JavaScript_Engine_Fingerprinting/links/5862902e08ae8fce49098567/Poster-ACSAC-2011-Efficient-Browser-Identification-with-JavaScript-Engine-Fingerprinting.pdf
+      \endverb
+    \endentry
     \entry{mayer09}{article}{}
       \name{author}{1}{}{%
         {{hash=f6dcb445ae0108268b58fc62482d99c4}{%
@@ -440,7 +481,7 @@
       \field{title}{Cookieless monster: Exploring the ecosystem of web-based device fingerprinting}
       \field{year}{2013}
     \endentry
-    \entry{nikiforakis13}{report}{}
+    \entry{nikiforakis13}{online}{}
       \name{author}{6}{}{%
         {{hash=e2908d482c889275a2e7e353defec5dd}{%
            family={Nikiforakis},
@@ -489,8 +530,11 @@
       \field{booktitle}{Security and privacy (SP), 2013 IEEE symposium on}
       \field{langid}{english}
       \field{title}{Cookieless monster: Exploring the ecosystem of web-based device fingerprinting}
-      \field{type}{techreport}
+      \field{urlday}{27}
+      \field{urlmonth}{10}
+      \field{urlyear}{2018}
       \field{year}{2013}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://seclab.cs.ucsb.edu/media/uploads/papers/sp2013_cookieless.pdf
       \endverb

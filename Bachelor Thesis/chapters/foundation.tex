@@ -446,84 +446,62 @@ Difference maps works in a similar way, only that this method sets a pixel eithe
 %When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
  
 \subsection{JavaScript Engine fingerprinting}
--- used to identify user and not just browser??
 
-used by mulazzani for browser identification
--- max. 1/2 pages
+Different than the other mentioned fingerprinting techniques, JavaScript Engine fingerprinting is not used to identify users in particular but the used web browsers.
 
-rest - how it was extrendet
+JavaScript Engine fingerprinting uses testsuits like Sputnik to determine the used browser and major version.
 
+This kind of web browser fingerprinting was first used in a paper from 2011 by P. Reischl et al. (\textcite{reschl11})
+In a paper 2013 the same authors in cooperation with some more published another paper.(\textcite{mulazzani13}, p.1)
 
--- Relies on JS conformance tests such as the Sputnik test suite to determine a specific browser and major version number.
--- A method demonstrated by Mulazzani et al. executed a set of conformance test cases from the Sputnik test suite in a user’s browser
--- compare the failed tests to a set of test cases that are known to fail in each version of a browser
--- match to be made to identify a specific browser and the major version
--- can be considered more robust than rely-ing on the User-Agent string (to known browser + version nr) -- user agent string - can be modified
--- js engine fp -  will be unique for each browser and cannot be ported to a different browser. 
--- used to detect modified User-Agent strings, can be used on mobile devices, and can be used to reliably identify the browser of Tor Browser Bundle users.
-(\textcite{upi15}, p.2)
+JavaScript is by default enabled in all major browsers and used on a very high percentage of websites. Compared to other methods which use server-side scripting for browser identification, JavaScript Engine fingerprinting is more robust as it does not rely on the user agent string.(\textcite{mulazzani13}, p.1)
 
-
--- developed 2013 by Mulazzani et al.
--- js - used by a very high percentage of websites
--- enabled by default on all major browsers -- still is??
--- other methods for server-side browser identification
--- this approach - more robust (user agent string can be changed)
--- js fp is authentic for each browser, not easily ported to a different browser
-(\textcite{mulazzani13}, p.1)
-
+\begin{comment}
 -- runtime - more than three orders of magnitude faster
 --  having a comparable overhead for creating and collecting fingerprint samples.
 -- implemented in just a few hundred lines of JS
 -- undetectable for the user - CPU not stalled noticeably
 (\textcite{mulazzani13}, p.2)
+\end{comment}
 
--- JS conformance tests - Sputnik or test262 -> thousands of independent test cases
--- not all necessary for browser identification
--- a single test case may be sufficient
--- e.g. to distinguish 2 specific browsers 
--- only one needs to fail a particular test case, which the other doesnt
--- e.g.  Opera 11.64 only fails in 4 out of more than 10,000
-tests cases from mid-January, while the most recent version
-of Internet Explorer 9 at that time failed in almost 400 test
-cases. -> only 1 testcase needed if only those two browsers are in the test set
--- only 1 test of these needed -> fraction of second to execute
+\subsubsection{How it works}
+JavaScript Engine fingerprinting uses conformance tests like Sputnik and test262 which consist of thousands of independent test cases to identify browsers and their major versions.
+Most of the time a single test case can be sufficient to uniquely identify the browser. It only needs to fail one particular test case which is passed by the other browsers. This mostly will only take a fraction of a second to execute.
 
--- first each browser is testsd with test 262
--- results - compared and minimal fp calculated for each browser
--- (in relation to other browsers in the test set)
--- use case for minimal fp is a web server that wants to assess - UAS from client is forged
--- with respect to the other browsers in the test set
--- web server can verify the browser
--- fp for each browser - as small as possible
--- another use case: calculate a decision tree
--- other than above: binary decision tree - iteratively identify browser in multiple rounds
--- larger test set
-(\textcite{mulazzani13}, p.3)
+-- e.g.  January '11 
+Opera 11.64 only fails in 4 out of more than 10,000
+Internet Explorer 9 at that time failed in almost 400 test cases
+
+There are two methods which can be used to identify the webbrowser and the major version.
+
+For a rather small test set the minimal fingerprint method can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed. They select a test case which only one browser failed. This browser can be uniquely identified by this test and is therefore removed from the set. This process is redone for each browser until there is a unique fingerprint for each browser in the set or there is no test case which only one browser failed. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)
+
+The figure below shows how the uniqueness of browsers and tests is obtained.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=350pt, height=130pt]{MinimalFP.png}
+	\caption{Example for the structure of a minimal fingerprint}
+	\label{MinimalFP}
+\end{figure}
+
+If the test set is rather large it is more effective to use a binary decision tree. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version like the  minimal fingerprint would which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)
+
+The figure below \textbf{reference} give a good overview how such a tree can be structured. The leaf nodes pose as browsers, the inner nodes display the used tests and the edges indicate the success. (\textcite{mulazzani13}, p.4)
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=350pt, height=160pt]{DecisionTree.png}
+	\caption{Example for the structure of a decision tree}
+	\label{DecisionTree}
+\end{figure}
 
 
-Implementation Minimal Fingerprint
--- use greedy algorithm to find a possibly minimal fp for given set
--- start test262 for each browser in test set
--- calculate browsers which fail each test case
--- js engine -> a static part of browser - only once per browser
--- compare results 
--- calculate for each failed test case - nr of browsers that fail
--- select test case where only 1 browser failed - remove browser from set - uniquely identifies
--- redone for each browser - until unique FS for every browser or no test case where only 1 browser failed found
--- if no unique fp for browser -> change selection, until minimal test set or no solution found
-(\textcite{mulazzani13}, p.3)
-
-Implementation Decision Tree
--- multiple test rounds
--- every test - down 1 level
--- leaf node -> browser
--- inner nodes -> tests
--- edges -> success/fail
--- no need for unique fp -> tests to split browsers taht fail
--- can reduce total number of executed tests
--- good for large test sets
-(\textcite{mulazzani13}, p.4)
+\begin{comment}
+-- can be considered more robust than relying on the User-Agent string  -- user agent string - can be modified
+-- js engine fp -  will be unique for each browser and cannot be ported to a different browser. 
+-- used to detect modified User-Agent strings, and can be used to reliably identify the browser of Tor Browser Bundle users.
+(\textcite{upi15}, p.2)
+\end{comment}
 
 \subsection{XX Cross-Browser fingerprinting}
 
