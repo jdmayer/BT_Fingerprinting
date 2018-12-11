@@ -428,26 +428,26 @@ It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observe
 When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
 \end{comment}
 \subsection{JavaScript Engine fingerprinting}
-
-In 2011 P. Reischl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and major version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
-JavaScript Engine fingerprinting uses testsuits like Sputnik to determine the used browser and version. Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robost fingerprinting technique.(\textcite{mulazzani13}, p.1)
+%if possible - shorten !
+In 2011 P. Reschl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and its version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
+Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robost fingerprinting technique.(\textcite{mulazzani13}, p.1)
 
 \subsubsection{How it works}
-JavaScript Engine fingerprinting works by running test cases of conformance tests like Sputnik and test 262 to identify browsers and their major versions. Even though these test suits consist of multiple thousands test cases the browser only needs to fail one particular test which every other browser passed to be identified. Therefore these fingerprinting technique only needs a fraction of a second to be executed. (\textcite{mulazzani13}, p.3) \\\\
-There are two methods which can be used to identify the webbrowser and the major version.\\\\
-For a rather small test set the minimal fingerprint method can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed. They select a test case which only one browser failed. This browser can be uniquely identified by this test and is therefore removed from the set. This process is redone for each browser until there is a unique fingerprint for each browser in the set or there is no test case which only one browser failed. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)\\\\
-The figure below shows how the uniqueness of browsers and tests is obtained. The check marks mean, that the respective browser has passed the test. Each test which has a uniqueness of 1 can be used to uniquely identify a browser.
+JavaScript Engine fingerprinting works by running test cases of conformance tests like Sputnik and test 262 (see \autoref{JS}) to identify browsers and their major versions. Even though these test suits consist of multiple thousands test cases the browser only needs to fail one particular test which every other browser passed to be identified. Therefore these fingerprinting technique only needs a fraction of a second to be executed. (\textcite{mulazzani13}, p.3) \\\\
+There are two methods which can be used for identification:\\\\
+For a rather small test set the \textit{minimal fingerprint method} can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed (uniqueness = 1). This browser can be uniquely identified by this test and is therefore removed from the set. This process is repeated for each browser until there is a unique fingerprint for each browser in the set or there is no test case which was failed by only one browser. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)\\\\
+\autoref{MinimalFP} shows how the uniqueness of browsers and tests is obtained. The check marks mean, that the respective browser has passed the test. Each test which has a uniqueness of 1 can be used to uniquely identify a browser.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=350pt, height=100pt]{MinimalFP.png}
+	\includegraphics[width=300pt, height=80pt]{MinimalFP.png}
 	\caption{Example for the structure of a minimal fingerprint\\}
 	\label{MinimalFP}
 \end{figure}
-If the test set is rather large it is more effective to use a binary decision tree. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version like the  minimal fingerprint would which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)\\\\
-The figure below \textbf{reference} give a good overview how such a tree can be structured. The leaf nodes pose as browsers, the inner nodes display the used tests and the edges indicate the success. (\textcite{mulazzani13}, p.4)
+If the test set is rather large it is more effective to use a \textit{binary decision tree}. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version like the  minimal fingerprint would which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)\\\\
+\autoref{DecisionTree} gives a good overview how such a tree can be structured. The leaf nodes pose as browsers, the inner nodes display the used tests and the edges indicate the success. (\textcite{mulazzani13}, p.4)
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=340pt, height=150pt]{DecisionTree.png}
+	\includegraphics[width=290pt, height=120pt]{DecisionTree.png}
 	\caption{Example for the structure of a decision tree}
 	\label{DecisionTree}
 \end{figure}
