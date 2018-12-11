@@ -202,7 +202,16 @@ The use of some common extensions and plug-ins were also mentioned in the liter-
 -- high chance - no unique fingerprint and will be harder to track
 (\textcite{web17})
 
-
+We have also given some guidelines for developers to make their browsers resist
+our fingerprinting algorithm. In particular, the verbosity of the UAS and the plugin
+versions should be decreased, and a standard ‘substitute font set’ – preferably
+supported by all browsers – should be introduced. Furthermore, users should be able
+to set fake system properties in the browser in order to hide their real operating
+system, time zone and screen resolution.
+Finally, we have proposed some improvements for our method, and defined certain
+directions for future experiments; an explicitly cross-browser experiment would
+provide a high-precision dataset. 
+(\textcite{boda11}, p.16)
 
 \newpage
 \section{Critical configurations and plug-ins}
@@ -210,6 +219,7 @@ The use of some common extensions and plug-ins were also mentioned in the liter-
 
 https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
 
+\begin{comment}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/dangerousConfigs}
@@ -217,7 +227,7 @@ https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerp
 	\label{fig:dangerousconfigs}
 \end{figure}
 (\textcite{mayer09}, p.43)
-
+\end{comment}
 As mentioned in the previous paragraph (chapter 2.1.) the scripts which use fingerprinting can read certain data via configuration settings or other observable characteristics from the web browser which enables them to create a specific fingerprint. (\textcite{doty18}, p.3)
 
 The following paragraphs will introduce some of these certain information sources disclosed to third parties by the web browser and why they are used at all.
@@ -379,11 +389,13 @@ Some of the provided characteristics are:
 \section{Web browser fingerprinting techniques}
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 \subsection{Browser specific fingerprinting}
+%find AmIUnique paper --- about single browser fp
 In 2010, P. Eckersley conducted a study in the project "Panopticlick" which checks how trackable users are via a from collected data generated fingerprint. (\textcite{upi15}, p.2) This study has shown that 94.2\% of the uses which use flash or java could be distinguished with browser fingerprinting. (\textcite{eckersley10}, p.2)\\
 Possible even if the browser only reveals as much as its version and configuration information which is in most cases enough to create a distinct fingerprint.(\textcite{eckersley10}, p.16)
 
 \subsubsection{How it works}
 Browser specific fingerprinting is a technique which only uses browser-dependent features (like flash and JavaScript or be retrieved from a http request) to collect a number of common or and less-common known browser characteristics.\\
+
 This retrieved browser information typically includes the installed fonts, plug-ins (including version numbers), user agent, http accept and screen resolution. (\textcite{upi15}, p.2)\\\\
 As this kind of fingerprint pracitcally is just a concatination of this information it is easily affected by changes, like upgrades, newly installed features or extermal change of the system.
 Usually, simple heuristics can be used to adjust the browser specific fingerprint accordingly.(\textcite{eckersley10}, p.4) (\textcite{upi15}, p.2)\\\\
@@ -400,9 +412,6 @@ Weaknesses: (\textcite{upi15}, p.2)
 	\item fingerprint can change across browsers
 	\item fingerprint can be easily changed (upgrade, plug-in, etc.)
 \end{itemize}
-
-
-%find AmIUnique paper --- about single browser fp
 
 \subsection{Canvas fingerprinting}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
@@ -441,6 +450,7 @@ Difference maps works in a similar way, only that this method sets a pixel eithe
 %When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
  
 \subsection{JavaScript Engine fingerprinting}
+%weaknesses?
 In 2011 P. Reischl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and major version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
 JavaScript Engine fingerprinting uses testsuits like Sputnik to determine the used browser and version. Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robost fingerprinting technique.(\textcite{mulazzani13}, p.1)
 
@@ -474,117 +484,72 @@ The figure below \textbf{reference} give a good overview how such a tree can be 
 \end{comment}
 \subsection{Cross-Browser fingerprinting}
 
-different kinds of cross-browser finger printing - first by boda - using ip - not so good
-in 2017 cao proposes- better option
+There are different ways to apply Cross-Browser fignerprinting. In 2011 Boda et al. used a part of the ip to create a fingerprint. In 2017 Cao et al. proposed a better option.
 
--- uses browser-independent features for the fingerprint
--- can rely solely on js and use font detection as a techniue
--- since a js engine is available and enabled by default on all modern browsers 
--- differs form techniques which rely on browser dependent plug-ins Adobe Flash or Java for obtaining a font list
-(\textcite{upi15}, pp.2)
- 
+\subsubsection{How it works}
+Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. The technique used differs. It e.g. can rely on browser dependent plug-ins like Adobe Flash or Java to obtain a font list.(\textcite{upi15}, pp.2)
+
+--create a unique identifier from specific browser data using JavaScript and server-side algorithms
+(\textcite{boda11}, p.4)
+
+In 2011 a study conducted by Boda et al. discovered that most user can be tracked across the 5 most populat web browsers using
+
+ a part of the ip address, time zone, screen resolution and the availability of a specific font set.(\textcite{boda11}, p.1)
+
+To be able to track a user across different web browsers a set of browser-independent features is used as a basis of identification. Part of this set is for example (\textcite{boda11}, p.2)
+\begin{itemize}
+	\item networking information (ip address, hostname, TCP port number)
+	\item application layer information (user agent string, name and version of the operating system, extensions)
+	\item information gained by quering (list of fonts, screen resolution, timezone, plug-ins and their version)
+\end{itemize}
+
+The difference to other fingerprints is that the first two octets of the IP address are used, which usually remains constant even if the IP address of the client changes dynamically. The downside is that it may change when switching ISP or other service
+(\textcite{boda11}, p.5)
+
+-- use locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version
+(\textcite{boda11}, p.5)
+
+ip version - unavailable behind an anonymous network or a proxy (\textcite{Cao17}, p.1)
+
+\newpage
+A technique developed by Yinzhi Cao
+**	E.g. used screen’s ratio of width to height as it remains consistent even when using zoom (\textcite{Cao17}, p.2 )
+**	Script forces system to perform 36 tasks – results include info, takes less than a minute
+**	(\textcite{nordrum17})
+
+**	Rely on corresponding OS and hardware functionalities
+**	99,24\%  successfully identify (\textcite{Cao17}, p.2)
+
+This fingerprinting technique is based on different novel operating system and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). All in al 29 features. Many of them are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, p.1)
+
+99,24\%  successfully identify users 
+83.24\% uniqueness with 91.44\% cross-browser stability(\textcite{Cao17}, p.2)
+compared to Boda excluding ip address -68.98\% uniqueness with 84.64\% cross-browser stability.
+
+Improvements towards Boda et al. technique. 
+E.g. Change of the screen resolution. In browsers like Firefox and Internet Expolorer the resolution changes when scrolling. Therefore this method takes the zoom level into consideration and normalizes the width an dheight of the screen resolution.
+E.g. DataUrl + JPEG are unstable across different browsers, therefore use a lossless format like PNG 
+%4 features for cross-browser fp (screen res., color depth, list of fonts, platform)
+(\textcite{Cao17}, p.2)
+
+Various rendering tasks (e.g. drawing curves and lines to client side) are sent. Also obtains operating system and hardware level information. The client side browser renders and returns the results (images, sound waves) which are converted into a hashes. In the meantime the browser collects browser-specific information.
+FP composition - Fingerprint is generated from list of hashes which is intertwined with a mask through a "and" operation which creates the fingerprint hash.
+The collected browser information corresponds to the mask. Each browser has its own mask. (\textcite{Cao17}, p.4)
+-- add rendering task? p-5
+
+-- go through results?
+-- tor browser -> many features unavailable
+-- disables canvas by default -> not fingerprintables if disabled?
+(\textcite{Cao17}, p.13)
+
+
 Weaknesses: (\textcite{upi15}, pp.2)
 \begin{itemize}
 	\item unable to distinguish between instances of identically configured devices
 	\item fingerprint can change????
 \end{itemize} 
- 
 
-A technique developed by Yinzhi Cao
-**	New method, created by Yinzhi Cao
-**	E.g. used screen’s ratio of width to height as it remains consistent even when using zoom
-**	Adapted 4 such features from AmIUnique (which used screen resolution – not consistent)
-**	Examination of a user’s audio stack, graphics card, and CPU
-**	Relies on 29 features
-**	Script forces system to perform 36 tasks – results include info, takes less than a minute
-**	Only on Tor it didn’t work
-**	(\textcite{nordrum17})
-
-**	Rely on corresponding OS and hardware functionalities
-**	99,24\%  successfully identify (\textcite{Cao17})
-
--- first by boda
--- then extended by cao
-
-
-(\textcite{boda11})
--- a part of the ip address, availability of a specific font set, time zone, screen resolution
--- uniquely identify most users of the 5 most popular web browsers
--- user agent strings - effective but fragile identifiers of browser instance
-(\textcite{boda11}, p.1)
-
--- browser-independent features as a basis of identification
--- eg. networking information (ip address, hostname, tcp port number)
--- eg. application layer information (uas in http header, name/version of os, extemsions, etc.)
--- eg. info gained by querying - over js - list of fonts, plugins(+version), screen resolution, time zone
-(\textcite{boda11}, p.2)
-
---create a unique identifier from specific browser data using JavaScript and server-side algorithms
-(\textcite{boda11}, p.4)
-
--- crossdomain tracking is achieved by using only the first two octets of the IP address, which
-remains constant in many cases even if the IP address of the client changes dynamically
--- may change after switching to a different ISP or another service
--- use locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version
-(\textcite{boda11}, p.5)
-
--- font lists provide a solid base for unique identification under the Windows and Mac OSes
-(\textcite{boda11}, p.8)
-
- The latter is true largely due to the fact that the list
-of fonts is easily accessible through the JavaScript API. Therefore, if resistance of
-identification is to be secured with the web browsers of today, the only option seems
-to be to disable such scripts. That way, one’s anonymity set can be greatly increased.
-Users of computers in a set of identically configured machines are likely to have
-the best odds against our fingerprinting algorithm. If such computers are centrally
-managed, it is unlikely that any of them has a unique feature based on which it could
-be identified. Therefore, passive methods are insufficient in such a context.
-Our research has some important implications regarding the user’s behaviour. We
-have provided recommendations about browser types and versions that are likely
-indistinguishable from other such browsers. Furthermore, it can be seen that
-resistance to identification is easier achieved with popular system settings. It must be
-noted, however, that these measures are not necessarily easy to carry out without
-causing inconvenience to the user.
-We have also given some guidelines for developers to make their browsers resist
-our fingerprinting algorithm. In particular, the verbosity of the UAS and the plugin
-versions should be decreased, and a standard ‘substitute font set’ – preferably
-supported by all browsers – should be introduced. Furthermore, users should be able
-to set fake system properties in the browser in order to hide their real operating
-system, time zone and screen resolution.
-Finally, we have proposed some improvements for our method, and defined certain
-directions for future experiments; an explicitly cross-browser experiment would
-provide a high-precision dataset. 
-(\textcite{boda11}, p.16)
-unavailable behind an anonymous network or a proxy (\textcite{Cao17}, p.1)
-
-
-
--- based on many novel OS and hardware level features, e.g.,
-these from graphics card, CPU, audio stack, and installed
-writing scripts. Specifically, because many of such OS and
-hardware level functions are exposed to JavaScript via browser
-APIs, we can extract features when asking the browser to perform
-certain tasks through these APIs. The extracted features
-can be used for both single- and cross-browser fingerprinting.
-(\textcite{Cao17}, p.1)
-
--- use many novel OS and hardware features, especially computer graphics ones
--- successfully fingerprint 99.24\% of users
--- 83.24\% uniqueness with 91.44\% cross-browser stability
--- Boda excluding IP address only have 68.98\% uniqueness with 84.64\% cross-browser stability.
---  current measurement of screen resolution, e.g.AmIUnique, Panopticlick, Boda - unstable
--- resolution changes in Firefox and IE when zooms
--- zoom level into consideration, normalize the width and height in screen resolution
--- DataURL and JPEG formats are unstable across different browsers, because these formats are with loss and implemented differently in multiple browsers and the server side as well.
--- need to adopt lossless formats for server-client communications in cross-browser fingerprinting.
--- use PNG, a lossless format, for cross-browser fp
--- Prior Fingerprintable Features
--- 4 features for cross-browser fp (screen res., color depth, list of fonts, platform)
--- nr of CPU virtual cores
--- screen resolution (in js simply "screen") - firefox/ie - change resolution value according to zoom level
--- use zoom levels, adjust resolution, screen ration also important
-(\textcite{Cao17}, p.2)
-
+\begin{comment}
 -- nr of CPU virtual cores - obtained by browser feature "hardwareConcurrency"
 -- audiocontext - provides bundle of audio signal processing functionalities from signal generation to signal
 --peak values and their corresponding frequencies are relatively stable
@@ -605,31 +570,4 @@ outputted by the rasterization, into a set of colors and a single
 depth value.
 --- MANY MORE - not write down all, als need to cut short - max. 1page per technique!!!!
 (\textcite{Cao17}, p.3)
-
-HOW it works:
--- task manager at server side - send various randering tasks
--- e.g. drawing curves, lines to client side
--- rendering task - also obtaining OS and hw level info
--- client-side browser renders and produces results (images, sound waves)
--- results convert into hashes -> to send to server
--- meantime - browser collect browser-specific info (for fp composition)
--- fp is generated from list of hashes from client side and a mask
--- that is a list of 1 or 0 corresponding to the hash list
--- perform "and" operation between list of hashes and mask -> create another hash as fp
--- mask: if browser not support anti-aliasing - all bit in mask involve anti-alisaing -> 0
--- second part of mask -> each browser pair - different mask
-(\textcite{Cao17}, p.4)
-
--- add rendering task? p-5
-
-FP composition
--- how to make fp on server side from client-side hashes
--- computed with -and- operation
--- generation of mask for every two browsers is training-based approach
-(\textcite{Cao17}, p.7)
-
--- go through results?
-
--- tor browser -> many features unavailable
--- disables canvas by default -> not fingerprintables if disabled?
-(\textcite{Cao17}, p.13)
+\end{comment}
