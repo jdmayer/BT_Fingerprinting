@@ -406,12 +406,7 @@ The interesting fact about browsers is that sometimes, when they try to hide som
 	When a browser uses a flash blocking add-on, the browser still displays flash in the plugin list. When due to the blocking add-on the list of system fonts can't be obtained this creates a distinct fingerprint even though the flash was not explicitly detected. (\textcite{eckersley10}, p.4)
 \end{tcolorbox}
 
-Weaknesses: (\textcite{upi15}, p.2)
-\begin{itemize}
-	\item unable to distinguish between instances of identically configured devices
-	\item fingerprint can change across browsers
-	\item fingerprint can be easily changed (upgrade, plug-in, etc.)
-\end{itemize}
+Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross browser fingerprinting, this is a single browser fingerprint method, which means it can not re-identify a user in another browser as the fingerprint may change across browsers and generally change easily(upgrade, plug-in, etc.). \textcite{upi15}, p.2)
 
 \subsection{Canvas fingerprinting}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
@@ -424,13 +419,6 @@ For rendering text fonts, webfonts were used as they are more distringuishable t
 The outcome of their research and tests was that the canvas fingerprint is consistent but would change depending on hardware and software configuration. Further Mowery and Shacham discovered that the canvas fingerprint is unable to distinguish between users who use the exact same hadware and software.(\textcite{mowery12}, p.5)\\\\
 Only 2 years after its first use a study conducted by Acar et al.(2014) ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximately occurrence of 5.5\% in the top 100,000 websites. (\textcite{upi15}, p.2)
 
-\subsubsection{Weaknesses}
-(\textcite{upi15}, p.2)
-\begin{itemize}
-	\item unable to distinguish between instances of identically configured devices
-	\item fingerprint can change across browsers
-\end{itemize}
-
 \subsubsection{How it works}
 Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5<canvas> element programmatically and reads the pixel data back to generate a fingerprint. Through this process a 2D graphic context is obtained and a text or image is drawn to the canvas.(\textcite{upi15}, p.2)\\
 The obtained canvas object provides a to-DataUrl(type) method which gives a data url consisting of a Base64 encoding of a png image which contains the canvas' contents. This Base 64 encoded pixel data url is used to create a hash.(\textcite{mowery12}, p.3)(\textcite{upi15}, p.2)\\\\
@@ -439,18 +427,20 @@ In their thesis K. Mowery and H. Shacham used two types of image comparisons: pi
 Pixel-level difference works by setting each pixel's color to a channel-wise difference between tow images at that location. If the color is something else thatn transparent pure black it indicates that there is a difference between the two pixels. They set the alpha value of differing pixel to 255 to render it completly opaque. (\textcite{mowery12}, pp.4)\\\\
 Difference maps works in a similar way, only that this method sets a pixel either black or white, depending on if they differ. If an image is purely white it indicates that they are the identical image. (\textcite{mowery12}, pp.4)
 
+Canvas fingerprinting has problems by distinguishing identically configured devices, like any fingeprinting technique. Like all single browser fingerprinting method the users fingerprint changes over different browsers. \textcite{upi15}, p.2)
+
+\begin{comment}
 %It is transparent to the user. Our tests can be performed, offscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being fingerprinted.
 
-%entropy
-%* Overall, our ﬁngerprints do combine beneﬁcially: 
-%* among the 116 groups, our ﬁve extremely simple tests show a distribution entropy of 5.73 bits. We believe that more specialized and targeted tests could reveal even more, perhaps down to the exact installed graphics card, operating system, and browser family. (\textcite{mowery12}, p.8)
+Overall, our ﬁngerprints do combine beneﬁcially: 
+among the 116 groups, our ﬁve extremely simple tests show a distribution entropy of 5.73 bits. We believe that more specialized and targeted tests could reveal even more, perhaps down to the exact installed graphics card, operating system, and browser family. (\textcite{mowery12}, p.8)
 
-%* It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observed 116 unique ﬁngerprint values, for a sample entropy of 5.73 bits. This is so even though the user population in our experiments exhibits little variation in browser and OS. (\textcite{mowery12}, p.1)
+It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observed 116 unique ﬁngerprint values, for a sample entropy of 5.73 bits. This is so even though the user population in our experiments exhibits little variation in browser and OS. (\textcite{mowery12}, p.1)
 
-%When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
- 
+When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
+\end{comment}
 \subsection{JavaScript Engine fingerprinting}
-%weaknesses?
+
 In 2011 P. Reischl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and major version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
 JavaScript Engine fingerprinting uses testsuits like Sputnik to determine the used browser and version. Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robost fingerprinting technique.(\textcite{mulazzani13}, p.1)
 
@@ -473,7 +463,7 @@ The figure below \textbf{reference} give a good overview how such a tree can be 
 	\caption{Example for the structure of a decision tree}
 	\label{DecisionTree}
 \end{figure}
-
+%weaknesses?
 \begin{comment}
 --  having a comparable overhead for creating and collecting fingerprint samples.
 -- implemented in just a few hundred lines of JS
@@ -488,8 +478,6 @@ In 2011 Boda et al. conducted the first study about cross-browser fingerprinting
 Until Cao et al. proposed an improved fingerprint in 2017 it stayed the only cross-browser work.(\textcite{Cao17}, p.1)
 
 \subsubsection{How it works}
-
-
 Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. (\textcite{upi15}, pp.2)
 
 The fingerprint is created from specific browser data with the help of JavaScript and server-side algorithms.(\textcite{boda11}, p.4)
@@ -526,11 +514,8 @@ Various rendering tasks (e.g. drawing curves and lines to client side) are sent.
 FP composition - Fingerprint is generated from list of hashes which is intertwined with a mask through a "and" operation which creates the fingerprint hash.
 The collected browser information corresponds to the mask. Each browser has its own mask. (\textcite{Cao17}, p.4)
 
+Contrary to single browser techniques cross-browser fingerprinting has no problem identifying users across browsers. Anyway. It has the same weakness as all fingerprints: identically configured devices. (\textcite{upi15}, pp.2)
 Weaknesses: (\textcite{upi15}, pp.2)
-\begin{itemize}
-	\item unable to distinguish between instances of identically configured devices
-	\item fingerprint can change????
-\end{itemize} 
 
 \begin{comment}
 -- nr of CPU virtual cores - obtained by browser feature "hardwareConcurrency"

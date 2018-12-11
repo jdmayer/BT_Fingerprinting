@@ -75,15 +75,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7.2}Canvas fingerprinting}{17}{subsection.2.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Weaknesses}{17}{subsection.2.7.2}
-\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{How it works}{17}{subsection.2.7.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7.3}JavaScript Engine fingerprinting}{18}{subsection.2.7.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{How it works}{18}{subsection.2.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.4}Cross-Browser fingerprinting}{20}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.4}Cross-Browser fingerprinting}{19}{subsection.2.7.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{How it works}{20}{subsection.2.7.4}
 \defcounter {refsection}{0}\relax 
