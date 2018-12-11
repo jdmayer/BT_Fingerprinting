@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 10:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1815,13 +1815,6 @@ Package biblatex Info: ... file 'main.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Cao17
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                Mayer09
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1830,10 +1823,6 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: citation 'Mayer09' was not found at all in the .bbl, 
 bibliography labels cannot be generated, please correct the citation.
-
-
-Package biblatex Warning: citation 'Cao17' was not found at all in the .bbl, bi
-bliography labels cannot be generated, please correct the citation.
 
 Package biblatex Info: Reference section=0 on input line 59.
 Package biblatex Info: Reference segment=0 on input line 59.
@@ -2374,18 +2363,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 468--475
 
  []
 
-[19 <./images/MinimalFP.png> <./images/DecisionTree.png>] [20]
-Overfull \hbox (51.71057pt too wide) in paragraph at lines 525--528
-[]\T1/lmr/m/n/12 99,24% suc-cess-fully iden-tify users 83.24% unique-ness with 
-91.44% cross-browser stability([],
- []
-
-) [21]
+[19 <./images/MinimalFP.png> <./images/DecisionTree.png>] [20]) [21]
 \openout2 = `chapters/applicationScenario.aux'.
 
- (./chapters/applicationScenario.tex
+
+(./chapters/applicationScenario.tex
 Chapter 3.
-<images/FingerprintingAttributes.png, id=643, 515.42563pt x 393.97188pt>
+<images/FingerprintingAttributes.png, id=648, 515.42563pt x 393.97188pt>
 File: images/FingerprintingAttributes.png Graphic file (type png)
 <use images/FingerprintingAttributes.png>
 Package pdftex.def Info: images/FingerprintingAttributes.png  used on input lin
@@ -2452,14 +2436,19 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0846D3A2B3B18DE63F694ABCB91041F2;9383.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  49001 strings out of 492639
- 921603 string characters out of 6133087
- 1471500 words of memory out of 5000000
+ 921585 string characters out of 6133087
+ 1471517 words of memory out of 5000000
  51915 multiletter control sequences out of 15000+600000
  584995 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2473,10 +2462,10 @@ type1/public/lm/lmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr
 i12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texliv
 e/2018/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2018/texmf-dist/
 fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (36 pages, 977728 bytes).
+Output written on main.pdf (36 pages, 977053 bytes).
 PDF statistics:
- 848 PDF objects out of 1000 (max. 8388607)
- 753 compressed objects within 8 object streams
+ 854 PDF objects out of 1000 (max. 8388607)
+ 759 compressed objects within 8 object streams
  123 named destinations out of 1000 (max. 500000)
  698 words of extra memory for PDF output out of 10000 (max. 10000000)
 

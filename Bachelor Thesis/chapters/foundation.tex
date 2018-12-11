@@ -484,17 +484,15 @@ The figure below \textbf{reference} give a good overview how such a tree can be 
 \end{comment}
 \subsection{Cross-Browser fingerprinting}
 
-There are different ways to apply Cross-Browser fignerprinting. In 2011 Boda et al. used a part of the ip to create a fingerprint. In 2017 Cao et al. proposed a better option.
+In 2011 Boda et al. conducted the first study about cross-browser fingerprinting, using a part of the IP address as part of the fingerprint. This is not optimal as the IP address can be modified by e.g. TOR or another proxy. (\textcite{boda11}, p.14)
+Until Cao et al. proposed an improved fingerprint in 2017 it stayed the only cross-browser work.(\textcite{Cao17}, p.1)
 
 \subsubsection{How it works}
-Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. The technique used differs. It e.g. can rely on browser dependent plug-ins like Adobe Flash or Java to obtain a font list.(\textcite{upi15}, pp.2)
 
---create a unique identifier from specific browser data using JavaScript and server-side algorithms
-(\textcite{boda11}, p.4)
 
-In 2011 a study conducted by Boda et al. discovered that most user can be tracked across the 5 most populat web browsers using
+Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. (\textcite{upi15}, pp.2)
 
- a part of the ip address, time zone, screen resolution and the availability of a specific font set.(\textcite{boda11}, p.1)
+The fingerprint is created from specific browser data with the help of JavaScript and server-side algorithms.(\textcite{boda11}, p.4)
 
 To be able to track a user across different web browsers a set of browser-independent features is used as a basis of identification. Part of this set is for example (\textcite{boda11}, p.2)
 \begin{itemize}
@@ -509,18 +507,11 @@ The difference to other fingerprints is that the first two octets of the IP addr
 -- use locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version
 (\textcite{boda11}, p.5)
 
-ip version - unavailable behind an anonymous network or a proxy (\textcite{Cao17}, p.1)
+The downside of using the IP address as part of the fingerprint is that proxies modify it for privacy reasons. Boda et al. dealt with that problem saying that the other parameter suffice to identify a user.
 
-\newpage
-A technique developed by Yinzhi Cao
-**	E.g. used screen’s ratio of width to height as it remains consistent even when using zoom (\textcite{Cao17}, p.2 )
-**	Script forces system to perform 36 tasks – results include info, takes less than a minute
-**	(\textcite{nordrum17})
+Cao et al. improved this method by excluding the IP address, modifying the use of some data and adding some features.(\textcite{Cao17}, p.1) This technique forces the system to perform 36 tasks which return the required information within less than a minute.
 
-**	Rely on corresponding OS and hardware functionalities
-**	99,24\%  successfully identify (\textcite{Cao17}, p.2)
-
-This fingerprinting technique is based on different novel operating system and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). All in al 29 features. Many of them are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, p.1)
+This fingerprinting technique is based on different novel operating system and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). Many of which are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, pp.1)
 
 99,24\%  successfully identify users 
 83.24\% uniqueness with 91.44\% cross-browser stability(\textcite{Cao17}, p.2)
@@ -529,19 +520,11 @@ compared to Boda excluding ip address -68.98\% uniqueness with 84.64\% cross-bro
 Improvements towards Boda et al. technique. 
 E.g. Change of the screen resolution. In browsers like Firefox and Internet Expolorer the resolution changes when scrolling. Therefore this method takes the zoom level into consideration and normalizes the width an dheight of the screen resolution.
 E.g. DataUrl + JPEG are unstable across different browsers, therefore use a lossless format like PNG 
-%4 features for cross-browser fp (screen res., color depth, list of fonts, platform)
 (\textcite{Cao17}, p.2)
 
 Various rendering tasks (e.g. drawing curves and lines to client side) are sent. Also obtains operating system and hardware level information. The client side browser renders and returns the results (images, sound waves) which are converted into a hashes. In the meantime the browser collects browser-specific information.
 FP composition - Fingerprint is generated from list of hashes which is intertwined with a mask through a "and" operation which creates the fingerprint hash.
 The collected browser information corresponds to the mask. Each browser has its own mask. (\textcite{Cao17}, p.4)
--- add rendering task? p-5
-
--- go through results?
--- tor browser -> many features unavailable
--- disables canvas by default -> not fingerprintables if disabled?
-(\textcite{Cao17}, p.13)
-
 
 Weaknesses: (\textcite{upi15}, pp.2)
 \begin{itemize}
@@ -569,5 +552,7 @@ the driver as well, processes a fragment, such as a triangle
 outputted by the rasterization, into a set of colors and a single
 depth value.
 --- MANY MORE - not write down all, als need to cut short - max. 1page per technique!!!!
+
+%4 features for cross-browser fp (screen res., color depth, list of fonts, platform)
 (\textcite{Cao17}, p.3)
 \end{comment}

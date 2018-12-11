@@ -152,6 +152,44 @@
       \verb https://pet-portal.eu/files/articles/2011/fingerprinting/cross-browser_fingerprinting.pdf
       \endverb
     \endentry
+    \entry{Cao17}{thesis}{}
+      \name{author}{3}{}{%
+        {{hash=6c19e9ff9aa635120d5ff06439d516b5}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3bdff36d59bfdb518667455de2a423b5}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=82e076854756894d8c2fdc3da1789d36}{%
+           family={Wijmans},
+           familyi={W\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{efbc8f6bc74519520c8ce816ff51f57d}
+      \strng{fullhash}{efbc8f6bc74519520c8ce816ff51f57d}
+      \strng{bibnamehash}{efbc8f6bc74519520c8ce816ff51f57d}
+      \strng{authorbibnamehash}{efbc8f6bc74519520c8ce816ff51f57d}
+      \strng{authornamehash}{efbc8f6bc74519520c8ce816ff51f57d}
+      \strng{authorfullhash}{efbc8f6bc74519520c8ce816ff51f57d}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{(Cross-)Browser Fingerprinting via OS and Hardware Level Features}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf
+      \endverb
+      \verb{url}
+      \verb http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf
+      \endverb
+    \endentry
     \entry{doty18}{report}{}
       \name{author}{1}{}{%
         {{hash=392b87a9f00d946f4a5fc375dfcd9422}{%
@@ -298,29 +336,6 @@
       \verb{url}
       \verb https://www.howtogeek.com/114937/htg-explains-whats-a-browser-user-agent/
       \endverb
-    \endentry
-    \entry{mayer09}{article}{}
-      \name{author}{1}{}{%
-        {{hash=f6dcb445ae0108268b58fc62482d99c4}{%
-           family={Mayer},
-           familyi={M\bibinitperiod},
-           given={J.\bibnamedelimi R.},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{f6dcb445ae0108268b58fc62482d99c4}
-      \strng{fullhash}{f6dcb445ae0108268b58fc62482d99c4}
-      \strng{bibnamehash}{f6dcb445ae0108268b58fc62482d99c4}
-      \strng{authorbibnamehash}{f6dcb445ae0108268b58fc62482d99c4}
-      \strng{authornamehash}{f6dcb445ae0108268b58fc62482d99c4}
-      \strng{authorfullhash}{f6dcb445ae0108268b58fc62482d99c4}
-      \field{sortinit}{M}
-      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Undergraduate Senior Thesis, Princeton University}
-      \field{langid}{english}
-      \field{title}{Any person... a pamphleteer”: Internet Anonymity in the Age of Web 2.0}
-      \field{year}{2009}
     \endentry
     \entry{mowery12}{article}{}
       \name{author}{2}{}{%
@@ -739,7 +754,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Cao17}
   \missing{Mayer09}
 \endrefsection
 \endinput
