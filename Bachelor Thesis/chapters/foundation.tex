@@ -384,26 +384,22 @@ Passive fingerprinting techniques
 \end{itemize}
 
 \section{Web browser fingerprinting techniques}
+%rewrite or delete?
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 \subsection{Browser specific fingerprinting}
 %can be both active and passive?
-In 2010, P. Eckersley conducted a study in the project "Panopticlick" which checks how trackable users are via a from collected data generated fingerprint. (\textcite{upi15}, p.2) This study has shown that 94.2\% of the uses which use flash or java could be distinguished with browser fingerprinting. (\textcite{eckersley10}, p.2)\\
-Possible even if the browser only reveals as much as its version and configuration information which is in most cases enough to create a distinct fingerprint.(\textcite{eckersley10}, p.16)
-
+In 2010, P. Eckersley conducted a study in the project "Panopticlick" which checks how trackable users are. The tracking is done with the help of a fingerprint which is generated from previously collected data. (\textcite{upi15}, p.2) This study has shown that 94.2\% of the users which use Flash or JavaScript could be distinguished with browser fingerprinting. (\textcite{eckersley10}, p.2)
 \subsubsection{How it works}
-Browser specific fingerprinting is a technique which only uses browser-dependent features (like flash and JavaScript or be retrieved from a http request) to collect a number of common or and less-common known browser characteristics.\\
-
-This retrieved browser information typically includes the installed fonts, plug-ins (including version numbers), user agent, http accept and screen resolution. (\textcite{upi15}, p.2)\\\\
+Browser specific fingerprinting is a technique which only uses browser-dependent features to collect a number of common or and less-common known browser characteristics.\\\\
+This kind of fingerprinting is possible even if the browser only reveals so much as its version and configuration information which is in most cases enough to create a distinct fingerprint. (\textcite{eckersley10}, p.16) Even though the retrieved browser information typically includes the installed fonts, plug-ins (including version numbers), user agent, http accept and screen resolution. (\textcite{upi15}, p.2)\\\\
 As this kind of fingerprint pracitcally is just a concatination of this information it is easily affected by changes, like upgrades, newly installed features or extermal change of the system.
 Usually, simple heuristics can be used to adjust the browser specific fingerprint accordingly.(\textcite{eckersley10}, p.4) (\textcite{upi15}, p.2)\\\\
-The interesting fact about browsers is that sometimes, when they try to hide something, this helps even more to make the fingerprint distinct.
-
+In some cases when the user tries to hide browser features, this accomplishes just the opposit, as it makes the fingerprint more distinct. See the example below.\\
 \begin{tcolorbox}
 	Example: \\
-	When a browser uses a flash blocking add-on, the browser still displays flash in the plugin list. When due to the blocking add-on the list of system fonts can't be obtained this creates a distinct fingerprint even though the flash was not explicitly detected. (\textcite{eckersley10}, p.4)
+	Even when using a flash blocking add-on, the browser still displays flash in the plugin list. When due to the blocking add-on the list of system fonts can't be obtained this creates a distinct fingerprint even though the flash blocker was not explicitly detected. (\textcite{eckersley10}, p.4)
 \end{tcolorbox}
-
-Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross browser fingerprinting, this is a single browser fingerprint method, which means it can not re-identify a user in another browser as the fingerprint may change across browsers and generally change easily(upgrade, plug-in, etc.). \textcite{upi15}, p.2)
+Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross-browser fingerprinting, this is a single browser fingerprint technique, which means it can not re-identify a user in another browser as the fingerprint may change across browsers. \textcite{upi15}, p.2)
 
 \subsection{Canvas fingerprinting}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
