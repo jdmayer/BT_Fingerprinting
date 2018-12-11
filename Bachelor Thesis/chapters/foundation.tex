@@ -1,6 +1,6 @@
 \chapter{Foundation}
 \label{cha:foundation}
-This chapter will cover the basic knowledge about fingerprinting. First explaining the term fingerprint and what it can be used for. Further it will discuss the threat is poses as well as possible ways to reduce a fingerprint before covering the used configurations and plugins. After the base was layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
+This chapter will cover the basic knowledge about fingerprinting. This chapter is all about the what, why and how of fingerprinting.  First explaining the term fingerprint and what it can be used for. Further it will discuss the threat is poses as well as possible ways to reduce a fingerprint before covering the used configurations and plugins. After the base was layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
 
 \section{Fingerprinting}
 Web browser fingerprinting, also known as device fingerprinting, is the systematic collection of information to identify and later re-identify users. (\textcite{doty18}, p.3)(\textcite{amiunique})\\
@@ -124,7 +124,7 @@ Due to this regulation, the only step the user has to take to avoid fingerprinti
 Even though the rules imposed by this regulation seem to help prevent unwanted tracking, it only helps mitigate it. There will certainly be fewer entities making use of fingerprinting though web browser fingerprinting is not expected to disappear, no matter how high the penalties are on its illegal utilisation.\\
 Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Further, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
 
-\section{Mitigation - max. 1,5 -2 pages}
+\section{Mitigation}
 As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the users privacy. So this brings up the question if there is a way to avoid this tracking method. Each of the researched articles about this topic stated the same. No. Unfortunately, there is no way to avoid being fingerprinted completely. There are only ways to try and reduce the risk of being tracked. (\textcite{web17})
 The danger of web browser fingerprinting lays in its stateless nature. 
 * hard to detect - if even possible
@@ -350,24 +350,23 @@ Benchmark tests – evaluate how the browser’s js engine performs against a li
 \newpage
 \section{Web browser fingerprinting methods}\label{sec:Methods}
 \subsection{Active fingerprinting}
-The active fingerprinting method needs to actively query information about the client that isn't automatically provided by the browser. (\textcite{web17}) To obtain additional characteristics the site needs to run a JavaScript code or use plug-ins like Adobe Flash which extend the browsers functionality. (\textcite{web17})((\textcite{doty18}, p.6)\\\\
+Active fingerprinting actively queries information about the client by running JavaScript code or using plug-ins like Adobe Flash which extend the browsers functionality.(\textcite{web17})((\textcite{doty18}, p.6)\\\\
 Some of the additional characteristics which can be retrieved with this method are:
 \begin{itemize}
-	\item user's screen (width, height, resolution)
-	\item window size
+	\item user's screen (width, height, resolution) and window size
 	\item enumerating fonts
 	\item time zone
 	\item plug-ins
 	\item evaluating performance characteristics
 	\item rendering graphical patterns\\
 \end{itemize}
-The only potential disadvantage active fingerprinting provides is that it can be detected on the client side. (\textcite{doty18}, p.6) Active fingerprinting can be discovered in case the user analyses the outgoing data packages, HTML or the JavaScript source code, which in the majority of cases does not happen. (\textcite{web17})\\\\
+The only potential disadvantage active fingerprinting provides is that it  can be detected on the client side in case the user analyses the outgoing data packages, HTML or the JavaScript source code, which in the majority of cases does not happen. (\textcite{doty18}, p.6)(\textcite{web17})\\\\
 Active fingerprinting techniques
 \begin{itemize}
 	\item Canvas fingerprinting
 	\item JavaScript Engine fingerprinting
 	\item Cross-Browser fingerprinting
-	\item \textbf{Browser specific fingerprinting?}
+	\item Browser specific fingerprinting
 \end{itemize}
 
 \subsection{Passive fingerprinting}
@@ -377,19 +376,17 @@ Some of the provided characteristics are:
 	\item cookies
 	\item http request headers
 	\item ip address and port
-	\item character sets (e.g. UTF-8)
-	\item languages\\
+	\item character sets (e.g. UTF-8) and languages\\
 \end{itemize}
-??Passive fingerprinting techniques
+Passive fingerprinting techniques
 \begin{itemize}
-	\item \textbf{Browser specific fingerprinting?}
+	\item Browser specific fingerprinting
 \end{itemize}
-
 
 \section{Web browser fingerprinting techniques}
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 \subsection{Browser specific fingerprinting}
-%find AmIUnique paper --- about single browser fp
+%can be both active and passive?
 In 2010, P. Eckersley conducted a study in the project "Panopticlick" which checks how trackable users are via a from collected data generated fingerprint. (\textcite{upi15}, p.2) This study has shown that 94.2\% of the uses which use flash or java could be distinguished with browser fingerprinting. (\textcite{eckersley10}, p.2)\\
 Possible even if the browser only reveals as much as its version and configuration information which is in most cases enough to create a distinct fingerprint.(\textcite{eckersley10}, p.16)
 

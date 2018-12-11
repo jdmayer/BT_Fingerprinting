@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1884,13 +1884,13 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 28.
  [2
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 90.
-Package tocbasic Info: Using my definition of `\numberline' on input line 106.
-Package tocbasic Info: Using my definition of `\numberline' on input line 114.
-Package tocbasic Info: Using my definition of `\numberline' on input line 130.
+Package tocbasic Info: Using my definition of `\numberline' on input line 88.
+Package tocbasic Info: Using my definition of `\numberline' on input line 104.
+Package tocbasic Info: Using my definition of `\numberline' on input line 112.
+Package tocbasic Info: Using my definition of `\numberline' on input line 128.
+Package tocbasic Info: Using my definition of `\numberline' on input line 134.
 Package tocbasic Info: Using my definition of `\numberline' on input line 136.
-Package tocbasic Info: Using my definition of `\numberline' on input line 138.
-Package tocbasic Info: Using my definition of `\numberline' on input line 144.
+Package tocbasic Info: Using my definition of `\numberline' on input line 142.
 )
 \tf@toc=\write9
 \openout9 = `main.toc'.
@@ -2236,37 +2236,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 353--356
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
+Underfull \hbox (badness 10000) in paragraph at lines 363--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--377
+Underfull \hbox (badness 10000) in paragraph at lines 373--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 397--398
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--403
+Underfull \hbox (badness 10000) in paragraph at lines 396--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--403
+Underfull \hbox (badness 10000) in paragraph at lines 396--400
 
  []
 
@@ -2281,16 +2281,17 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--415
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--415
+
+ []
+
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 412--418
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--418
-
- []
-
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -2303,63 +2304,63 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--421
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--429
+Underfull \hbox (badness 10000) in paragraph at lines 420--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--429
+Underfull \hbox (badness 10000) in paragraph at lines 420--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--429
+Underfull \hbox (badness 10000) in paragraph at lines 420--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--429
+Underfull \hbox (badness 10000) in paragraph at lines 420--426
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 444--446
+Underfull \hbox (badness 10000) in paragraph at lines 441--443
 
  []
 
-<images/MinimalFP.png, id=608, 376.90813pt x 108.405pt>
+<images/MinimalFP.png, id=607, 376.90813pt x 108.405pt>
 File: images/MinimalFP.png Graphic file (type png)
 <use images/MinimalFP.png>
-Package pdftex.def Info: images/MinimalFP.png  used on input line 454.
+Package pdftex.def Info: images/MinimalFP.png  used on input line 451.
 (pdftex.def)             Requested size: 349.99757pt x 100.00507pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--457
+Underfull \hbox (badness 10000) in paragraph at lines 445--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--457
+Underfull \hbox (badness 10000) in paragraph at lines 445--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--457
+Underfull \hbox (badness 10000) in paragraph at lines 445--454
 
  []
 
 [18]
-<images/DecisionTree.png, id=616, 360.34625pt x 172.14313pt>
+<images/DecisionTree.png, id=615, 360.34625pt x 172.14313pt>
 File: images/DecisionTree.png Graphic file (type png)
 <use images/DecisionTree.png>
-Package pdftex.def Info: images/DecisionTree.png  used on input line 462.
+Package pdftex.def Info: images/DecisionTree.png  used on input line 459.
 (pdftex.def)             Requested size: 340.00116pt x 149.9997pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--465
+Underfull \hbox (badness 10000) in paragraph at lines 455--462
 
  []
 
@@ -2369,7 +2370,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 458--465
 
 (./chapters/applicationScenario.tex
 Chapter 3.
-<images/FingerprintingAttributes.png, id=649, 515.42563pt x 393.97188pt>
+<images/FingerprintingAttributes.png, id=648, 515.42563pt x 393.97188pt>
 File: images/FingerprintingAttributes.png Graphic file (type png)
 <use images/FingerprintingAttributes.png>
 Package pdftex.def Info: images/FingerprintingAttributes.png  used on input lin
@@ -2435,12 +2436,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0846D3A2B3B18DE63F694ABCB91041F2;9383.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
+(rerunfilecheck)             Checksum: B6FB0B0DD0B0101082DFA35055A76E99;9268.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -2448,7 +2444,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  49001 strings out of 492639
  921585 string characters out of 6133087
- 1471503 words of memory out of 5000000
+ 1471507 words of memory out of 5000000
  51915 multiletter control sequences out of 15000+600000
  584995 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2462,10 +2458,10 @@ type1/public/lm/lmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr
 i12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texliv
 e/2018/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2018/texmf-dist/
 fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (36 pages, 977299 bytes).
+Output written on main.pdf (36 pages, 976152 bytes).
 PDF statistics:
- 855 PDF objects out of 1000 (max. 8388607)
- 760 compressed objects within 8 object streams
+ 854 PDF objects out of 1000 (max. 8388607)
+ 759 compressed objects within 8 object streams
  123 named destinations out of 1000 (max. 500000)
  698 words of extra memory for PDF output out of 10000 (max. 10000000)
 
