@@ -298,6 +298,8 @@ SEE NIKIFORAKIS!!!!
 -- originally html <canvas> element was used to draw graphics on a web page
 (\textcite{pixel18})
 
+%what is base 64
+
 Through the display of an HTML5 Canvas element, it is possible to collect small differences in the hardware on in the software configurations, thanks to slight differences in the image rendering between devices. The smallest pixel difference can be detected -> canvas fingerprinting 
 (\textcite{amiunique})
 
@@ -402,25 +404,18 @@ In some cases when the user tries to hide browser features, this accomplishes ju
 Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross-browser fingerprinting, this is a single browser fingerprint technique, which means it can not re-identify a user in another browser as the fingerprint may change across browsers. \textcite{upi15}, p.2)
 
 \subsection{Canvas fingerprinting}
-Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\
-As the title teasers, this web browser fingerprinting technique works by using the new coding features in HTML5.(\textcite{pixel18}) Any website that runs JavaScript on the user's browser can use the HTML5<canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
-For rendering text fonts, webfonts were used as they are more distringuishable than expected. (\textcite{mowery12}, p.6) Further WebGL was used as  graphic cards leave a detectable fingerprint while rendering even the simplest scenes.(\textcite{mowery12}, p.8)\\
-\begin{tcolorbox}
-	Example text rendering: \\
-	Out of 300 samples the text font Arial was rendered in 50 distinct ways. (\textcite{mowery12}, p.6)
-\end{tcolorbox}
-The outcome of their research and tests was that the canvas fingerprint is consistent but would change depending on hardware and software configuration. Further Mowery and Shacham discovered that the canvas fingerprint is unable to distinguish between users who use the exact same hadware and software.(\textcite{mowery12}, p.5)\\\\
-Only 2 years after its first use a study conducted by Acar et al.(2014) ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximately occurrence of 5.5\% in the top 100,000 websites. (\textcite{upi15}, p.2)
+Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\ Any website that runs JavaScript on the user's browser can use the HTML5<canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
+The outcome of their research and tests was that the canvas fingerprint is consistent but would change depending on hardware and software configuration. Only 2 years after its first use, a study conducted by Acar et al. ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximately occurrence of 5.5\% in the top 100,000 Alexa websites. (\textcite{acar14}, p.5)
 
 \subsubsection{How it works}
-Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5<canvas> element programmatically and reads the pixel data back to generate a fingerprint. Through this process a 2D graphic context is obtained and a text or image is drawn to the canvas.(\textcite{upi15}, p.2)\\
-The obtained canvas object provides a to-DataUrl(type) method which gives a data url consisting of a Base64 encoding of a png image which contains the canvas' contents. This Base 64 encoded pixel data url is used to create a hash.(\textcite{mowery12}, p.3)(\textcite{upi15}, p.2)\\\\
+Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5<canvas> element programmatically. Each browser renders differently which helps acquiring a distinctive part for the fingerprint. So for example out of 300 samples the text font Arial was rendered in 50 distinctive ways.(\textcite{mowery12}, p.6)\\\\
+After rendering the text or WebGL scene using HTML5<canvas> the pixel data is read to generate a fingerprint. Through this process a 2D graphic context is obtained and a text or image is drawn to the canvas.(\textcite{upi15}, p.2)\\
+The obtained canvas object provides a to-DataUrl(type) method which gives a data url consisting of a Base64 encoding of a png image which contains the canvas' content. This Base64 encoded pixel data url is used to create a hash.(\textcite{mowery12}, p.3)(\textcite{upi15}, p.2)\\\\
 At least the operating system, browser version, graphics card, installed fonts, sub-pixel hinting and anti-aliasing all play a part in the final fingerprint.(\textcite{upi15}, p.2) \\\\
-In their thesis K. Mowery and H. Shacham used two types of image comparisons: pixel-level difference and difference maps.(\textcite{mowery12}, pp.4)\\\\
-Pixel-level difference works by setting each pixel's color to a channel-wise difference between tow images at that location. If the color is something else thatn transparent pure black it indicates that there is a difference between the two pixels. They set the alpha value of differing pixel to 255 to render it completly opaque. (\textcite{mowery12}, pp.4)\\\\
-Difference maps works in a similar way, only that this method sets a pixel either black or white, depending on if they differ. If an image is purely white it indicates that they are the identical image. (\textcite{mowery12}, pp.4)
-
-Canvas fingerprinting has problems by distinguishing identically configured devices, like any fingeprinting technique. Like all single browser fingerprinting method the users fingerprint changes over different browsers. \textcite{upi15}, p.2)
+In their paper K. Mowery and H. Shacham used two types of image comparisons to check if the user's configuration matches a fingerprint: \textit{pixel-level difference} and \textit{difference maps}.(\textcite{mowery12}, pp.4)\\\\
+Pixel-level difference works by setting each pixel's color to a specific color. If the pixel's color isn't a transparent pure black it indicates that two pixels don't match and therefore its alpha value is set to 255 to render it completly opaque. (\textcite{mowery12}, pp.4)\\\\
+Difference maps works in a similar way, only that this method sets a pixel either black or white, depending on if they differ. If an image is purely white it indicates that they are the identical image. (\textcite{mowery12}, pp.4)\\\\
+Canvas fingerprinting can not distinguishing identically configured devices and can not fingerprint a user across different browsers.(\textcite{mowery12}, p.5) \textcite{upi15}, p.2)
 
 \begin{comment}
 %It is transparent to the user. Our tests can be performed, offscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being fingerprinted.

@@ -19,6 +19,62 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{acar14}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=fb548a2dcea5b2db265509516c83a7a6}{%
+           family={Acar},
+           familyi={A\bibinitperiod},
+           given={Gunes},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a52e7e2ec891fcf0b76b02778832884b}{%
+           family={Eubank},
+           familyi={E\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7325cbcfbf22a9088d434d6ec7442789}{%
+           family={Englehardt},
+           familyi={E\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=327e7ba98f80c7aa7aefacc5869a4277}{%
+           family={Juarez},
+           familyi={J\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=95dc795a2be14c50fb6a924acc135ff8}{%
+           family={Narayanan},
+           familyi={N\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod}}}%
+        {{hash=35f00ee6afc1d6ff2a2fdccf7837d238}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{d41ac06ce934d48d81aee192d1bd3a1e}
+      \strng{fullhash}{50aacfc986db1b30e3380ed1cd7caf79}
+      \strng{bibnamehash}{d41ac06ce934d48d81aee192d1bd3a1e}
+      \strng{authorbibnamehash}{d41ac06ce934d48d81aee192d1bd3a1e}
+      \strng{authornamehash}{d41ac06ce934d48d81aee192d1bd3a1e}
+      \strng{authorfullhash}{50aacfc986db1b30e3380ed1cd7caf79}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security}
+      \field{title}{The web never forgets: Persistent tracking mechanisms in the wild}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://www.ftc.gov/system/files/documents/public_comments/2015/10/00064-98109.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ftc.gov/system/files/documents/public_comments/2015/10/00064-98109.pdf
+      \endverb
+    \endentry
     \entry{amiunique}{online}{}
       \name{author}{1}{}{%
         {{hash=cde66cfbb4dfe5a6b13d6225badd0d4d}{%
@@ -514,35 +570,6 @@
       \endverb
       \verb{url}
       \verb https://seclab.cs.ucsb.edu/media/uploads/papers/sp2013_cookieless.pdf
-      \endverb
-    \endentry
-    \entry{nordrum17}{report}{}
-      \name{author}{1}{}{%
-        {{hash=b2b5713e361d726e2efaab35f87033d4}{%
-           family={Nordrum},
-           familyi={N\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{b2b5713e361d726e2efaab35f87033d4}
-      \strng{fullhash}{b2b5713e361d726e2efaab35f87033d4}
-      \strng{bibnamehash}{b2b5713e361d726e2efaab35f87033d4}
-      \strng{authorbibnamehash}{b2b5713e361d726e2efaab35f87033d4}
-      \strng{authornamehash}{b2b5713e361d726e2efaab35f87033d4}
-      \strng{authorfullhash}{b2b5713e361d726e2efaab35f87033d4}
-      \field{sortinit}{N}
-      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{Browser Fingerprinting Tech Works Across Different Browsers for the First Time}
-      \field{type}{techreport}
-      \field{year}{2017}
-      \verb{urlraw}
-      \verb https://spectrum.ieee.org/tech-talk/telecom/internet/new-online-fingerprinting-technique-works-across-browsers
-      \endverb
-      \verb{url}
-      \verb https://spectrum.ieee.org/tech-talk/telecom/internet/new-online-fingerprinting-technique-works-across-browsers
       \endverb
     \endentry
     \entry{pixel18}{online}{}
