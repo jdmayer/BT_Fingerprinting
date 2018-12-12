@@ -17,9 +17,12 @@ Example\\
 Upon accessing a website, the fingerprinting script determines the users fingerprint and pushes it to a central data store. This data store is usually a shared data store which is used by multiple websites. So when the user accesses another website which also has access to this shared data store, the user will be recognized and the user profile can be updated. (\textcite{havens16}, p. 8)
 \end{tcolorbox}
 
+\begin{comment}
+Web browser fingerprinting is a tracking method, which can correlate user's browsing activity within as well as across sessions without transparency or control. (\textcite{doty18}, p.3) Most fingerprinting techniques are obscure and users usually don't notice that they are being tracked.\\\\
+The modern web exposes a number of details about the user’s device, either directly or discoverable through testing. This is largely a result of a greater need to comply with different device types, support for different features, or simply leaking data by including too much information in protocol requests. (\textcite{havens16}, p. 4)
+\end{comment}
 %\subsection{Entropy} - (\textcite{khan14})
-\section{Utilisation}
-\label{sec:utilisation}
+\section{Utilisation}\label{sec:utilisation}
 In a study conducted in 2013 by Nikiforakis et al. they found that fingerprinting is a part of some of the most popular websites on the internet and that multiple hundred thousands of users are fingerprinted on a daily basis. (\textcite{nikiforakis13}, p.6) \\\\
 The following paragraphs lists different ways in which fingerprinting can be utilized:\\\\
 Constructive use
@@ -64,7 +67,7 @@ Con- and destructive use
 	\end{tcolorbox}
 \end{itemize}
 The following paragraphs will summarize the findings of a study conducted by Nikiforakis et al. in cooperation with three commercial fingerprinting companies in order to test multiple websites for the use of fingerprinting scripts.\\\\
-Nikiforakis et al. used the categorization of TrendMicro and McAfee on a list of 3804 domains. If a domain was neither analysed nor categorized by the both used services they were marked as untested and not used. Therefore only 59.2\% of the 3804 domains were included in the results of this testing. If one service declared a domain as unsafe and the other stated the opposite, it was accepted as safe. Some categories were given aliases and gathered together to a more generalized category.(\textcite{nikiforakis13}, pp.6)\\\\
+Nikiforakis et al. used the categorization of TrendMicro and McAfee on a list of 3804 domains. If a domain was neither analysed nor categorized by the both used services they were marked as untested and not used. Therefore only 59.2\% of the 3804 domains were included in the results of this testing. If one service declared a domain as unsafe and the other stated the opposite, it was accepted as safe. Some categories were given aliases and gathered together to a more generalized category.(\textcite{nikiforakis13}, pp.6)\\
 \begin{figure}[H]
 \centering
 		\includegraphics[width=350pt, height=160pt]{Top10CategoriesNiki.png}
@@ -76,55 +79,33 @@ The top two categories were identified as malicious (163 domains) or as spam (10
 It was discovered that all these sites were found to include, as some point, fingerprinting code provided by one of the three commercial fingerprinting companies.\\
 This observation, paired with the fact that all of these three studied providers stated that there must be set an appointment in order to acquire fingerprinting services, point to the possibility that fingerprinting companies work with dubious domains in order to expand their fingerprinting database.(\textcite{nikiforakis13}, p.7)
 
-
 \section{Threat}
-have a look at (\textcite{eckersley10})
-
-As seen in the previous sub-chapter /ref{sec:utilisation} web browser fingerprinting does have its advantages as well as its disadvantages for the user. This section will have a closer look as the threat fingerprinting poses for the users privacy.
- 
-Web browser fingerprinting is a tracking method, which can correlate user's browsing activity within as well as across sessions without transparency or control. (\textcite{doty18}, p.3) Most fingerprinting techniques are obscure and users usually don't notice that they are being tracked.
-
-The modern web exposes a number of details about the user’s device, either directly or discoverable through testing. This is largely a result of a greater need to comply with different device types, support for different features, or simply leaking data by including too much information in protocol requests.
-(\textcite{havens16}, p. 4)
- 
-Privacy and security
-
+As seen in the previous \autoref{sec:utilisation} web browser fingerprinting can be utilized in destructive ways. This section will have a closer look at the threat fingerprinting poses for the users' privacy and security.\\\\
+The most tricky part about fingerprinting is that on the one hand users usually do not know that they are being tracked and on the other hand they can't do anything to prevent it (see \autoref{mitigation}). \\\\
+So for example P. Eckersley was able to generate unique fingerprints for 83.6\% of 470,161 browsers who belong to users who have a high awareness of privacy concerns. (\textcite{eckersley10}, p.2,8)\\\\
+Even though the fingerprint can change due to modified characteristics there is a simple algorithm to detect these changes. With heuristics this algorithm was able to re-identify a changed fingerprint with 99.1\% accurancy out of 65.56\% guesses of changed fingerprints.(\textcite{eckersley10}, p.13)\\\\
+Below are a few threats listed which fingerprinted users might face:
 \begin{itemize}
-	\item Identify a user: concerns about surveillance, personal physical safety, concerns about discrimination against them based on what they read or write when using the web. (\textcite{doty18}, p.4)
-	\item An online party can correlate multiple visits (on same or different sites) to develop a profile or history of the user. This may occur without the user’s knowledge or consent and tools such as clearing cookies do not prevent further correlation. Also allows tracking across origins – different sites may be able to combine information about a single user even where a cookie policy would block accessing of cookies between origins. (\textcite{doty18}, p.4)
-	\item Tracking without transparency or user control: bf allows for collection of data about user activity without clear indications that such collection is happening. Allows for tracking of activity without clear or effective user controls. (typically cannot be cleared or re-set) /*like cookies*/ (\textcite{doty18}, p.4f)
+	\item due to the possibility of being identified some users might face surveillance, risk their personal physical safety or concerns about discrimination against due to their internet activities. (\textcite{doty18}, p.4)
+	\item the tracking enables collection without clear indications that such a collection is happening without clear or effective user controls. (\textcite{doty18}, pp.4)
+	\item Tor enables JavaScript by default and if the user fails to turn it off, even Tor users can be tracked due to the information leaked by JavaScript. (\textcite{havens16}, pp.9)
 \end{itemize}
 
-\textbf{go to original source}
-High risk: 
-In 2010 Peter Eckersley, in association with the Electronic Frontier Foundation(EFF), conducted a study of browser fingerprinting techniques. –
-**	Group of people, expected to have high awareness of privacy concerns. 
-**	Out of 470,161 browsers – 93,6% instantaneously unique finerprint
-**	Group -> privacy-conscious users, informed of the dangers of browser fingerprinting
-**	Simple algorithm for detecting changes in fingerprints.
-o	Check to see if there is any fingerprint which, aside from one non-matching field, is otherwise the same.
-o	Not make guess if there were multiple potential matches
-o	Made 65,56\% guesses – 99,1% right
-(\textcite{havens16}, p.6f)
-
-**	Deanonymization of Tor users
-Tor enables JavaScript by default and if the user fails to turn it off, even Tor users can be tracked due to the information leaked by JavaScript. (\textcite{havens16}, p.9f)
-
 \subsection{Under General Data Protection Regulation}
-This threat posed by web browser fingerprinting as depicted above might be reduced by the \textit{General Data Protection Regulation (GDPR)}, which entered into force on May 25th 2018. This regulation imposed by the European Union (EU) intends to cover exactly this kind of hidden data collection which is used by web browser fingerprinting, by forcing companies to prove they have a legitimate reason for the utilization of any means of tracking.(\textcite{miele18})\\\\
+This threat posed by web browser fingerprinting as depicted above might be reduced by the \textit{General Data Protection Regulation (GDPR)}, which entered into force on May 25th 2018. This regulation imposed by the European Union (EU) intends to cover exactly this kind of hidden data collection which is used by web browser fingerprinting, by forcing companies to prove they have a legitimate reason for the utilization of any means of tracking. (\textcite{miele18})\\\\
 Even though the GDPR avoids specifying technologies it provides general rules which should keep up with technological development. Due to this regulation browser characteristics are now to be treated like personal data. Personal data has a broad definition as any information that might be linked to an identifiable individual can be passed as such. Examples for such are not only the IP-Address and MAC-Address of users but also less specific features, including the combination of characteristics which web browser fingerprinting relies upon. (\textcite{miele18})\\\\
-In order to be allowed to use fingerprinting legally the concerned entity has to complete the following steps:\\
+In order to be allowed to use fingerprinting legally the concerned entity has to complete the following steps:
 \begin{itemize}
 	\item show that the tracking does not violate "the fundamental rights and freedoms of the data subject, including privacy", 
 	\item and is in line with "reasonable expectations of data subjects"
 	\item further give a legitimate argument for its interest in tracking,
-	\item and share details about the scope, purposes, and legal basis of the data processing with the person subjected to the fingerprinting\\
+	\item and share details about the scope, purposes, and legal basis of the data processing with the person subjected to the fingerprinting
 \end{itemize}
 Due to this regulation, the only step the user has to take to avoid fingerprinting is to say "no".\\\\
-Even though the rules imposed by this regulation seem to help prevent unwanted tracking, it only helps mitigate it. There will certainly be fewer entities making use of fingerprinting though web browser fingerprinting is not expected to disappear, no matter how high the penalties are on its illegal utilisation.\\
+Even though the rules imposed by this regulation seem to help prevent unwanted tracking, it only helps mitigate it. There will certainly be fewer entities making use of fingerprinting though web browser fingerprinting is not expected to disappear, no matter how high the penalties are on its illegal utilisation.\\\\
 Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Further, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
 
-\section{Mitigation}
+\section{Mitigation} \label{mitigation}
 As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the users privacy. So this brings up the question if there is a way to avoid this tracking method. Each of the researched articles about this topic stated the same. No. Unfortunately, there is no way to avoid being fingerprinted completely. There are only ways to try and reduce the risk of being tracked. (\textcite{web17})
 The danger of web browser fingerprinting lays in its stateless nature. 
 * hard to detect - if even possible
@@ -461,15 +442,11 @@ If the test set is rather large it is more effective to use a \textit{binary dec
 (\textcite{upi15}, p.2)
 \end{comment}
 \subsection{Cross-Browser fingerprinting}
-
-In 2011 Boda et al. conducted the first study about cross-browser fingerprinting, using a part of the IP address as part of the fingerprint. This is not optimal as the IP address can be modified by e.g. TOR or another proxy. (\textcite{boda11}, p.14)
-Until Cao et al. proposed an improved fingerprint in 2017 it stayed the only cross-browser work.(\textcite{Cao17}, p.1)
+In 2011 Boda et al. conducted the first study about cross-browser fingerprinting, utilizing a part of the user's IP address as part of the fingerprint. Even though this technique is not optimal due to the fact that the IP address can be modified by e.g. proxies it was the only paper published about cross-browser fingerprinting until Cao et al. published an improved version in 2017. (\textcite{boda11}, p.14)(\textcite{Cao17}, p.1)
 
 \subsubsection{How it works}
 Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. (\textcite{upi15}, pp.2)
-
 The fingerprint is created from specific browser data with the help of JavaScript and server-side algorithms.(\textcite{boda11}, p.4)
-
 To be able to track a user across different web browsers a set of browser-independent features is used as a basis of identification. Part of this set is for example (\textcite{boda11}, p.2)
 \begin{itemize}
 	\item networking information (ip address, hostname, TCP port number)
@@ -479,29 +456,21 @@ To be able to track a user across different web browsers a set of browser-indepe
 
 The difference to other fingerprints is that the first two octets of the IP address are used, which usually remains constant even if the IP address of the client changes dynamically. The downside is that it may change when switching ISP or other service
 (\textcite{boda11}, p.5)
-
--- use locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version
+uses locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version
 (\textcite{boda11}, p.5)
-
-The downside of using the IP address as part of the fingerprint is that proxies modify it for privacy reasons. Boda et al. dealt with that problem saying that the other parameter suffice to identify a user.
-
+The downside of using the IP address as part of the fingerprint is that proxies modify it for privacy reasons. Boda et al. dealt with that problem saying that the other parameter suffice to identify a user.\\\\
 Cao et al. improved this method by excluding the IP address, modifying the use of some data and adding some features.(\textcite{Cao17}, p.1) This technique forces the system to perform 36 tasks which return the required information within less than a minute.
-
 This fingerprinting technique is based on different novel operating system and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). Many of which are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, pp.1)
-
 99,24\%  successfully identify users 
 83.24\% uniqueness with 91.44\% cross-browser stability(\textcite{Cao17}, p.2)
 compared to Boda excluding ip address -68.98\% uniqueness with 84.64\% cross-browser stability.
-
 Improvements towards Boda et al. technique. 
 E.g. Change of the screen resolution. In browsers like Firefox and Internet Expolorer the resolution changes when scrolling. Therefore this method takes the zoom level into consideration and normalizes the width an dheight of the screen resolution.
 E.g. DataUrl + JPEG are unstable across different browsers, therefore use a lossless format like PNG 
 (\textcite{Cao17}, p.2)
-
 Various rendering tasks (e.g. drawing curves and lines to client side) are sent. Also obtains operating system and hardware level information. The client side browser renders and returns the results (images, sound waves) which are converted into a hashes. In the meantime the browser collects browser-specific information.
 FP composition - Fingerprint is generated from list of hashes which is intertwined with a mask through a "and" operation which creates the fingerprint hash.
 The collected browser information corresponds to the mask. Each browser has its own mask. (\textcite{Cao17}, p.4)
-
 Contrary to single browser techniques cross-browser fingerprinting has no problem identifying users across browsers. Anyway. It has the same weakness as all fingerprints: identically configured devices. (\textcite{upi15}, pp.2)
 Weaknesses: (\textcite{upi15}, pp.2)
 

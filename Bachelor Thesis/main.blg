@@ -1,19 +1,19 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[40] biber-MSWIN32:313> INFO - === 
-[85] Biber.pm:371> INFO - Reading 'main.bcf'
-[226] Biber.pm:857> INFO - Found 22 citekeys in bib section 0
-[247] Biber.pm:3976> INFO - Processing section 0
-[265] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
-[271] bibtex.pm:1500> INFO - LaTeX decoding ...
-[316] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
-[318] Utils.pm:193> WARN - Duplicate entry key: 'eckersley10' in file 'references.bib', skipping ...
-[319] Utils.pm:193> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Mayer09' and 'mayer09' in file 'references.bib'
-[457] Utils.pm:193> WARN - I didn't find a database entry for 'Mayer09' (section 0)
-[491] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[491] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[491] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[491] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[529] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[540] bbl.pm:720> INFO - Output to main.bbl
-[548] Biber.pm:110> INFO - WARNINGS: 3
+[52] biber-MSWIN32:313> INFO - === 
+[148] Biber.pm:371> INFO - Reading 'main.bcf'
+[281] Biber.pm:857> INFO - Found 22 citekeys in bib section 0
+[299] Biber.pm:3976> INFO - Processing section 0
+[333] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[339] bibtex.pm:1500> INFO - LaTeX decoding ...
+[380] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[383] Utils.pm:193> WARN - Duplicate entry key: 'eckersley10' in file 'references.bib', skipping ...
+[384] Utils.pm:193> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Mayer09' and 'mayer09' in file 'references.bib'
+[527] Utils.pm:193> WARN - I didn't find a database entry for 'Mayer09' (section 0)
+[563] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[563] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[564] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[564] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[634] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[644] bbl.pm:720> INFO - Output to main.bbl
+[651] Biber.pm:110> INFO - WARNINGS: 3
