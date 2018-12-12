@@ -780,6 +780,52 @@
       \verb https://www.xovi.de/wiki/User_Agent
       \endverb
     \endentry
+    \entry{yen09}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=aa0759a6b92d305747d0a43c108ecc1a}{%
+           family={Yen},
+           familyi={Y\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=252deed1a7ef70665c589c30b59899eb}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7a3518a789625e62c279dc9e91516527}{%
+           family={Monrose},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=78d5a4b0f2a3c214287fff9b2606bd79}{%
+           family={Reiter},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{daa9980c650876c7cea8963414af5f88}
+      \strng{fullhash}{84d8fa1dab367256d7709fef4a539047}
+      \strng{bibnamehash}{daa9980c650876c7cea8963414af5f88}
+      \strng{authorbibnamehash}{daa9980c650876c7cea8963414af5f88}
+      \strng{authornamehash}{daa9980c650876c7cea8963414af5f88}
+      \strng{authorfullhash}{84d8fa1dab367256d7709fef4a539047}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment}
+      \field{title}{Browser fingerprinting from coarse traffic summaries: Techniques and implications}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://www.cs.unc.edu/~reiter/papers/2009/DIMVA.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.cs.unc.edu/~reiter/papers/2009/DIMVA.pdf
+      \endverb
+    \endentry
   \enddatalist
   \missing{Mayer09}
 \endrefsection
