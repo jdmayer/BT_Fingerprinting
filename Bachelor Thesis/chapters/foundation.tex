@@ -1,20 +1,23 @@
 \chapter{Foundation}
 \label{cha:foundation}
-This chapter will cover the basic knowledge about fingerprinting. This chapter is all about the what, why and how of fingerprinting.  First explaining the term fingerprint and what it can be used for. Further it will discuss the threat is poses as well as possible ways to reduce a fingerprint before covering the used configurations and plug-ins. After the base was layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
+This chapter will cover the basic knowledge about fingerprinting. First the term fingerprint will be explained and what it can be used for. Further, the threat it poses as well as suggestions on how to reduce a fingerprint will be discussed before covering technologies which can be utilized to track the user. After the base has been layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
 
 \section{Fingerprinting}
-Web browser fingerprinting, also known as device fingerprinting, is the systematic collection of information to identify and later re-identify users. (\textcite{doty18}, p.3)(\textcite{amiunique})\\
-This data tracking method works by obtaining data from the users web browser and using this data to create an unique fingerprint "hash". This hash is the key for later re-identifying the user. (\textcite{upi15}, p. 1)(\textcite{havens16}, p. 4)\\\\
-With millions of computers and mobile devices in use and even more browsers, this identification method seems really unlikely to work at first sight. Nevertheless, it is an extremely reliable method for correlating data across websites or even web browsers with individual users. (\textcite{havens16}, p. 3)\\\\
-Here is how it works:\\
-There are currently over 7.5 billion people populating our planet. Imagine you have to identify a single person. By stating this specific person is male, you already cut the choice by half. Information about the ethnicity and age of this person as well as the time zone he lives in will narrow down the choice even more.\\
-It's basically the same with web browser fingerprinting. The gender can be seen as an equivalent for the used operating system, the ethnicity as the browser and age as the browsers version. Information about the time zone and used language are easily acquirable by the browser and so are more specific details which help narrowing down the choice to nearly always one person.\\\\
+\textit{Web browser fingerprinting}, also known as device fingerprinting, is the systematic collection of information to identify and later re-identify users. (\textcite{doty18}, p.3)(\textcite{amiunique})\\
+This data tracking method works by obtaining data from the user's web browser and using this data to create an unique fingerprint "hash". This hash is the key for later re-identifying the user. (\textcite{upi15}, p. 1)(\textcite{havens16}, p. 4)\\\\
+With millions of computers and mobile devices in use and even more browsers, this identification method seems really unlikely to work at first sight. Nevertheless, it is an extremely reliable method for correlating data across websites or even web browsers with individual users. (\textcite{havens16}, p. 3)\\
+\begin{tcolorbox}
+	Example on how it works:\\
+	There are currently over 7.5 billion people populating our planet. Imagine you have to identify a single person. By stating this specific person is male, you already cut the choice in half. Information about the ethnicity and age of this person, as well as the time zone he lives in will narrow down the choice even more.\\
+	It's basically the same with web browser fingerprinting. The gender can be seen as an equivalent of the used operating system, the ethnicity as the browser and age as the browser version. Information about the time zone and used language are easily acquired by the browser and so are more specific details which help narrowing down the choice to nearly always one person.
+\end{tcolorbox}
+
 This combination of properties can be obtained using code (time zone, screen resolution, plug-ins) and also be extracted from HTTP headers (user agent string). (\textcite{miele18}) \\\\
-Web browser fingerprinting was first developed roughly before 2010 and due to its effectiveness quickly gained traction in the tracking industry.(\textcite{havens16}, p. 3) \\
-Many of the fingerprinting methods can not be detected by the user and as it is extremely difficult for users to modify their web browsers in a way that they are less vulnerable to it (\textcite{amiunique})(\textcite{miele18}), makes it a dangerous tool for deanonymization attacks and maliciously-minded tracking programs. (\textcite{havens16}, p.3)\\
+Web browser fingerprinting was first developed short before 2010 and due to its effectiveness quickly gained traction in the tracking industry. (\textcite{havens16}, p. 3) \\
+Many of the fingerprinting methods can not be detected by the user, and as it is extremely difficult for users to modify their web browsers in a way that they are less vulnerable to it (\textcite{amiunique})(\textcite{miele18}), makes it a dangerous tool for deanonymization attacks and maliciously-minded tracking programs. (\textcite{havens16}, p.3)\\
 \begin{tcolorbox}
 Example\\
-Upon accessing a website, the fingerprinting script determines the users fingerprint and pushes it to a central data store. This data store is usually a shared data store which is used by multiple websites. So when the user accesses another website which also has access to this shared data store, the user will be recognized and the user profile can be updated. (\textcite{havens16}, p. 8)
+Upon accessing a website, the fingerprinting script determines the user's fingerprint and pushes it to a central data store. This data store is usually a shared data store which is used by multiple websites. So when the user accesses another website, which also has access to this specific shared data store, the user will be recognized and the user profile can be updated. (\textcite{havens16}, p. 8)
 \end{tcolorbox}
 
 \begin{comment}
@@ -46,17 +49,17 @@ Destructive use
 Con- and destructive use
 \begin{itemize}
 	\item Identifying criminals\\
-	As a mean of tracking, fingerprinting can be used to track people or even criminals. But as seen in the previous examples this can used for and against users. 
+	As a mean of tracking, fingerprinting can be used to track people or even criminals. But as seen in the previous examples this can be used to harm or benefit users. 
 	\begin{tcolorbox}
 	Example: positive use\\
-	When a user is harassed or stalked by another user the website can use web browser fingerprinting as a mean of blacklisting said user. 
+	When a user A is harassed or stalked by another user B, the website can use web browser fingerprinting as a mean of blacklisting said user B. 
 	\end{tcolorbox}
 	\begin{tcolorbox}
 	Example: negative use\\
 	Citizens of countries with a strict regime can be blacklisted for expressing criticism against the government.
 	\end{tcolorbox}
 	\item Commercial use\\
-	Commercial Fingerprinting is used to track people’s habits and preferences. The acquired knowledge can be used to either help the user or direct him into a certain direction. 
+	Commercial fingerprinting is used to track people’s habits and preferences. The acquired knowledge can be used to either help the user or direct him into a certain direction. 
 	\begin{tcolorbox}
 	Example: positive use\\
 	A website picks up the user’s habit to look for climbing gear and suggests similar products.
@@ -67,7 +70,7 @@ Con- and destructive use
 	\end{tcolorbox}
 \end{itemize}
 The following paragraphs will summarize the findings of a study conducted by Nikiforakis et al. in cooperation with three commercial fingerprinting companies in order to test multiple websites for the use of fingerprinting scripts.\\\\
-Nikiforakis et al. used the categorization of TrendMicro and McAfee on a list of 3804 domains. If a domain was neither analysed nor categorized by the both used services they were marked as untested and not used. Therefore only 59.2\% of the 3804 domains were included in the results of this testing. If one service declared a domain as unsafe and the other stated the opposite, it was accepted as safe. Some categories were given aliases and gathered together to a more generalized category.(\textcite{nikiforakis13}, pp.6)\\
+Nikiforakis et al. used the categorization of TrendMicro and McAfee on a list of 3804 domains. If a domain was neither analysed nor categorized by both used services they were marked as untested and not used. Therefore only 59.2\% of the 3804 domains were included in the results of this testing. If one service declared a domain as unsafe and the other stated the opposite, it was accepted as safe. Some categories were given aliases and gathered in a more generalized category.(\textcite{nikiforakis13}, pp.6)\\
 \begin{figure}[H]
 \centering
 		\includegraphics[width=350pt, height=160pt]{Top10CategoriesNiki.png}
@@ -75,9 +78,9 @@ Nikiforakis et al. used the categorization of TrendMicro and McAfee on a list of
 		\label{Top10Niki}
 \end{figure}
 This figure shows 10 categories, 8 of which operate with user subscriptions. These sites usually are interested in preventing hijacking of user accounts and fraudulent activities.\\
-The top two categories were identified as malicious (163 domains) or as spam (1063 domains). Nikiforakis et al. noticed that many domains belonging to one of these categories were parked websites which do not include any fingerprinting code. Further many "quiz" or "survey" websites were located which in a later step extract a user's personal details. The domains were categorized as malicious if they exploit vulnerable browsers or extract private data from users.\\\\
-It was discovered that all these sites were found to include, as some point, fingerprinting code provided by one of the three commercial fingerprinting companies.\\
-This observation, paired with the fact that all of these three studied providers stated that there must be set an appointment in order to acquire fingerprinting services, point to the possibility that fingerprinting companies work with dubious domains in order to expand their fingerprinting database.(\textcite{nikiforakis13}, p.7)
+The top two categories were identified as malicious (163 domains) or as spam (1063 domains). Nikiforakis et al. noticed that many domains belonging to one of these categories were parked websites which do not include any fingerprinting code. Further, many "quiz" or "survey" websites were discovered which extract a user's personal details. The domains were categorized as malicious if they exploit vulnerable browsers or extract private data from users. (\textcite{nikiforakis13}, p.7)\\\\
+It was discovered that all these sites were found to include, at some point, fingerprinting code provided by one of the three commercial fingerprinting companies.\\
+This observation, paired with the fact that all three studied providers stated that there must be made an appointment in order to acquire fingerprinting services, point to the possibility that fingerprinting companies work with dubious domains in order to expand their fingerprinting database. (\textcite{nikiforakis13}, p.7)
 
 \section{Threat}
 As seen in the previous \autoref{sec:utilisation} web browser fingerprinting can be utilized in destructive ways. This section will have a closer look at the threat fingerprinting poses for the users' privacy and security.\\\\
