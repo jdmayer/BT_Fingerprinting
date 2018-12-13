@@ -216,9 +216,9 @@ Apart from these security risks is Adobe Flash also being criticized for its poo
 Adobe Flash can be disabled or even uninstalled which might effect the user experience on old websites negatively. (\textcite{pixel18})
 
 \subsection{HTML 5}\label{html5}
-HTML5 is the latest version of the Hypertext Markup Language which is a coding language used to build websites and supported by all major browsers. (\textcite{pixel18})(\textcite{marshal17}) It can be used to build complicated applications, as well as provide animations, movies, music, and the likes. This without the need of any additional software (plug-ins). Summed up, it provides features like geolocation, graphics, video and webapps. (\textcite{marshal17})\\\\
+HTML5 is the latest version of the Hypertext Markup Language which is a coding language used to build websites and supported by all major browsers. (\textcite{pixel18})(\textcite{marshall17}) It can be used to build complicated applications, as well as provide animations, movies, music, and the likes. This without the need of any additional software (plug-ins). Summed up, it provides features like geolocation, graphics, video and webapps. (\textcite{marshall17})\\\\
 Apart from its incredible capabilities there is a slight problem concerning HTML5 video. As it would not be agreed upon which format(s) should be supported which ended in each browser supporting different HTML5 video formats.\\
-As HTML5 does not include digital rights management technology which is used to prevent the user from copying the content, content owner usually prefer Flash. (\textcite{marshal17})\\\\
+As HTML5 does not include digital rights management technology which is used to prevent the user from copying the content, content owner usually prefer Flash. (\textcite{marshall17})\\\\
 One of HTML5's new elements is <canvas> element which is used to draw graphics on a web page.(\textcite{pixel18}) Through this process it is possible to acquire any differences in the hardware and software configurations due to slight image rendering differences. (\textcite{amiunique}) This provides a way to inspect the data with pixel accuracy which later can be used in fingerprinting techniques like described in \autoref{canvasfp} (\textcite{mowery12}, p.2) \\\\
 In \autoref{canvasfp} \textit{Base64 encoded images} are used which is one of the oldest ways to encode something in html. Base64 encoded images are a part of the HTML and displays it without loading. It turns different types of data into a combination of numbers and letters which is safe for HTML. One of the main benefits is that the webpage does not have to load an external ressource which helps the page to load faster. This performance benefit only works if small images are used. (\textcite{sexton15})
 
@@ -374,37 +374,39 @@ If the test set is rather large it is more effective to use a \textit{binary dec
 (\textcite{upi15}, p.2)
 \end{comment}
 \subsection{Cross-Browser fingerprinting}
-In 2011 Boda et al. conducted the first study about cross-browser fingerprinting, utilizing a part of the user's IP address as part of the fingerprint. Even though this technique is not optimal due to the fact that the IP address can be modified by e.g. proxies it was the only paper published about cross-browser fingerprinting until Cao et al. published an improved version in 2017. (\textcite{boda11}, p.14)(\textcite{Cao17}, p.1)
+In 2011 Boda et al. conducted the first study about cross-browser fingerprinting, utilizing a part of the user's IP address as part of the fingerprint. Even though this technique is not optimal due to the fact that the IP address can be modified by e.g. proxies it remained the only paper published about cross-browser fingerprinting until Cao et al. published an improved version in 2017. (\textcite{boda11}, p.14)(\textcite{Cao17}, p.1)
 
 \subsubsection{How it works}
-Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. (\textcite{upi15}, pp.2)
-The fingerprint is created from specific browser data with the help of JavaScript and server-side algorithms.(\textcite{boda11}, p.4)
+Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. (\textcite{upi15}, pp.2)\\\\
+%The fingerprint is created from specific browser data with the help of JavaScript and server-side algorithms.(\textcite{boda11}, p.4)
 To be able to track a user across different web browsers a set of browser-independent features is used as a basis of identification. Part of this set is for example (\textcite{boda11}, p.2)
 \begin{itemize}
 	\item networking information (ip address, hostname, TCP port number)
 	\item application layer information (user agent string, name and version of the operating system, extensions)
-	\item information gained by quering (list of fonts, screen resolution, timezone, plug-ins and their version)
+	\item information gained by quering (list of fonts, screen resolution, timezone, plug-ins and their version)\\
 \end{itemize}
-
-The difference to other fingerprints is that the first two octets of the IP address are used, which usually remains constant even if the IP address of the client changes dynamically. The downside is that it may change when switching ISP or other service
-(\textcite{boda11}, p.5)
-uses locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version
-(\textcite{boda11}, p.5)
+The difference to other fingerprints is that the first two octets of the IP address are used, which usually remains constant even if the IP address of the client changes dynamically. The downside is that it may change when switching ISP or other service (\textcite{boda11}, p.5)\\\\
+%uses locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version (\textcite{boda11}, p.5)
 The downside of using the IP address as part of the fingerprint is that proxies modify it for privacy reasons. Boda et al. dealt with that problem saying that the other parameter suffice to identify a user.\\\\
-Cao et al. improved this method by excluding the IP address, modifying the use of some data and adding some features.(\textcite{Cao17}, p.1) This technique forces the system to perform 36 tasks which return the required information within less than a minute.
-This fingerprinting technique is based on different novel operating system and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). Many of which are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, pp.1)
+Cao et al. improved this method by excluding the IP address, modifying the use of some data and adding some features.(\textcite{Cao17}, p.1) This technique forces the system to perform 36 tasks which return the required information within less than a minute.\\\\
+This fingerprinting technique is based on different novel operating system and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). Many of which are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, pp.1)\\\\
+\begin{comment}
 99,24\%  successfully identify users 
 83.24\% uniqueness with 91.44\% cross-browser stability(\textcite{Cao17}, p.2)
 compared to Boda excluding ip address -68.98\% uniqueness with 84.64\% cross-browser stability.
-Improvements towards Boda et al. technique. 
-E.g. Change of the screen resolution. In browsers like Firefox and Internet Expolorer the resolution changes when scrolling. Therefore this method takes the zoom level into consideration and normalizes the width an dheight of the screen resolution.
-E.g. DataUrl + JPEG are unstable across different browsers, therefore use a lossless format like PNG 
-(\textcite{Cao17}, p.2)
-Various rendering tasks (e.g. drawing curves and lines to client side) are sent. Also obtains operating system and hardware level information. The client side browser renders and returns the results (images, sound waves) which are converted into a hashes. In the meantime the browser collects browser-specific information.
-FP composition - Fingerprint is generated from list of hashes which is intertwined with a mask through a "and" operation which creates the fingerprint hash.
-The collected browser information corresponds to the mask. Each browser has its own mask. (\textcite{Cao17}, p.4)
+\end{comment}
+Some improvements Cao et al. made towards Boda et al.'s technique are:
+\begin{tcolorbox}
+	Improvement 1:\\
+	Change of the screen resolution. In browsers like Firefox and Internet Expolorer the resolution changes when scrolling. Therefore this method takes the zoom level into consideration and normalizes the width an dheight of the screen resolution. (\textcite{Cao17}, p.2)
+\end{tcolorbox}
+\begin{tcolorbox}
+	Improvement 2:\\
+	The formats DataUrl and JPEG are unstable across different browsers, therefore Cao et al. prefered the use of a lossless format like PNG. (\textcite{Cao17}, p.2)
+\end{tcolorbox}
+The script sends various rendering tasks (e.g. drawing curves and lines to client side) and obtains operating system and hardware level information. The client side browser renders and returns the results (images, sound waves) which are converted into a hashes. In the meantime the browser collects browser-specific information.(\textcite{Cao17}, p.4)\\\\
+The final fingerprint is generated from a list of hashes which is intertwined with a mash with the help of an "and"-operation. The mask consists of collected browser information, whereas each browser has its own mask. (\textcite{Cao17}, p.4)\\\\
 Contrary to single browser techniques cross-browser fingerprinting has no problem identifying users across browsers. Anyway. It has the same weakness as all fingerprints: identically configured devices. (\textcite{upi15}, pp.2)
-Weaknesses: (\textcite{upi15}, pp.2)
 
 \begin{comment}
 -- nr of CPU virtual cores - obtained by browser feature "hardwareConcurrency"
