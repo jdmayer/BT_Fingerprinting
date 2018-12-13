@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  13 DEC 2018 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  13 DEC 2018 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1811,21 +1811,10 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Mayer09
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
-
-Package biblatex Warning: citation 'Mayer09' was not found at all in the .bbl, 
-bibliography labels cannot be generated, please correct the citation.
-
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 59.
 Package biblatex Info: Reference segment=0 on input line 59.
+
 ABD: EveryShipout initializing macros
 Package hyperref Info: Option `pageanchor' set `false' on input line 64.
 <images/FH_Logo.png, id=273, 285.065pt x 66.74937pt>
@@ -1920,20 +1909,20 @@ Chapter 1.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 24--30
+Underfull \hbox (badness 10000) in paragraph at lines 23--29
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 30.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 29.
 (c:/texlive/2018/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 47--53
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
 
  []
 
 
-Overfull \hbox (5.5526pt too wide) in paragraph at lines 47--53
+Overfull \hbox (5.5526pt too wide) in paragraph at lines 46--52
 [][]\T1/lmr/m/n/12 Chapter 6[][] sums up the bach-e-lor the-sis, sum-ma-rizes t
 he re-sults and states pos-si-ble prospects. 
  []
@@ -2091,7 +2080,7 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 67--67
 [][] 
  []
 
-<images/Top10CategoriesNiki.png, id=414, 720.6925pt x 375.4025pt>
+<images/Top10CategoriesNiki.png, id=416, 720.6925pt x 375.4025pt>
 File: images/Top10CategoriesNiki.png Graphic file (type png)
 <use images/Top10CategoriesNiki.png>
 Package pdftex.def Info: images/Top10CategoriesNiki.png  used on input line 73.
@@ -2209,33 +2198,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--202
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 241--246
+Underfull \hbox (badness 10000) in paragraph at lines 262--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--246
-
- []
-
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--251
+Underfull \hbox (badness 10000) in paragraph at lines 262--267
 
  []
 
@@ -2251,57 +2219,12 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 252--256
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--256
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 282--285
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--295
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--305
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 322--330
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--330
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--330
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--330
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
 
  []
 
@@ -2317,101 +2240,167 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--336
+Underfull \hbox (badness 10000) in paragraph at lines 273--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--277
+
+ []
+
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 303--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 338--346
+Underfull \hbox (badness 10000) in paragraph at lines 343--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--346
+Underfull \hbox (badness 10000) in paragraph at lines 343--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--346
+Underfull \hbox (badness 10000) in paragraph at lines 343--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--346
+Underfull \hbox (badness 10000) in paragraph at lines 343--351
 
  []
 
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--346
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--346
+Underfull \hbox (badness 10000) in paragraph at lines 355--357
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
 
  []
 
-<images/MinimalFP.png, id=591, 376.90813pt x 108.405pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
+
+ []
+
+<images/MinimalFP.png, id=601, 376.90813pt x 108.405pt>
 File: images/MinimalFP.png Graphic file (type png)
 <use images/MinimalFP.png>
-Package pdftex.def Info: images/MinimalFP.png  used on input line 369.
+Package pdftex.def Info: images/MinimalFP.png  used on input line 390.
 (pdftex.def)             Requested size: 299.9971pt x 80.00339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--372
+Underfull \hbox (badness 10000) in paragraph at lines 384--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--372
+Underfull \hbox (badness 10000) in paragraph at lines 384--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--372
+Underfull \hbox (badness 10000) in paragraph at lines 384--393
 
  []
 
-<images/DecisionTree.png, id=595, 360.34625pt x 172.14313pt>
+<images/DecisionTree.png, id=605, 360.34625pt x 172.14313pt>
 File: images/DecisionTree.png Graphic file (type png)
 <use images/DecisionTree.png>
-Package pdftex.def Info: images/DecisionTree.png  used on input line 377.
+Package pdftex.def Info: images/DecisionTree.png  used on input line 398.
 (pdftex.def)             Requested size: 289.9984pt x 120.00027pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--380
+Underfull \hbox (badness 10000) in paragraph at lines 394--401
 
  []
 
-[16 <./images/MinimalFP.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 403--422
+[17 <./images/MinimalFP.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 424--443
 
  []
 
-[17 <./images/DecisionTree.png>]) [18]
+[18 <./images/DecisionTree.png>]) [19]
 \openout2 = `chapters/applicationScenario.aux'.
 
  (./chapters/applicationScenario.tex
 Chapter 3.
-<images/FingerprintingAttributes.png, id=629, 515.42563pt x 393.97188pt>
+<images/FingerprintingAttributes.png, id=639, 515.42563pt x 393.97188pt>
 File: images/FingerprintingAttributes.png Graphic file (type png)
 <use images/FingerprintingAttributes.png>
 Package pdftex.def Info: images/FingerprintingAttributes.png  used on input lin
 e 10.
 (pdftex.def)             Requested size: 350.00504pt x 159.99657pt.
-[19
+[20
 
 
 
- <./images/FingerprintingAttributes.png>]) [20]
+ <./images/FingerprintingAttributes.png>]) [21]
 \openout2 = `chapters/requirements.aux'.
 
  (./chapters/requirements.tex
 Chapter 4.
-) [21
+) [22
 
 
 
@@ -2420,7 +2409,7 @@ Chapter 4.
 
  (./chapters/implementation.tex
 Chapter 5.
-) [22
+) [23
 
 
 
@@ -2429,7 +2418,7 @@ Chapter 5.
 
  (./chapters/evaluation.tex
 Chapter 6.
-) [23
+) [24
 
 
 
@@ -2438,18 +2427,18 @@ Chapter 6.
 
  (./chapters/summary.tex
 Chapter 7.
-) [24
+) [25
 
 
 
-] [25
+] [26
 
 
-] [26] [27] (./main.lof)
+] [27] [28] (./main.lof)
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
- [28
+ [29
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
@@ -2473,10 +2462,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49013 strings out of 492639
- 922101 string characters out of 6133087
- 1474016 words of memory out of 5000000
- 51929 multiletter control sequences out of 15000+600000
+ 49018 strings out of 492639
+ 922254 string characters out of 6133087
+ 1473146 words of memory out of 5000000
+ 51932 multiletter control sequences out of 15000+600000
  584995 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  70i,12n,106p,1103b,3243s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2490,10 +2479,10 @@ r12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texliv
 e/2018/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2018/texmf-dist/
 fonts/type1/public/lm/lmss17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public
 /lm/lmssbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (34 pages, 977978 bytes).
+Output written on main.pdf (35 pages, 978910 bytes).
 PDF statistics:
- 857 PDF objects out of 1000 (max. 8388607)
- 763 compressed objects within 8 object streams
- 121 named destinations out of 1000 (max. 500000)
+ 868 PDF objects out of 1000 (max. 8388607)
+ 773 compressed objects within 8 object streams
+ 123 named destinations out of 1000 (max. 500000)
  658 words of extra memory for PDF output out of 10000 (max. 10000000)
 

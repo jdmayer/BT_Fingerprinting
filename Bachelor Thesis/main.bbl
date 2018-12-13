@@ -453,6 +453,29 @@
       \verb https://javascript.info/intro
       \endverb
     \endentry
+    \entry{mayer09}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f6dcb445ae0108268b58fc62482d99c4}{%
+           family={Mayer},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6dcb445ae0108268b58fc62482d99c4}
+      \strng{fullhash}{f6dcb445ae0108268b58fc62482d99c4}
+      \strng{bibnamehash}{f6dcb445ae0108268b58fc62482d99c4}
+      \strng{authorbibnamehash}{f6dcb445ae0108268b58fc62482d99c4}
+      \strng{authornamehash}{f6dcb445ae0108268b58fc62482d99c4}
+      \strng{authorfullhash}{f6dcb445ae0108268b58fc62482d99c4}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Undergraduate Senior Thesis, Princeton University}
+      \field{langid}{english}
+      \field{title}{Any person... a pamphleteer”: Internet Anonymity in the Age of Web 2.0}
+      \field{year}{2009}
+    \endentry
     \entry{mowery12}{article}{}
       \name{author}{2}{}{%
         {{hash=cac3e6f203539b5d1c31b329f265049e}{%
@@ -918,7 +941,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Mayer09}
 \endrefsection
 \endinput
 
