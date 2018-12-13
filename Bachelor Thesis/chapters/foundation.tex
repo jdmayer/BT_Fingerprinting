@@ -167,12 +167,9 @@ Further Doty mentions that this helps (\textcite{doty18}, p.6):
 \end{itemize}
 While N. Doty only listed ways to decrease the chance of being fingerprinted, R. Upathilake suggests the following steps to actually prevent the chance of being tracked via web browser fingerprinting (\textcite{upi15}, p.4):
 \end{comment}
-\section{Critical configurations and plug-ins}
--- max. 1/2 page per config
-
-https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
-
+\section{Critical technologies}
 \begin{comment}
+%https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/dangerousConfigs}
@@ -181,56 +178,31 @@ https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerp
 \end{figure}
 (\textcite{mayer09}, p.43)
 \end{comment}
-As mentioned in the previous paragraph (chapter 2.1.) the scripts which use fingerprinting can read certain data via configuration settings or other observable characteristics from the web browser which enables them to create a specific fingerprint. (\textcite{doty18}, p.3)
+As mentioned in the previous sections scripts which use fingerprinting can read certain data via configuration settings or other observable characteristics from the web browser which enables them to create a specific fingerprint. (\textcite{doty18}, p.3) The following paragraphs will outline some of these configurations. 
 
-The following paragraphs will introduce some of these certain information sources disclosed to third parties by the web browser and why they are used at all.
-
-
+\begin{comment}
 The information that browser fingerprinting reveals typically includes a mixture of HTTP headers (which are delivered as a normal part of every web request) and properties that can be learned about the browser using JavaScript code: your time zone, system fonts, screen resolution, which plugins you have installed, and what platform your browser is running on. Sites can even use techniques such as canvas or WebGL fingerprinting to gain insight into your hardware configuration.(\textcite{miele18})
-
+\end{comment}
 \subsection{JavaScript}\label{JS}
-
-JavaScript is enabled by default in all major browsers and by November 2018 JavaScript was included by 95\% of all websites online. (\textcite{w3techs18}).
--- therefore very useful tool - also because can query!
-Js – the language which never works – for the developer
-
--- what is sputnik and test 262 ()
-
-JS gives access to many browser-populated features like the plugins installed on the user’s device (\textcite{amiunique})
-
-Identifying web browsers based on the underlying javascript engine
-(\textcite{mulazzani13})
-
-When JavaScript is disabled, websites won’t be able to detect the list of active plugins and fonts you use, and they also won’t be able to install certain cookies on your browser.
-The disadvantage of disabling JavaScript is that websites won’t always function properly, be-cause it’s also used to make websites run smoothly on your device. This will impact your browsing experience.(\textcite{pixel18})
-
-Browser fingerprinting, while a powerful tool, is often part of a larger suite of tracking techniques. Fingerprinting operates through the js engine as part of an analytics program. Any website that runs the fingerprinting analytics script will be able to track users through a shared data store.
-(\textcite{havens16}, p.8)
+JavaScript is a web development language for web functionality. (\textcite{wood}) It allows client-side scripting and gives access to many browser-populated features like the installed plugins. (\textcite{amiunique}) It is enabled by default in all major browsers and by November 2018 JavaScript was included by 95\% of all websites online. (\textcite{jsinfo}) (\textcite{w3techs18})\\\\
+JavaScript can be executed on any device which has a \textit{JavaScript Engine}. (\textcite{mulazzani13}, p.2) (\textcite{jsinfo}) This engine is responsible for parsing the script to compile it into machine language which can be exeucted. During this process the engine applies optimizations on every state of the process. (\textcite{jsinfo})\\\\
+Known JavaScript Engines:
+\begin{itemize}
+	\item V8 in Chrome and Opera
+	\item SpiderMonkey in Firefox
+	\item ChakraCore for Microsoft Edge\\\\
+\end{itemize}
+JavaScript Engines usually implement features which are specified by \textit{ECMAScript}.(\textcite{jsinfo}) (\textcite{mulazzani13}, p.2)\\
+ECMAScript provides rules, details, and guidlines which have to be regarded for a scripting language in order to be ECMAScript compliant. It is represented by ECMA-262 which is a standard published by Ecma International (responsible for creating standards for technologies). (\textcite{aranda17})\\\\
+In-Browser JavaScript is seen as "safe" programming language as it only has a low-level access to memory or CPU. Its abilities are therefore limited and it has no direct access to OS system functions. (\textcite{jsinfo})\\\\
+JavaScript can also be used to retrieve browser characteristics like the user's time zone and system color. Further there are two properties which can be used to acquire additional information about the user's screen and window.(\textcite{web17})\\\\
+The \textit{navigator object} is a possible property for window objects and supported by all major browsers. Informations which can be acquired through the navigator object include: browser name and version, if cookies are enabled, browser language, platform and the useragent (which does not differ from the user agent in \autoref{UAS})(\textcite{web17})\\\\
+The \textit{screen} is a property which holds information about the user's screen. For example the screen width and height, the acutal available display width and height and the color depth which is supported by the user's device.(\textcite{web17})\\\\
+When JavaScript is disabled, websites are not able to detect the list of active plugins and fonts, and neither will be able to install certain cookies on the targeted browser. The disadvantage of disabling JavaScript is that websites won’t always function properly, because it’s also used to make websites run smoothly and therefore will impact the browsing experience.(\textcite{pixel18})
 
 
-Javascript has been standardized as ECMAScript [8],
-and all major browsers implement it in order to allow
-client-side scripting and dynamic websites. Traditionally,
-Web developers use the UserAgent string or the navigator
-object (i.e., navigator.UserAgent) to identify the client’s
-Web browser, and load corresponding features or CSS files.
-The UserAgent string is defined in RFC2616 [11] as a
-sequence of product tokens and identifies the software as
-well as significant subparts. Tokens are listed in order of their
-significance by convention. The navigator object contains the
-same string as the UserAgent string. However, both are by
-no means security features, and can be set arbitrarily by the
-user.
-(\textcite{mulazzani13}, p.2)\\
-
-SEE NIKIFORAKIS!!!!
-
-
-\subsubsection{WebGL}\label{webgl}
-%WebGL provides a JavaScript API for rendering 3D graphics in a <canvas> element. Modeled after OpenGL ES 2.0, WebGL is currently a draft speciﬁcation and implemented and enabled in Chrome, Firefox, and Opera, as well as implemented but disabled in Safari. Each of these browsers provides a hardware-accelerated implementation, using the installed graphics hardware to render each frame. To mitigate serious misbehaviour and crashes, all of these browsers enable WebGL only for a whitelisted set of graphics cards and drivers.
-%Current WebGL implementations expose their functionality through a separate canvas context (which will eventually be named “webgl”). The WebGL API is too complex to describe here in suﬃcient detail, but is stylistically similar to the desktop OpenGL API. It provides for vertex and fragment shaders, written in OpenGL Shading Language (GLSL), that, after compilation, run directly on the graphics card. WebGL also provides for OpenGL-style textures, as well as diﬀerent lighting primitives. More advanced techniques, such as specular highlighting, bump mapping, and transparency, can be achieved through custom GLSL shaders. 2.4 SecurityImplications 
-%(\textcite{mowery12}, p.3)
-
+%has some tests which e.g. are later used for js engine fp -- what is sputnik and test 262 ()
+%one of the fastest evolving languages, in terms of practices, tooling, n ecosystem (\textcite{wood})
 
 \subsection{Adobe Flash}\label{adobe}
 Adobe Flash is a browser plug-in which provides different ways of delivering rich media content which could traditionally not be displayed using HTML. (\textcite{nikiforakis13}, p.3)
@@ -245,7 +217,7 @@ Adobe Flash is a browser plug-in which provides different ways of delivering ric
 
 SEE NIKIFORAKIS!!!!
 
-\subsection{HTML 5 /Canvas}\label{html5}
+\subsection{HTML 5 and Canvas}\label{html5}
 -- HTML5 is the coding language used to build websites -> core fundamentals of every website
 -- has the element "canvas"
 -- originally html <canvas> element was used to draw graphics on a web page
@@ -299,8 +271,10 @@ Browser Plugins – a list of plugins installed in the browser
 Cookies enabled – whether or not the user allows cookies on the page
 Benchmark tests – evaluate how the browser’s js engine performs against a list of published bench marks. This information is often used to supplement that of the user agent string
 
-//probably why it's needed, which can be blocked
-
+\subsubsection{WebGL}\label{webgl}
+%WebGL provides a JavaScript API for rendering 3D graphics in a <canvas> element. Modeled after OpenGL ES 2.0, WebGL is currently a draft speciﬁcation and implemented and enabled in Chrome, Firefox, and Opera, as well as implemented but disabled in Safari. Each of these browsers provides a hardware-accelerated implementation, using the installed graphics hardware to render each frame. To mitigate serious misbehaviour and crashes, all of these browsers enable WebGL only for a whitelisted set of graphics cards and drivers.
+%Current WebGL implementations expose their functionality through a separate canvas context (which will eventually be named “webgl”). The WebGL API is too complex to describe here in suﬃcient detail, but is stylistically similar to the desktop OpenGL API. It provides for vertex and fragment shaders, written in OpenGL Shading Language (GLSL), that, after compilation, run directly on the graphics card. WebGL also provides for OpenGL-style textures, as well as diﬀerent lighting primitives. More advanced techniques, such as specular highlighting, bump mapping, and transparency, can be achieved through custom GLSL shaders. 2.4 SecurityImplications 
+%(\textcite{mowery12}, p.3)
 
 \newpage
 \section{Web browser fingerprinting methods}\label{sec:Methods}
@@ -339,7 +313,7 @@ Passive fingerprinting techniques
 \end{itemize}
 
 \section{Web browser fingerprinting techniques}
-%rewrite or delete?
+
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 \subsection{Browser specific fingerprinting}
 %can be both active and passive?

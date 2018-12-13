@@ -1,10 +1,10 @@
-@thesis{upi15,
-	author={R. Upathilake and J. Li and A. Matrawy},
-	title={A Classification of Web Browser Fingerprinting Techniques},
-	year={2015},
-	institution={IEEE},
-	url={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7266460},
-	hyphenation={english}
+@inproceedings{upi15,
+  title={A classification of web browser fingerprinting techniques},
+  author={Upathilake, Randika and Li, Yingkun and Matrawy, Ashraf},
+  booktitle={New Technologies, Mobility and Security (NTMS), 2015 7th International Conference on},
+  year={2015},
+  url={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7266460},
+  organization={IEEE}
 }
 
 @thesis{havens16,
@@ -40,12 +40,12 @@
 	hyphenation={english}
 }
 
-@thesis{Cao17,
-	author={Y. Cao and S. Li and E. Wijmans},
-	title={(Cross-)Browser Fingerprinting via OS and Hardware Level Features},
-	year={2017},
-	url={http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf},
-	hyphenation={english}
+@inproceedings{Cao17,
+  title={(Cross-)Browser Fingerprinting via OS and Hardware Level Features},
+  author={Cao, Yinzhi and Li, Song and Wijmans, Erik},
+  booktitle={Proceedings of Network \& Distributed System Security Symposium (NDSS)},
+  url={http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf},
+  year={2017}
 }
 
 @techreport{fielding14,
@@ -202,6 +202,30 @@
   year={2014},
   url={https://www.ftc.gov/system/files/documents/public_comments/2015/10/00064-98109.pdf},
   organization={ACM}
+}
+
+@online{wood,
+  author={Adam Wood},
+	url={https://html.com/javascript/},
+	title={JavaScript},
+	urldate={2018-12-13},
+	hyphenation={english}
+}
+
+@online{jsinfo,
+  author={javascript.info},
+	url={https://javascript.info/intro},
+	title={An introductin ot JavaScript},
+	urldate={2018-12-13},
+	hyphenation={english}
+}
+
+@online{aranda17,
+  author={Michael Aranda},
+	url={https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5},
+	title={What’s the difference between JavaScript and ECMAScript?},
+	urldate={2018-12-13},
+	hyphenation={english}
 }
 
 %---------------------------------

@@ -134,6 +134,37 @@
       \verb https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
       \endverb
     \endentry
+    \entry{aranda17}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5c274e2d1639a2dceb3bf4582ca50348}{%
+           family={Aranda},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c274e2d1639a2dceb3bf4582ca50348}
+      \strng{fullhash}{5c274e2d1639a2dceb3bf4582ca50348}
+      \strng{bibnamehash}{5c274e2d1639a2dceb3bf4582ca50348}
+      \strng{authorbibnamehash}{5c274e2d1639a2dceb3bf4582ca50348}
+      \strng{authornamehash}{5c274e2d1639a2dceb3bf4582ca50348}
+      \strng{authorfullhash}{5c274e2d1639a2dceb3bf4582ca50348}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{What’s the difference between JavaScript and ECMAScript?}
+      \field{urlday}{13}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5
+      \endverb
+      \verb{url}
+      \verb https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5
+      \endverb
+    \endentry
     \entry{arntz17}{online}{}
       \name{author}{1}{}{%
         {{hash=1dc5a4894c2ecb2eb6f4cdc1b78a14d4}{%
@@ -208,35 +239,35 @@
       \verb https://pet-portal.eu/files/articles/2011/fingerprinting/cross-browser_fingerprinting.pdf
       \endverb
     \endentry
-    \entry{Cao17}{thesis}{}
+    \entry{Cao17}{inproceedings}{}
       \name{author}{3}{}{%
-        {{hash=6c19e9ff9aa635120d5ff06439d516b5}{%
+        {{hash=3a7e58dc54b05a1f9e413693d8ba1ee1}{%
            family={Cao},
            familyi={C\bibinitperiod},
-           given={Y.},
+           given={Yinzhi},
            giveni={Y\bibinitperiod}}}%
-        {{hash=3bdff36d59bfdb518667455de2a423b5}{%
+        {{hash=909427ba15a05b64bbb661ae6ebde980}{%
            family={Li},
            familyi={L\bibinitperiod},
-           given={S.},
+           given={Song},
            giveni={S\bibinitperiod}}}%
-        {{hash=82e076854756894d8c2fdc3da1789d36}{%
+        {{hash=9e9515b35f1161d2ea10f097e0222638}{%
            family={Wijmans},
            familyi={W\bibinitperiod},
-           given={E.},
+           given={Erik},
            giveni={E\bibinitperiod}}}%
       }
-      \strng{namehash}{efbc8f6bc74519520c8ce816ff51f57d}
-      \strng{fullhash}{efbc8f6bc74519520c8ce816ff51f57d}
-      \strng{bibnamehash}{efbc8f6bc74519520c8ce816ff51f57d}
-      \strng{authorbibnamehash}{efbc8f6bc74519520c8ce816ff51f57d}
-      \strng{authornamehash}{efbc8f6bc74519520c8ce816ff51f57d}
-      \strng{authorfullhash}{efbc8f6bc74519520c8ce816ff51f57d}
+      \strng{namehash}{c79da34ca59305269eaa256096a8be02}
+      \strng{fullhash}{c79da34ca59305269eaa256096a8be02}
+      \strng{bibnamehash}{c79da34ca59305269eaa256096a8be02}
+      \strng{authorbibnamehash}{c79da34ca59305269eaa256096a8be02}
+      \strng{authornamehash}{c79da34ca59305269eaa256096a8be02}
+      \strng{authorfullhash}{c79da34ca59305269eaa256096a8be02}
       \field{sortinit}{C}
       \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{langid}{english}
+      \field{booktitle}{Proceedings of Network \& Distributed System Security Symposium (NDSS)}
       \field{title}{(Cross-)Browser Fingerprinting via OS and Hardware Level Features}
       \field{year}{2017}
       \verb{urlraw}
@@ -391,6 +422,35 @@
       \endverb
       \verb{url}
       \verb https://www.howtogeek.com/114937/htg-explains-whats-a-browser-user-agent/
+      \endverb
+    \endentry
+    \entry{jsinfo}{online}{}
+      \name{author}{1}{}{%
+        {{hash=96f3bffce83ef1c04e7d05f41e7ef9e6}{%
+           family={javascript.info},
+           familyi={j\bibinitperiod}}}%
+      }
+      \strng{namehash}{96f3bffce83ef1c04e7d05f41e7ef9e6}
+      \strng{fullhash}{96f3bffce83ef1c04e7d05f41e7ef9e6}
+      \strng{bibnamehash}{96f3bffce83ef1c04e7d05f41e7ef9e6}
+      \strng{authorbibnamehash}{96f3bffce83ef1c04e7d05f41e7ef9e6}
+      \strng{authornamehash}{96f3bffce83ef1c04e7d05f41e7ef9e6}
+      \strng{authorfullhash}{96f3bffce83ef1c04e7d05f41e7ef9e6}
+      \field{sortinit}{j}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{An introductin ot JavaScript}
+      \field{urlday}{13}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://javascript.info/intro
+      \endverb
+      \verb{url}
+      \verb https://javascript.info/intro
       \endverb
     \endentry
     \entry{mowery12}{article}{}
@@ -681,39 +741,39 @@
       \verb https://www.eff.org/de/deeplinks/2018/06/gdpr-and-browser-fingerprinting-how-it-changes-game-sneakiest-web-trackers
       \endverb
     \endentry
-    \entry{upi15}{thesis}{}
+    \entry{upi15}{inproceedings}{}
       \name{author}{3}{}{%
-        {{hash=b1def7255677859e2d11f1222cfe8462}{%
+        {{hash=b1fa0f3c85fdba3d2d0272227c9314ee}{%
            family={Upathilake},
            familyi={U\bibinitperiod},
-           given={R.},
+           given={Randika},
            giveni={R\bibinitperiod}}}%
-        {{hash=262394c964914c2a67b690bd67fde298}{%
+        {{hash=52103ab2379c6a6c787cc678e33cdeca}{%
            family={Li},
            familyi={L\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=c5c734abc11181faf072cd85690d6976}{%
+           given={Yingkun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=415b8e79e807c3d8ce94ca1a788ec86d}{%
            family={Matrawy},
            familyi={M\bibinitperiod},
-           given={A.},
+           given={Ashraf},
            giveni={A\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
+      \list{organization}{1}{%
         {IEEE}%
       }
-      \strng{namehash}{d9fbb3e82ca4beadd3d190e171210483}
-      \strng{fullhash}{d9fbb3e82ca4beadd3d190e171210483}
-      \strng{bibnamehash}{d9fbb3e82ca4beadd3d190e171210483}
-      \strng{authorbibnamehash}{d9fbb3e82ca4beadd3d190e171210483}
-      \strng{authornamehash}{d9fbb3e82ca4beadd3d190e171210483}
-      \strng{authorfullhash}{d9fbb3e82ca4beadd3d190e171210483}
+      \strng{namehash}{4e77730e4aa232e61cbc6b6cec0e8cdf}
+      \strng{fullhash}{4e77730e4aa232e61cbc6b6cec0e8cdf}
+      \strng{bibnamehash}{4e77730e4aa232e61cbc6b6cec0e8cdf}
+      \strng{authorbibnamehash}{4e77730e4aa232e61cbc6b6cec0e8cdf}
+      \strng{authornamehash}{4e77730e4aa232e61cbc6b6cec0e8cdf}
+      \strng{authorfullhash}{4e77730e4aa232e61cbc6b6cec0e8cdf}
       \field{sortinit}{U}
       \field{sortinithash}{36a2444f5238e0dcf4bb59704df6624d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{A Classification of Web Browser Fingerprinting Techniques}
+      \field{booktitle}{New Technologies, Mobility and Security (NTMS), 2015 7th International Conference on}
+      \field{title}{A classification of web browser fingerprinting techniques}
       \field{year}{2015}
       \verb{urlraw}
       \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7266460
@@ -749,6 +809,37 @@
       \endverb
       \verb{url}
       \verb https://w3techs.com/technologies/details/cp-javascript/all/all
+      \endverb
+    \endentry
+    \entry{wood}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b0de7dedbb027a6d75f36d5f8f26e752}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0de7dedbb027a6d75f36d5f8f26e752}
+      \strng{fullhash}{b0de7dedbb027a6d75f36d5f8f26e752}
+      \strng{bibnamehash}{b0de7dedbb027a6d75f36d5f8f26e752}
+      \strng{authorbibnamehash}{b0de7dedbb027a6d75f36d5f8f26e752}
+      \strng{authornamehash}{b0de7dedbb027a6d75f36d5f8f26e752}
+      \strng{authorfullhash}{b0de7dedbb027a6d75f36d5f8f26e752}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{JavaScript}
+      \field{urlday}{13}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://html.com/javascript/
+      \endverb
+      \verb{url}
+      \verb https://html.com/javascript/
       \endverb
     \endentry
     \entry{xovi18}{online}{}
