@@ -267,17 +267,18 @@ Benchmark tests – evaluate how the browser’s js engine performs against a li
 
 \section{Web browser fingerprinting methods}\label{sec:Methods}
 \subsection{Active fingerprinting}
-Active fingerprinting actively queries information about the client by running JavaScript code or using plug-ins like Adobe Flash which extend the browsers functionality.(\textcite{web17})((\textcite{doty18}, p.6)\\\\
+Active fingerprinting actively queries information about the client by running JavaScript code or using plug-ins like Adobe Flash which extend the browsers functionality. (\textcite{web17})((\textcite{doty18}, p.6)\\\\
 Some of the additional characteristics which can be retrieved with this method are:
 \begin{itemize}
-	\item user's screen (width, height, resolution) and window size
+	\item user's screen (width, height, resolution)
+	\item window size
 	\item enumerating fonts
 	\item time zone
 	\item plug-ins
 	\item evaluating performance characteristics
 	\item rendering graphical patterns\\
 \end{itemize}
-The only potential disadvantage active fingerprinting provides is that it  can be detected on the client side in case the user analyses the outgoing data packages, HTML or the JavaScript source code, which in the majority of cases does not happen. (\textcite{doty18}, p.6)(\textcite{web17})\\\\
+The only potential disadvantage active fingerprinting provides, is that it can be detected on the client-side in case the user analyses the outgoing data packages, HTML or the JavaScript source code. However, this does not happen in the majority of cases. (\textcite{doty18}, p.6)(\textcite{web17})\\\\
 Active fingerprinting techniques
 \begin{itemize}
 	\item Canvas fingerprinting
@@ -287,13 +288,14 @@ Active fingerprinting techniques
 \end{itemize}
 
 \subsection{Passive fingerprinting}
-In contrast to active fingerprinting methods, passive fingerprinting does not need to execute any code on the client side. This method works based on observable characteristics which is contained in the header data of the IP packet by default. (\textcite{doty18}, p.6)(\textcite{web17}) There is no way for the user to learn if a website is using a passive fingerprinting method and secretly storing data.\\\\
+In contrast to active fingerprinting methods, passive fingerprinting does not need to execute any code on the client side. This method works based on observable characteristics which are contained in the header data of the IP packet by default. (\textcite{doty18}, p.6)(\textcite{web17}) There is no way for the user to learn if a website is using a passive fingerprinting method and is secretly storing data.\\\\
 Some of the provided characteristics are:
 \begin{itemize}
 	\item cookies
-	\item http request headers
-	\item ip address and port
-	\item character sets (e.g. UTF-8) and languages\\
+	\item HTTP request headers
+	\item IP address and port
+	\item character sets (e.g. UTF-8)
+	\item languages\\
 \end{itemize}
 Passive fingerprinting techniques
 \begin{itemize}
