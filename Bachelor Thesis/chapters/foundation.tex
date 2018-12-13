@@ -179,6 +179,7 @@ While N. Doty only listed ways to decrease the chance of being fingerprinted, R.
 (\textcite{mayer09}, p.43)
 \end{comment}
 As mentioned in the previous sections scripts which use fingerprinting can read certain data via configuration settings or other observable characteristics from the web browser which enables them to create a specific fingerprint. (\textcite{doty18}, p.3) The following paragraphs will outline some of these configurations. 
+-- only some
 
 \begin{comment}
 The information that browser fingerprinting reveals typically includes a mixture of HTTP headers (which are delivered as a normal part of every web request) and properties that can be learned about the browser using JavaScript code: your time zone, system fonts, screen resolution, which plug-ins you have installed, and what platform your browser is running on. Sites can even use techniques such as canvas or WebGL fingerprinting to gain insight into your hardware configuration.(\textcite{miele18})
@@ -238,8 +239,9 @@ As shown in the examples above, not only the used browser name and its version a
 If wanted, changes on the user agent string are easily made. (\textcite{arntz17})
 The problem with this configuration is, that the longer the user-agent field values become, the higher becomes the risk of being identified through for example fingerprinting. This is the case why the user should limit the addition to the user-agent string which can be requested by third parties. (\textcite{fielding14}, p.5.5.3)
 
-
+\begin{comment}
 \subsection{Others}
+In the previous 
 Quickly describe which else there are:
 (\textcite{havens16}, p.5):
 Language – Language the browser is in; used for localization
@@ -259,8 +261,8 @@ Benchmark tests – evaluate how the browser’s js engine performs against a li
 %WebGL provides a JavaScript API for rendering 3D graphics in a <canvas> element. Modeled after OpenGL ES 2.0, WebGL is currently a draft speciﬁcation and implemented and enabled in Chrome, Firefox, and Opera, as well as implemented but disabled in Safari. Each of these browsers provides a hardware-accelerated implementation, using the installed graphics hardware to render each frame. To mitigate serious misbehaviour and crashes, all of these browsers enable WebGL only for a whitelisted set of graphics cards and drivers.
 %Current WebGL implementations expose their functionality through a separate canvas context (which will eventually be named “webgl”). The WebGL API is too complex to describe here in suﬃcient detail, but is stylistically similar to the desktop OpenGL API. It provides for vertex and fragment shaders, written in OpenGL Shading Language (GLSL), that, after compilation, run directly on the graphics card. WebGL also provides for OpenGL-style textures, as well as diﬀerent lighting primitives. More advanced techniques, such as specular highlighting, bump mapping, and transparency, can be achieved through custom GLSL shaders. 2.4 SecurityImplications 
 %(\textcite{mowery12}, p.3)
+\end{comment}
 
-\newpage
 \section{Web browser fingerprinting methods}\label{sec:Methods}
 \subsection{Active fingerprinting}
 Active fingerprinting actively queries information about the client by running JavaScript code or using plug-ins like Adobe Flash which extend the browsers functionality.(\textcite{web17})((\textcite{doty18}, p.6)\\\\
