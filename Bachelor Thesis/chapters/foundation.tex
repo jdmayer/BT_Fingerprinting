@@ -109,29 +109,30 @@ Even though the rules imposed by this regulation seem to help prevent unwanted t
 Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Furthermore, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
 
 \section{Mitigation} \label{mitigation}
-As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the users privacy which brings up the question if it can be avoided. Each of the researched papers about this topic states the same - No. Unfortunately, it is impossible to opt-out fingerprinting. (\textcite{web17})(\textcite{upi15}, p.4)\\\\
-Even if it is not possible to prevent the possibility of being fingerprinted there are many suggestions on how to at least mitigate the characteristics which are used to generate an unique fingerprint. Some of these suggestions are stated below:
+As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the user's privacy which brings up the question if it can be avoided. Each of the researched papers about this topic states the same - No. Unfortunately, it is impossible to opt-out fingerprinting. (\textcite{web17})(\textcite{upi15}, p.4)\\\\
+Even if it is not possible to prevent the possibility of being fingerprinted, there are many suggestions on how to at least mitigate the characteristics which are used to generate an unique fingerprint. Some of these suggestions are stated below:
 \begin{itemize}
 	\item Blocking tools which are maintained by regular web-crawls to detect tracking and incorporate blocking mechanisms (\textcite{acar14}, pp.11);\\
 	\textit{This might work with active fingerprinting methods but not with the passive methods.}
 
-	\item Having flash provide less system information and report only a standard set of fonts (\textcite{nikiforakis13}, p.13);\\
-	\textit{This would require flash developers to take enough interest in this topic to change security settings as well this might cause some rendering problems.}
+	\item Having Flash provide less system information and report only a standard set of fonts (\textcite{nikiforakis13}, p.13);\\
+	\textit{This would require Flash developers to take enough interest in this topic to change security settings. It might also cause rendering problems.} 
+	%%???
 	
 	\item Use private browsing modes or Tor anonymity service;\\
-	\textit{Tor is slower and while it disables WebGL it still allows rendering to a <canvas> which partly exposes the user to canvas fingerprinting.} (\textcite{mowery12}, p.1)
+	\textit{Tor is slower and while it disables WebGL it still allows rendering to the <canvas> element which partly exposes the user to canvas fingerprinting.} (\textcite{mowery12}, p.1)
 	
 	\item Browser vendors agree on a single set of API calls to expose to the web applications as well as internal implementation specifics (\textcite{nikiforakis13}, p.13);\\
 	\textit{This would require all browser vendors to take enough interest in this topic to change their API calls.}
 	
 	\item Browser vendors agree on an universal list of "canvas-safe" fonts (\textcite{mowery12}, p.10)(\textcite{boda11}, p.16);\\
-	\textit{This would again require cooperation of all browser vendors. If only a few browsers adapt their settings this might make them more distinct.} 
+	\textit{This would again require the cooperation of all browser vendors. If only a few browsers adapt their settings this might make them more distinct.} 
 	
 	\item Support WebGL which ignore graphic cards and render scenes in a generic software renderer;\\
 	\textit{This approach might be good while the performance impact is not.} (\textcite{mowery12}, p.10)
 	
-	\item Require the users approval whenever a script requests pixel data  (\textcite{mowery12}, p.10);\\
-	\textit{The reason why this might be can be concealed and the casual user will not know the effects of accepting}
+	\item Require the users approval whenever a script requests pixel data (\textcite{mowery12}, p.10);\\
+	\textit{The reason why the approval is needed might be covered. Further, a casual user will not know the effects of accepting}
 	
 	\item Modification of the user agent string;\\
 	\textit{Opinions vary on this ones. While Yen et al. claim that this measure helps, Nikiforakis et al. as well as other authors state otherwise.} (\textcite{yen09}, p.5) (\textcite{nikiforakis13}, p.13) (\textcite{eckersley10}, p.4)
@@ -146,7 +147,7 @@ Even if it is not possible to prevent the possibility of being fingerprinted the
 	\textit{Helps against canvas fingerprinting but does not prevent passive methods.}
 	
 	\item Use commonly-used web browsers and default settings, including the operating system (\textcite{web17});\\
-	\textit{Good suggestions as no fingerprinting technique is able to distinguish identically configured devices}	
+	\textit{Good suggestions as no fingerprinting technique is able to distinguish identically configured devices.}	
 \end{itemize}
 
 \begin{comment}

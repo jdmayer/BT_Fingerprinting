@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  13 DEC 2018 23:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  14 DEC 2018 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2159,63 +2159,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--115
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 191--195
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--195
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Overfull \hbox (39.35616pt too wide) in paragraph at lines 199--206
+Overfull \hbox (39.35616pt too wide) in paragraph at lines 200--207
 \T1/lmr/m/n/12 JavaScript En-gines usu-ally im-ple-ment fea-tures which are spe
 c-i-fied by \T1/lmr/m/it/12 EC-MAScript\T1/lmr/m/n/12 .([][]javascript.info
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--206
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--206
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--206
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--206
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--206
+Underfull \hbox (badness 10000) in paragraph at lines 200--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--217
+Underfull \hbox (badness 10000) in paragraph at lines 213--218
 
  []
 
@@ -2232,53 +2232,32 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--220
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--227
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--227
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--227
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
+Underfull \hbox (badness 10000) in paragraph at lines 230--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
-
- []
-
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--239
+Underfull \hbox (badness 10000) in paragraph at lines 230--235
 
  []
 
@@ -2294,57 +2273,78 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--244
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--244
+Underfull \hbox (badness 10000) in paragraph at lines 236--240
+
+ []
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--245
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 271--274
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--284
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--294
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 311--319
+Underfull \hbox (badness 10000) in paragraph at lines 312--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--319
+Underfull \hbox (badness 10000) in paragraph at lines 312--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--319
+Underfull \hbox (badness 10000) in paragraph at lines 312--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--319
+Underfull \hbox (badness 10000) in paragraph at lines 312--320
 
  []
 
@@ -2360,62 +2360,62 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
+Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--335
+Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--335
+Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--335
+Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--335
+Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--335
+Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--335
+Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 348--350
+Underfull \hbox (badness 10000) in paragraph at lines 349--351
 
  []
 
 <images/MinimalFP.png, id=603, 376.90813pt x 108.405pt>
 File: images/MinimalFP.png Graphic file (type png)
 <use images/MinimalFP.png>
-Package pdftex.def Info: images/MinimalFP.png  used on input line 358.
+Package pdftex.def Info: images/MinimalFP.png  used on input line 359.
 (pdftex.def)             Requested size: 299.9971pt x 80.00339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--361
+Underfull \hbox (badness 10000) in paragraph at lines 353--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--361
+Underfull \hbox (badness 10000) in paragraph at lines 353--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--361
+Underfull \hbox (badness 10000) in paragraph at lines 353--362
 
  []
 
@@ -2423,40 +2423,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--361
 <images/DecisionTree.png, id=613, 360.34625pt x 172.14313pt>
 File: images/DecisionTree.png Graphic file (type png)
 <use images/DecisionTree.png>
-Package pdftex.def Info: images/DecisionTree.png  used on input line 366.
+Package pdftex.def Info: images/DecisionTree.png  used on input line 367.
 (pdftex.def)             Requested size: 289.9984pt x 120.00027pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--369
+Underfull \hbox (badness 10000) in paragraph at lines 363--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--387
+Underfull \hbox (badness 10000) in paragraph at lines 384--388
 
  []
 
 [17 <./images/MinimalFP.png> <./images/DecisionTree.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--405
+Underfull \hbox (badness 10000) in paragraph at lines 392--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--405
+Underfull \hbox (badness 10000) in paragraph at lines 392--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--405
+Underfull \hbox (badness 10000) in paragraph at lines 392--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--405
+Underfull \hbox (badness 10000) in paragraph at lines 392--406
 
  []
 
@@ -2483,12 +2483,12 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--413
+Underfull \hbox (badness 10000) in paragraph at lines 411--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--413
+Underfull \hbox (badness 10000) in paragraph at lines 411--414
 
  []
 
@@ -2571,7 +2571,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  49031 strings out of 492639
  922638 string characters out of 6133087
- 1474439 words of memory out of 5000000
+ 1473436 words of memory out of 5000000
  51944 multiletter control sequences out of 15000+600000
  584995 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2586,7 +2586,7 @@ r12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texliv
 e/2018/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2018/texmf-dist/
 fonts/type1/public/lm/lmss17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public
 /lm/lmssbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (35 pages, 980081 bytes).
+Output written on main.pdf (35 pages, 979792 bytes).
 PDF statistics:
  876 PDF objects out of 1000 (max. 8388607)
  781 compressed objects within 8 object streams
