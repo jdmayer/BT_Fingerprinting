@@ -1,6 +1,6 @@
 \chapter{Foundation}
 \label{cha:foundation}
-This chapter will cover the basic knowledge about fingerprinting. This chapter is all about the what, why and how of fingerprinting.  First explaining the term fingerprint and what it can be used for. Further it will discuss the threat is poses as well as possible ways to reduce a fingerprint before covering the used configurations and plugins. After the base was layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
+This chapter will cover the basic knowledge about fingerprinting. This chapter is all about the what, why and how of fingerprinting.  First explaining the term fingerprint and what it can be used for. Further it will discuss the threat is poses as well as possible ways to reduce a fingerprint before covering the used configurations and plug-ins. After the base was layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
 
 \section{Fingerprinting}
 Web browser fingerprinting, also known as device fingerprinting, is the systematic collection of information to identify and later re-identify users. (\textcite{doty18}, p.3)(\textcite{amiunique})\\
@@ -133,7 +133,7 @@ Even if it is not possible to prevent the possibility of being fingerprinted the
 	\item Modification of the user agent string;\\
 	\textit{Opinions vary on this ones. While Yen et al. claim that this measure helps, Nikiforakis et al. as well as other authors state otherwise.} (\textcite{yen09}, p.5) (\textcite{nikiforakis13}, p.13) (\textcite{eckersley10}, p.4)
 	
-	\item Decrease the verbosity of plugin versions and the user agent string (\textcite{boda11}, p.16);\\
+	\item Decrease the verbosity of plug-in versions and the user agent string (\textcite{boda11}, p.16);\\
 	\textit{This measurement might help to reduce the uniqueness of said characteristics.}
 	
 	\item Enable the user to set fake system properties in browser like hiding the operating system, time zone and screen resolution (\textcite{boda11}, p.16);\\
@@ -181,10 +181,10 @@ While N. Doty only listed ways to decrease the chance of being fingerprinted, R.
 As mentioned in the previous sections scripts which use fingerprinting can read certain data via configuration settings or other observable characteristics from the web browser which enables them to create a specific fingerprint. (\textcite{doty18}, p.3) The following paragraphs will outline some of these configurations. 
 
 \begin{comment}
-The information that browser fingerprinting reveals typically includes a mixture of HTTP headers (which are delivered as a normal part of every web request) and properties that can be learned about the browser using JavaScript code: your time zone, system fonts, screen resolution, which plugins you have installed, and what platform your browser is running on. Sites can even use techniques such as canvas or WebGL fingerprinting to gain insight into your hardware configuration.(\textcite{miele18})
+The information that browser fingerprinting reveals typically includes a mixture of HTTP headers (which are delivered as a normal part of every web request) and properties that can be learned about the browser using JavaScript code: your time zone, system fonts, screen resolution, which plug-ins you have installed, and what platform your browser is running on. Sites can even use techniques such as canvas or WebGL fingerprinting to gain insight into your hardware configuration.(\textcite{miele18})
 \end{comment}
 \subsection{JavaScript}\label{JS}
-JavaScript is a web development language for web functionality. (\textcite{wood}) It allows client-side scripting and gives access to many browser-populated features like the installed plugins. (\textcite{amiunique}) It is enabled by default in all major browsers and by November 2018 JavaScript was included by 95\% of all websites online. (\textcite{jsinfo}) (\textcite{w3techs18})\\\\
+JavaScript is a web development language for web functionality. (\textcite{wood}) It allows client-side scripting and gives access to many browser-populated features like the installed plug-ins. (\textcite{amiunique}) It is enabled by default in all major browsers and by November 2018 JavaScript was included by 95\% of all websites online. (\textcite{jsinfo}) (\textcite{w3techs18})\\\\
 JavaScript can be executed on any device which has a \textit{JavaScript Engine}. (\textcite{mulazzani13}, p.2) (\textcite{jsinfo}) This engine is responsible for parsing the script to compile it into machine language which can be exeucted. During this process the engine applies optimizations on every state of the process. (\textcite{jsinfo})\\\\
 Known JavaScript Engines:
 \begin{itemize}
@@ -198,46 +198,25 @@ In-Browser JavaScript is seen as "safe" programming language as it only has a lo
 JavaScript can also be used to retrieve browser characteristics like the user's time zone and system color. Further there are two properties which can be used to acquire additional information about the user's screen and window.(\textcite{web17})\\\\
 The \textit{navigator object} is a possible property for window objects and supported by all major browsers. Informations which can be acquired through the navigator object include: browser name and version, if cookies are enabled, browser language, platform and the useragent (which does not differ from the user agent in \autoref{UAS})(\textcite{web17})\\\\
 The \textit{screen} is a property which holds information about the user's screen. For example the screen width and height, the acutal available display width and height and the color depth which is supported by the user's device.(\textcite{web17})\\\\
-When JavaScript is disabled, websites are not able to detect the list of active plugins and fonts, and neither will be able to install certain cookies on the targeted browser. The disadvantage of disabling JavaScript is that websites won’t always function properly, because it’s also used to make websites run smoothly and therefore will impact the browsing experience.(\textcite{pixel18})
+When JavaScript is disabled, websites are not able to detect the list of active plug-ins and fonts, and neither will be able to install certain cookies on the targeted browser. The disadvantage of disabling JavaScript is that websites won’t always function properly, because it’s also used to make websites run smoothly and therefore will impact the browsing experience.(\textcite{pixel18})
 
 
 %has some tests which e.g. are later used for js engine fp -- what is sputnik and test 262 ()
 %one of the fastest evolving languages, in terms of practices, tooling, n ecosystem (\textcite{wood})
 
 \subsection{Adobe Flash}\label{adobe}
--- browser plugin
--- provides different ways of delivering rich media content
--- which traditionally not displayed using HTML
- (\textcite{nikiforakis13}, p.3)
-**	Criticized for poor performance, lack of stability
-**	Newer technologies (HTML5) can potentially deliver what used to be only possible through flash – still available on the vast majority of desktops (\textcite{nikiforakis13}, p.3)
-
-**	Returns all fonts with one simple call (\textcite{havens16}, p.5)
-**	Its rich programming interface (API) provides access to many system-specific attributes (version of OS, list of fonts, screen resolution, timezone) (\textcite{amiunique})
-
-**	Can be disabled without a negative impact on UEX – only impacts browsing experience on old websites(\textcite{pixel18}.)
-**	Vulnerability, called “local storage objects” -> enables “zombie cookie” or “supercookie”. Almost impossible to remove. Populate numerous different storage areas with tracking in-formation. Even if cookies deleted from browser -> still come back. Other storage locations repopulate cookie as long as any existis – combined with brower fingerprinting, the cookies can track changes in fingerprints while also relying upon the fingerprint as a finale line of defense against the most privacy-conscious users. “cookie syncing” (\textcite{havens16}, p.8f)
-
--- used for retrieving more sensitive information
--- incl. ability to detect HTTP proxies 
-(\textcite{nikiforakis13}, p.2)
-
--- proprietary browser plug-in
--- reimplements certain APIs existing in browser + accessible through js
--- APIs not always provide same results (more detailed)
--- e.g. querying a browser about the platform of
-execution, Firefox reports “Linux x86 64”. Flash, on the
-other hand, provides the full kernel version, e.g., Linux
-3.2.0-26-generic.
-(\textcite{nikiforakis13}, p.2)
-
--- needed to play Flash animations
--- was most commonly used video format on the www
--- therefore - expansion - compulsory
--- HTML5 - now a serious and safer alternative - adobe still installed on various browsers
-(\textcite{web17})
+Adobe Flash is a proprietary browser plug-in which provides different ways of delivering rich media content which is usually not displayed in HTML. (\textcite{nikiforakis13}, pp.2) It used to be the most commonly used video format on the internet but can now be replaced with safer technologies like HTML5. Eventhough it could be replaced it is still installed on the vast majority of  browsers.(\textcite{web17})(\textcite{nikiforakis13}, p.3) \\\\
+This plug-in can be used to retrieve sensitive data from the user for example can it detect HTTP proxies. Besides, has it reimplemented  certain APIs which already exist in browers and are accessible through the use of JavaScript. (\textcite{nikiforakis13}, p.2) This rich programming interface (API) can be used to access system-specific attributes, such as the operating system and its version, a list of fonts, screen resolution and time zone.(\textcite{amiunique})(\textcite{havens16}, p.5) Furthermore, the API does not provide the same result as the original browser API, but even more detailed return values. (\textcite{nikiforakis13}, p.2)
+\begin{tcolorbox}
+	Example: \\
+	Firefox might return “Linux x86 64” if it is queried about the platform execution while Flash might provide the full kernel version "Linux 3.2.0-26-generic". (\textcite{nikiforakis13}, p.2)\\
+\end{tcolorbox}
+Apart from these security risks is Adobe Flash also being criticized for its poor performance, as well as lack of stability. (\textcite{nikiforakis13}, p.3) Another vulnerability is its local storage objects which enable so called \textit{zombie cookies}. These zombie cookies populate in various storage locations on the targeted device and re-populate in case one of these storage areas is cleared. These cookies can also be used paired with fingerprinting in order to keep track of changes in fingerprints ("cookie syncing"). (\textcite{havens16}, p.8f)\\\\
+Adobe Flash can be disabled or even uninstalled which might effect the user experience on old websites negatively. (\textcite{pixel18})
 
 \subsection{HTML 5 and Canvas}\label{html5}
+
+
 -- HTML5 is the coding language used to build websites -> core fundamentals of every website
 -- has the element "canvas"
 -- originally html <canvas> element was used to draw graphics on a web page
@@ -287,7 +266,7 @@ Installed Fonts – the fonts supported in the browser, typically retrieved from
 Canvas Fingerprinting – The program attempts to render an image on the webpage using the HTML5 canvas. Subtle differences in the rendering of the image can lead to identification
 
 (\textcite{havens16}, p.6)
-Browser Plugins – a list of plugins installed in the browser
+Browser plug-ins – a list of plug-ins installed in the browser
 Cookies enabled – whether or not the user allows cookies on the page
 Benchmark tests – evaluate how the browser’s js engine performs against a list of published bench marks. This information is often used to supplement that of the user agent string
 
@@ -346,7 +325,7 @@ Usually, simple heuristics can be used to adjust the browser specific fingerprin
 In some cases when the user tries to hide browser features, this accomplishes just the opposit, as it makes the fingerprint more distinct. See the example below.\\
 \begin{tcolorbox}
 	Example: \\
-	Even when using a flash blocking add-on, the browser still displays flash in the plugin list. When due to the blocking add-on the list of system fonts can't be obtained this creates a distinct fingerprint even though the flash blocker was not explicitly detected. (\textcite{eckersley10}, p.4)
+	Even when using a flash blocking add-on, the browser still displays flash in the plug-in list. When due to the blocking add-on the list of system fonts can't be obtained this creates a distinct fingerprint even though the flash blocker was not explicitly detected. (\textcite{eckersley10}, p.4)
 \end{tcolorbox}
 Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross-browser fingerprinting, this is a single browser fingerprint technique, which means it can not re-identify a user in another browser as the fingerprint may change across browsers. \textcite{upi15}, p.2)
 
