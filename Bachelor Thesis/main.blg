@@ -1,17 +1,18 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[45] biber-MSWIN32:313> INFO - === 
-[94] Biber.pm:371> INFO - Reading 'main.bcf'
-[242] Biber.pm:857> INFO - Found 26 citekeys in bib section 0
-[262] Biber.pm:3976> INFO - Processing section 0
-[280] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
-[287] bibtex.pm:1500> INFO - LaTeX decoding ...
-[340] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
-[343] Utils.pm:193> WARN - Duplicate entry key: 'eckersley10' in file 'references.bib', skipping ...
-[561] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[561] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[51] biber-MSWIN32:313> INFO - === 
+[102] Biber.pm:371> INFO - Reading 'main.bcf'
+[244] Biber.pm:857> INFO - Found 28 citekeys in bib section 0
+[263] Biber.pm:3976> INFO - Processing section 0
+[282] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[288] bibtex.pm:1500> INFO - LaTeX decoding ...
+[343] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[346] Utils.pm:193> WARN - Duplicate entry key: 'eckersley10' in file 'references.bib', skipping ...
+[514] Utils.pm:193> WARN - I didn't find a database entry for 'marshal17' (section 0)
+[562] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[562] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
 [562] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
 [562] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[603] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[621] bbl.pm:720> INFO - Output to main.bbl
-[630] Biber.pm:110> INFO - WARNINGS: 1
+[608] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[623] bbl.pm:720> INFO - Output to main.bbl
+[632] Biber.pm:110> INFO - WARNINGS: 2

@@ -214,27 +214,12 @@ This plug-in can be used to retrieve sensitive data from the user for example ca
 Apart from these security risks is Adobe Flash also being criticized for its poor performance, as well as lack of stability. (\textcite{nikiforakis13}, p.3) Another vulnerability is its local storage objects which enable so called \textit{zombie cookies}. These zombie cookies populate in various storage locations on the targeted device and re-populate in case one of these storage areas is cleared. These cookies can also be used paired with fingerprinting in order to keep track of changes in fingerprints ("cookie syncing"). (\textcite{havens16}, p.8f)\\\\
 Adobe Flash can be disabled or even uninstalled which might effect the user experience on old websites negatively. (\textcite{pixel18})
 
-\subsection{HTML 5 and Canvas}\label{html5}
-
-
--- HTML5 is the coding language used to build websites -> core fundamentals of every website
--- has the element "canvas"
--- originally html <canvas> element was used to draw graphics on a web page
-(\textcite{pixel18})
-
-%what is base 64
-
-Through the display of an HTML5 Canvas element, it is possible to collect small differences in the hardware on in the software configurations, thanks to slight differences in the image rendering between devices. The smallest pixel difference can be detected -> canvas fingerprinting 
-(\textcite{amiunique})
-
-%One of the most interesting new elements in HTML5, <canvas> provides an area of the screen which can be drawn upon programmatically. It enjoys widespread support, being available in the most recent versions of Chrome, Firefox, Internet Explorer, Opera, and Safari as well as Mobile Safari and Android Browser. The basic approach to drawing on a canvas is simple: acquire a graphics context, and use the context’s API to eﬀect your changes. In the current HTML5 speciﬁcation, the only deﬁned context is“2d”. The 2d context provides basic drawing primitives such as fillRect, lineTo, and arc, as well as more complicated features such as B´ezier curves, color gradients, and copying in an existing image. 
-%
-%\textbf{refer to canvas fingerprinting}
-%pixel extraction: In order for <canvas> to be a useful ﬁngerprint, there must be some way to examine its behavior. Fortunately, <canvas> makes this extremely easy, providing several ways to inspect its data with pixel accuracy.
-%(\textcite{mowery12}, p.2)
-%
-%First, the 2d context provides the method getImageData(). Given a rectangular region of the canvas, this method returns an ImageData object. Contained in this object are the RGBA values (as integers) for every pixel in the requested region. Second, the canvas object itself provides a toDataURL(type) method. When passed “image/png”, this method returns a data url consisting of the Base64 encoding of a PNG image containing the entire contents of the canvas. As this is a very convenient canvas-level method, we used this approach to extract data in our experiments. During black-box use of these ﬁngerprints, the test suite could simply hash these data URLs, thereby removing the need to upload entire images from each client. It is worthwhile to note that these methods do preserve the same origin policy — if an image from a diﬀerent origin has been drawn on this canvas, they will throw a SecurityError exception instead of returning pixel data. Therefore, our <canvas> ﬁngerprints must only contain image resources that are under our control. 
-%(\textcite{mowery12}, p.3)
+\subsection{HTML 5}\label{html5}
+HTML5 is the latest version of the Hypertext Markup Language which is a coding language used to build websites and supported by all major browsers. (\textcite{pixel18})(\textcite{marshal17}) It can be used to build complicated applications, as well as provide animations, movies, music, and the likes. This without the need of any additional software (plug-ins). Summed up, it provides features like geolocation, graphics, video and webapps. (\textcite{marshal17})\\\\
+Apart from its incredible capabilities there is a slight problem concerning HTML5 video. As it would not be agreed upon which format(s) should be supported which ended in each browser supporting different HTML5 video formats.\\
+As HTML5 does not include digital rights management technology which is used to prevent the user from copying the content, content owner usually prefer Flash. (\textcite{marshal17})\\\\
+One of HTML5's new elements is <canvas> element which is used to draw graphics on a web page.(\textcite{pixel18}) Through this process it is possible to acquire any differences in the hardware and software configurations due to slight image rendering differences. (\textcite{amiunique}) This provides a way to inspect the data with pixel accuracy which later can be used in fingerprinting techniques like described in \autoref{canvasfp} (\textcite{mowery12}, p.2) \\\\
+In \autoref{canvasfp} \textit{Base64 encoded images} are used which is one of the oldest ways to encode something in html. Base64 encoded images are a part of the HTML and displays it without loading. It turns different types of data into a combination of numbers and letters which is safe for HTML. One of the main benefits is that the webpage does not have to load an external ressource which helps the page to load faster. This performance benefit only works if small images are used. (\textcite{sexton15})
 
 \subsection{User agent}\label{UAS}
 A user agent is a request header field in the hypertext transfer protocol (http) which is used for the communication between browser and website. (\textcite{xovi18}) It is automatically sent with each page call, except if it is specifically configured not to. (\textcite{xovi18})(\textcite{fielding14}, p.5.5.3)\\\\
@@ -329,7 +314,7 @@ In some cases when the user tries to hide browser features, this accomplishes ju
 \end{tcolorbox}
 Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross-browser fingerprinting, this is a single browser fingerprint technique, which means it can not re-identify a user in another browser as the fingerprint may change across browsers. \textcite{upi15}, p.2)
 
-\subsection{Canvas fingerprinting}
+\subsection{Canvas fingerprinting} \label{canvasfp}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\ Any website that runs JavaScript on the user's browser can use the HTML5<canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
 The outcome of their research and tests was that the canvas fingerprint is consistent but would change depending on hardware and software configuration. Only 2 years after its first use, a study conducted by Acar et al. ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximately occurrence of 5.5\% in the top 100,000 Alexa websites. (\textcite{acar14}, p.5)
 

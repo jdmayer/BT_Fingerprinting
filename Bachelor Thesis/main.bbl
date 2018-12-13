@@ -727,6 +727,37 @@
       \verb https://publik.tuwien.ac.at/files/PubDat_202737.pdf
       \endverb
     \endentry
+    \entry{sexton15}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c4698dd8b8867ff7fb700d735bd8fe9d}{%
+           family={Sexton},
+           familyi={S\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4698dd8b8867ff7fb700d735bd8fe9d}
+      \strng{fullhash}{c4698dd8b8867ff7fb700d735bd8fe9d}
+      \strng{bibnamehash}{c4698dd8b8867ff7fb700d735bd8fe9d}
+      \strng{authorbibnamehash}{c4698dd8b8867ff7fb700d735bd8fe9d}
+      \strng{authornamehash}{c4698dd8b8867ff7fb700d735bd8fe9d}
+      \strng{authorfullhash}{c4698dd8b8867ff7fb700d735bd8fe9d}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Base64 encoding images}
+      \field{urlday}{13}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://varvy.com/pagespeed/base64-images.html
+      \endverb
+      \verb{url}
+      \verb https://varvy.com/pagespeed/base64-images.html
+      \endverb
+    \endentry
     \entry{miele18}{report}{}
       \name{author}{2}{}{%
         {{hash=f56835b538b65d2bda77418f9d4f7322}{%
@@ -941,6 +972,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{marshal17}
 \endrefsection
 \endinput
 
