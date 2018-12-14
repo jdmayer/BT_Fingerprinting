@@ -69,7 +69,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7.4}Cross-Browser fingerprinting}{17}{subsection.2.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{How it works}{18}{subsection.2.7.4}
+\contentsline {subsubsection}{How it works}{17}{subsection.2.7.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Analysis based on an application scenario}{20}{chapter.3}
 \defcounter {refsection}{0}\relax 

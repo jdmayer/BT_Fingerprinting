@@ -303,36 +303,35 @@ Passive fingerprinting techniques
 \end{itemize}
 
 \section{Web browser fingerprinting techniques}
-
 As described in \autoref{sec:Methods} there are different methods of fingerprinting. These methods are implemented in different techniques which will be discussed in this chapter.
 \subsection{Browser specific fingerprinting}
 %can be both active and passive?
-In 2010, P. Eckersley conducted a study in the project "Panopticlick" which checks how trackable users are. The tracking is done with the help of a fingerprint which is generated from previously collected data. (\textcite{upi15}, p.2) This study has shown that 94.2\% of the users which use Flash or JavaScript could be distinguished with browser fingerprinting. (\textcite{eckersley10}, p.2)
+In 2010, P. Eckersley conducted a study on the project "Panopticlick" which checks how trackable users are. The tracking is done with the help of a fingerprint which is generated from previously collected data. (\textcite{upi15}, p.2) This study has shown that 94.2\% of the users which use Flash or JavaScript could be distinguished with the help of browser fingerprinting. (\textcite{eckersley10}, p.2)
 \subsubsection{How it works}
-Browser specific fingerprinting is a technique which only uses browser-dependent features to collect a number of common or and less-common known browser characteristics.\\\\
-This kind of fingerprinting is possible even if the browser only reveals so much as its version and configuration information which is in most cases enough to create a distinct fingerprint. (\textcite{eckersley10}, p.16) Even though the retrieved browser information typically includes the installed fonts, plug-ins (including version numbers), user agent, http accept and screen resolution. (\textcite{upi15}, p.2)\\\\
-As this kind of fingerprint pracitcally is just a concatination of this information it is easily affected by changes, like upgrades, newly installed features or extermal change of the system.
+Browser specific fingerprinting is a technique which only uses browser-dependent features to collect a number of common and less-common known browser characteristics.\\\\
+This kind of fingerprinting is possible even if the browser only reveals its version and configuration information which is usually enough to create a distinct fingerprint. (\textcite{eckersley10}, p.16) Although the retrieved browser information typically includes the installed fonts, plug-ins (including version numbers), user agent, HTTP accept and screen resolution. (\textcite{upi15}, p.2)\\\\
+As this kind of fingerprint is just a concatenation of this information it is easily affected by changes, like upgrades, newly installed features or external system changes.
 Usually, simple heuristics can be used to adjust the browser specific fingerprint accordingly.(\textcite{eckersley10}, p.4) (\textcite{upi15}, p.2)\\\\
-In some cases when the user tries to hide browser features, this accomplishes just the opposit, as it makes the fingerprint more distinct. See the example below.\\
+In some cases when the user tries to hide browser features, the opposite happens as the fingerprint is made more distinct. See the example below.\\
 \begin{tcolorbox}
 	Example: \\
-	Even when using a flash blocking add-on, the browser still displays flash in the plug-in list. When due to the blocking add-on the list of system fonts can't be obtained this creates a distinct fingerprint even though the flash blocker was not explicitly detected. (\textcite{eckersley10}, p.4)
+	Even when using a Flash-blocking add-on, the browser still displays Flash in the plug-in list. Due to the add-on the list of system fonts can't be obtained, this creates a distinct fingerprint, although the Flash-blocker was not explicitly detected. (\textcite{eckersley10}, p.4)
 \end{tcolorbox}
 Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross-browser fingerprinting, this is a single browser fingerprint technique, which means it can not re-identify a user in another browser as the fingerprint may change across browsers. \textcite{upi15}, p.2)
 
 \subsection{Canvas fingerprinting} \label{canvasfp}
 Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\ Any website that runs JavaScript on the user's browser can use the HTML5<canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
-The outcome of their research and tests was that the canvas fingerprint is consistent but would change depending on hardware and software configuration. Only 2 years after its first use, a study conducted by Acar et al. ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximately occurrence of 5.5\% in the top 100,000 Alexa websites. (\textcite{acar14}, p.5)
+The outcome of their research and tests showed that the canvas fingerprint is consistent but can change depending on hardware and software configuration. Only 2 years after its first use, a study conducted by Acar et al. ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximate occurrence of 5.5\% in the top 100,000 Alexa websites. (\textcite{acar14}, p.5)
 
 \subsubsection{How it works}
-Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5<canvas> element programmatically. Each browser renders differently which helps acquiring a distinctive part for the fingerprint. So for example out of 300 samples the text font Arial was rendered in 50 distinctive ways.(\textcite{mowery12}, p.6)\\\\
+Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5<canvas> element programmatically. Each browser renders differently which helps acquiring a distinctive part for the fingerprint. So for example, out of 300 samples the text font Arial was rendered in 50 distinctive ways.(\textcite{mowery12}, p.6)\\\\
 After rendering the text or WebGL scene using HTML5<canvas> the pixel data is read to generate a fingerprint. Through this process a 2D graphic context is obtained and a text or image is drawn to the canvas.(\textcite{upi15}, p.2)\\
 The obtained canvas object provides a to-DataUrl(type) method which gives a data url consisting of a Base64 encoding of a png image which contains the canvas' content. This Base64 encoded pixel data url is used to create a hash.(\textcite{mowery12}, p.3)(\textcite{upi15}, p.2)\\\\
 At least the operating system, browser version, graphics card, installed fonts, sub-pixel hinting and anti-aliasing all play a part in the final fingerprint.(\textcite{upi15}, p.2) \\\\
 In their paper K. Mowery and H. Shacham used two types of image comparisons to check if the user's configuration matches a fingerprint: \textit{pixel-level difference} and \textit{difference maps}.(\textcite{mowery12}, pp.4)\\\\
-Pixel-level difference works by setting each pixel's color to a specific color. If the pixel's color isn't a transparent pure black it indicates that two pixels don't match and therefore its alpha value is set to 255 to render it completly opaque. (\textcite{mowery12}, pp.4)\\\\
-Difference maps works in a similar way, only that this method sets a pixel either black or white, depending on if they differ. If an image is purely white it indicates that they are the identical image. (\textcite{mowery12}, pp.4)\\\\
-Canvas fingerprinting can not distinguishing identically configured devices and can not fingerprint a user across different browsers.(\textcite{mowery12}, p.5) \textcite{upi15}, p.2)
+Pixel-level difference works by setting each pixel's color to a specific color. If the pixel's color isn't a transparent pure black it indicates that two pixels don't match and therefore its alpha value is set to 255 to render it completely opaque. (\textcite{mowery12}, pp.4)\\\\
+Difference maps work in a similar way, only that this method sets a pixel either black or white, depending on whether they differ. If an image is purely white it indicates that they are identical images. (\textcite{mowery12}, pp.4)\\\\
+Canvas fingerprinting can not distinguish identically configured devices and can not fingerprint a user across different browsers.(\textcite{mowery12}, p.5) \textcite{upi15}, p.2)
 
 \begin{comment}
 %It is transparent to the user. Our tests can be performed, offscreen, in a fraction of a second. There is no indication, visual or otherwise, that the user’s system is being fingerprinted.
@@ -345,23 +344,22 @@ It is high-entropy. In 294 experiments on Amazon’s Mechanical Turk, we observe
 When writing their thesis Mowery et al. did not have access to various hundreds distrinct customer-level computer systems and therefore went to use Amazon Mechanical Turk and were able to collect samples from 300 distrinct member of this marketplace.(\textcite{mowery12}, pp.4) Running 5 fingerprinting tests in the background they collected metadata (browser's user agent string, WebGL-reported renderer, vendor, and version.
 \end{comment}
 \subsection{JavaScript Engine fingerprinting}
-%if possible - shorten !
-In 2011 P. Reschl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and its version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
-Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robost fingerprinting technique.(\textcite{mulazzani13}, p.1)
+In 2011 P. Reschl et al. published their first paper about the use of the JavaScript Engine to uniquely identify a web browser and its version. Comparing it to the Panopticlick project (\textcite{eckersley10}) it was stated in the paper that the new approach is multiple times faster and less error prone. (\textcite{reschl11}, p.2) Two years later, in 2013, the same team with some additional authors published another paper in which this fingerprint technique was described in more detail.(\textcite{mulazzani13}, p.1) \\\\
+Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robust fingerprinting technique.(\textcite{mulazzani13}, p.1)
 
 \subsubsection{How it works}
-JavaScript Engine fingerprinting works by running test cases of conformance tests like Sputnik and test 262 (see \autoref{JS}) to identify browsers and their major versions. Even though these test suits consist of multiple thousands test cases the browser only needs to fail one particular test which every other browser passed to be identified. Therefore these fingerprinting technique only needs a fraction of a second to be executed. (\textcite{mulazzani13}, p.3) \\\\
+JavaScript Engine fingerprinting works by running test cases of conformance tests like Sputnik and test 262 to identify browsers and their major versions. Even though these test suits consist of multiple thousands test cases the browser only needs to fail one particular test which every other browser passed to be identified. Therefore these fingerprinting technique only needs a fraction of a second to be executed. (\textcite{mulazzani13}, p.3) \\\\
 There are two methods which can be used for identification:\\\\
-For a rather small test set the \textit{minimal fingerprint method} can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed (uniqueness = 1). This browser can be uniquely identified by this test and is therefore removed from the set. This process is repeated for each browser until there is a unique fingerprint for each browser in the set or there is no test case which was failed by only one browser. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)\\\\
-\autoref{MinimalFP} shows how the uniqueness of browsers and tests is obtained. The check marks mean, that the respective browser has passed the test. Each test which has a uniqueness of 1 can be used to uniquely identify a browser.
+For a rather small test set the \textit{minimal fingerprint method} can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed (uniqueness = 1). This browser can be uniquely identified by this test and is therefore removed from the set. This process is repeated for each browser until there is a unique fingerprint for each browser in the set or there is no test case, which only one browser failed. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)\\\\
+\autoref{MinimalFP} shows how the uniqueness of browsers and tests is obtained. The check marks indicate, that the respective browser has passed the test. Each test which has a uniqueness of 1 can be used to uniquely identify the respective browser.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=300pt, height=80pt]{MinimalFP.png}
 	\caption{Example for the structure of a minimal fingerprint\\}
 	\label{MinimalFP}
 \end{figure}
-If the test set is rather large it is more effective to use a \textit{binary decision tree}. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version like the  minimal fingerprint would which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)\\\\
-\autoref{DecisionTree} gives a good overview how such a tree can be structured. The leaf nodes pose as browsers, the inner nodes display the used tests and the edges indicate the success. (\textcite{mulazzani13}, p.4)
+If the test set is rather large it is more effective to use a \textit{binary decision tree}. This method runs multiple test rounds to determine a web browser and major version. There is no need for a unique fingerprint as the tests split the browsers to identify them. Therefore there is no need to run a test for each browser and version unlike the minimal fingerprint which reduces the total number of executed tests. (\textcite{mulazzani13}, p.4)\\\\
+\autoref{DecisionTree} gives a good overview of how such a tree can be structured. The leaf nodes pose as browsers, the inner nodes display the used tests and the edges indicate the success. (\textcite{mulazzani13}, p.4)
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=290pt, height=120pt]{DecisionTree.png}
@@ -378,10 +376,10 @@ If the test set is rather large it is more effective to use a \textit{binary dec
 (\textcite{upi15}, p.2)
 \end{comment}
 \subsection{Cross-Browser fingerprinting}
-In 2011 Boda et al. conducted the first study about cross-browser fingerprinting, utilizing a part of the user's IP address as part of the fingerprint. Even though this technique is not optimal due to the fact that the IP address can be modified by e.g. proxies it remained the only paper published about cross-browser fingerprinting until Cao et al. published an improved version in 2017. (\textcite{boda11}, p.14)(\textcite{Cao17}, p.1)
+In 2011 Boda et al. conducted the first study on cross-browser fingerprinting, utilizing a part of the user's IP address as part of the fingerprint. Even though this technique is not optimal, as the IP address can be modified by e.g. proxies, it remained the only paper published this kind of fingerprinting until Cao et al. published an improved version in 2017. (\textcite{boda11}, p.14)(\textcite{Cao17}, p.1)
 
 \subsubsection{How it works}
-Cross-Browser fingerprinting uses browser-independent features to be able to track a user regardless of what browser they are using. This can be done by relying only on the use of JavaScript and font detection. (\textcite{upi15}, pp.2)\\\\
+Cross-Browser fingerprinting uses browser-independent features to track a user regardless of the browser they are using. This can be done by relying only on the use of JavaScript and font detection. (\textcite{upi15}, pp.2)\\\\
 %The fingerprint is created from specific browser data with the help of JavaScript and server-side algorithms.(\textcite{boda11}, p.4)
 To be able to track a user across different web browsers a set of browser-independent features is used as a basis of identification. Part of this set is for example (\textcite{boda11}, p.2)
 \begin{itemize}
@@ -389,11 +387,11 @@ To be able to track a user across different web browsers a set of browser-indepe
 	\item application layer information (user agent string, name and version of the operating system, extensions)
 	\item information gained by quering (list of fonts, screen resolution, timezone, plug-ins and their version)\\
 \end{itemize}
-The difference to other fingerprints is that the first two octets of the IP address are used, which usually remains constant even if the IP address of the client changes dynamically. The downside is that it may change when switching ISP or other service (\textcite{boda11}, p.5)\\\\
+The difference to other fingerprints is that the first two octets of the IP address are used, which usually remain constant even if the IP address of the client changes dynamically. The downside is that it may change when switching ISP or other services. (\textcite{boda11}, p.5)\\\\
 %uses locality, short user id(script-generated identifier, derived from the first two octets of the IP address), usa, os, screen, timezone, basic fonts, all fonts, browser name and version (\textcite{boda11}, p.5)
-The downside of using the IP address as part of the fingerprint is that proxies modify it for privacy reasons. Boda et al. dealt with that problem saying that the other parameter suffice to identify a user.\\\\
-Cao et al. improved this method by excluding the IP address, modifying the use of some data and adding some features.(\textcite{Cao17}, p.1) This technique forces the system to perform 36 tasks which return the required information within less than a minute.\\\\
-This fingerprinting technique is based on different novel operating system and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). Many of which are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, pp.1)\\\\
+Besides, the IP address is modified by proxies for privacy reasons, which changes the unique fingerprint. Boda et al. dealt with that problem saying that the other parameters suffice to identify a user.\\\\
+Cao et al. improved this method by excluding the IP address, modifying the use of some data and adding some features.(\textcite{Cao17}, p.1) This technique forces the system to perform 36 tasks which return the required information in less than a minute.\\\\
+This fingerprinting technique is based on different novel operating systems and hardware level features (e.g. from graphic card, CPU, audio stack, and installed writing scripts). Many of these features are exposed to JavaScript over web browser APIs, which are used to extracted them.(\textcite{Cao17}, pp.1)\\\\
 \begin{comment}
 99,24\%  successfully identify users 
 83.24\% uniqueness with 91.44\% cross-browser stability(\textcite{Cao17}, p.2)
@@ -402,15 +400,15 @@ compared to Boda excluding ip address -68.98\% uniqueness with 84.64\% cross-bro
 Some improvements Cao et al. made towards Boda et al.'s technique are:
 \begin{tcolorbox}
 	Improvement 1:\\
-	Change of the screen resolution. In browsers like Firefox and Internet Expolorer the resolution changes when scrolling. Therefore this method takes the zoom level into consideration and normalizes the width an dheight of the screen resolution. (\textcite{Cao17}, p.2)
+	Change of the screen resolution. In browsers like Firefox and Internet Explorer the resolution changes when the user zooms. Therefore this method takes the zoom level into consideration and normalizes the width and height of the screen resolution. (\textcite{Cao17}, p.2)
 \end{tcolorbox}
 \begin{tcolorbox}
 	Improvement 2:\\
 	The formats DataUrl and JPEG are unstable across different browsers, therefore Cao et al. prefered the use of a lossless format like PNG. (\textcite{Cao17}, p.2)
 \end{tcolorbox}
-The script sends various rendering tasks (e.g. drawing curves and lines to client side) and obtains operating system and hardware level information. The client side browser renders and returns the results (images, sound waves) which are converted into a hashes. In the meantime the browser collects browser-specific information.(\textcite{Cao17}, p.4)\\\\
+The script sends various rendering tasks (e.g. drawing curves and lines to client side) and also obtains operating system and hardware level information. The client side browser renders and returns the results (images, sound waves) which are converted into hashes. In the meantime the browser collects browser-specific information.(\textcite{Cao17}, p.4)\\\\
 The final fingerprint is generated from a list of hashes which is intertwined with a mash with the help of an "and"-operation. The mask consists of collected browser information, whereas each browser has its own mask. (\textcite{Cao17}, p.4)\\\\
-Contrary to single browser techniques cross-browser fingerprinting has no problem identifying users across browsers. Anyway. It has the same weakness as all fingerprints: identically configured devices. (\textcite{upi15}, pp.2)
+Contrary to single browser techniques cross-browser fingerprinting has no problem identifying users across browsers. Anyway, it has the same weakness as all fingerprints: identically configured devices. (\textcite{upi15}, pp.2)
 
 \begin{comment}
 -- nr of CPU virtual cores - obtained by browser feature "hardwareConcurrency"
