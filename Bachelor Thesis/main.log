@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  14 DEC 2018 01:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.23)  29 DEC 2018 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2179,12 +2179,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--198
  []
 
 
-Overfull \hbox (39.35616pt too wide) in paragraph at lines 199--206
-\T1/lmr/m/n/12 JavaScript En-gines usu-ally im-ple-ment fea-tures which are spe
-c-i-fied by \T1/lmr/m/it/12 EC-MAScript\T1/lmr/m/n/12 .([][]javascript.info
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 199--206
 
  []
@@ -2482,7 +2476,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 409--412
 
  []
@@ -2492,7 +2486,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--412
 
  []
 
-[18]) [19]
+) [19]
 \openout2 = `chapters/applicationScenario.aux'.
 
  (./chapters/applicationScenario.tex
@@ -2563,7 +2557,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FF637D0889AFDB7B6F16F4CC7F7CCB09;8279.
+(rerunfilecheck)             Checksum: 9AFB2CEDF36BE324A75849F016EFBBF0;8279.
 
 
 Package biblatex Warning: Please rerun LaTeX.
@@ -2576,7 +2570,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  49031 strings out of 492639
  922638 string characters out of 6133087
- 1474444 words of memory out of 5000000
+ 1473445 words of memory out of 5000000
  51944 multiletter control sequences out of 15000+600000
  584995 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2591,7 +2585,7 @@ r12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texliv
 e/2018/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2018/texmf-dist/
 fonts/type1/public/lm/lmss17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public
 /lm/lmssbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (35 pages, 979963 bytes).
+Output written on main.pdf (35 pages, 980072 bytes).
 PDF statistics:
  880 PDF objects out of 1000 (max. 8388607)
  785 compressed objects within 8 object streams

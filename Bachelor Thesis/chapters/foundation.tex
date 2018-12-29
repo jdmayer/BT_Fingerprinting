@@ -109,7 +109,7 @@ Even though the rules imposed by this regulation seem to help prevent unwanted t
 Anyway, the GDPR only applies on processed personal data of individuals living in the \textit{European Economic Area (EEA)} for commercial purposes, or for any purposes when the behaviour is within the EEA. There will always be companies which either think they can escape the consequences or which claim to have "legitimate interest" in tracking users. Furthermore, no matter how strict regulations are, it always comes down to the user. Due to the plentiful requests for consent as they are found on the web nowadays many users are worn out and do not take a second look at the privacy policy regulated by the GDPR. (\textcite{miele18})
 
 \section{Mitigation} \label{mitigation}
-As seen in the previous chapters there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the user's privacy which brings up the question if it can be avoided. Each of the researched papers about this topic states the same - No. Unfortunately, it is impossible to opt-out fingerprinting. (\textcite{web17})(\textcite{upi15}, p.4)\\\\
+As seen in the previous sections there are many ways of utilizing web browser fingerprinting. Many of these possible applications pose a threat to the user's privacy which brings up the question if it can be avoided. Each of the researched papers about this topic states the same - No. Unfortunately, it is impossible to opt-out fingerprinting. (\textcite{web17})(\textcite{upi15}, p.4)\\\\
 Even if it is not possible to prevent the possibility of being fingerprinted, there are many suggestions on how to at least mitigate the characteristics which are used to generate an unique fingerprint. Some of these suggestions are stated below:
 \begin{itemize}
 	\item Blocking tools which are maintained by regular web-crawls to detect tracking and incorporate blocking mechanisms (\textcite{acar14}, pp.11);\\
@@ -171,7 +171,7 @@ Further Doty mentions that this helps (\textcite{doty18}, p.6):
 \end{itemize}
 While N. Doty only listed ways to decrease the chance of being fingerprinted, R. Upathilake suggests the following steps to actually prevent the chance of being tracked via web browser fingerprinting (\textcite{upi15}, p.4):
 \end{comment}
-\section{Critical technologies}
+\section{Critical Technologies}
 \begin{comment}
 %https://www.1and1.ca/digitalguide/online-marketing/web-analytics/browser-fingerprints-tracking-without-cookies/
 \begin{figure}
@@ -196,7 +196,7 @@ Known JavaScript Engines:
 	\item SpiderMonkey in Firefox
 	\item ChakraCore for Microsoft Edge\\\\
 \end{itemize}
-JavaScript Engines usually implement features which are specified by \textit{ECMAScript}.(\textcite{jsinfo}) (\textcite{mulazzani13}, p.2)\\
+JavaScript Engines usually implement features which are specified by \textit{ECMAScript} .  (\textcite{jsinfo})(\textcite{mulazzani13}, p.2)\\
 ECMAScript provides rules, details, and guidlines which have to be regarded for a scripting language in order to be ECMAScript compliant. It is represented by ECMA-262, which is a standard published by Ecma International (responsible for creating standards for technologies). (\textcite{aranda17})\\\\
 In-Browser JavaScript is seen as "safe" programming language as it only has a low-level access to memory or CPU. Its abilities are therefore limited and it has no direct access to OS system functions. (\textcite{jsinfo})\\\\
 Nevertheless, can JavaScript also be used to retrieve browser characteristics like the user's time zone and system color. Further there are two properties which can be used to acquire additional information about the user's screen and window.(\textcite{web17})\\\\
@@ -320,13 +320,13 @@ In some cases when the user tries to hide browser features, the opposite happens
 Like many other web browser fingerprinting techniques, browser specific fingerprinting is not able to distinguish instances of identically configured devices. Further, other than cross-browser fingerprinting, this is a single browser fingerprint technique, which means it can not re-identify a user in another browser as the fingerprint may change across browsers. \textcite{upi15}, p.2)
 
 \subsection{Canvas fingerprinting} \label{canvasfp}
-Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\ Any website that runs JavaScript on the user's browser can use the HTML5<canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
+Canvas fingerprinting was first mentioned and implemented by Mowery and Shacham in 2012 as part of their work "Pixel Perfect: Fingerprinting Canvas in HTML5".\\ Any website that runs JavaScript on the user's browser can use the HTML5 <canvas> element and observe its rendering behaviour. There is no need for any special access to system resources. (\textcite{mowery12}, p.1)(\textcite{upi15}, p.2)\\\\
 The outcome of their research and tests showed that the canvas fingerprint is consistent but can change depending on hardware and software configuration. Only 2 years after its first use, a study conducted by Acar et al. ascertained that canvas fingerprinting is the most common form of fingerprinting with an approximate occurrence of 5.5\% in the top 100,000 Alexa websites. (\textcite{acar14}, p.5)
 
 \subsubsection{How it works}
-Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5<canvas> element programmatically. Each browser renders differently which helps acquiring a distinctive part for the fingerprint. So for example, out of 300 samples the text font Arial was rendered in 50 distinctive ways.(\textcite{mowery12}, p.6)\\\\
+Canvas fingerprinting renders text and WebGL scenes onto an area of the screen using the HTML5 <canvas> element programmatically. Each browser renders differently which helps acquiring a distinctive part for the fingerprint. So for example, out of 300 samples the text font Arial was rendered in 50 distinctive ways.(\textcite{mowery12}, p.6)\\\\
 After rendering the text or WebGL scene using HTML5<canvas> the pixel data is read to generate a fingerprint. Through this process a 2D graphic context is obtained and a text or image is drawn to the canvas.(\textcite{upi15}, p.2)\\
-The obtained canvas object provides a to-DataUrl(type) method which gives a data url consisting of a Base64 encoding of a png image which contains the canvas' content. This Base64 encoded pixel data url is used to create a hash.(\textcite{mowery12}, p.3)(\textcite{upi15}, p.2)\\\\
+The obtained canvas object provides a toDataURL(type) method which gives a data url consisting of a Base64 encoding of a png image which contains the canvas' content. This Base64 encoded pixel data url is used to create a hash.(\textcite{mowery12}, p.3)(\textcite{upi15}, p.2)\\\\
 At least the operating system, browser version, graphics card, installed fonts, sub-pixel hinting and anti-aliasing all play a part in the final fingerprint.(\textcite{upi15}, p.2) \\\\
 In their paper K. Mowery and H. Shacham used two types of image comparisons to check if the user's configuration matches a fingerprint: \textit{pixel-level difference} and \textit{difference maps}.(\textcite{mowery12}, pp.4)\\\\
 Pixel-level difference works by setting each pixel's color to a specific color. If the pixel's color isn't a transparent pure black it indicates that two pixels don't match and therefore its alpha value is set to 255 to render it completely opaque. (\textcite{mowery12}, pp.4)\\\\
@@ -348,7 +348,7 @@ In 2011 P. Reschl et al. published their first paper about the use of the JavaSc
 Compared to other methods this technique does not rely on the user agent string (which can be modified, see \autoref{UAS}) which makes it a more robust fingerprinting technique.(\textcite{mulazzani13}, p.1)
 
 \subsubsection{How it works}
-JavaScript Engine fingerprinting works by running test cases of conformance tests like Sputnik and test 262 to identify browsers and their major versions. Even though these test suits consist of multiple thousands test cases the browser only needs to fail one particular test which every other browser passed to be identified. Therefore these fingerprinting technique only needs a fraction of a second to be executed. (\textcite{mulazzani13}, p.3) \\\\
+JavaScript Engine fingerprinting works by running test cases of conformance tests like Sputnik and test262 to identify browsers and their major versions. Even though these test suits consist of multiple thousands test cases the browser only needs to fail one particular test which every other browser passed to be identified. Therefore these fingerprinting technique only needs a fraction of a second to be executed. (\textcite{mulazzani13}, p.3) \\\\
 There are two methods which can be used for identification:\\\\
 For a rather small test set the \textit{minimal fingerprint method} can be used. First test262 is started for each browser in the set and the results are compared. For each browser a test is selected which only this specific browser failed (uniqueness = 1). This browser can be uniquely identified by this test and is therefore removed from the set. This process is repeated for each browser until there is a unique fingerprint for each browser in the set or there is no test case, which only one browser failed. If there is no unique fingerprint for a browser the selection is simply changed.(\textcite{mulazzani13}, p.3)\\\\
 \autoref{MinimalFP} shows how the uniqueness of browsers and tests is obtained. The check marks indicate, that the respective browser has passed the test. Each test which has a uniqueness of 1 can be used to uniquely identify the respective browser.
