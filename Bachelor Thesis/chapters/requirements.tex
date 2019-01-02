@@ -1,16 +1,54 @@
 \chapter{Requirements}
 \label{cha:requirements}
+as part of this work - develop a prototype
+which technique is used - was decided in the previous section
+this prototype is used to show how this particular technique is implemented
+see in the sections concerned.
+this section first discuses the use cases the prototype covers before it uses these to distinguish between functional and non functional requirements
+as well as non-goals
+
 
 \section{Use cases}
+use cases are defined to distinguish between features which are needed and unnecessary over the top stuff
+
+\begin{itemize}
+	\item user can check if he is recognised, able to adapt, see how much the person is able to distinguish between others
+	\item user is able to adapt and recheck if adaptions help to change his fingerprint - see which things need to be changed to change fingerprint
+	see if unique at all
+	\item server can check if recongnise users 
+\end{itemize}
 
 \section{Functional requirements}
 
 \begin{itemize}
 \item{measure data}
+\item measure static data
+\item run JS on client
+\item filter important data or only acquire needed data
 \item{create hash}
+\item export data in form of .csv file
 \item{re-identify users}
+\item give feedback to user if he has been recongised
+\item able to be used on different OS
+\item feed back how distinguishable? or which things were used to distinguish the user
 \end{itemize}
 
 \section{Non functional requirements}
 
-e.g. not -> to adjust the fingerprint to re-identify users even if some data changes
+\begin{itemize}
+\item good and pretty feedback for user
+\end{itemize}
+
+\section{Objective}
+\begin{itemize}
+	\item show how the technique is implemented
+	\item show how it works
+\end{itemize}
+
+\section{Non Objective}
+\begin{itemize}
+	\item dont show heuristics and stuff
+		\item adjust fingerprint with the help of heuristict to re-identify users after some changes
+	\item stability - no errors
+	\item user experience, good to use and able to config it
+\end{itemize}
