@@ -73,19 +73,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Analysis based on an application scenario}{20}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Introduction}{20}{section.3.1}
+\contentsline {section}{\numberline {3.1}Browser specific fingerprinting}{20}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Browser specific fingerprinting}{21}{section.3.2}
+\contentsline {section}{\numberline {3.2}Canvas fingerprinting}{21}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Canvas fingerprinting}{21}{section.3.3}
+\contentsline {section}{\numberline {3.3}JavaScript Engine fingerprinting}{21}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}JavaScript Engine fingerprinting}{21}{section.3.4}
+\contentsline {section}{\numberline {3.4}Cross-Browser fingerprinting}{21}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Cross-Browser fingerprinting}{21}{section.3.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Accelerometer fingerprinting}{21}{section.3.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Comparison}{21}{section.3.7}
+\contentsline {section}{\numberline {3.5}Comparison}{21}{section.3.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Requirements}{22}{chapter.4}
 \defcounter {refsection}{0}\relax 
@@ -117,9 +113,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Evaluation}{25}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Prototype testcases}{25}{section.6.1}
+\contentsline {section}{\numberline {6.1}Recording}{25}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Comparison to AmIUnique and Panopticlick?}{25}{section.6.2}
+\contentsline {section}{\numberline {6.2}Identification}{25}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Prototype testcases}{25}{section.6.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Summary}{26}{chapter.7}
 \defcounter {refsection}{0}\relax 
