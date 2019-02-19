@@ -20,6 +20,16 @@ What makes each canvas fingerprint unique is not the final image that we see, bu
 * anti-alisaing: may be the most common filter used today, and it consists of using gray pixels to smudge the edges of each glyph. If you zoom into a page, you’ll notice that the edges of curved letters are not perfect, but are rather jagged. The anti-aliasing filter smoothes out these jagged edges because our eyes average out the difference in tonality.
 (\textcite{multilogin17})
 
+* Note that scientific studies indicate that computer hardware, drivers, and browser versions can all affect the resulting glyphs. Also, in our own research, we’ve noticed that computers with the same graphic processing units (GPUs) will likely produce the same results.
+(\textcite{multilogin17})
+
+Canvas device fingerprinting has a sizable benefit over other traditional methods, in that it changes much slower than other prints. For example, if you are on Firefox 30 and upgrade to Firefox 42, the print will remain the same. This is due to the fact that the canvas element is essentially device pritning the rendering engine, the graphics driver and GPU. 
+(\textcite{jkula17})
+
+ draw text on the screen in a hidden box
+(\textcite{jkula17})\\
+
+
 \section{Idea}
 
 \section{Architecture}
@@ -38,6 +48,13 @@ This chapter discusses the techniques introduced in \autoref{sec:Techniques} in 
 -- refere to previous chapter
 -- give good overview what needs what?
 
+In the figure below (1) the browser is requested to draw text on the screen in a hidden box. This text is enlarged, drawn in multiple colors and consists of a large range of text samples. Next (2) the drawing is converted to a base64 URL. Finally, (3) in order to shorten the output the base64 URL is hashed. This output is then used as the canvas device fingerprint. 
+(\textcite{jkula17})\\
+
+js.file -> FillText()/FillStyle()/FillRect()... -> Browser
+js.file <- toDataURL() <- Browser
+js.file -> Hash() to Database
+(\textcite{jkula17})
 
 \section{Programming}
 

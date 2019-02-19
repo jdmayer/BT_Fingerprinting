@@ -69,10 +69,10 @@
       \field{title}{The web never forgets: Persistent tracking mechanisms in the wild}
       \field{year}{2014}
       \verb{urlraw}
-      \verb https://www.ftc.gov/system/files/documents/public_comments/2015/10/00064-98109.pdf
+      \verb https://securehomes.esat.kuleuven.be/~gacar/persistent/the_web_never_forgets.pdf
       \endverb
       \verb{url}
-      \verb https://www.ftc.gov/system/files/documents/public_comments/2015/10/00064-98109.pdf
+      \verb https://securehomes.esat.kuleuven.be/~gacar/persistent/the_web_never_forgets.pdf
       \endverb
     \endentry
     \entry{amiunique}{online}{}
@@ -451,6 +451,35 @@
       \endverb
       \verb{url}
       \verb https://javascript.info/intro
+      \endverb
+    \endentry
+    \entry{jkula17}{online}{}
+      \name{author}{1}{}{%
+        {{hash=eab9052a247970d2000b2c5b258e0318}{%
+           family={jkula},
+           familyi={j\bibinitperiod}}}%
+      }
+      \strng{namehash}{eab9052a247970d2000b2c5b258e0318}
+      \strng{fullhash}{eab9052a247970d2000b2c5b258e0318}
+      \strng{bibnamehash}{eab9052a247970d2000b2c5b258e0318}
+      \strng{authorbibnamehash}{eab9052a247970d2000b2c5b258e0318}
+      \strng{authornamehash}{eab9052a247970d2000b2c5b258e0318}
+      \strng{authorfullhash}{eab9052a247970d2000b2c5b258e0318}
+      \field{sortinit}{j}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Canvas Fingerprinting}
+      \field{urlday}{31}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
+      \endverb
+      \verb{url}
+      \verb https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
       \endverb
     \endentry
     \entry{marshall17}{online}{}
