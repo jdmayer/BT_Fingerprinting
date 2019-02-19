@@ -603,6 +603,35 @@
       \verb http://www.ieee-security.org/TC/W2SP/2013/papers/s2p1.pdf
       \endverb
     \endentry
+    \entry{multilogin17}{online}{}
+      \name{author}{1}{}{%
+        {{hash=155c9ef388fafe0ab4ad884632662728}{%
+           family={multilogin},
+           familyi={m\bibinitperiod}}}%
+      }
+      \strng{namehash}{155c9ef388fafe0ab4ad884632662728}
+      \strng{fullhash}{155c9ef388fafe0ab4ad884632662728}
+      \strng{bibnamehash}{155c9ef388fafe0ab4ad884632662728}
+      \strng{authorbibnamehash}{155c9ef388fafe0ab4ad884632662728}
+      \strng{authornamehash}{155c9ef388fafe0ab4ad884632662728}
+      \strng{authorfullhash}{155c9ef388fafe0ab4ad884632662728}
+      \field{sortinit}{m}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Everything you need to know about Canvas Fingerprinting}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://multilogin.com/everything-you-need-to-know-about-canvas-fingerprinting/
+      \endverb
+      \verb{url}
+      \verb https://multilogin.com/everything-you-need-to-know-about-canvas-fingerprinting/
+      \endverb
+    \endentry
     \entry{Top10Niki}{misc}{}
       \name{author}{1}{}{%
         {{hash=20a3830a9c901b89619ec711c1ab454f}{%
