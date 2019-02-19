@@ -1,6 +1,0 @@
-* nice styling
-* show user what is happening (reading, rendering, making hash, comparing, etc.)
-* show which things are used
-* if time - add small site which
-	* explains what canvas fingerprinting ist
-	* how to mitigate the use of it
