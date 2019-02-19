@@ -71,60 +71,50 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{How it works}{18}{subsection.2.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Analysis based on an application scenario}{20}{chapter.3}
+\contentsline {chapter}{\numberline {3}Requirements}{20}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Browser specific fingerprinting}{20}{section.3.1}
+\contentsline {section}{\numberline {3.1}Use cases}{20}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Canvas fingerprinting}{21}{section.3.2}
+\contentsline {section}{\numberline {3.2}Functional requirements}{20}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}JavaScript Engine fingerprinting}{21}{section.3.3}
+\contentsline {section}{\numberline {3.3}Non functional requirements}{21}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Cross-Browser fingerprinting}{21}{section.3.4}
+\contentsline {section}{\numberline {3.4}Objective}{21}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Comparison}{21}{section.3.5}
+\contentsline {section}{\numberline {3.5}Non Objective}{21}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Requirements}{22}{chapter.4}
+\contentsline {chapter}{\numberline {4}Design and Implementation}{22}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Use cases}{22}{section.4.1}
+\contentsline {section}{\numberline {4.1}Idea}{22}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Functional requirements}{22}{section.4.2}
+\contentsline {section}{\numberline {4.2}Architecture}{22}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Non functional requirements}{23}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.1}Application scenario}{22}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Objective}{23}{section.4.4}
+\contentsline {section}{\numberline {4.3}Programming}{23}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Non Objective}{23}{section.4.5}
+\contentsline {section}{\numberline {4.4}Obtained Data}{23}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Design and Implementation}{24}{chapter.5}
+\contentsline {section}{\numberline {4.5}Fingerprint}{23}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Idea}{24}{section.5.1}
+\contentsline {subsection}{\numberline {4.5.1}Calculation}{23}{subsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Architecture}{24}{section.5.2}
+\contentsline {section}{\numberline {4.6}Visualisation}{23}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Programming}{24}{section.5.3}
+\contentsline {chapter}{\numberline {5}Evaluation}{24}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Obtained Data}{24}{section.5.4}
+\contentsline {section}{\numberline {5.1}Recording}{24}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Fingerprint}{24}{section.5.5}
+\contentsline {section}{\numberline {5.2}Identification}{24}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5.1}Calculation}{24}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.3}Prototype testcases}{24}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Visualisation}{24}{section.5.6}
+\contentsline {chapter}{\numberline {6}Summary}{25}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Evaluation}{25}{chapter.6}
+\contentsline {chapter}{References}{26}{appendix*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Recording}{25}{section.6.1}
+\contentsline {section}{Literature}{26}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Identification}{25}{section.6.2}
+\contentsline {section}{Online sources}{27}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Prototype testcases}{25}{section.6.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Summary}{26}{chapter.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{27}{appendix*.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Literature}{27}{section*.10}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Online sources}{28}{section*.11}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{30}{appendix*.12}
+\contentsline {chapter}{List of Figures}{29}{appendix*.12}
