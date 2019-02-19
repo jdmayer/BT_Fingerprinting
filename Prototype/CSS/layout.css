@@ -24,16 +24,6 @@
   cursor: context-menu;
 }
 
-.page-content {
-  margin: 10px;
-}
-
-main {
-  padding: 0px;
-  flex: 1; /*even distribution over the side*/
-  /* 1 0 . can never get smaller and orientates on the original height*/
-}
-
 .footer {
   text-align: center;
   color: white;
@@ -42,4 +32,14 @@ main {
   bottom: 0;
   width: 100%;
   padding: 1% 0%;
+}
+
+.page-content {
+  margin: 25px;
+}
+
+main {
+  padding: 0px;
+  flex: 1; /*even distribution over the side*/
+  /* 1 0 . can never get smaller and orientates on the original height*/
 }
