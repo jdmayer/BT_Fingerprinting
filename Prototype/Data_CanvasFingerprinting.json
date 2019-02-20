@@ -1,0 +1,19 @@
+{
+	"users": [
+		{
+			"hash": "h1",
+			"firstVisit": "now",
+			"lastVisit": "now"
+		},
+		{
+			"hash": "h2",
+			"firstVisit": "now",
+			"lastVisit": "now"
+		},
+		{
+			"hash": "h3",
+			"firstVisit": "now",
+			"lastVisit": "now"
+		}
+	]
+}
