@@ -20,119 +20,71 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Fingerprinting
- */
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 @WebServlet("/Fingerprinting")
 public class Fingerprinting extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public Fingerprinting() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		/*
-		 * out.println("<html><head><title>Random sthg</title></head>");
-		 * out.println("<body>schalala<p>"); String test = "hi"; out.println(test);
-		 * out.println("</p></body>"); out.println("</html");
-		 * 
-		 * response.setContentType("text/html;charset=UTF-8");
-		 * 
-		 * String hash; String firstVisit; String filepath =
-		 * "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\DataStore_Fingerprints.txt";
-		 * 
-		 * 
-		 * try{ File file = new File(filepath);
-		 * 
-		 * FileReader fileReader = new FileReader(file); BufferedReader bufferedReader =
-		 * new BufferedReader(fileReader);
-		 * 
-		 * x = new Scanner(file); x.useDelimiter("[,\n]");
-		 * 
-		 * boolean existingUser = false; while(x.hasNext()) { hash = x.next();
-		 * firstVisit = x.next();
-		 * 
-		 * if(hash.equals("#n2123")) { existingUser = true; } } if(!existingUser) {
-		 * PrintWriter fileWriter = new PrintWriter(new FileOutputStream(filepath,
-		 * true)); String currDate = new
-		 * SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime()).
-		 * toString(); fileWriter.println(); fileWriter.print("hash1," + currDate);
-		 * 
-		 * fileWriter.flush(); fileWriter.close(); } fileReader.close(); }
-		 * catch(Exception e) { System.out.println("error occured - " + e + "."); }
-		 * finally{
-		 * 
-		 * 
-		 * }
-		 */
-
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("*** get ***");
 	}
 
 	private static Scanner x;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("*** post ***");
+		
 		response.setContentType("text/plain");
 		String hash = request.getParameter("hash");
+		
 		String firstVisit = "";
-		
-		String tmpHash = "";
-		String tmpFirstVisit = "";
 		boolean existingUser = false;
-		
-		String filepath = "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\DataStore_Fingerprints.txt";
 
 		try {
-			File file = new File(filepath);
-
-			FileReader fileReader = new FileReader(file);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-			x = new Scanner(file);
-			x.useDelimiter("[,\n]");
-			// think about saving to json object
-
-			while (x.hasNext()) {
-				tmpHash = x.next();
-				tmpFirstVisit = x.next();
-				
-				System.out.println(tmpHash);
-				System.out.println(tmpFirstVisit);
-
-				if (tmpHash.equals(hash)) {
-					existingUser = true;
-					firstVisit = tmpFirstVisit;
-				}
-			}
+			JSONParser parser = new JSONParser();
+			JSONArray userArray = (JSONArray) parser.parse(new FileReader("C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\CanvasPrints.json"));
+					
+			for (Object user : userArray) {
+			    JSONObject jsonUser = (JSONObject) user;
+			    String tmpHash = (String) jsonUser.get("hash");
+			    firstVisit = (String) jsonUser.get("firstVisit");
+			    
+			    System.out.println("* " + tmpHash + " - " + firstVisit);
+			    if(tmpHash.equals(hash)) {
+			    	existingUser = true;
+			    	System.out.println("old user");
+			    	firstVisit = (String) jsonUser.get("firstVisit");
+			    }	
+		     }
+			
 			if (!existingUser) {
-				PrintWriter fileWriter = new PrintWriter(new FileOutputStream(filepath, true));
-				String currDate = new SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime())
-						.toString();
-				fileWriter.println();
-				fileWriter.print(hash + " || " + currDate);
-
-				fileWriter.flush();
-				fileWriter.close();
+				// add to json!
+				String currDate = new SimpleDateFormat("dd.MM.yyyy (hh:mm)").format(Calendar.getInstance().getTime()).toString();
+				
+				//userArray.add({"hi", "there"});
 			}
-			fileReader.close();
 			
 		} catch (Exception e) {
 			System.out.println("error occured - " + e + ".");
-		} finally {}
+		} finally {
+			
+		}
 
+		// OUTPUT FOR USER
 		PrintWriter out = response.getWriter();
-
 		if(existingUser) {
 			out.print("You first visited this prototype on: " + firstVisit);
 		}
 		else {
 			out.print("This is your first visit!");
-		}
+		}		
 	}
-
 }
