@@ -1,0 +1,94 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/base.css">
+<link rel="stylesheet" href="CSS/layout.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+function fingerprint_canvas() {
+    console.log("generate fingerprint");
+    
+   document.getElementById("testform").action = "/PrototypeServlet/Fingerprinting";
+   document.getElementById("testform").method = "GET";
+   document.getElementById("uname").value = "schaka";
+   document.getElementById("testform").submit();
+    
+}
+</script>
+
+<title>Prototype</title>
+</head>
+<body>
+	<div id="header-content" class="header-content">
+		<h2>Web Browser Fingerprinting Prototype</h2>
+	</div>
+
+	<form id="testform">
+		Name: <input type="text" name="uname" width="20"/>
+		<button type="button" onclick="fingerprint_canvas()">do sthg</button>
+	</form>
+
+	<div class="page-content">
+		<p>Add check Fingerprint here - always able to try out! (inkl
+			intro) * show user what is happening (reading, rendering, making
+			hash, comparing, etc.) * show which things are used * write where the
+			info comes from and more details in the BA</p>
+
+
+		<button type="button" class="btn btn-info"
+			onclick="fingerprint_canvas()">Check Fingerprint</button>
+		<div id="canvasFP"></div>
+		<div id="lastVisit"></div>
+
+		<input type="hidden" name="canvasFP" id="canvasFP" />
+		<div class="panel panel-info">
+			<div class="panel-body"></div>
+		</div>
+
+
+		<div class="panel-group">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<a data-toggle="collapse" href="#CanvasFP">
+						<h4 class="panel-title">Canvas Fingerprinting</h4>
+					</a>
+				</div>
+				<div id="CanvasFP" class="panel-collapse collapse">
+					<div class="panel-body">Explanation etc.</div>
+					<div class="panel-footer">if multiple FP techniques -> here
+						button</div>
+				</div>
+			</div>
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<a data-toggle="collapse" href="#Mitigation">
+						<h4 class="panel-title">Mitigation</h4>
+					</a>
+				</div>
+				<div id="Mitigation" class="panel-collapse collapse">
+					<div class="panel-body">Ways to mitigate fingerprinting</div>
+					<div class="panel-footer">button to try out if possible</div>
+				</div>
+			</div>
+		</div>
+		<p>add where it has been tested with grid</p>
+
+	</div>
+</body>
+
+<footer>
+	<div class=footer>by Janine Denise Mayer</div>
+</footer>
+</html>

@@ -1,0 +1,72 @@
+package wea5.shop;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import javax.faces.bean.*;
+
+import wea5.shop.util.Constants;
+import wea5.shop.util.FacesUtil;
+import wea5.shop.warehouse.*;
+
+@ManagedBean
+@SessionScoped
+public class WebShopUser {
+	
+	private static Logger logger = Logger.getAnonymousLogger();
+	
+	private List<ArticleData> allArticles = new ArrayList<>();
+	private ArticleData article;
+	
+	@ManagedProperty(value="#{shoppingCart}");
+	private ShoppingCart shoppingCart;
+	
+	public void setShoppingCart(ShoppingCart shoppingCart) {
+		this.shoppingCart = shoppingCart;
+	}
+	
+	public List<ArticleData> getAllArticles() {
+		return allArticles;
+	}
+	
+	public ArticleData getArticle() {
+		return article;
+	}
+	
+	public String allArticles() {
+		try {
+			ShopDelegate shopDelegate = ServiceLocator.getInstance().getShopDelegate();
+			this.allArticles = shopDelegate.getAllArticles();
+			return Constants.SHOW_ALL_ARTICLES;
+		} catch(Exception e) {
+			return FacesUtil.createFailure("Cannot get all Articles", e, logger);
+		}
+	}
+	
+	public String articleDetails(String articleId) {
+		try {
+			logger.log(Level.INFO, "articleId: " + articleId);
+			
+			ShopDelegate shopDelegate = ServiceLocator.getInstance().getShopDelegate();
+			this.article = shopDelegate.getArticleById(articleId);
+			return Constants.SHOW_DETAILS;
+		} catch(Exception e) {
+			return FacesUtil.createFailure("Cannot get all article details", e, logger);
+		}
+	}
+	
+	public String putArticleIntoCart(String articleId) {
+		try {
+			logger.log(Level.INFO, "articleId: " + articleId);
+			
+			ShopDelegate shopDelegate = ServiceLocator.getInstance().getShopDelegate();
+			this.article = shopDelegate.getArticleById(articleId);
+			this.shoppingCart.addArticle(article);
+			
+			return Constants.SHOW_CART;
+		} catch(Exception e) {
+			return FacesUtil.createFailure("Cannot put into shopping cart", e, logger);
+		}
+	}
+}

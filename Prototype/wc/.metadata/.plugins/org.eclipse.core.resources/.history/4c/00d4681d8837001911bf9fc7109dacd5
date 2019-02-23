@@ -1,0 +1,7 @@
+/**
+ * 
+ */
+
+$(function() {
+	alert("hi there, jquery is working");
+});

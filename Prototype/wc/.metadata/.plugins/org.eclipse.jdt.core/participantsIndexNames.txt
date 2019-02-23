@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2969278227.index
+\Ue1_BookShop\src
+C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\577258679.index
+\PrototypeServlet\src
+C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\170329995.index
+\PrototypeServlet\src
+C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4026204785.index
+\Ue1_BookShop\src

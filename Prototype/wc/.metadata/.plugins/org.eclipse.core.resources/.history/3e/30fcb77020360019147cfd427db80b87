@@ -1,0 +1,152 @@
+package bt;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Fingerprinting
+ */
+@WebServlet("/Fingerprinting")
+public class Fingerprinting extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public Fingerprinting() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+    private static Scanner x;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		PrintWriter out = response.getWriter();
+		out.println("<html><head><title>Random sthg</title></head>");
+		out.println("<body>schalala<p>");
+		String test = "hi";
+		out.println(test);
+		out.println("</p></body>");
+		out.println("</html");
+		
+		String filepath = "test.txt";
+		
+		response.setContentType("text/html;charset=UTF-8");
+	  
+		String hash;
+		String firstVisit;
+		String lastVisit;
+		String nrOfVisits;
+		
+		FileReader fileReader;
+		FileWriter fileWriter;
+	    try{
+	        File file = new File("C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\test.txt");
+	        fileReader = new FileReader(file);
+	        BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+	       /* while (temp != null) {
+	        	PrintWriter fileWriter = new PrintWriter(new    
+	        			FileOutputStream("C:\\\\Users\\\\mayer.LAPTOP-T80OEI65\\\\Desktop\\\\test.txt",true));  
+	                    fileWriter.println("try again");
+	            fileWriter.close(); 
+	            fileReader.close();
+	         }*/
+	        
+	        x = new Scanner(file);
+			x.useDelimiter("[,\n]");
+			
+			boolean existingUser = false;
+			while(x.hasNext()) {
+				hash = x.next();
+				firstVisit = x.next();
+				lastVisit = x.next();
+				nrOfVisits = x.next();
+				
+				System.out.println(hash);
+				//if id.equals(newhash){...}
+				//do some shit
+				if(hash.equals("#n21234")) {
+					existingUser = true;
+				}
+			}
+			if(!existingUser) {
+				fileWriter = new PrintWriter(new    
+	        			FileOutputStream("C:\\\\Users\\\\mayer.LAPTOP-T80OEI65\\\\Desktop\\\\test.txt",true));  
+	                    fileWriter.println("\nadded new user");
+
+			}
+	    }  
+	    catch(FileNotFoundException fnfe) {    
+
+	  }  
+	  finally{  
+		  fileWriter.close();
+		  fileReader.close();
+	  }  
+
+
+		
+		/*
+		File oldFile = new File(filepath);
+		File newFile = new File("othertest.txt");
+		
+		String hash;
+		String firstVisit;
+		String lastVisit;
+		String nrOfVisits;
+		
+		try {
+			System.out.println("hello" + getServletContext().getRealPath("test.txt"));
+			FileWriter fw = new FileWriter("othertest.txt", true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			PrintWriter pw = new PrintWriter(bw);
+			
+			x = new Scanner(new File(filepath));
+			x.useDelimiter("[,\n");
+			
+			while(x.hasNext()) {
+				hash = x.next();
+				firstVisit = x.next();
+				lastVisit = x.next();
+				nrOfVisits = x.next();
+				
+				System.out.println(hash);
+				//if id.equals(newhash){...}
+				//do some shit
+			}
+			
+			x.close();
+			pw.flush();
+			pw.close();
+			oldFile.delete();
+			File dump = new File(filepath);
+			newFile.renameTo(dump);
+		}
+		catch(Exception e) {
+			System.out.println("error occured - " + e + ".");
+		}*/
+		
+		
+		System.out.println("bye");
+		//append("Served at: ").append(request.getContextPath());
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

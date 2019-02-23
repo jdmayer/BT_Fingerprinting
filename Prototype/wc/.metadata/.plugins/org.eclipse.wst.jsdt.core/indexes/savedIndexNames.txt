@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+801358606.index
+1178777582.index
+3663298709.index
+1494092.index
+170329995.index
+1757075464.index
+4179344149.index
