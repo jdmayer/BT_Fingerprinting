@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PrototypeServlet" path="/PrototypeServlet" reloadable="true" source="org.eclipse.jst.jee.server:PrototypeServlet"/><Context docBase="C:\Public\WEA5\wc\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Ue1_BookShop" path="/Ue1_BookShop" reloadable="true" source="org.eclipse.jst.j2ee.server:Ue1_BookShop"/></Host>
+      <Context docBase="C:\Users\mayer.LAPTOP-T80OEI65\Desktop\BT_Fingerprinting\Prototype\wc\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\mayer.LAPTOP-T80OEI65\Desktop\BT_Fingerprinting\Prototype\wc\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PrototypeServlet" path="/PrototypeServlet" reloadable="true" source="org.eclipse.jst.jee.server:PrototypeServlet"/></Host>
     </Engine>
   </Service>
 </Server>
