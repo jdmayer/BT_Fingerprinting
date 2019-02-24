@@ -48,6 +48,9 @@ This chapter discusses the techniques introduced in \autoref{sec:Techniques} in 
 -- refere to previous chapter
 -- give good overview what needs what?
 
+* use servlet with jsp and ajax, save outcome in local file
+* test via "deployment"
+
 In the figure below (1) the browser is requested to draw text on the screen in a hidden box. This text is enlarged, drawn in multiple colors and consists of a large range of text samples. Next (2) the drawing is converted to a base64 URL. Finally, (3) in order to shorten the output the base64 URL is hashed. This output is then used as the canvas device fingerprint. 
 (\textcite{jkula17})\\
 
@@ -59,16 +62,24 @@ js.file -> Hash() to Database
 \section{Programming}
 
 the hash will be written into a json which is saved to a local file
-the json will be updated whenever the user retries the fingerprint
-
-* muss in chrome den zugriff auf lokale dateien extrig freigeben für die Speicherung der Daten
--- C:\Users\mayer.LAPTOP-T80OEI65\AppData\Local\Vivaldi\Application>vivaldi.exe --args --allow-file-access-from-file
-
-* new idea: save data in google drive -> accessable from everywhere, at the same time
-* further as javascript can not directly save/update files in the local file storage
+the json will be updated whenever a new user is added, else only read
 
 * use servlet : https://www.youtube.com/watch?v=GO1Wi1nWuJM
 * connect servlet with jsp with help of ajax: https://www.youtube.com/watch?v=P4eOHI6OGks
+
+Canvas script:
+https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
+https://browserleaks.com/canvas#how-does-it-work
+
+Browser script
+https://www.darkwavetech.com/index.php/device-fingerprint-blog/
+
+use: 
+* Timezone fingerprinting
+*
+
+this is made into a string and hashed via ....
+ 
 
 \section{Obtained Data}
 

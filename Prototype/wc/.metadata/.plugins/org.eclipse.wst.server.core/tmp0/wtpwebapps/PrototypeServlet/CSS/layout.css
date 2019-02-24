@@ -14,13 +14,13 @@
   color: white;
   display: flex;
   text-align: center;
-  background-color: darkred;/*rgb(9, 123, 89);*/
+  background-color: #660000;
   border-bottom: 0.5px solid #000;
-  padding: 10px;
+  padding: 5px;
   margin: 0px;
 }
 
-.header-content h2 {
+.header-content h3 {
   flex: 1;
   padding: 0px;
   cursor: context-menu;
@@ -29,7 +29,7 @@
 .footer {
   text-align: center;
   color: white;
-  background-color: rgba(155, 34, 34, 0.8);
+  background-color: rgba(102, 0, 0, 0.8);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -40,6 +40,9 @@
   margin: 50px;
 }
 
+.table-content {
+  margin: 25px;
+}
 main {
   padding: 0px;
   flex: 1; /*even distribution over the side*/
