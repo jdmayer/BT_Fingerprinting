@@ -38,8 +38,6 @@ public class Fingerprinting extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("*** post ***");
-		
 		response.setContentType("text/plain");
 		String hash = request.getParameter("hash");
 		String filePath = "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\CanvasPrints.json";
@@ -55,12 +53,10 @@ public class Fingerprinting extends HttpServlet {
 			for (Object user : userArray) {
 			    JSONObject jsonUser = (JSONObject) user;
 			    String tmpHash = (String) jsonUser.get("hash");
-			    firstVisit = (String) jsonUser.get("firstVisit");
 			    
-			    System.out.println("* " + tmpHash + " - " + firstVisit);
 			    if(tmpHash.equals(hash)) {
 			    	existingUser = true;
-			    	System.out.println("old user");
+			    	System.out.println("existing user");
 			    	firstVisit = (String) jsonUser.get("firstVisit");
 			    }	
 		     }
@@ -69,8 +65,8 @@ public class Fingerprinting extends HttpServlet {
 				String currDate = new SimpleDateFormat("dd.MM.yyyy (hh:mm)").format(Calendar.getInstance().getTime()).toString();
 				
 				JSONObject object = new JSONObject();
-		        object.put("hash", "xyz");
-		        object.put("firstVisit", "now");
+		        object.put("hash", hash);
+		        object.put("firstVisit", currDate);
 		        userArray.add(object);
 		        jsonRoot.put("users", userArray);
 		        
