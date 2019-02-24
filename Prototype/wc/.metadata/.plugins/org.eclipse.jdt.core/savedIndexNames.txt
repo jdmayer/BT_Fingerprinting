@@ -1,17 +1,17 @@
 INDEX VERSION 1.131+C:\Users\mayer.LAPTOP-T80OEI65\Desktop\BT_Fingerprinting\Prototype\wc\.metadata\.plugins\org.eclipse.jdt.core
 801358606.index
 2669967543.index
-1169356552.index
 2039484116.index
+1169356552.index
 1490572994.index
 1110334383.index
+3967172651.index
 2120859673.index
+2211241645.index
 3964918290.index
+398072831.index
 3973029336.index
 2161747041.index
-398072831.index
-3967172651.index
-2211241645.index
 128611431.index
 2857209468.index
 2896252543.index
@@ -20,11 +20,11 @@ INDEX VERSION 1.131+C:\Users\mayer.LAPTOP-T80OEI65\Desktop\BT_Fingerprinting\Pro
 1713295793.index
 2501437059.index
 456548656.index
-2100084718.index
 3173990942.index
+2100084718.index
 1515095896.index
-2235725070.index
 488545607.index
+2235725070.index
 2327184759.index
 1703361771.index
 72535324.index

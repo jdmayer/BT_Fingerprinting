@@ -51,7 +51,7 @@
         // send hash to servlet
         $.ajax({
           type: 'POST',
-          data: { hash: hash },
+          data: { method: 'canvas', hash: hash },
           url: 'Fingerprinting',
           success: function (result) {
             $('#result1').html(result);
@@ -65,6 +65,60 @@
       }
     }
 
+    function fingerprint_browser() {
+        "use strict";   
+    
+        var hash = null;
+        
+        try {
+        // timezone
+        var date1 = new Date(2019, 0, 1);
+        var date2 = new Date(2019, 6, 1);
+        var date1Offset = date1.getTimezoneOffset();
+        var date2Offset = date2.getTimezoneOffset();
+     
+        // language
+         var language = navigator.language ? navigator.language : "undefined";
+        var languages = navigator.languages ? navigator.languages : "undefined";
+        // there are MS specified properties (navigator.browserlanguage)
+        // not used - as prototype for multiple OS
+
+		// java enabled
+		var javaEnabled = navigator.javaEnabled() ? true : false;
+        
+        // display
+        if(window.screen) {
+        	 var screenAvailWidth = window.screen.availWidth;
+             var screenAvailHeight = window.screen.availHeight;
+             var screenWidth = window.screen.width;
+             var screenHeight = window.screen.height;
+             var screenColorDepth = window.screen.colorDepth;
+        }
+                
+        // useragent string
+        var uas = navigator.userAgent;
+        
+        hash = uas + " | " + screenAvailWidth + " | " + screenAvailHeight + " | " + screenWidth + " | " + screenHeight + " | " +
+        		screenWidth + " | " + screenColorDepth + " | " + javaEnabled + " | " + language + " | " + languages + " | " +
+        		date2Offset + " | " + date1Offset;
+        
+        console.log(hash);
+          // send hash to servlet
+          $.ajax({
+            type: 'POST',
+            data: { method: 'browser', hash: hash },
+            url: 'Fingerprinting',
+            success: function (result) {
+              $('#result2').html(result);
+            }
+          });
+
+          return hash;
+        } catch (errorMsg) {
+          console.log("An error occured: " + errorMsg)
+          return "An unexpected error occured";
+        }
+      }
 
   </script>
 
@@ -110,8 +164,8 @@
        <div class="panel-body">Explanation etc.
           how does it work, what's its weakness
         </div>
-        <div class="panel-footer" id="result1">
-         <button type="button" class="btn btn-info" onclick="fingerprint_canvas();">Check Browser Fingerprint</button>
+        <div class="panel-footer" id="result2">
+         <button type="button" class="btn btn-info" onclick="fingerprint_browser();">Check Browser Fingerprint</button>
         </div>
       </div>
     </div>

@@ -40,7 +40,20 @@ public class Fingerprinting extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/plain");
 		String hash = request.getParameter("hash");
-		String filePath = "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\CanvasPrints.json";
+		String method = request.getParameter("method");
+		
+		String filePath;
+		switch(method) {
+		case "canvas":
+			filePath = "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\CanvasPrints.json";
+			break;
+		case "browser":
+			filePath = "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\BrowserPrints.json";
+			break;
+		default:
+			filePath = "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\BrowserPrints.json";
+		}
+		
 		
 		String firstVisit = "";
 		boolean existingUser = false;
@@ -53,6 +66,7 @@ public class Fingerprinting extends HttpServlet {
 			for (Object user : userArray) {
 			    JSONObject jsonUser = (JSONObject) user;
 			    String tmpHash = (String) jsonUser.get("hash");
+			    
 			    
 			    if(tmpHash.equals(hash)) {
 			    	existingUser = true;
