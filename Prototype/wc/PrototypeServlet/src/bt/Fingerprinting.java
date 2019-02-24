@@ -37,20 +37,20 @@ public class Fingerprinting extends HttpServlet {
 		System.out.println("*** get ***");
 	}
 
-	private static Scanner x;
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("*** post ***");
 		
 		response.setContentType("text/plain");
 		String hash = request.getParameter("hash");
+		String filePath = "C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\CanvasPrints.json";
 		
 		String firstVisit = "";
 		boolean existingUser = false;
 
 		try {
 			JSONParser parser = new JSONParser();
-			JSONArray userArray = (JSONArray) parser.parse(new FileReader("C:\\Users\\mayer.LAPTOP-T80OEI65\\Desktop\\CanvasPrints.json"));
+			JSONObject jsonRoot = (JSONObject) parser.parse(new FileReader(filePath));
+			JSONArray userArray = (JSONArray) jsonRoot.get("users");
 					
 			for (Object user : userArray) {
 			    JSONObject jsonUser = (JSONObject) user;
@@ -66,10 +66,17 @@ public class Fingerprinting extends HttpServlet {
 		     }
 			
 			if (!existingUser) {
-				// add to json!
 				String currDate = new SimpleDateFormat("dd.MM.yyyy (hh:mm)").format(Calendar.getInstance().getTime()).toString();
 				
-				//userArray.add({"hi", "there"});
+				JSONObject object = new JSONObject();
+		        object.put("hash", "xyz");
+		        object.put("firstVisit", "now");
+		        userArray.add(object);
+		        jsonRoot.put("users", userArray);
+		        
+		        FileWriter fileWriter = new FileWriter(filePath);
+	            fileWriter.write(jsonRoot.toJSONString());
+	            fileWriter.close();
 			}
 			
 		} catch (Exception e) {
