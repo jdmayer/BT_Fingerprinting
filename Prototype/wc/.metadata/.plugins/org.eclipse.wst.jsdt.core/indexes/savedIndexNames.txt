@@ -1,9 +1,8 @@
-INDEX VERSION 1.4+C:\Users\mayer.LAPTOP-T80OEI65\Desktop\BT_Fingerprinting\Prototype\wc\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-502583001.index
-2097673370.index
-170329995.index
-1414193695.index
-854684820.index
-801358606.index
-170329995.index
-2719093463.index
+INDEX VERSION 1.4+C:\Users\Janine Mayer\Desktop\BT_Fingerprinting\Prototype\wc\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+231673620.index
+2407123389.index
+2698002377.index
+3969488370.index
+853745519.index
+3139405805.index
+4227135196.index
