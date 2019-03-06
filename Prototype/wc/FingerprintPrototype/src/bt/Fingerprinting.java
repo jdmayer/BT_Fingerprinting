@@ -90,7 +90,7 @@ public class Fingerprinting extends HttpServlet {
 		// OUTPUT FOR USER
 		PrintWriter out = response.getWriter();
 		if(existingUser) {
-			out.print("You first visited this prototype on: " + firstVisit);
+			out.print("I remember you! You first visited this prototype on: " + firstVisit);
 		}
 		else {
 			out.print("This is your first visit!");

@@ -4,5 +4,4 @@ INDEX VERSION 1.4+C:\Users\Janine Mayer\Desktop\BT_Fingerprinting\Prototype\wc\.
 2698002377.index
 3969488370.index
 853745519.index
-3139405805.index
 4227135196.index
