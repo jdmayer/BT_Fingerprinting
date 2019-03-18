@@ -43,6 +43,24 @@
         canvasInput.fillText(allSigns, 2, 15);
         canvasInput.fillStyle = "rgba(102, 204, 0, 0.7)";
         canvasInput.fillText(allSigns, 4, 17);
+        
+        canvasInput.font = "9px 'Times New Roman'";
+        canvasInput.textBaseline = "middle";
+        canvasInput.fillStyle = "#0fd2ee";
+        canvasInput.fillRect(10, 10, 10, 10);
+        canvasInput.fillStyle = "#ff00a7";
+        canvasInput.fillText(allSigns, 10, 25);
+        canvasInput.fillStyle = "rgba(99, 66, 33, 0.1)";
+        canvasInput.fillText(allSigns, 20, 47);
+        
+        canvasInput.font = "21px 'Georgia'";
+        canvasInput.textBaseline = "hanging";
+        canvasInput.fillStyle = "#2e2c9b";
+        canvasInput.fillRect(25, 17, 32, 22);
+        canvasInput.fillStyle = "#813338";
+        canvasInput.fillText(allSigns, 20, 51);
+        canvasInput.fillStyle = "rgba(120, 200, 70, 0.4)";
+        canvasInput.fillText(allSigns, 43, 71);
 
         // create hash
         hash = canvas.toDataURL();

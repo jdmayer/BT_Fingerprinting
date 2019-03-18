@@ -58,11 +58,11 @@ public class Fingerprinting extends HttpServlet {
 			for (Object user : userArray) {
 			    JSONObject jsonUser = (JSONObject) user;
 			    String tmpHash = (String) jsonUser.get("hash");
-			    System.out.println("*** " + jsonUser.get("firstVisist"));
+			   // System.out.println("*** " + jsonUser.get("firstVisit"));
 			    
 			    if(tmpHash.equals(hash)) {
 			    	existingUser = true;
-			    	System.out.println("existing user");
+			    	//System.out.println("existing user");
 			    	firstVisit = (String) jsonUser.get("firstVisit");
 			    }	
 		     }
@@ -90,7 +90,10 @@ public class Fingerprinting extends HttpServlet {
 		// OUTPUT FOR USER
 		PrintWriter out = response.getWriter();
 		if(existingUser) {
-			out.print("I remember you! You first visited this prototype on: " + firstVisit);
+			out.println("<p style=\"color:red;\">");			
+			out.print("I remember you!");
+		    out.println("</p>");
+		    out.print("You first visited this prototype on:" + firstVisit);
 		}
 		else {
 			out.print("This is your first visit!");
