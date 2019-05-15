@@ -1,54 +1,45 @@
 \chapter{Requirements}
 \label{cha:requirements}
-as part of this work - develop a prototype
-which technique is used - was decided in the previous section
-this prototype is used to show how this particular technique is implemented
-see in the sections concerned.
-this section first discuses the use cases the prototype covers before it uses these to distinguish between functional and non functional requirements
-as well as non-goals
+As part of this bachelor thesis a prototype is composed  to show how fingerprinting techniques are implemented. This section first discusses the use case which is covered by the prototype before a distinction between functional and non functional requirements is made and non-goals are identified.
 
-
-\section{Use cases}
-use cases are defined to distinguish between features which are needed and unnecessary over the top stuff
+\section{Use case}
+A use case is defined to distinguish between needed and obsolete features. The prototype is programmed to fulfill the following use case:
 
 \begin{itemize}
-	\item user can check if he is recognised, able to adapt, see how much the person is able to distinguish between others
-	\item user is able to adapt and recheck if adaptions help to change his fingerprint - see which things need to be changed to change fingerprint
-	see if unique at all
-	\item server can check if recongnise users 
+	\item \textit{User recognition: } The prototype gives the user the chance to check if he has a unique fingerprint. On the users wish the website creates a fingerprint for the user. After the creation the user is informed if he has been recognised or if this was the first visit on the website. The user can try and change his fingerprint, then get back to the prototype and check if the website still recognises him.
 \end{itemize}
 
 \section{Functional requirements}
 
 \begin{itemize}
-\item{measure data}
-\item measure static data
-\item run JS on client
-\item filter important data or only acquire needed data
-\item{create hash}
-\item export data in form of .csv file
-\item{re-identify users}
-\item give feedback to user if he has been recongised
-\item able to be used on different OS
-\item feed back how distinguishable? or which things were used to distinguish the user
+\item \textit{Acquire data for browser fingerprinting: }
+screen propterties, languages, timezone, plugins, et cetera.
+\item \textit{Acquire data for canvas fingerprinting: }
+pixeldata of rendered canvas.
+\item \textit{Comparision of hashes: }Comparing already existing hashes in the local JSON file with the newly created hash.
+\item \textit{Save hash: }Saving the created hash with the current date and time to a local JSON file.
+\item \textit{Feedback for client: }Display a short message if the client has been recognised or not.
+\item \textit{Compatibility: }The prototype should be able to work on multiple operating systems and in various browsers.
 \end{itemize}
 
 \section{Non functional requirements}
 
 \begin{itemize}
-\item good and pretty feedback for user
+\item \textit{Usability: }It is easy for the user to check his fingerprint and the feedback is understandable.
+\item \textit{Correctness/Reliability: }The program creates the same fingerprint for a user in case nothing has changed.
+\item \textit{Testability: }It is easy to test the prototype (creating a fingerprint and check back with the given time of the first visit).
+\item \textit{Information: }The prototype gives a brief overview what the used techniques are about. 
+\item \textit{Protability: }The prototype can easily be distributed to different devices.
 \end{itemize}
 
-\section{Objective}
+\section{Objectives}
 \begin{itemize}
-	\item show how the technique is implemented
-	\item show how it works
+	\item Use at least one fingerprinting technique to create the prototype.
+	\item Test the prototype with multiple web browsers and operating systems.
 \end{itemize}
 
-\section{Non Objective}
+\section{Non Objectives}
 \begin{itemize}
-	\item dont show heuristics and stuff
-		\item adjust fingerprint with the help of heuristict to re-identify users after some changes
-	\item stability - no errors
-	\item user experience, good to use and able to config it
+	\item Use heuristics to check if a fingerprint has been changed.
+	\item Inform the user which part of his hash is unique and which is identical to other users.
 \end{itemize}

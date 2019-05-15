@@ -333,6 +333,41 @@
       \field{title}{How unique is your web browser?}
       \field{year}{2010}
     \endentry
+    \entry{engl16}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=3256db5bc1b68a377d01d7dd2d895d74}{%
+           family={Englehardt},
+           familyi={E\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c5c03ec3e23946318017f9553554c528}{%
+           family={Narayanan},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{0a38a9820d71b9d0a3278c5f993965cd}
+      \strng{fullhash}{0a38a9820d71b9d0a3278c5f993965cd}
+      \strng{bibnamehash}{0a38a9820d71b9d0a3278c5f993965cd}
+      \strng{authorbibnamehash}{0a38a9820d71b9d0a3278c5f993965cd}
+      \strng{authornamehash}{0a38a9820d71b9d0a3278c5f993965cd}
+      \strng{authorfullhash}{0a38a9820d71b9d0a3278c5f993965cd}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Online tracking: A 1-million-site measurement and analysis}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb http://randomwalker.info/publications/OpenWPM_1_million_site_tracking_measurement.pdf
+      \endverb
+      \verb{url}
+      \verb http://randomwalker.info/publications/OpenWPM_1_million_site_tracking_measurement.pdf
+      \endverb
+    \endentry
     \entry{fielding14}{report}{}
       \name{author}{2}{}{%
         {{hash=a6155135a306bddfc30cc4f52d1924e6}{%
@@ -630,35 +665,6 @@
       \endverb
       \verb{url}
       \verb http://www.ieee-security.org/TC/W2SP/2013/papers/s2p1.pdf
-      \endverb
-    \endentry
-    \entry{multilogin17}{online}{}
-      \name{author}{1}{}{%
-        {{hash=155c9ef388fafe0ab4ad884632662728}{%
-           family={multilogin},
-           familyi={m\bibinitperiod}}}%
-      }
-      \strng{namehash}{155c9ef388fafe0ab4ad884632662728}
-      \strng{fullhash}{155c9ef388fafe0ab4ad884632662728}
-      \strng{bibnamehash}{155c9ef388fafe0ab4ad884632662728}
-      \strng{authorbibnamehash}{155c9ef388fafe0ab4ad884632662728}
-      \strng{authornamehash}{155c9ef388fafe0ab4ad884632662728}
-      \strng{authorfullhash}{155c9ef388fafe0ab4ad884632662728}
-      \field{sortinit}{m}
-      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{Everything you need to know about Canvas Fingerprinting}
-      \field{urlday}{13}
-      \field{urlmonth}{6}
-      \field{urlyear}{2017}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://multilogin.com/everything-you-need-to-know-about-canvas-fingerprinting/
-      \endverb
-      \verb{url}
-      \verb https://multilogin.com/everything-you-need-to-know-about-canvas-fingerprinting/
       \endverb
     \endentry
     \entry{Top10Niki}{misc}{}
@@ -1061,6 +1067,8 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{javatptNav}
+  \missing{javatptWindow}
 \endrefsection
 \endinput
 
