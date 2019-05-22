@@ -1,30 +1,18 @@
 \chapter{Summary}
 \label{cha:summary}
-all in all at least 1 page
-
-
-In this chapter -> results of this thesis summarized + possible additions for the prototype outlined
+In this chapter summarizes the results of this thesis and gives an outlook on possible additions which can be added to the prototype.
 
 \section{Result}
-all objects explained + have they been done?
-
-Objective : Analysis of different web browser fingerprinting techniques
- -> yes did outline different techniques:
-\begin{itemize}
-	\item Browser specific fingerprinting
-	\item Canvas fingerprinting
-	\item JavaScript Engine fingerprinting
-	\item Cross browser fingerprinting
-\end{itemize}
-Further did outline different technologies + configurations first for a better understanding of the matter
-
-Objective : Prototype
--> umsetzen von mindestens einer technique -> even did two
-further tested the prototype with multiple browsers and OS
-prototype is capable of creating hashes,saving them and later using them to reidentifying users.
-
+An objective of this thesis was to outline existing fingerprinting techniques including used configurations and techniques. In \autoref{sec:technologies} used technologies have been introduced before a distinction between active and passive fingerprinting methods was made (\autoref{sec:Methods}). Following this, the different fingerprinting techniques have been outlined and explained in \autoref{sec:Techniques}. This objective was concluded with two application scenarios which depicted how browser specific fingerprinting and canvas fingerprinting (see \autoref{sec:appBrowserSpecific} and \autoref{sec:appCanvas}).\\\\
+The other objective of this thesis was to design and implement a prototype which involves the implementation of at least one fingerprinting technique. After setting out specific requirements for the development (see \autoref{cha:requirements}) the analysis which techniques should be implemented was made. Based on the chosen techniques the prototype was designed and implemented (see \autoref{cha:implementation}). Conclusive to the implementation, the finished prototype has been thoroughly tested with multiple devices.
 
 \section{Prospect}
-what can be done - probably adjustment with the help of heuristics + adjustment of the methods (still a bit faulty)
-adjust some method configurations which can change (e.g. check plugins (could update or install, zoomlevel as mentioned in test results))
+As the sole purpose of the prototype has been to depict the implementation of at least one fingerprinting technique is truely is only a prototype. To convert this prototype into a proper fingerprinting application there are a number of improvements which can be done.\\
+
+\begin{itemize}
+	\item {Zoom level: }The zoom level of a browser is a characteristic which can be taken into consideration, as therefore the program will be able to re-identify a user when the zoom level differs from the original zoom level.
+	\item {Heuristics: }Heuristics can be used to check if the users fingerprint has been changed since the first visit. This can help to recognize simple browser updates and new or updated browser plugins.
+	\item {Information: }The program could give the user a feedback which characteristics have been similar to other users and which are the characteristics which help differentiate between other users. Further Tipps on how to change those characteristics could be displayed.
+\end{itemize} 
+
 

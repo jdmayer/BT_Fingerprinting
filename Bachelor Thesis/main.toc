@@ -137,10 +137,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Prospect}{37}{section.6.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{38}{appendix*.20}% 
+\contentsline {chapter}{References}{39}{appendix*.20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literature}{38}{section*.21}% 
+\contentsline {section}{Literature}{39}{section*.21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Online sources}{39}{section*.22}% 
+\contentsline {section}{Online sources}{40}{section*.22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{42}{appendix*.24}% 
+\contentsline {chapter}{List of Figures}{43}{appendix*.24}% 

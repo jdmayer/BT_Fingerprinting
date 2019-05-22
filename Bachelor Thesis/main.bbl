@@ -75,6 +75,37 @@
       \verb https://securehomes.esat.kuleuven.be/~gacar/persistent/the_web_never_forgets.pdf
       \endverb
     \endentry
+    \entry{nav19}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b0589212592a70b6d4073dad15c9d771}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={jpmedle\bibnamedelima et},
+           prefixi={j\bibinitperiod\bibinitdelim e\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0589212592a70b6d4073dad15c9d771}
+      \strng{fullhash}{b0589212592a70b6d4073dad15c9d771}
+      \strng{bibnamehash}{b0589212592a70b6d4073dad15c9d771}
+      \strng{authorbibnamehash}{b0589212592a70b6d4073dad15c9d771}
+      \strng{authornamehash}{b0589212592a70b6d4073dad15c9d771}
+      \strng{authorfullhash}{b0589212592a70b6d4073dad15c9d771}
+      \field{sortinit}{a}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Navigator}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+      \endverb
+    \endentry
     \entry{amiunique}{online}{}
       \name{author}{1}{}{%
         {{hash=cde66cfbb4dfe5a6b13d6225badd0d4d}{%
@@ -395,37 +426,6 @@
       \endverb
       \verb{url}
       \verb http://randomwalker.info/publications/OpenWPM_1_million_site_tracking_measurement.pdf
-      \endverb
-    \endentry
-    \entry{nav19}{online}{}
-      \name{author}{1}{}{%
-        {{hash=eb551ebe62ee974d041441de29465179}{%
-           given={et\bibnamedelima al.},
-           giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod},
-           prefix={jpmedle\bibnamedelimb et\bibnamedelima al.},
-           prefixi={j\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
-      }
-      \strng{namehash}{eb551ebe62ee974d041441de29465179}
-      \strng{fullhash}{eb551ebe62ee974d041441de29465179}
-      \strng{bibnamehash}{eb551ebe62ee974d041441de29465179}
-      \strng{authorbibnamehash}{eb551ebe62ee974d041441de29465179}
-      \strng{authornamehash}{eb551ebe62ee974d041441de29465179}
-      \strng{authorfullhash}{eb551ebe62ee974d041441de29465179}
-      \field{sortinit}{e}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{Navigator}
-      \field{urlday}{11}
-      \field{urlmonth}{4}
-      \field{urlyear}{2019}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
-      \endverb
-      \verb{url}
-      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
       \endverb
     \endentry
     \entry{fielding14}{report}{}
@@ -808,29 +808,7 @@
       \verb http://www.ieee-security.org/TC/W2SP/2013/papers/s2p1.pdf
       \endverb
     \endentry
-    \entry{Top10Niki}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=e72fc79d7ab8834d1d1ac0b4bb6fd2b9}{%
-           family={N.\bibnamedelimi Nikiforakis},
-           familyi={N\bibinitperiod\bibinitdelim N\bibinitperiod},
-           given={et\bibnamedelima al.},
-           giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
-      }
-      \strng{namehash}{e72fc79d7ab8834d1d1ac0b4bb6fd2b9}
-      \strng{fullhash}{e72fc79d7ab8834d1d1ac0b4bb6fd2b9}
-      \strng{bibnamehash}{e72fc79d7ab8834d1d1ac0b4bb6fd2b9}
-      \strng{authorbibnamehash}{e72fc79d7ab8834d1d1ac0b4bb6fd2b9}
-      \strng{authornamehash}{e72fc79d7ab8834d1d1ac0b4bb6fd2b9}
-      \strng{authorfullhash}{e72fc79d7ab8834d1d1ac0b4bb6fd2b9}
-      \field{sortinit}{N}
-      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Figure~3 in \textcite{nikiforakis13}}
-      \field{title}{Cookieless monster: Exploring the ecosystem of web-based device fingerprinting}
-      \field{year}{2013}
-    \endentry
-    \entry{nikiforakis13}{online}{}
+    \entry{nikiforakis13}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=76e1bbfc3f1d522cea343b48c68bd0c1}{%
            family={Nikiforakis},
@@ -872,6 +850,7 @@
       \strng{authorbibnamehash}{153f2fab94fe1c5988efd2cab74290a9}
       \strng{authornamehash}{153f2fab94fe1c5988efd2cab74290a9}
       \strng{authorfullhash}{5a49ca7eb883bd5fd6dcd1a22f8c620b}
+      \field{extraname}{1}
       \field{sortinit}{N}
       \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{labelnamesource}{author}
@@ -890,6 +869,54 @@
       \verb{url}
       \verb https://seclab.cs.ucsb.edu/media/uploads/papers/sp2013_cookieless.pdf
       \endverb
+    \endentry
+    \entry{Top10Niki}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=76e1bbfc3f1d522cea343b48c68bd0c1}{%
+           family={Nikiforakis},
+           familyi={N\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=05b10f8da764f4d036d4a383ec3240d1}{%
+           family={Kapravelos},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fbe13b739a9d96f75e24d367cb108d9f}{%
+           family={Joosen},
+           familyi={J\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=0c9d5a6fd559f783d78f813d6f9cd983}{%
+           family={Kruegel},
+           familyi={K\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=636fcbb59f40818a7aeb4bb1572f27ca}{%
+           family={Piessens},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6ce4d1089a0df61f38d1b06de89c6b4a}{%
+           family={Vigna},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{153f2fab94fe1c5988efd2cab74290a9}
+      \strng{fullhash}{5a49ca7eb883bd5fd6dcd1a22f8c620b}
+      \strng{bibnamehash}{153f2fab94fe1c5988efd2cab74290a9}
+      \strng{authorbibnamehash}{153f2fab94fe1c5988efd2cab74290a9}
+      \strng{authornamehash}{153f2fab94fe1c5988efd2cab74290a9}
+      \strng{authorfullhash}{5a49ca7eb883bd5fd6dcd1a22f8c620b}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Figure~3 in \textcite{nikiforakis13}}
+      \field{title}{Cookieless monster: Exploring the ecosystem of web-based device fingerprinting}
+      \field{year}{2013}
     \endentry
     \entry{fontDetect}{online}{}
       \name{author}{1}{}{%

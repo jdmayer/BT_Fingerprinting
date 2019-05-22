@@ -20,14 +20,14 @@ As a mean of explanation a application scenarios will be used to outline the con
 In general the prototype depicts a simple client-server application. \\
 The main parts of this application scenario are:\\
 \begin{itemize}
-	\item \textit{Servlet}, can be seen as a controller, which manages requests and responses
-	\item \textit{JavaServerPage }(short JSP), holds HTML for the webpage and JavaScript
+	\item \textit{Servlet}, can be seen as a controller, which manages requests and responses.
+	\item \textit{JavaServerPage }(short JSP), holds HTML for the webpage and JavaScript.
 	\item \textit{web.xml}, is a web application deployment descriptor, which means it defines everything about the application the server needs to know. In this case what the welcoming page is.
-	\item \textit{Ajax}, used for the datatransfer from the website back to the servlet
-	\item \textit{JSON}, two local JSON files are used to hold the created fingerprints for comparison\\\\
+	\item \textit{Ajax}, used for the datatransfer from the website back to the servlet.
+	\item \textit{JSON}, two local JSON files are used to hold the created fingerprints for comparison.\\\\
 \end{itemize} 
 
-Below is a simplified outline of the general sequence of operations.
+\autoref{fig:ConceptPrototype} is a simple outline of the general sequence of operations.
 
 \begin{figure}[H]
 	\centering
@@ -39,19 +39,19 @@ Below is a simplified outline of the general sequence of operations.
 \begin{enumerate}
 	\item The client requests the prototype website with the following url:\\ \textit{http://[ip-address]:8080/FingerprintPrototype/index.jsp}\\
 	Due to the servlet the prototype can be accessed from different devices when the server runs, which makes the prototype easily portable.
-	\item The servlet receives the request and renders the welcoming page which is stated in WEB-INF\textbackslash web.xml (in this case index.jsp)
+	\item The servlet receives the request and renders the welcoming page which is stated in WEB-INF\textbackslash web.xml (in this case index.jsp).
 	\item The JSP is then rendered in the clients browser.
 	\item The user can click one of the depicted buttons to create his fingerprint. The button triggers a JavaScript method which will lead to create the respective fingerprint. As JavaScript is executed directly in the users browser, JavaScript needs to be enabled in the browser.
 	\item When the calculation of the fingerprinting hash is done Ajax is used to deliver the new hash to the Servlet.
 	\item The servlet then compares the newly created hash with already existing ones which are stored in a local JSON file. If the fingerprint is not recognised it is added along with the current date and time to the JSON file.
 	\item Thereafter the servlet renders a short message in form of static HTML in the JSP on the website of the user. This message informs the user if he has been recognised or else if this was his first visit on the prototype.\\
 \end{enumerate}
-Depending on which kind of fingerprint has to be created, the following sections (see \autoref{sec:appBrowserSpecific} and \autoref{sec:appCanvas}) will go into detail with what happenes in step 4 which is described above.
+Depending on which kind of fingerprint has to be created, the following sections will go into detail with what happenes in step 4 which is described above.
 
 
 \subsubsection{Browser specific fingerprinting}\label{sec:appBrowserSpecific}
 
-The following application scenario describes what happens when the user choses to create a browser specific fingerprint:
+The following \autoref{ConceptBrowserSpecificFingerprinting} displays an application scenario which describes what happens when the user choses to create a browser specific fingerprint:
 
 \begin{figure}[H]
 	\centering
@@ -67,10 +67,8 @@ The following application scenario describes what happens when the user choses t
 \end{enumerate}
 
 
-
-
 \subsubsection{Canvas fingerprinting}\label{sec:appCanvas}
-The following application scenario describes what happens when the user choses to create a canvas fingerprint:
+The following \autoref{ConceptCanvasFingerprinting} depicts an application scenario which describes what happens when the user choses to create a canvas fingerprint:
 
 \begin{figure}[H]
 	\centering
@@ -260,8 +258,7 @@ Additional to the information queried from the window properties, the prototype 
 After retrieving the necessary information mentioned above, the prototype concats the pieces of information and the created string serves as fingerprinting hash.
 
 \subsubsection{Fingerprint}
-As mentioned above the hash which is created by the prototype consists of a concatenation of all retrieved information about the user.
-
+As mentioned above the hash which is created by the prototype consists of a concatenation of all retrieved information about the user.\\\\
 The example below was retrieved from a device running Windows 10 as an operating system. The fingerprint tells that a Vivaldi Browser was used, the window has the measurements 1280 x 720 and the used lanugage is German. The booleans concatinated with " - " are generated by the font method and depict which fonts are installed.
 \begin{figure}[H]
 	\centering
