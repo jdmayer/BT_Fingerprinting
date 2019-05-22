@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.6)  22 MAY 2019 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.6)  22 MAY 2019 23:57
 entering extended mode
 **./main.tex
 (main.tex
@@ -2169,30 +2169,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--71
 
  (chapters/introduction.tex
 Chapter 1.
-[1
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--22
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 22.
+
+("C:\Users\Janine Mayer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmr.f
+d"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [1
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 25--31
-
- []
-
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 31.
-
-("C:\Users\Janine Mayer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmr.f
-d"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 47--53
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
 
-Overfull \hbox (5.5526pt too wide) in paragraph at lines 47--53
-[][]\T1/lmr/m/n/12 Chapter 6[][] sums up the bach-e-lor the-sis, sum-ma-rizes t
-he re-sults and states pos-si-ble prospects. 
+Underfull \hbox (badness 10000) in paragraph at lines 37--43
+
  []
 
 ) [2]
@@ -2360,7 +2374,7 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 70--70
 [][] 
  []
 
-<images/Top10CategoriesNiki.png, id=423, 720.6925pt x 375.4025pt>
+<images/Top10CategoriesNiki.png, id=427, 720.6925pt x 375.4025pt>
 File: images/Top10CategoriesNiki.png Graphic file (type png)
 <use images/Top10CategoriesNiki.png>
 Package pdftex.def Info: images/Top10CategoriesNiki.png  used on input line 76.
@@ -2626,7 +2640,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
-<images/base64Encoding.png, id=600, 312.16624pt x 167.62625pt>
+<images/base64Encoding.png, id=604, 312.16624pt x 167.62625pt>
 File: images/base64Encoding.png Graphic file (type png)
 <use images/base64Encoding.png>
 Package pdftex.def Info: images/base64Encoding.png  used on input line 334.
@@ -2667,7 +2681,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--357
  []
 
 [16 <./images/base64Encoding.png>]
-<images/MinimalFP.png, id=630, 376.90813pt x 108.405pt>
+<images/MinimalFP.png, id=634, 376.90813pt x 108.405pt>
 File: images/MinimalFP.png Graphic file (type png)
 <use images/MinimalFP.png>
 Package pdftex.def Info: images/MinimalFP.png  used on input line 365.
@@ -2687,7 +2701,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 359--368
 
  []
 
-<images/DecisionTree.png, id=634, 360.34625pt x 172.14313pt>
+<images/DecisionTree.png, id=638, 360.34625pt x 172.14313pt>
 File: images/DecisionTree.png Graphic file (type png)
 <use images/DecisionTree.png>
 Package pdftex.def Info: images/DecisionTree.png  used on input line 373.
@@ -2813,7 +2827,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-<images/applicationScenarioPrototype.png, id=682, 650.93187pt x 266.9975pt>
+<images/applicationScenarioPrototype.png, id=686, 650.93187pt x 266.9975pt>
 File: images/applicationScenarioPrototype.png Graphic file (type png)
 <use images/applicationScenarioPrototype.png>
 Package pdftex.def Info: images/applicationScenarioPrototype.png  used on input
@@ -2829,7 +2843,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-<images/applicationScenario_browserSpecificFP.png, id=694, 292.59312pt x 179.67
+<images/applicationScenario_browserSpecificFP.png, id=698, 292.59312pt x 179.67
 125pt>
 File: images/applicationScenario_browserSpecificFP.png Graphic file (type png)
 <use images/applicationScenario_browserSpecificFP.png>
@@ -2841,7 +2855,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-<images/applicationScenario_canvasFP.png, id=697, 286.57062pt x 178.6675pt>
+<images/applicationScenario_canvasFP.png, id=701, 286.57062pt x 178.6675pt>
 File: images/applicationScenario_canvasFP.png Graphic file (type png)
 <use images/applicationScenario_canvasFP.png>
 Package pdftex.def Info: images/applicationScenario_canvasFP.png  used on input
@@ -2967,7 +2981,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--259
 
  []
 
-<images/browserSpecFingerprint.png, id=829, 790.45313pt x 127.47626pt>
+<images/browserSpecFingerprint.png, id=833, 790.45313pt x 127.47626pt>
 File: images/browserSpecFingerprint.png Graphic file (type png)
 <use images/browserSpecFingerprint.png>
 Package pdftex.def Info: images/browserSpecFingerprint.png  used on input line 
@@ -3009,7 +3023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 294--297
  []
 
 [30 <./images/browserSpecFingerprint.png>]
-<images/canvasFingerprint.png, id=879, 799.48688pt x 382.93062pt>
+<images/canvasFingerprint.png, id=883, 799.48688pt x 382.93062pt>
 File: images/canvasFingerprint.png Graphic file (type png)
 <use images/canvasFingerprint.png>
 Package pdftex.def Info: images/canvasFingerprint.png  used on input line 302.
@@ -3024,13 +3038,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--312
 
  []
 
-<images/prototype.png, id=882, 618.31pt x 458.21187pt>
+<images/prototype.png, id=886, 618.31pt x 458.21187pt>
 File: images/prototype.png Graphic file (type png)
 <use images/prototype.png>
 Package pdftex.def Info: images/prototype.png  used on input line 315.
 (pdftex.def)             Requested size: 320.0135pt x 270.00705pt.
 [31 <./images/canvasFingerprint.png>]
-<images/prototypeResult.png, id=892, 616.3025pt x 463.23062pt>
+<images/prototypeResult.png, id=896, 616.3025pt x 463.23062pt>
 File: images/prototypeResult.png Graphic file (type png)
 <use images/prototypeResult.png>
 Package pdftex.def Info: images/prototypeResult.png  used on input line 322.
@@ -3041,17 +3055,27 @@ Package pdftex.def Info: images/prototypeResult.png  used on input line 322.
  (chapters/evaluation.tex
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
@@ -3126,10 +3150,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50668 strings out of 492946
- 969854 string characters out of 3123157
- 1582898 words of memory out of 3000000
- 53395 multiletter control sequences out of 15000+200000
+ 50678 strings out of 492946
+ 970201 string characters out of 3123157
+ 1584963 words of memory out of 3000000
+ 53403 multiletter control sequences out of 15000+200000
  596182 words of font info for 64 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  70i,12n,106p,1098b,3469s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3152,9 +3176,9 @@ AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/
 Janine Mayer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
 <C:/Users/Janine Mayer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main.pdf (49 pages, 947128 bytes).
+Output written on main.pdf (49 pages, 946678 bytes).
 PDF statistics:
- 1232 PDF objects out of 1440 (max. 8388607)
- 277 named destinations out of 1000 (max. 500000)
+ 1246 PDF objects out of 1440 (max. 8388607)
+ 279 named destinations out of 1000 (max. 500000)
  709 words of extra memory for PDF output out of 10000 (max. 10000000)
 

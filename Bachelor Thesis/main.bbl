@@ -100,10 +100,10 @@
       \field{urlyear}{2019}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+      \verb https:/developer.mozilla.org/en-US/docs/Web/API/Navigator
       \endverb
       \verb{url}
-      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+      \verb https:/developer.mozilla.org/en-US/docs/Web/API/Navigator
       \endverb
     \endentry
     \entry{amiunique}{online}{}
@@ -194,6 +194,52 @@
       \endverb
       \verb{url}
       \verb https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5
+      \endverb
+    \endentry
+    \entry{ariker15}{online}{}
+      \name{author}{4}{}{%
+        {{hash=05910bf6cfc78b28d398a7c96f4f7b66}{%
+           family={Ariker},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=82f04920b5c0e5483748447177e421eb}{%
+           family={Heller},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e5091ff4b22fd906359d4eb468c7dbe8}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=79d6f93af6000404b0d0a7be4eaa0beb}{%
+           family={Perrey},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{028ad4e6f9cb2e28e31acc3269b8da9c}
+      \strng{fullhash}{e4c61d4a0710c21b22d3548a778b353d}
+      \strng{bibnamehash}{028ad4e6f9cb2e28e31acc3269b8da9c}
+      \strng{authorbibnamehash}{028ad4e6f9cb2e28e31acc3269b8da9c}
+      \strng{authornamehash}{028ad4e6f9cb2e28e31acc3269b8da9c}
+      \strng{authorfullhash}{e4c61d4a0710c21b22d3548a778b353d}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{How Marketers Can Personalize at Scale}
+      \field{urlday}{23}
+      \field{urlmonth}{11}
+      \field{urlyear}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://hbr.org/2015/11/how-marketers-can-personalize-at-scale
+      \endverb
+      \verb{url}
+      \verb https://hbr.org/2015/11/how-marketers-can-personalize-at-scale
       \endverb
     \endentry
     \entry{arntz17}{online}{}
@@ -335,6 +381,37 @@
       \endverb
       \verb{url}
       \verb http://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf
+      \endverb
+    \endentry
+    \entry{fbScandal}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ae63461fd7d1f3cbf5cb0463cdb1d5e9}{%
+           family={Confessore},
+           familyi={C\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae63461fd7d1f3cbf5cb0463cdb1d5e9}
+      \strng{fullhash}{ae63461fd7d1f3cbf5cb0463cdb1d5e9}
+      \strng{bibnamehash}{ae63461fd7d1f3cbf5cb0463cdb1d5e9}
+      \strng{authorbibnamehash}{ae63461fd7d1f3cbf5cb0463cdb1d5e9}
+      \strng{authornamehash}{ae63461fd7d1f3cbf5cb0463cdb1d5e9}
+      \strng{authorfullhash}{ae63461fd7d1f3cbf5cb0463cdb1d5e9}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Cambridge Analytica and Facebook: The Scandal and the Fallout So Far}
+      \field{urlday}{4}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nytimes.com/2018/04/04/us/politics/cambridge-analytica-scandal-fallout.html
+      \endverb
+      \verb{url}
+      \verb https://www.nytimes.com/2018/04/04/us/politics/cambridge-analytica-scandal-fallout.html
       \endverb
     \endentry
     \entry{doty18}{report}{}
@@ -688,29 +765,6 @@
       \verb{url}
       \verb https://www.techradar.com/news/internet/web/html5-what-is-it-1047393
       \endverb
-    \endentry
-    \entry{mayer09}{article}{}
-      \name{author}{1}{}{%
-        {{hash=8b1cb40e219981147b5b0fd16e9d0d0a}{%
-           family={Mayer},
-           familyi={M\bibinitperiod},
-           given={J.\bibnamedelimi R.},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{8b1cb40e219981147b5b0fd16e9d0d0a}
-      \strng{fullhash}{8b1cb40e219981147b5b0fd16e9d0d0a}
-      \strng{bibnamehash}{8b1cb40e219981147b5b0fd16e9d0d0a}
-      \strng{authorbibnamehash}{8b1cb40e219981147b5b0fd16e9d0d0a}
-      \strng{authornamehash}{8b1cb40e219981147b5b0fd16e9d0d0a}
-      \strng{authorfullhash}{8b1cb40e219981147b5b0fd16e9d0d0a}
-      \field{sortinit}{M}
-      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Undergraduate Senior Thesis, Princeton University}
-      \field{langid}{english}
-      \field{title}{Any person... a pamphleteer”: Internet Anonymity in the Age of Web 2.0}
-      \field{year}{2009}
     \endentry
     \entry{mowery12}{article}{}
       \name{author}{2}{}{%
@@ -1188,6 +1242,37 @@
       \endverb
       \verb{url}
       \verb https://w3techs.com/technologies/details/cp-javascript/all/all
+      \endverb
+    \endentry
+    \entry{googleDrive}{online}{}
+      \name{author}{1}{}{%
+        {{hash=797281af2115c6d5dddffea7d8ec7731}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Wang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{797281af2115c6d5dddffea7d8ec7731}
+      \strng{fullhash}{797281af2115c6d5dddffea7d8ec7731}
+      \strng{bibnamehash}{797281af2115c6d5dddffea7d8ec7731}
+      \strng{authorbibnamehash}{797281af2115c6d5dddffea7d8ec7731}
+      \strng{authornamehash}{797281af2115c6d5dddffea7d8ec7731}
+      \strng{authorfullhash}{797281af2115c6d5dddffea7d8ec7731}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Google Drive Vulnerability Leaks Users' Private Data}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://thehackernews.com/2014/07/google-drive-vulnerability-leaks-users_9.html
+      \endverb
+      \verb{url}
+      \verb https://thehackernews.com/2014/07/google-drive-vulnerability-leaks-users_9.html
       \endverb
     \endentry
     \entry{wood}{online}{}

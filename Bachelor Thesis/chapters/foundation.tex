@@ -1,6 +1,6 @@
 \chapter{Foundation}
 \label{cha:foundation}
-This chapter will cover the basic knowledge about fingerprinting. First the term fingerprint will be explained and what it can be used for. Further, the threat it poses as well as suggestions on how to reduce a fingerprint will be discussed before covering technologies which can be utilized to track the user. After the base has been layed the chapter closes with the descriptions of the different fingerprinting methods and techniques.
+This chapter will cover the basic knowledge about fingerprinting. First the term fingerprint will be explained and what it can be used for. Further, the threat it poses as well as suggestions on how to reduce a fingerprint will be discussed before covering technologies which can be utilized to track the user. After the base has been layed the chapter closes with the description of the different fingerprinting methods and techniques.
 
 \section{Fingerprinting}
 \textit{Web browser fingerprinting}, also known as device fingerprinting, is the systematic collection of information to identify and later re-identify users. (\textcite{doty18}, p.3)(\textcite{amiunique})\\
@@ -9,14 +9,14 @@ With millions of computers and mobile devices in use and even more browsers, thi
 \begin{tcolorbox}
 	Example on how it works:\\
 	There are currently over 7.5 billion people populating our planet. Imagine you have to identify a single person. By stating this specific person is male, you already cut the choice in half. Information about the ethnicity and age of this person, as well as the time zone he lives in will narrow down the choice even more.\\
-	It's basically the same with web browser fingerprinting. The gender can be seen as an equivalent of the used operating system, the ethnicity as the browser and age as the browser version. Information about the time zone and used language are easily acquired by the browser and so are more specific details which help narrowing down the choice to nearly always one person.
+	It's basically the same with web browser fingerprinting. The gender can be seen as an equivalent of the used operating system, the ethnicity as the browser and age as the browser version. Information about the time zone and used language are easily acquired by the browser and so are more specific details which help narrowing down the choice to one person.
 \end{tcolorbox}
 
 This combination of properties can be obtained using code (time zone, screen resolution, plug-ins) and also be extracted from HTTP headers (user agent string). (\textcite{miele18}) \\\\
 Web browser fingerprinting was first developed short before 2010 and due to its effectiveness quickly gained traction in the tracking industry. (\textcite{havens16}, p. 3) \\
 Many of the fingerprinting methods can not be detected by the user, and as it is extremely difficult for users to modify their web browsers in a way that they are less vulnerable to it (\textcite{amiunique})(\textcite{miele18}), makes it a dangerous tool for deanonymization attacks and maliciously-minded tracking programs. (\textcite{havens16}, p.3)\\
 \begin{tcolorbox}
-Example\\
+Example:\\
 Upon accessing a website, the fingerprinting script determines the user's fingerprint and pushes it to a central data store. This data store is usually a shared data store which is used by multiple websites. So when the user accesses another website, which also has access to this specific shared data store, the user will be recognized and the user profile can be updated. (\textcite{havens16}, p. 8)
 \end{tcolorbox}
 

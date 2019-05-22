@@ -17,9 +17,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Objectives}{2}{section.1.2}% 
+\contentsline {section}{\numberline {1.2}Objectives}{1}{section.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Analysis of different web browser fingerprinting techniques}{2}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.1}Analysis of different web browser fingerprinting techniques}{1}{subsection.1.2.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}Prototype}{2}{subsection.1.2.2}% 
 \defcounter {refsection}{0}\relax 

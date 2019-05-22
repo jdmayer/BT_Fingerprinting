@@ -4,12 +4,11 @@
 This chapter depicts how the implemented fingerprinting prototype was tested and what outcome was achieved.
 
 \section{Test cases}\label{sec:testCases}
-Two testcases were tested on each fingerprinting technique to assure that the creation and comparison of the fingerprints work properly.
-
+Two testcases were tested on each fingerprinting technique to assure that the creation and comparison of the fingerprints work properly.\\\\
 Those test cases are:
 \begin{itemize}
-	\item creation of a new fingerprint
-	\item creation of a known fingerprint\\
+	\item creation and comparison of a new fingerprint
+	\item creation and comparison of a known fingerprint\\
 \end{itemize}
 
 The test procedure of both test cases is the same:
@@ -20,8 +19,9 @@ The test procedure of both test cases is the same:
 	\item click on button of wanted technique
 	\item check response text below button\\
 \end{itemize}
-The key difference is what knowledge of the user the prototype already possesses. When testing with a new fingerprint, the prototype must recognise that the hash is not part of his fingerprint collection and save the newly created fingerprint. Further the correct response has to be displayed.\\\\
-When testing with a known fingerprint, the prototype must recognise the fingerprint when comparing it to the collection. Therefore it may not add it again and display the correct user response.
+The key difference is what knowledge prototype already possesses of the user. When testing with a new fingerprint, the prototype must recognise that the hash is not part of its fingerprint collection and save the newly created fingerprint. Further the correct response has to be displayed.\\\\
+When testing with a known fingerprint, the prototype must recognise the fingerprint when comparing it to the collection. Therefore it may not add it again and still display the correct user response.\\\\
+These two test cases have been tested with each of the devices stated in \autoref{sec:testdevices}.
 
 \section{Tested devices}\label{sec:testdevices}
 
@@ -115,6 +115,6 @@ Due to the easy distribution of the prototype the test could also have been exec
 	\end{itemize}
 \end{itemize}
 Taken everything into consideration the prototype has a quote of 100\% in recognising known users with the same configurations. This has been tested with 13 different devices in 5 different browsers (with 16 versions, see \autoref{sec:testdevices}).\\\\
-In case the users configuration have been changed since the fingerprint has been created, the user cannot be re-identified, as configuration alterations have not been taken into consideration for the prototype.
+In case the users configuration have been changed since the fingerprint has been created, the user cannot be re-identified, as configuration alterations have not been taken into consideration for this prototype.
 
 
