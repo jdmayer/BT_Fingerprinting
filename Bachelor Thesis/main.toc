@@ -65,9 +65,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7.3}JavaScript Engine fingerprinting}{16}{subsection.2.7.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{How it works}{16}{subsection.2.7.3}% 
+\contentsline {subsubsection}{How it works}{17}{subsection.2.7.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.4}Cross-Browser fingerprinting}{17}{subsection.2.7.4}% 
+\contentsline {subsection}{\numberline {2.7.4}Cross-Browser fingerprinting}{18}{subsection.2.7.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{How it works}{18}{subsection.2.7.4}% 
 \defcounter {refsection}{0}\relax 
@@ -115,28 +115,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.6}Canvas fingerprinting}{30}{subsection.4.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Fingerprint}{30}{lstnumber.-8.18}% 
+\contentsline {subsubsection}{Fingerprint}{31}{lstnumber.-8.18}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Visualisation}{31}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation and Test}{34}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Evaluation and Test}{33}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Recording}{34}{section.5.1}% 
+\contentsline {section}{\numberline {5.1}Recording}{33}{section.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Identification}{34}{section.5.2}% 
+\contentsline {section}{\numberline {5.2}Identification}{33}{section.5.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Prototype testcases}{34}{section.5.3}% 
+\contentsline {section}{\numberline {5.3}Prototype testcases}{33}{section.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Summary}{36}{chapter.6}% 
+\contentsline {chapter}{\numberline {6}Summary}{35}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Result}{36}{section.6.1}% 
+\contentsline {section}{\numberline {6.1}Result}{35}{section.6.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Prospect}{36}{section.6.2}% 
+\contentsline {section}{\numberline {6.2}Prospect}{35}{section.6.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{37}{appendix*.16}% 
+\contentsline {chapter}{References}{36}{appendix*.16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literature}{37}{section*.17}% 
+\contentsline {section}{Literature}{36}{section*.17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Online sources}{38}{section*.18}% 
+\contentsline {section}{Online sources}{37}{section*.18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{40}{appendix*.19}% 
+\contentsline {chapter}{List of Figures}{39}{appendix*.19}% 

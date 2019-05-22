@@ -32,38 +32,28 @@
 	 */
 
 	var Detector = function() {
-		// a font will be compared against all the three default fonts.
-		// and if it doesn't match all 3 then that font is not available.
 		var baseFonts = [ 'monospace', 'sans-serif', 'serif' ];
-
-		//we use m or w because these two characters take up the maximum width.
-		// And we use a LLi so that the same matching fonts can get separated
 		var testString = "mmmmmmmmmmlli";
-
-		//we test using 72px font size, we may use any size. I guess larger the better.
 		var testSize = '72px';
 
 		var h = document.getElementsByTagName("body")[0];
-
-		// create a SPAN in the document to get the width of the text we use to test
 		var s = document.createElement("span");
 		s.style.fontSize = testSize;
 		s.innerHTML = testString;
 		var defaultWidth = {};
 		var defaultHeight = {};
 		for ( var index in baseFonts) {
-			//get the default width for the three base fonts
 			s.style.fontFamily = baseFonts[index];
 			h.appendChild(s);
-			defaultWidth[baseFonts[index]] = s.offsetWidth; //width for the default font
-			defaultHeight[baseFonts[index]] = s.offsetHeight; //height for the defualt font
+			defaultWidth[baseFonts[index]] = s.offsetWidth; 
+			defaultHeight[baseFonts[index]] = s.offsetHeight;
 			h.removeChild(s);
 		}
 
 		function detect(font) {
 			var detected = false;
 			for ( var index in baseFonts) {
-				s.style.fontFamily = font + ',' + baseFonts[index]; // name of the font along with the base font for fallback.
+				s.style.fontFamily = font + ',' + baseFonts[index]; 
 				h.appendChild(s);
 				var matched = (s.offsetWidth != defaultWidth[baseFonts[index]] || s.offsetHeight != defaultHeight[baseFonts[index]]);
 				h.removeChild(s);
@@ -75,8 +65,8 @@
 		this.detect = detect;
 	};
 
-	//author
-	//https://gist.github.com/oboshto/abd1414811a30bda3b02dc4112c44a71
+	/*author
+	  https://gist.github.com/oboshto/abd1414811a30bda3b02dc4112c44a71*/
 	function get_fonts() {
 		var fonts = [ "Arial", "	Helvetica", "Verdana", "Comic Sans",
 				"Windings", "Webdings", "Georgia", "Rotterdalle", "Sweet Cake",
@@ -111,11 +101,11 @@
 		return renderer;
 	}
 
-	// source:
-	// https://browserleaks.com/canvas#how-does-it-work
-	// https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
+	/* source:
+	 https://browserleaks.com/canvas#how-does-it-work
+	 https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print*/
 	function fingerprint_canvas() {
-		"use strict"; // feature in EXMAScript 5 - prevents some actions + more exceptions     
+		"use strict";      
 
 		var canvas = null;
 		var canvasInput = null;
@@ -123,10 +113,7 @@
 		var allSigns = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~1!2@3#4$5%6^7&8*9(0)-_=+[{]}|;:',<.>/?";
 
 		try {
-			// create canvas
 			canvas = document.createElement('canvas');
-
-			// fill canvas
 			canvasInput = canvas.getContext('2d');
 			canvasInput.textBaseline = "top";
 			canvasInput.font = "14px 'Arial'";
@@ -156,26 +143,24 @@
 			canvasInput.fillStyle = "rgba(120, 200, 70, 0.4)";
 			canvasInput.fillText(allSigns, 43, 71);
 
-			// create hash + add graphicCard (as hash not always unique)
 			hash = get_graphicCard() + " | " + canvas.toDataURL();
 			console.log(hash);
 
-			// send hash to servlet
 			$.ajax({
-				type : 'POST',
-				data : {
-					method : 'canvas',
-					hash : hash
+				type:'POST',
+				data:{
+					method:'canvas',
+					hash:hash
 				},
-				url : 'Fingerprinting',
-				success : function(result) {
+				url:'Fingerprinting',
+				success:function(result) {
 					$('#result1').html(result);
 				}
 			});
 
 			return hash;
 		} catch (errorMsg) {
-			//console.log("An error occured: " + errorMsg)
+			console.log("An error occured: " + errorMsg)
 			return "An unexpected error occured";
 		}
 	}
@@ -186,24 +171,18 @@
 		var hash = null;
 
 		try {
-			// timezone
 			var date1 = new Date(2019, 0, 1);
 			var date2 = new Date(2019, 6, 1);
 			var date1Offset = date1.getTimezoneOffset();
 			var date2Offset = date2.getTimezoneOffset();
 
-			// language
 			var language = navigator.language ? navigator.language
 					: "undefined";
 			var languages = navigator.languages ? navigator.languages
 					: "undefined";
-			// there are MS specified properties (navigator.browserlanguage)
-			// not used - as prototype for multiple OS
 
-			// java enabled
 			var javaEnabled = navigator.javaEnabled() ? true : false;
 
-			// display
 			if (window.screen) {
 				var screenAvailWidth = window.screen.availWidth;
 				var screenAvailHeight = window.screen.availHeight;
@@ -212,16 +191,13 @@
 				var screenColorDepth = window.screen.colorDepth;
 			}
 
-			// useragent string
 			var uas = navigator.userAgent;
 
-			// further settings
 			var cookieEnabled = navigator.cookieEnabled;
 			var doNotTrack = navigator.doNotTrack;
 			var cores = window.navigator.hardwareConcurrency;
 			var touchPoints = navigator.maxTouchPoints;
 
-			// plugins
 			var pluginCount = navigator.plugins.length;
 			var plugins = "";
 
@@ -242,18 +218,16 @@
 					+ " | " + touchPoints + " | " + pluginCount + " | "
 					+ plugins + get_fonts() + get_graphicCard();
 
-			hash = navigator.plugins;
 			console.log(hash);
 
-			// send hash to servlet
 			$.ajax({
-				type : 'POST',
-				data : {
-					method : 'browser',
-					hash : hash
+				type:'POST',
+				data:{
+					method:'browser',
+					hash:hash
 				},
-				url : 'Fingerprinting',
-				success : function(result) {
+				url:'Fingerprinting',
+				success:function(result) {
 					$('#result2').html(result);
 				}
 			});
@@ -289,9 +263,9 @@
 			</div>
 			<div id="CanvasFP" class="panel-collapse collapse collapse in">
 				<div class="panel-body">Canvas Fingerprinting uses the HTML5
-					canvas element to render text and color to the browser. The
-					canvas.toDataURL() method is used to create a hash using the pixels
-					of the created canvas.</div>
+					canvas element to render text and color to the browser. The rendered elements are hidden from the user, wherefore 
+					the tracking stays concealed. After rendering the canvas, the canvas.toDataURL() method is used to retrieve the 
+					pixel data of the canvas. This data is used to re-identify the user.</div>
 				<div class="panel-footer" id="result1">
 					<button type="button" class="btn btn-info"
 						onclick="fingerprint_canvas();">Check Canvas Fingerprint</button>
@@ -306,9 +280,9 @@
 				</a>
 			</div>
 			<div id="BrowserFP" class="panel-collapse collapse collapse in">
-				<div class="panel-body">Browser fingerprinting uses various
-					characteristics like language and screen properties to create a
-					hash.</div>
+				<div class="panel-body">Browser fingerprinting uses JavaScript to query various characteristics from the users browser. 
+				These pieces of information (e.g. screen properties, languages, browser and operating system) are used to 
+				re-identify the user.</div>
 				<div class="panel-footer" id="result2">
 					<button type="button" class="btn btn-info"
 						onclick="fingerprint_browser();">Check Browser
@@ -326,7 +300,7 @@
 			<div id="Evaluation" class="panel-collapse collapse collapse in">
 				<div class="panel-body">This prototype was tested on multiple
 					computers and mobile phones. In the course of this evaluation each
-					of the 25 created browser and the 25 created canvas hashes turned
+					of the 25 created browser and the 25 created canvas fingerprints turned
 					out to be individual.</div>
 			</div>
 		</div>

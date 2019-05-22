@@ -606,6 +606,58 @@
       \verb https://www.darkwavetech.com/index.php/device-fingerprint-blog?disp=posts&paged=8
       \endverb
     \endentry
+    \entry{Base64Alphabet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e9fcd00d059b9910ecc59847fd0dbbdd}{%
+           family={Josefsson},
+           familyi={J\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9fcd00d059b9910ecc59847fd0dbbdd}
+      \strng{fullhash}{e9fcd00d059b9910ecc59847fd0dbbdd}
+      \strng{bibnamehash}{e9fcd00d059b9910ecc59847fd0dbbdd}
+      \strng{authorbibnamehash}{e9fcd00d059b9910ecc59847fd0dbbdd}
+      \strng{authornamehash}{e9fcd00d059b9910ecc59847fd0dbbdd}
+      \strng{authorfullhash}{e9fcd00d059b9910ecc59847fd0dbbdd}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Figure~1 in \textcite{josef06}}
+      \field{title}{The base16, base32, and base64 data encodings}
+      \field{year}{2006}
+    \endentry
+    \entry{josef06}{report}{}
+      \name{author}{1}{}{%
+        {{hash=97ec76c57a8640354d28158df00f4d85}{%
+           family={Josefsson},
+           familyi={J\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{97ec76c57a8640354d28158df00f4d85}
+      \strng{fullhash}{97ec76c57a8640354d28158df00f4d85}
+      \strng{bibnamehash}{97ec76c57a8640354d28158df00f4d85}
+      \strng{authorbibnamehash}{97ec76c57a8640354d28158df00f4d85}
+      \strng{authornamehash}{97ec76c57a8640354d28158df00f4d85}
+      \strng{authorfullhash}{97ec76c57a8640354d28158df00f4d85}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The base16, base32, and base64 data encodings}
+      \field{type}{techreport}
+      \field{year}{2006}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc4648.txt.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc4648.txt.pdf
+      \endverb
+    \endentry
     \entry{marshall17}{online}{}
       \name{author}{1}{}{%
         {{hash=3955859b49b060fce091536656821782}{%

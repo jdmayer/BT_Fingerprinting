@@ -31,9 +31,11 @@ public class Fingerprinting extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/plain");
+		response.setContentType("text/HTML");
 		String hash = request.getParameter("hash");
 		String method = request.getParameter("method");
+		//System.out.println("** " + hash + " - " + method);
+		
 		
 		String filePath;
 		switch(method) {
@@ -54,7 +56,7 @@ public class Fingerprinting extends HttpServlet {
 			JSONParser parser = new JSONParser();
 			JSONObject jsonRoot = (JSONObject) parser.parse(new FileReader(filePath));
 			JSONArray userArray = (JSONArray) jsonRoot.get("users");
-					
+		
 			for (Object user : userArray) {
 			    JSONObject jsonUser = (JSONObject) user;
 			    String tmpHash = (String) jsonUser.get("hash");
