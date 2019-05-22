@@ -62,7 +62,7 @@ The following application scenario describes what happens when the user choses t
 
 \begin{enumerate}
 	\item The browser specific fingerprint JavaScript method uses the window object to retrieve information about the browser (e.g. navigator and screen properties).
-	\item The acquired information is then combined with further acquired information (e.g. fonts and graphic card).
+	\item The acquired information is then combined with further acquired information (e.g. fonts and GPU).
 	\item The created hash is then passed back to the server (see figure \ref{fig:ConceptPrototype}).\\
 \end{enumerate}
 
@@ -82,141 +82,73 @@ The following application scenario describes what happens when the user choses t
 \begin{enumerate}
 	\item The canvas fingerprint JavaScript method renders a hidden canvas in the browser. The canvas contains different fonts, colors and forms.
 	\item  With the help of the toDataURL() method the content of the canvas is converted into pixel data which is retrieved by the JavaScript method.
-	\item The retrieved pixel data is then concated with graphic card details (only in this prototype).
+	\item The retrieved pixel data is then concated with GPU details (only in this prototype).
 	\item The created hash is then passed back to the server (see figure \ref{fig:ConceptPrototype}).\\
 \end{enumerate}
 
 
 \section{Implementation details}
-As shown with the help of the application scenario (see figure \ref{fig:ConceptPrototype}) the prototype is a simple client server application. 
-
-
-\subsection{Browser}
-like already mentioned -> needs to enable JavaScript for the whole thing to work.
-Further could be that the firewall needs to be enabled to be able to connect to the website
-The user does not have to do anything special, except for press a button
-
+As shown with the help of the application scenario (see figure \ref{fig:ConceptPrototype}) the prototype is a simple client server application. \\\\
+Following subsections cover the implementation details about the prototype. How exaclty the fingerprints are composed will be outlined in subsection \autoref{sec:codeBrowserSpec} and \autoref{sec:codeCanvas}.
 
 \subsection{Servlet}
-The servlet is working like a controller which is taking care of requests and responses. The main focus lays on the doPost() method which is in charge of the hash comparison. The newly created hash is compared with all existing hashes from a local JSON file. In case that the local JSON file does not contain the new hash, a new JSON object with the current date, time and the hash is added to the file.\\
-At the end of the method a feedback for the user is created which will be rendered in the JSP.
+The servlet \textit{(Fingerprinting.java)} is working like a controller which is taking care of requests and responses. The main focus lays on the doPost() method which is in charge of the hash comparison. The newly created hash is compared with all existing hashes from a local JSON file. Here is to considered that two different files are In case that the local JSON file does not contain the new hash, a new JSON object with the current date, time and the hash is added to the file.\\
+Here is to be considered that two different files are used to save the hashes. This is due to the fact that the two fingerprinting techniques create completely different hashes which can not be compared to one another.\\\\
+At the end of the method a feedback for the user is created which then is rendered in the JSP. The following code snippet shows how a PrintWriter is used to send HTML code as a response to the browser.
 
+%\begin{program}
 \begin{JavaCode}
-// output for user
-PrintWriter out = response.getWriter();
-if(existingUser) {
-	out.println("<p style=\"color:red;\">");			
-	out.print("I remember you!");
-	out.println("</p>");
-	out.print("You first visited this prototype on:" + firstVisit);
-}
-else {
-	out.print("This is your first visit!");
-}
+	PrintWriter out = response.getWriter();
+	if(existingUser) {
+		out.println("<p style=\"color:red;\">");			
+		out.print("I remember you!");
+		out.println("</p>");
+		out.print("You first visited this prototype on:" + firstVisit);
+	}
+	else {
+		out.print("This is your first visit!");
+	}
 \end{JavaCode}
+%\caption{Output for user}
+%\label{codeServletOutput}
+%\end{program}
 
 
 \subsection{JSP}
-The JSP which is constantly mentioned is the index.jsp. This JSP contains HTML as well as JavaScript code. The HTML is rendered in the users browser and the JavaScript is executed as soon as one of the buttons is clicked by the user.\\\\
-The website consists of a few panels and two buttons with are in charge of starting the fingerprinting process.
+The JavaServerPage \textit{(index.jsp)} contains HTML as well as JavaScript code. The HTML is used to render the prototype in the users browser while JavaScript is executed upon a button click which starts the fingerprinting process (see \autoref{sec:codeBrowserSpec} and \autoref{sec:codeCanvas}). Apart from the bare creation of the fingerprints, JavaScript is also using Ajax to forward the generated hash back to the servlet.\\
 
-In the background there is JavaScript code which does the fingerprinting work.
+%\begin{program}
+\begin{JsCode}
+	$.ajax({
+		type : 'POST',
+		data : {
+			method : 'canvas',
+			hash : hash
+		},
+		url : 'Fingerprinting',
+		success : function(result) {
+			$('#result1').html(result);
+		}
+	});
+\end{JsCode}
+%\caption{Ajax sends hash to servlet}
+%\label{codeAjax}
+%\end{program}
+As seen in the code snippet above, Ajax posts two different data items. "method" is used to make a distinction between the transfer of a canvas (like above) or a browser specific fingerprinting hash. The "hash" data simply contains the created hash variable.\\\\
+On success of the transfer the response of the servlet will be rendered in the HTML component with the id "result1". As seen below the response will be rendered where the button, which called the fingerprinting method, was previously rendered.\\
+%\begin{program}
+\begin{HtmlCode}
+	<div class="panel-footer" id="result1">
+		<button type="button" class="btn btn-info"
+		onclick="fingerprint_canvas();">Check Canvas Fingerprint</button>
+	</div>
+\end{HtmlCode}
+%\caption{Reference in HTML for response}
+%\label{codeHTMLReference}
+%\end{program}
 
-js for fingerprinting is embedded in the jsp
-html
-ajax in javascript
+\subsection{Fonts method} \label{sec:fonts}
 
-Javascript methods are erläutered in den folgenden subsubsecitons
-
-
-\subsection{Browser specific fingerprinting}
-
-\subsubsection{Window}
-Each browser automatically creates a window object which holds information about the window and is supported by all major browsers (\textcite{javatptWindow}). This information can be queried with the help of JavaScript wherefore JavaScript needs to be enabled to execute the data retrieval.\\\\
-The window object is a property which is supported by all main browsers. It holds information about the window and is therefore an essential information source for the browser specific fingerprinting technique.
-Information queried with the help of window:
-\begin{itemize}
-	\item 
-\end{itemize}
-
-Navigator is one of the properties of the window object and the main source of the information needed for creating the browser specific fingerprint in this thesis (\textcite{javatptNav}).\\\\
-Information queried with the help of navigator:
-\begin{itemize}
-	\item 
-\end{itemize}
-
-
-As the rendered canvas is not allocated in the HTML it appears hidden. Therefore the user does not see the rendered fonts, colors and forms.\\\\
-
-
-
-
-
--- tell which properties can be accessed and are used
-%https://www.w3schools.com/jsref/obj_navigator.asp
-navigator object -> supported by all major browsers
-
-%https://www.javatpoint.com/javascript-navigator-object
-navigator object -> is a window property
-accessed via window.navigator or navigator
-
-
-
-script ähnliche info von (\textcite{jkula17}) - gibt hier mehrere beispiele!!
-allerdings sollte die url auch dementsprechend geändert werden!
-
-\subsection{Canvas fingerprinting}
-
-
-(\textcite{jkula17}) anlehnung des scripts
-
-// explain why concat pixeldata with graphic card -> übersichtlich
-
-// explain Base64 encoded pixeldata + what toDataURL does
-// code example
-
-// tell that those two techniques create different hashes and therefore can not be used gegengleich
-Those two techniques are Canvas Fingerprinting and Browser Fingerprinting and were - > saved to different files as not gegengleich
-
-the hash will be written into a json which is saved to a local file
-the json will be updated whenever a new user is added, else only read
-
-* use servlet : https://www.youtube.com/watch?v=GO1Wi1nWuJM
-* connect servlet with jsp with help of ajax: https://www.youtube.com/watch?v=P4eOHI6OGks
-
-Canvas script:
-https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
-%https://browserleaks.com/canvas#how-does-it-work
-
-Browser script
-https://www.darkwavetech.com/index.php/device-fingerprint-blog/
-
-
-
-this is made into a string and hashed via ....
- 
- In the figure below (1) the browser is requested to draw text on the screen in a hidden box. This text is enlarged, drawn in multiple colors and consists of a large range of text samples. Next (2) the drawing is converted to a base64 URL. Finally, (3) in order to shorten the output the base64 URL is hashed. This output is then used as the canvas device fingerprint. 
- (\textcite{jkula17})\\
- 
- js.file -> FillText()/FillStyle()/FillRect()... -> Browser
- js.file <- toDataURL() <- Browser
- js.file -> Hash() to Database
- (\textcite{jkula17})
- 
- 
-ACHTUNG:
-Zoomlevel ändert sowohl Canvas FP als auch Browser FP (screenAvailWidth + " | " + screenAvailHeight + " | " + screenWidth + " | " + screenHeight + " | " +
-screenWidth + " | " + screenColorDepth + )
--- muss anmerken, dass dieser Prototyp zoom level nicht into consideration nimmt - da dies erst bei cross browser fingerprinting into considertation geenommen wurde - therefore not with casual fp techniques. always use same zoom level when FP!!
-
-write about navigator element in js!
-
-browser fp unterscheidet sich oft nur durch die screen size
-
-bei canvas fp - muss grafik karte, etc auflesen
-
-
-about reading the users installed fonts:
 Javascript's sandboxed inside the browser and doesn't have privileges to read from the clients disk for security reasons.
 
 You need to have your own list of fonts to check, then you have an array of installed fonts by checking each of the list to see which one is installed.
@@ -226,16 +158,122 @@ The difference in widths will tell you the availability of the fonts installed o
 https://stackoverflow.com/questions/3597682/how-to-iterate-the-installed-fonts-using-javascript
 
 
-for font querying - need code from:
-https://www.lalit.org/wordpress/wp-content/uploads/2008/05/fontdetect.js?ver=0.3
+
+As installed fonts in a browser can not be directly queried, a work around is used to check which fonts are installed. This workaround simply renders specifically stated fonts and checks through the rendering if they are installed.\\\\
+To execute this workaround a detector is needed. The detector used in this prototype was implemented by \textit{Latil Patel}(\textcite{fontDetect}).\\\\
+As already mentioned, the detector can only check explicitly queried fonts wherefore the following method is needed (which uses Patels detector):\\
 
 \begin{JsCode}
-	// source:
-	// https://browserleaks.com/canvas#how-does-it-work
-	// https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
-	function fingerprint_canvas() {
-		"use strict"; // feature in EXMAScript 5 - prevents some actions + more exceptions     
+	function get_fonts() {
+		var fonts = [ "Arial", "	Helvetica", "Verdana", "Comic Sans",
+		"Windings", "Webdings", "Georgia", "Rotterdalle", "Sweet Cake",
+		"Coldiac", "Kilauea", "Blacker", "Rubik", "Cormorant" ];
+		var fontDetector = new Detector();
+		var fontExist = "";
+		for (var i = 0; i < fonts.length; i++) {
+			fontExist += fontDetector.detect(fonts[i]) + " - ";
+		}
+		return fontExist;
+	}
+\end{JsCode}
+The detector simply renders all fonts which are called by the method above and checks if they can be rendered. If so, they are available and a respective boolean is returned and added to a string which is eventually the return value of the \textit{get\_fonts()} method. 
+
+\subsection{GPU method} \label{sec:graphicCard}
+To retrieve the users grapic processing unit a function implemented by \textit{Lesha Rubinshtein} (\textcite{gpuDetect}) is used. As seen in the code snippet below the function creates a canvas (like the canvas fingerprinting technique) and uses it to retrieve GPU specific information.\\
+
+\begin{JsCode}
+	function get_gpu() {
+		var canvas = document.createElement('canvas');
+		var gl;
+		var debugInfo;
+		var vendor;
+		var renderer;
 		
+		try {
+			gl = canvas.getContext('webgl')
+			|| canvas.getContext('experimental-webgl');
+		} catch (e) {
+		}
+		
+		if (gl) {
+			debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+			vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+			renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+		}
+		
+		return renderer;
+	}
+	
+\end{JsCode}
+
+\subsection{Browser specific fingerprinting} \label{sec:codeBrowserSpec}
+
+As outlined in \autoref{specFP} the browser specific fingerprint consists of multiple pieces of information which are retrieved from the user. The method used in this prototype retrieves its pieces of information mainly from a browser object called \textit{window}.
+
+\subsubsection{Window}
+The window object is a property which is supported by all main browsers. It is automatically created by the browser and holds information about the window (\textcite{javatpt}). It is therefore an essential information source for the browser specific fingerprinting technique.\\
+
+The following properties are queried in the prototype:
+\begin{itemize}
+	\item \textit{screen: }allows to query information like the screen heigth and width or color depth.
+	\item \textit{navigator: }enables the retrieval of information of different configurations and plugins (see below).\\
+\end{itemize}
+
+\begin{JsCode}
+	if (window.screen) {
+		var screenAvailWidth = window.screen.availWidth;
+		var screenAvailHeight = window.screen.availHeight;
+		var screenWidth = window.screen.width;
+		var screenHeight = window.screen.height;
+		var screenColorDepth = window.screen.colorDepth;
+	}
+\end{JsCode}
+As documented in the code above, it is a simple property call to retrieve individual measurements from users.\\\\
+Navigator is one of the properties of the window object and the main source of the information needed for creating the browser specific fingerprint in this thesis (\textcite{javatpt}). It is read-only and can be accessed via window.navigator or simply navigator(\textcite{nav19}).\\
+
+Information queried with the help of window.navigator (\textcite{nav19}):
+\begin{itemize}
+	\item \textit{language: }returns the preferred language which is used in the browser UI (null if unknown).
+	\item \textit{languages: }returns all languages which are known by the browser.
+	\item \textit{user agent string: }returns the user agent string of the browser (see \autoref{UAS}).
+	\item \textit{cookieEnabled: }returns a boolean if a cookie can be set or will be ignored.
+	\item \textit{doNotTrack: }returns 'yes' or 'no' depending on the users doNotTrack setting.
+	\item \textit{hardwareConcurrency: }returns the number of available logical processor cores.
+	\item \textit{maxTouchPoints: }returns the value of maximal concurrent touch contact points of the used device.
+	\item \textit{plugins: }returns an array which holds all installed plugins in the browser.\\
+\end{itemize}
+All of the queries properties return a boolean, integer or string except for plugins. Plugins returns a pluginarray which is not a JavaScript array but still possesses a length property (\textcite{nav19}).\\
+\begin{JsCode}
+	var pluginCount = navigator.plugins.length;
+	var plugins = "";
+	
+	for (var i = 0; i < pluginCount; i++) {
+		var version = navigator.plugins[i].version ? navigator.plugins[i].version
+		: "x";
+		plugins += navigator.plugins[i].name + ", "
+		+ navigator.plugins[i].description + "(" + version
+		+ "), " + navigator.plugins[i].filename + " | ";
+	}
+\end{JsCode}
+As the code above shows how easily specific information about the plugins can be retrieves to be used for the creation of a browser specific fingerprint.\\\\
+Additional to the information queried from the window properties, the prototype also includes the users gpu (graphic processing unit) (\autoref{sec:graphicCard}) and font check (\autoref{sec:fonts}) in the fingerprint.\\\\
+After retrieving the necessary information mentioned above, the prototype concats the pieces of information and the created string serves as fingerprinting hash.
+
+\subsubsection{Fingerprint}
+As mentioned above the hash which is created by the prototype consists of a concatenation of all retrieved information about the user.
+Example:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=460pt, height=100pt]{browserSpecFingerprint.png}
+	\caption{Example for a browser specific fingerprint\\}
+	\label{fig:specFP}
+\end{figure}
+
+\subsection{Canvas fingerprinting} \label{sec:codeCanvas}
+
+As outlined in \autoref{canvasfp} the canvas fingerprint consists of pixel data which is retrieved from a canvas in the users browser. This canvas is rendered through the use of JavaScript in the users browser and not allocated to HTML thus appearing hidden. Therefore the user does not see the rendered fonts, colors and forms.\\
+
+\begin{JsCode}
 		var canvas = null;
 		var canvasInput = null;
 		var hash = null;
@@ -252,70 +290,30 @@ https://www.lalit.org/wordpress/wp-content/uploads/2008/05/fontdetect.js?ver=0.3
 			canvasInput.textBaseline = "alphabetic";
 			canvasInput.fillStyle = "#f60";
 			canvasInput.fillRect(125, 1, 62, 20);
-			canvasInput.fillStyle = "#069";
 			canvasInput.fillText(allSigns, 2, 15);
-			canvasInput.fillStyle = "rgba(102, 204, 0, 0.7)";
-			canvasInput.fillText(allSigns, 4, 17);
-			
-			canvasInput.font = "9px 'Times New Roman'";
-			canvasInput.textBaseline = "middle";
-			canvasInput.fillStyle = "#0fd2ee";
-			canvasInput.fillRect(10, 10, 10, 10);
-			canvasInput.fillStyle = "#ff00a7";
-			canvasInput.fillText(allSigns, 10, 25);
-			canvasInput.fillStyle = "rgba(99, 66, 33, 0.1)";
-			canvasInput.fillText(allSigns, 20, 47);
-			
-			canvasInput.font = "21px 'Georgia'";
-			canvasInput.textBaseline = "hanging";
-			canvasInput.fillStyle = "#2e2c9b";
-			canvasInput.fillRect(25, 17, 32, 22);
-			canvasInput.fillStyle = "#813338";
-			canvasInput.fillText(allSigns, 20, 51);
-			canvasInput.fillStyle = "rgba(120, 200, 70, 0.4)";
-			canvasInput.fillText(allSigns, 43, 71);
-			
-			// create hash + add graphicCard (as hash not always unique)
-			hash = get_graphicCard() + " | " + canvas.toDataURL();
-			console.log(hash);
-			
-			// send hash to servlet
-			$.ajax({
-				type : 'POST',
-				data : {
-					method : 'canvas',
-					hash : hash
-				},
-				url : 'Fingerprinting',
-				success : function(result) {
-					$('#result1').html(result);
-				}
-			});
-			
-			return hash;
-		} catch (errorMsg) {
-			//console.log("An error occured: " + errorMsg)
-			return "An unexpected error occured";
 		}
-	}
 \end{JsCode}
+The code above was written based on the two websites \textit{browserleaks} (\textcite{browserleaks}) and \textit{darkwavetech} (\textcite{jkula17}).\\\\
+As seen a canvas is created and an input variable (canvasInput) is prepared. The '2d' written in the getContext method leads to the creation of a CanvasRenderingContext2D obext which represents a two-dimensional rendering context. This depicted in the code snipped above, this context is used to render not only fonts but also colors and rectangles. To render text various different letters and signs are used to recover pixeldata which is as diverse as possible.\\\\
+After filling the canvas with input \textit{canvas.toDataURL()} is called which returns the Base64 encoded representation of pixel data. In short, Base64 is 
 
-// add ajax method
+// ADD BASE64
 
-\subsection{Fonts}
+\subsubsection{Fingerprint}
+As depicted below the canvas fingerprint mainly consists of Base64 encoded pixeldata. For simple clarity purpose (quick comparison with the human eye), the gpu was also queried with the in \autoref{sec:graphicCard} introduced JavaScript method.\\
 
-\subsection{Graphiccard}
-
-
-\subsection{Fingerprint}
-
-// here example fingerprints and an short explanation
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=460pt, height=250pt]{canvasFingerprint.png}
+	\caption{Example for a canvas fingerprint\\}
+	\label{fig:canvasFP}
+\end{figure}
 
 \section{Visualisation}
 
 
 has embedded folder CSS for the layout
+does explain plainly how they work and so on.
 
 \begin{figure}[H]
 	\centering

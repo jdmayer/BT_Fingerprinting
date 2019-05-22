@@ -239,6 +239,35 @@
       \verb https://pet-portal.eu/files/articles/2011/fingerprinting/cross-browser_fingerprinting.pdf
       \endverb
     \endentry
+    \entry{browserleaks}{online}{}
+      \name{author}{1}{}{%
+        {{hash=15a041c72a357da9cd85597e607ddf3d}{%
+           family={browserleaks},
+           familyi={b\bibinitperiod}}}%
+      }
+      \strng{namehash}{15a041c72a357da9cd85597e607ddf3d}
+      \strng{fullhash}{15a041c72a357da9cd85597e607ddf3d}
+      \strng{bibnamehash}{15a041c72a357da9cd85597e607ddf3d}
+      \strng{authorbibnamehash}{15a041c72a357da9cd85597e607ddf3d}
+      \strng{authornamehash}{15a041c72a357da9cd85597e607ddf3d}
+      \strng{authorfullhash}{15a041c72a357da9cd85597e607ddf3d}
+      \field{sortinit}{b}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Device Fingerprinting}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://browserleaks.com/canvas#how-does-it-work
+      \endverb
+      \verb{url}
+      \verb https://browserleaks.com/canvas#how-does-it-work
+      \endverb
+    \endentry
     \entry{Cao17}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=3a7e58dc54b05a1f9e413693d8ba1ee1}{%
@@ -368,6 +397,37 @@
       \verb http://randomwalker.info/publications/OpenWPM_1_million_site_tracking_measurement.pdf
       \endverb
     \endentry
+    \entry{nav19}{online}{}
+      \name{author}{1}{}{%
+        {{hash=eb551ebe62ee974d041441de29465179}{%
+           given={et\bibnamedelima al.},
+           giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod},
+           prefix={jpmedle\bibnamedelimb et\bibnamedelima al.},
+           prefixi={j\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb551ebe62ee974d041441de29465179}
+      \strng{fullhash}{eb551ebe62ee974d041441de29465179}
+      \strng{bibnamehash}{eb551ebe62ee974d041441de29465179}
+      \strng{authorbibnamehash}{eb551ebe62ee974d041441de29465179}
+      \strng{authornamehash}{eb551ebe62ee974d041441de29465179}
+      \strng{authorfullhash}{eb551ebe62ee974d041441de29465179}
+      \field{sortinit}{e}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Navigator}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+      \endverb
+    \endentry
     \entry{fielding14}{report}{}
       \name{author}{2}{}{%
         {{hash=a6155135a306bddfc30cc4f52d1924e6}{%
@@ -488,6 +548,35 @@
       \verb https://javascript.info/intro
       \endverb
     \endentry
+    \entry{javatpt}{online}{}
+      \name{author}{1}{}{%
+        {{hash=67138bbf1f79f4aa8e007c5f6f7b1dea}{%
+           family={javatpoint},
+           familyi={j\bibinitperiod}}}%
+      }
+      \strng{namehash}{67138bbf1f79f4aa8e007c5f6f7b1dea}
+      \strng{fullhash}{67138bbf1f79f4aa8e007c5f6f7b1dea}
+      \strng{bibnamehash}{67138bbf1f79f4aa8e007c5f6f7b1dea}
+      \strng{authorbibnamehash}{67138bbf1f79f4aa8e007c5f6f7b1dea}
+      \strng{authornamehash}{67138bbf1f79f4aa8e007c5f6f7b1dea}
+      \strng{authorfullhash}{67138bbf1f79f4aa8e007c5f6f7b1dea}
+      \field{sortinit}{j}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Javatpoint}
+      \field{urlday}{14}
+      \field{urlmonth}{5}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.javatpoint.com/
+      \endverb
+      \verb{url}
+      \verb https://www.javatpoint.com/
+      \endverb
+    \endentry
     \entry{jkula17}{online}{}
       \name{author}{1}{}{%
         {{hash=eab9052a247970d2000b2c5b258e0318}{%
@@ -505,16 +594,16 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
-      \field{title}{Canvas Fingerprinting}
+      \field{title}{Device Fingerprinting}
       \field{urlday}{31}
       \field{urlmonth}{8}
       \field{urlyear}{2017}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
+      \verb https://www.darkwavetech.com/index.php/device-fingerprint-blog?disp=posts&paged=8
       \endverb
       \verb{url}
-      \verb https://www.darkwavetech.com/index.php/device-fingerprint-blog/canvas-device-print
+      \verb https://www.darkwavetech.com/index.php/device-fingerprint-blog?disp=posts&paged=8
       \endverb
     \endentry
     \entry{marshall17}{online}{}
@@ -750,6 +839,37 @@
       \verb https://seclab.cs.ucsb.edu/media/uploads/papers/sp2013_cookieless.pdf
       \endverb
     \endentry
+    \entry{fontDetect}{online}{}
+      \name{author}{1}{}{%
+        {{hash=227f118fa9a411d484defbbde756cd67}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Lalit},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{227f118fa9a411d484defbbde756cd67}
+      \strng{fullhash}{227f118fa9a411d484defbbde756cd67}
+      \strng{bibnamehash}{227f118fa9a411d484defbbde756cd67}
+      \strng{authorbibnamehash}{227f118fa9a411d484defbbde756cd67}
+      \strng{authornamehash}{227f118fa9a411d484defbbde756cd67}
+      \strng{authorfullhash}{227f118fa9a411d484defbbde756cd67}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Font Detector}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lalit.org/wordpress/wp-content/uploads/2008/05/fontdetect.js?ver=0.3
+      \endverb
+      \verb{url}
+      \verb https://www.lalit.org/wordpress/wp-content/uploads/2008/05/fontdetect.js?ver=0.3
+      \endverb
+    \endentry
     \entry{pixel18}{online}{}
       \name{author}{1}{}{%
         {{hash=385f12272e10c8ce8aae30d319c7962c}{%
@@ -820,6 +940,37 @@
       \endverb
       \verb{url}
       \verb https://publik.tuwien.ac.at/files/PubDat_202737.pdf
+      \endverb
+    \endentry
+    \entry{gpuDetect}{online}{}
+      \name{author}{1}{}{%
+        {{hash=dd9f3a19854963f5bb606917fbbfccd3}{%
+           family={Rubinshtein},
+           familyi={R\bibinitperiod},
+           given={Lesha},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd9f3a19854963f5bb606917fbbfccd3}
+      \strng{fullhash}{dd9f3a19854963f5bb606917fbbfccd3}
+      \strng{bibnamehash}{dd9f3a19854963f5bb606917fbbfccd3}
+      \strng{authorbibnamehash}{dd9f3a19854963f5bb606917fbbfccd3}
+      \strng{authornamehash}{dd9f3a19854963f5bb606917fbbfccd3}
+      \strng{authorfullhash}{dd9f3a19854963f5bb606917fbbfccd3}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Webgl detect gpu}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gist.github.com/oboshto/abd1414811a30bda3b02dc4112c44a71
+      \endverb
+      \verb{url}
+      \verb https://gist.github.com/oboshto/abd1414811a30bda3b02dc4112c44a71
       \endverb
     \endentry
     \entry{sexton15}{online}{}
@@ -1067,8 +1218,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{javatptNav}
-  \missing{javatptWindow}
 \endrefsection
 \endinput
 

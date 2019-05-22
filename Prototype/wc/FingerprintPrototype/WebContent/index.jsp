@@ -75,6 +75,8 @@
 		this.detect = detect;
 	};
 
+	//author
+	//https://gist.github.com/oboshto/abd1414811a30bda3b02dc4112c44a71
 	function get_fonts() {
 		var fonts = [ "Arial", "	Helvetica", "Verdana", "Comic Sans",
 				"Windings", "Webdings", "Georgia", "Rotterdalle", "Sweet Cake",
@@ -240,6 +242,7 @@
 					+ " | " + touchPoints + " | " + pluginCount + " | "
 					+ plugins + get_fonts() + get_graphicCard();
 
+			hash = navigator.plugins;
 			console.log(hash);
 
 			// send hash to servlet
