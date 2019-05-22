@@ -1,46 +1,120 @@
-\chapter{Evaluation and Test}
+\chapter{Testing and Evaluation}
 \label{cha:evaluation}
-Zoomlevel ändert sowohl Canvas FP als auch Browser FP
 
--- muss anmerken, dass dieser Prototyp zoom level nicht into consideration nimmt - da dies erst bei cross browser fingerprinting into considertation geenommen wurde - therefore not with casual fp techniques. always use same zoom level when FP!!
+This chapter depicts how the implemented fingerprinting prototype was tested and what outcome was achieved.
 
-browser fp unterscheidet sich oft nur durch die screen size
+\section{Test cases}\label{sec:testCases}
+Two testcases were tested on each fingerprinting technique to assure that the creation and comparison of the fingerprints work properly.
 
-
-This chapter contains all tests used on the implemented prototype and evaluates the used web browser fingerprinting techniques.
-
-browser etwas sensibler, als canvas da zb version von browser explizit mit einbezoge, was canvas nicht merkt sofern sich etwas von der grafik her nicht verändert hat.
-
-checked: wrote down pc/phone specification and the timestamp of the first visit and therefore could check if the right fingerprint was recognised.
-
-Test procedure:
+Those test cases are:
 \begin{itemize}
-\item start server for prototype
-\item open prototype in browser
-\item make sure JavaScript is enabled
-\item click on button of wanted technique
-\item check response text below button
+	\item creation of a new fingerprint
+	\item creation of a known fingerprint\\
 \end{itemize}
 
-\section{Recording}
-recording of the fingerprinting
-on linux, mac and windows machines
+The test procedure of both test cases is the same:
+\begin{itemize}
+	\item start server for prototype
+	\item open prototype in browser
+	\item make sure JavaScript is enabled
+	\item click on button of wanted technique
+	\item check response text below button\\
+\end{itemize}
+The key difference is what knowledge of the user the prototype already possesses. When testing with a new fingerprint, the prototype must recognise that the hash is not part of his fingerprint collection and save the newly created fingerprint. Further the correct response has to be displayed.\\\\
+When testing with a known fingerprint, the prototype must recognise the fingerprint when comparing it to the collection. Therefore it may not add it again and display the correct user response.
 
-\section{Identification}
-how many users are identified
-are they identified after minor changes
-percentage
+\section{Tested devices}\label{sec:testdevices}
 
-\section{Prototype testcases}
+As stated in the requirements (\autoref{cha:requirements}), the test cases mentioned in \autoref{sec:testCases} have been tested on multiple browsers and operating systems. Both fingerprinting techniques (browser specific fingerprinting and canvas fingerprinting) have been tested on each device mentioned in the following subsections.
 
-add evaluation in form of an image!
+\subsection{Computers}
+The test cases have been executed on 8 computers with multiple browsers. Each of the computers mentioned in \autoref{tab:PC} is a 64 bit system type and has executed the prototype in browsers mentioned in \autoref{tab:PCBrowser}.
 
---
-Schlussziehen: viele sachen die in älteren papers beschrieben werden funktionieren nicht mehr
-- unter anderem, da flash nur noch vorsichtig (in Chrome jedesmal zu lassen dass man es verwenden kann) angewendet werden kann
-- zum anderen - schwer alle fonts abzufragen ohne flash 
+\begin{table}[h]
+	\centering
+	\begin{tabular}{llll}
+		Nr. & Operating System & Version & Graphics Processing Unit \\ \hline
+		\rule{0pt}{15pt}1 & Windows 10 Home & 1803 & NVIDIA GTX 1050 \\
+		2 & Windows 10 Home & 1803 & Intel(R) HD Graphics 520 \\
+		3 & Windows 10 Enterprise & 1803 & NVIDIA GeForce GTX 960 \\
+		4 & Windows 10 Enterprise & 1803 & Intel(R) UHD Graphics 630 \\
+		5 & Windows 10 Pro & 1803 & NVIDIA GeForce MX 130 \\
+		6 & Arch Linux & 5.0.2 & Mesa DRI Intel(R) HD Graphics 630 \\&&& (Kaby Lake GT2) \\
+		7 & macOS Majave & 10.14.3 & Intel Iris Pro OpenGL Engine
+	\end{tabular}
+\caption{Tested computers}
+\label{tab:PC}
+\end{table}
 
 
-Screenshot vom prototypen
-auf desktop und auf handy!
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lll}
+		Browser & Version & Tested devices \\ \hline
+		\rule{0pt}{15pt}Microsoft Edge & 18.17763 & 1 \\
+		Microsoft Edge & 17.17134 & 2, 3, 4, 5 \\
+		Google Chrome & 73.0.3683.86 & 1, 4, 7 \\
+		Google Chrome & 73.0.3683.75-2 & 6 \\
+		Google Chrome & 72.0.3626.121 & 2, 5 \\
+		Google Chrome & 63.0.3239.84 & 3 \\
+		Mozilla Firefox & 66.0.2 & 1, 7 \\
+		Mozilla Firefox & 65.0.2 & 2, 4 \\
+		Mozilla Firefox & 60.5.2esr & 3 \\
+		Safari & 12.0.3 & 7
+	\end{tabular}
+	\caption{Tested browsers with computers}
+	\label{tab:PCBrowser}
+\end{table}
+
+
+\subsection{Mobile Phones}
+Due to the easy distribution of the prototype the test could also have been executed on multiple mobile phones (see \autoref{tab:Phone}) and mobile browsers (see \autoref{tab:PhoneBrowser}).
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lllll}
+		Nr. & Operating System & Graphics Processing Unit \\ \hline
+		\rule{0pt}{15pt}1 & Android 9.0 & Adreno (TM) 630 \\
+		2 & Android 9.0 & Mali-G72  \\
+		3 & Android 7.0 & Adreno (TM) 506 \\
+		4 & Android 7.0 & Mali-T830 \\
+		5 & iOS 12.1.4 & Apple A12 GPU 
+	\end{tabular}
+\caption{Tested mobile phones}
+\label{tab:Phone}
+\end{table}
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lllll}
+		Browser & Version & Tested devices \\ \hline
+		\rule{0pt}{15pt}Google Chrome & 74.0.3729.157 & 4 \\
+		Google Chrome & 73.0.3683.90 & 2, 3  \\
+		Safari & 12.1.4 & 5 \\
+		DuckDuckGo & 7.16.1 & 5 \\
+		DuckDuckGo & 5.26.0 & 4 \\
+		DuckDuckGo & 5.19.0 & 1 
+	\end{tabular}
+	\caption{Tested browsers with mobile phones}
+	\label{tab:PhoneBrowser}
+\end{table}
+
+\section{Results}
+\begin{itemize}
+	\item \textit{Quantity: }Due to the execution of the test cases with the devices and browsers over 25 fingerprints could be acquired per technique.
+	\item \textit{Correctness/Uniqueness: }Each of the acquired fingerprints was unique and could be used to re-identify the user.
+	\item \textit{Compatibility: }The protoype can be executed successfully on each device and in each browser mentioned in \autoref{sec:testdevices}. 
+	\item \textit{Portability:}The test cases can be executed on multiple devices, no matter if desktop computer, laptop or mobile phone.
+	\item \textit{Weakness: }
+	\begin{itemize}
+		\item \textit{Zoom level: }Both fingerprints change in case the user created the fingerprint with a different zoom level, as the prototype does not take the zoom level into consideration. 
+		\item \textit{Browser update: }In case of a browser version update the browser specific fingerprint changes, though the canvas fingerprint does not necessarily change.
+		\item \textit{Cross browser: }As non of the techniques works across browsers the user can not be re-identified in case he visisted the prototype before in another browser.
+		\item \textit{Plugins: }In case the user installs or de-installs a browser plugin the browser specific technique can not re-identify the user. In case the plug-in does not influence the graphic this does not concern the canvas fingerprint.\\
+	\end{itemize}
+\end{itemize}
+Taken everything into consideration the prototype has a quote of 100\% in recognising known users with the same configurations. This has been tested with 13 different devices in 5 different browsers (with 16 versions, see \autoref{sec:testdevices}).\\\\
+In case the users configuration have been changed since the fingerprint has been created, the user cannot be re-identified, as configuration alterations have not been taken into consideration for the prototype.
+
 
